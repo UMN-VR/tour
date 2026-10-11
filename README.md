@@ -41,11 +41,14 @@ npm install
 npm run dev
 ```
 
-Open the address Vite prints: it leads to the campus selector. App edits hot
-reload. The photographs come from the published site, so the tours need the
-network; to use a local copy, point `TOUR_PUBLIC` at a folder holding
-`tour/twin-cities/media/` (the scene build's output, `public/`, is used when it
-exists). For a phone on the same network, use `npm run dev -- --host 0.0.0.0`.
+Open the address Vite prints: it leads to the campus selector. App edits and
+edits to linked FOSS Earth libraries hot reload: the `localSource()` Vite plugin
+serves their checkout files directly and keeps them out of Vite's dependency
+cache, including CSS imports from those packages. The photographs come from the
+published site, so the tours need the network; to use a local copy, point
+`TOUR_PUBLIC` at a folder holding `tour/twin-cities/media/` (the scene build's
+output, `public/`, is used when it exists). For a phone on the same network, use
+`npm run dev -- --host 0.0.0.0`.
 An HTTP LAN URL uses the WebGL fallback; to exercise WebGPU, use a trusted
 HTTPS development proxy or tunnel, since WebGPU requires a secure context.
 
