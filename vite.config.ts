@@ -1,17 +1,32 @@
 import { configDefaults, defineConfig } from 'vitest/config'
+import { defaultClientConditions, defaultServerConditions, type Connect, type Plugin, type ProxyOptions } from 'vite'
 import react from '@vitejs/plugin-react'
 import { execSync } from 'node:child_process'
-import { cpSync, existsSync, readdirSync } from 'node:fs'
+import { createReadStream, existsSync, mkdirSync, readFileSync, statSync, writeFileSync } from 'node:fs'
+import { createRequire } from 'node:module'
 import path from 'node:path'
-import type { Connect, Plugin } from 'vite'
-import { appFiles, builtFrom } from 'foss-earth/vite'
+import { appFiles, babylonShaderChunks, builtFrom } from 'foss-earth/vite'
 
-/** The tour pages this site builds; each is a FOSS Earth app with its own scene. */
-const TOUR_PAGES = { twinCities: 'tour/twin-cities/index.html' }
-/** Where `/` leads while developing: the landing page is Jekyll's, not this app's. */
-const DEV_HOME = '/tour/twin-cities/'
-/** The Jekyll landing page, deployed beside the tour for GitHub Pages to render. */
-const LANDING_PAGE = ['index.md', '_config.yml', 'Media ']
+/** The tour's pages: the campus selector, and FOSS Earth's app with each campus's scene. */
+const TOUR_PAGES = {
+  selector: 'tour/index.html',
+  minneapolis: 'tour/minneapolis/index.html',
+  stPaul: 'tour/st-paul/index.html',
+  twinCities: 'tour/twin-cities/index.html',
+}
+/** Each campus's repository, checked out beside this one, holds its scene; it is published at /tour/<campus>/scene.json. */
+const CAMPUSES = ['minneapolis', 'st-paul', 'twin-cities']
+/** Where `/` leads while developing: the site's landing page is the club's, not this app's. */
+const DEV_HOME = '/tour/'
+/** The photographs every campus's scene points to, as the site publishes them. */
+const MEDIA = '/tour/twin-cities/media'
+const SITE = 'https://umn-vr.github.io'
+/**
+ * The scene build's output (npm run build:scene): photographs under tour/twin-cities/media/.
+ * Without it, the photographs come from the published site.
+ */
+const PUBLIC = process.env.TOUR_PUBLIC?.trim() || 'public'
+const localMedia = existsSync(path.join(PUBLIC, MEDIA))
 
 function getGitOutput(command: string): string | null {
   try {
@@ -22,9 +37,14 @@ function getGitOutput(command: string): string | null {
 }
 
 const sourceCommit = getGitOutput('git rev-parse --short=12 HEAD') ?? 'unknown'
-const sourceDirty = Boolean(getGitOutput('git status --short'))
+// What the tour is built from: a change anywhere else, such as a doc, does not change what runs, so it does not make the build "-dirty".
+const BUILT_FROM = ['tour', 'src', 'vite.config.ts', 'tsconfig.json', 'tsconfig.app.json', 'tsconfig.node.json', 'package.json', 'package-lock.json']
+const sourceDirty = Boolean(getGitOutput(`git status --short -- ${BUILT_FROM.join(' ')}`))
 
-/** Sends `/` to the tour, in `npm run dev` and `npm run preview` alike. */
+const require = createRequire(import.meta.url)
+const sceneOf = (campus: string): Buffer => readFileSync(require.resolve(`@umn-vr/${campus}/scene.json`))
+
+/** Sends `/` to the campus selector, in `npm run dev` and `npm run preview` alike. */
 function tourHome(): Plugin {
   const redirect: Connect.NextHandleFunction = (request, response, next) => {
     if (request.url !== '/') return next()
@@ -40,59 +60,89 @@ function tourHome(): Plugin {
 }
 
 /**
- * Makes `dist/` the whole site: the tour this build produced, and the Jekyll landing page
- * copied as it is. GitHub Pages runs Jekyll over the deployed branch, and Jekyll leaves out
- * any file whose name starts with `_` or `.`, so the build refuses to produce one.
+ * Serves each campus's scene from its checkout while developing, and writes it into the build.
+ * The scenes are content, not the app's files, so the app's service worker does not keep them.
  */
-function wholeSite(): Plugin {
+function campusScenes(): Plugin {
   let outDir = 'dist'
-  let root = '.'
+  let building = false
+  const serve: Connect.NextHandleFunction = (request, response, next) => {
+    const campus = request.url?.match(/^\/tour\/([a-z-]+)\/scene\.json(?:\?|$)/)?.[1]
+    if (!campus || !CAMPUSES.includes(campus)) return next()
+    response.setHeader('Content-Type', 'application/json')
+    response.end(sceneOf(campus))
+  }
   return {
-    name: 'umn-vr-whole-site',
-    apply: 'build',
-    configResolved(config) {
-      root = config.root
-      outDir = path.resolve(config.root, config.build.outDir)
-    },
+    name: 'umn-vr-campus-scenes',
+    // Vitest resolves a build config too, with an out directory of its own: only a build writes.
+    configResolved(config) { outDir = path.resolve(config.root, config.build.outDir); building = config.command === 'build' },
+    configureServer: server => { server.middlewares.use(serve) },
     closeBundle() {
-      const hidden = (readdirSync(outDir, { recursive: true }) as string[])
-        .filter(file => file.split(path.sep).some(part => part.startsWith('_') || part.startsWith('.')))
-      if (hidden.length) throw new Error(`Jekyll would drop these built files: ${hidden.join(', ')}`)
-      for (const entry of LANDING_PAGE) {
-        if (existsSync(path.join(root, entry))) cpSync(path.join(root, entry), path.join(outDir, entry), { recursive: true })
+      if (!building) return
+      for (const campus of CAMPUSES) {
+        mkdirSync(path.join(outDir, 'tour', campus), { recursive: true })
+        writeFileSync(path.join(outDir, 'tour', campus, 'scene.json'), sceneOf(campus))
       }
     },
   }
 }
 
+/** Without the scene build's output here, the photographs come from the published site. */
+const media: Record<string, ProxyOptions> | undefined = localMedia ? undefined : { [MEDIA]: { target: SITE, changeOrigin: true } }
+
+/** `npm run preview` serves the build only: this serves it the scene build's photographs, as `npm run dev` does. */
+function previewMedia(): Plugin {
+  const root = path.resolve(PUBLIC)
+  const types: Record<string, string> = { '.jpg': 'image/jpeg', '.json': 'application/json' }
+  const serve: Connect.NextHandleFunction = (request, response, next) => {
+    const pathname = decodeURIComponent(new URL(request.url ?? '/', 'http://localhost').pathname)
+    const file = path.join(root, pathname)
+    if (!pathname.startsWith(`${MEDIA}/`) || !file.startsWith(root + path.sep) || !existsSync(file) || !statSync(file).isFile()) return next()
+    response.setHeader('Content-Type', types[path.extname(file)] ?? 'application/octet-stream')
+    createReadStream(file).pipe(response)
+  }
+  return { name: 'umn-vr-preview-media', configurePreviewServer: server => { if (localMedia) server.middlewares.use(serve) } }
+}
+
 // https://vite.dev/config/
-export default defineConfig(({ mode }) => ({
+export default defineConfig({
   // The organization site is served from the domain root.
   base: '/',
-  server: {
-    // FOSS Earth and gamepad-tools are linked from their checkouts beside this one.
-    fs: { allow: ['.', '../../foss-earth', '../../Felipegalind0/gamepad-tools'] },
-  },
+  publicDir: PUBLIC,
   resolve: {
     // One copy of each, shared with FOSS Earth's source.
     dedupe: ['@babylonjs/core', '@babylonjs/loaders', '3d-tiles-renderer', 'react', 'react-dom'],
+    // FOSS Earth is linked from its checkout beside this organization's and used from source,
+    // as its app uses its libraries: "source" selects their TypeScript entry points, and keeping
+    // the linked paths makes their imports resolve from FOSS Earth's own node_modules.
+    conditions: ['source', ...defaultClientConditions],
+    preserveSymlinks: true,
   },
+  ssr: { resolve: { conditions: ['source', ...defaultServerConditions] } },
+  server: {
+    fs: { allow: ['.', '../../foss-earth', '../../Felipegalind0/gamepad-tools', ...CAMPUSES.map(campus => `../${campus}`)] },
+    proxy: media,
+  },
+  preview: { proxy: media },
   // FOSS Earth's About tab shows these.
   define: {
     __BUILD_TIME__: JSON.stringify(new Date().toISOString()),
     __SOURCE_VERSION__: JSON.stringify(`${sourceCommit}${sourceDirty ? '-dirty' : ''}`),
-    __REPOSITORY_SLUG__: JSON.stringify('UMN-VR/UMN-VR.github.io'),
+    __REPOSITORY_SLUG__: JSON.stringify('UMN-VR/tour'),
+    __PAGES_REPOSITORY_SLUG__: JSON.stringify('UMN-VR/UMN-VR.github.io'),
   },
   build: {
-    // Routine app releases reuse the published scene and photographs.
-    copyPublicDir: mode !== 'app',
+    // The photographs are published apart from the app (README, "Deploying").
+    copyPublicDir: false,
     rolldownOptions: { input: TOUR_PAGES },
   },
   // FOSS Earth's service worker keeps the app's own files on the visitor's device: GitHub Pages lets them go stale after ten minutes.
   // Each page says what it is built from, this repository, FOSS Earth and every package, for the About tab.
-  plugins: [react(), tourHome(), wholeSite(), appFiles(), builtFrom()],
+  plugins: [react(), tourHome(), campusScenes(), previewMedia(), babylonShaderChunks(), appFiles(), builtFrom()],
   test: {
     // .local/ holds the YouVisit backup and scratch; public/ the generated scene.
-    exclude: [...configDefaults.exclude, '.local/**', 'public/**', 'dist-app/**'],
+    exclude: [...configDefaults.exclude, '.local/**', 'public/**', 'build/**'],
+    // FOSS Earth and its libraries are TypeScript source, so they go through the transform too.
+    server: { deps: { inline: [/3d-tiles-renderer\//, /foss-earth\//, /@foss-earth\//, /@felipegalind0\//] } },
   },
-}))
+})

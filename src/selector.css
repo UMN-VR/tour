@@ -1,0 +1,235 @@
+:root {
+  color-scheme: light;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #26201e;
+  background: #faf8f5;
+  font-synthesis: none;
+  line-height: 1.5;
+  --campus-maroon: #7a0019;
+  --campus-gold: #ffcc33;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: var(--campus-maroon);
+  text-underline-offset: 0.2em;
+}
+
+a:focus-visible,
+main:focus-visible {
+  outline: 3px solid var(--campus-maroon);
+  outline-offset: 5px;
+}
+
+.page-width {
+  width: min(100% - 2.5rem, 76rem);
+  margin-inline: auto;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0.75rem;
+  left: 1.25rem;
+  z-index: 1;
+  padding: 0.75rem 1rem;
+  color: var(--campus-maroon);
+  background: var(--campus-gold);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+.site-header {
+  color: white;
+  background: var(--campus-maroon);
+  border-bottom: 0.3rem solid var(--campus-gold);
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 2rem;
+  padding-block: 1.2rem;
+}
+
+.club-link {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.club-link:hover {
+  text-decoration: underline;
+}
+
+.club-link:focus-visible {
+  outline-color: var(--campus-gold);
+}
+
+.site-label {
+  color: #fff0bd;
+  font-size: 0.95rem;
+}
+
+.intro {
+  max-width: 48rem;
+  padding-block: clamp(2.5rem, 6vw, 5rem) 2rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  color: var(--campus-maroon);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 750;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+.intro-text {
+  margin: 1.25rem 0 0;
+  color: #514844;
+  font-size: 1.15rem;
+  line-height: 1.65;
+}
+
+.tour-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tour-list > li {
+  display: flex;
+  min-width: 0;
+}
+
+.tour-card {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow: hidden;
+  color: inherit;
+  background: white;
+  border: 1px solid #d8cec8;
+  border-radius: 0.6rem;
+  text-decoration: none;
+}
+
+.tour-card:hover {
+  border-color: var(--campus-maroon);
+}
+
+.tour-card:hover h2 {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.tour-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 8 / 5;
+  object-fit: cover;
+  background: #e9e3df;
+  border-bottom: 1px solid #d8cec8;
+}
+
+.tour-card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+h2 {
+  margin: 0;
+  color: var(--campus-maroon);
+  font-size: 1.55rem;
+  font-weight: 750;
+  line-height: 1.2;
+}
+
+.tour-card-content p {
+  margin: 0.9rem 0 1.5rem;
+  color: #514844;
+}
+
+.tour-action {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 1rem;
+  color: var(--campus-maroon);
+  border-top: 1px solid #e9e3df;
+  font-weight: 700;
+}
+
+.arrow {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.site-footer {
+  margin-top: 3rem;
+  padding-block: 1.5rem 2rem;
+  color: #514844;
+  border-top: 1px solid #d8cec8;
+  font-size: 0.9rem;
+}
+
+.site-footer p {
+  margin: 0 0 0.6rem;
+}
+
+.return-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding-block: 0.25rem;
+  font-weight: 700;
+}
+
+@media (max-width: 52rem) {
+  .tour-list {
+    grid-template-columns: 1fr;
+    max-width: 38rem;
+  }
+
+  .tour-image {
+    aspect-ratio: 2 / 1;
+  }
+}
+
+@media (forced-colors: active) {
+  .tour-card,
+  .site-header {
+    border-color: CanvasText;
+  }
+
+  a:focus-visible,
+  main:focus-visible {
+    outline-color: Highlight;
+  }
+}

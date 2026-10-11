@@ -1,22 +1,25 @@
 import { existsSync, readFileSync } from "node:fs";
+import { createRequire } from "node:module";
+import path from "node:path";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { checkSceneFiles, validateScene } from "foss-earth/scenes";
 import { TWIN_CITIES } from "./scenes";
 
-const site = new URL("../../public/", import.meta.url);
-// Validate local generated content even when a build selects a remote release.
+// The photographs, where the scene build (npm run build:scene) wrote them; the published site holds them otherwise.
+const site = path.resolve(process.env.TOUR_PUBLIC?.trim() || "public");
 const published = new URL("tour/twin-cities/scene.json", "https://umn-vr.github.io/");
-/** A published URL's file in public/. */
-const fileOf = (url: string) => new URL(`.${new URL(url).pathname}`, site);
+/** A published URL's file in the scene build's output. */
+const fileOf = (url: string) => path.join(site, new URL(url).pathname);
 
 describe("the Twin Cities tour's scene", () => {
-  const result = validateScene(readFileSync(fileOf(published.href), "utf8"), { baseUrl: published.href });
+  // The scene the tour publishes, from the twin-cities repository beside this one.
+  const result = validateScene(readFileSync(createRequire(import.meta.url).resolve("@umn-vr/twin-cities/scene.json"), "utf8"), { baseUrl: published.href });
 
   it("is a valid generated scene", () => {
     expect(result.ok ? [] : result.errors).toEqual([]);
   });
 
-  it("has every image it declares, as declared", () => {
+  it.skipIf(!existsSync(path.join(site, "tour/twin-cities/media")))("has every image it declares, as declared", () => {
     if (!result.ok) throw new Error("the scene is not valid");
     const report = checkSceneFiles(result.scene, url => (existsSync(fileOf(url)) ? new Uint8Array(readFileSync(fileOf(url))) : null));
     expect(report.problems).toEqual([]);

@@ -1,40 +1,53 @@
-# UMN VR site and campus tour
+# UMN campus tours
 
-This repository is <https://umn-vr.github.io/>. It holds two things:
+The University of Minnesota's virtual campus tours, built on
+[FOSS Earth](https://github.com/foss-earth/app): 360° photographs on a 3D globe.
+They are published with the UMN VR club's site, https://umn-vr.github.io/:
 
-- **The UMN VR club's landing page:** `index.md` and `Media /`, rendered by GitHub Pages' Jekyll.
-- **The University of Minnesota's virtual campus tour:** <https://umn-vr.github.io/tour/twin-cities/>.
-  It is an app built on [FOSS Earth](https://github.com/foss-earth/foss-earth.github.io), the
-  way [0SFS](https://github.com/0SFS/0SFS.github.io) is. FOSS Earth provides the globe and the
-  panorama viewer; this repository provides the tour's scene and page.
+| Page | What it is |
+| --- | --- |
+| [/tour/](https://umn-vr.github.io/tour/) | Choose a campus |
+| [/tour/minneapolis/](https://umn-vr.github.io/tour/minneapolis/) | The Minneapolis campus: 48 panoramas |
+| [/tour/st-paul/](https://umn-vr.github.io/tour/st-paul/) | The Saint Paul campus: 12 panoramas |
+| [/tour/twin-cities/](https://umn-vr.github.io/tour/twin-cities/) | Both campuses: all 60 panoramas in 23 stops |
 
-[AGENTS.md](AGENTS.md) sets out what belongs here, in FOSS Earth and in 0SFS.
+Each campus page is FOSS Earth's app as it is, offering that campus's scene and
+opening it. FOSS Earth provides the globe and the panorama viewer; this
+repository provides the pages. Each scene is its own repository:
+[twin-cities](https://github.com/UMN-VR/twin-cities),
+[minneapolis](https://github.com/UMN-VR/minneapolis) and
+[st-paul](https://github.com/UMN-VR/st-paul). The photographs are published
+once, under `/tour/twin-cities/media/`, and every scene points there.
 
-## Running the tour locally
+## Running the tours locally
 
-The tour links FOSS Earth and gamepad-tools from checkouts beside this one, as 0SFS does:
+The tours link FOSS Earth and the scenes from checkouts beside this one:
 
 ```text
 gh/
-├── foss-earth/
-├── Felipegalind0/gamepad-tools/   (built: npm run build)
-└── UMN-VR/UMN-VR.github.io/
+├── foss-earth/app/            (and the FOSS Earth libraries beside it; see its README)
+├── Felipegalind0/gamepad-tools/
+└── UMN-VR/
+    ├── tour/                  this repository
+    ├── twin-cities/
+    ├── minneapolis/
+    └── st-paul/
 ```
+
+With FOSS Earth's app installed (`npm install` in `foss-earth/app`):
 
 ```sh
 npm install
 npm run dev
 ```
 
-Open the address Vite prints. It leads to the tour, which opens with the campus scene loaded.
-App edits hot reload; a deploy is not part of this development loop. For a phone on the same
-network, use `npm run dev -- --host 0.0.0.0` and scan the QR code `npm run qr` prints in another
-terminal; it carries the Google key too ([FOSS Earth: Testing on a phone](../../foss-earth/docs/development.md#testing-on-a-phone)). An HTTP
-LAN URL uses the WebGL fallback; to exercise WebGPU, use a trusted HTTPS development proxy or
-tunnel, since WebGPU requires a secure context. Panorama rendering supports WebGL 2 and
-capable WebGL 1 contexts; [content delivery](docs/content-delivery.md) describes the limits.
-The generated scene and media are served directly from `public/`, without copying or uploading
-them for each edit.
+Open the address Vite prints: it leads to the campus selector. App edits hot
+reload. The photographs come from the published site, so the tours need the
+network; to use a local copy, point `TOUR_PUBLIC` at a folder holding
+`tour/twin-cities/media/` (the scene build's output, `public/`, is used when it
+exists). For a phone on the same network, use `npm run dev -- --host 0.0.0.0`.
+An HTTP LAN URL uses the WebGL fallback; to exercise WebGPU, use a trusted
+HTTPS development proxy or tunnel, since WebGPU requires a secure context.
 
 ## How the photographs load
 
@@ -43,19 +56,18 @@ view needs, at the detail its pixels need, drawn over the orb's preview, which i
 already. The view sharpens in a second or two on a 2 Mbit/s connection (measured on a desktop
 with Chrome's network emulation; not yet on a phone), where a 5 MiB whole
 image took 20 seconds or more, and a look back shows tiles already loaded. This is FOSS Earth's
-[tiled cube](https://github.com/foss-earth/foss-earth.github.io/blob/main/docs/scenes/format.md#tiled-cubes),
-measured in its [progressive 360° prototype](https://github.com/foss-earth/foss-earth.github.io/blob/main/benchmarks/eac-progressive-prototype/REPORT.md);
+[tiled cube](https://github.com/foss-earth/scenes),
+measured in its [progressive 360° prototype](https://github.com/foss-earth/research/blob/main/benchmarks/eac-progressive-prototype/REPORT.md);
 the build makes both kinds of tiles and the whole images for every photograph.
 
 Each file is downloaded once. The viewer keeps what it downloads in the browser, under the
 photograph's revision in the scene, and reads it from there on a reload, on a later visit and
 when you look back at a part of a panorama: Scenes → Saved images shows what is kept (256 MB at
-most), what the visit took from it, and clears it. The map shows all 60 orbs after one request,
+most), what the visit took from it, and clears it. The map shows all its orbs after one request,
 from one image that holds every photograph's small preview, and loads a sharper preview only
 for an orb drawn large enough to show it. FOSS Earth's
-[scene format](https://github.com/foss-earth/foss-earth.github.io/blob/main/docs/scenes/format.md#saved-images)
-describes both. The app's own files are kept too, by FOSS Earth's
-[service worker](https://github.com/foss-earth/foss-earth.github.io/blob/main/docs/app-files.md),
+[scenes](https://github.com/foss-earth/scenes) describe both. The app's own files are kept too, by FOSS Earth's
+[service worker](https://github.com/foss-earth/ui/blob/main/docs/app-files.md),
 so a later visit downloads none of them however long after the last it comes (Settings → App
 files). On a phone or another device with little graphics memory, the GPU holds the view and
 gives the rest back to the disk: Scenes → Loading and memory and Tiled images set how much.
@@ -99,7 +111,7 @@ tab to tell.
 - What the site publishes is in its page's source:
 
   ```sh
-  curl -s -A foss-earth-check/1.0 https://umn-vr.github.io/tour/twin-cities/ | grep -o '<meta name="foss-earth[^>]*>'
+  curl -s -A foss-earth-check/1.0 https://umn-vr.github.io/tour/minneapolis/ | grep -o '<meta name="foss-earth[^>]*>'
   ```
 
 The tour says what it knows. Settings (the gear on the bar) → Diagnostics → **Copy report**
@@ -111,84 +123,67 @@ open long enough to reach Settings, add `?report` to its address
 (<https://umn-vr.github.io/tour/twin-cities/?report>): the page shows the report and does not
 start the map. Nothing is sent anywhere; the report is yours to paste where you report the
 fault. FOSS Earth's
-[diagnostics page](https://github.com/foss-earth/foss-earth.github.io/blob/main/docs/diagnostics.md)
+[diagnostics page](https://github.com/foss-earth/ui/blob/main/docs/diagnostics.md)
 has the details, and how to attach a browser's inspector to a phone.
 
 ## Commands
 
 | Command | What it does |
 | --- | --- |
-| `npm run dev` | The tour with hot reload, FOSS Earth included |
-| `npm run qr` | Prints a QR code that opens the running dev or preview server's tour on a phone, with the Google key |
-| `npm run build:scene` | Rebuilds the tour's scene from the YouVisit backup; see [tools/twin-cities/README.md](tools/twin-cities/README.md) |
-| `npm run build:app` | Builds `dist-app/`, leaving the scene and photographs out |
-| `npm run build` | Builds the complete site in `dist/`, for `npm run preview` or a full release |
+| `npm run dev` | The tours with hot reload, FOSS Earth included |
+| `npm run build` | Typechecks and builds the four pages and the three scenes into `dist/` |
+| `npm run preview` | Serves `dist/` |
+| `npm test` | The scenes' tests; with the photographs local (`TOUR_PUBLIC`), every file each scene declares is checked too |
 | `npm run ci` | Lint, tests and a production build |
-| `npm run deploy` / `npm run deploy:app` | Builds and publishes only the app and landing page; preserves published content |
-| `npm run deploy:content` | Checks and publishes the generated scene and photographs; preserves the app |
-| `npm run deploy:full` | Builds and replaces the complete published site; use for the first release or an intentional full refresh |
+| `npm run campus-scenes` | Rewrites the Minneapolis and Saint Paul scenes from the Twin Cities scene and each campus's `campus.json` |
+| `npm run build:scene` | Rebuilds the Twin Cities scene and photographs from the YouVisit backup; see [tools/twin-cities/README.md](tools/twin-cities/README.md) |
 
 ## Layout
 
 | Path | Contents |
 | --- | --- |
-| `tour/twin-cities/index.html`, `src/tour/` | The tour page: FOSS Earth's app, offering the tour's scene and opening it |
-| `public/tour/twin-cities/` | The scene and its prepared images, generated by `npm run build:scene` |
-| `tools/twin-cities/`, `tools/deploy.mjs` | The scene's build and hand-edited placements, and the separate release commands |
+| `tour/index.html`, `src/selector.css` | The campus selector, a plain page with no app |
+| `tour/<campus>/index.html`, `src/tour/` | Each campus's page: FOSS Earth's app, offering that campus's scene |
+| `tools/campus-scenes.mjs` | Makes each campus's scene from the Twin Cities one |
+| `tools/twin-cities/` | The Twin Cities scene's build and its hand-edited placements |
 | `docs/` | What is left to do ([roadmap.md](docs/roadmap.md)), and a prompt for each larger piece |
-| `index.md`, `_config.yml`, `Media /` | The Jekyll landing page, copied into the build unchanged |
-| `.local/` | Gitignored: the YouVisit backup the tour is built from, and scratch |
+| `public/`, `.local/` | Gitignored: the scene build's output, and the YouVisit backup it reads |
 
 ## Deploying
 
-Routine releases use `npm run deploy`, which builds `dist-app/` and adds just those files to
-`gh-pages`. It does not rebuild, copy or replace the 661 MiB of scene content. Existing
-photographs and old hashed app bundles remain available for people with a page already open.
+The [club site](https://github.com/UMN-VR/UMN-VR.github.io) publishes the tours
+with its landing page: build here (`npm run build`), then `npm run deploy` there.
+The deploy adds this build to the `gh-pages` branch and keeps what is already
+published, the photographs and older app files included, so a page that is
+already open keeps working.
 
-Commit first, here and in FOSS Earth: the build writes both commits into the page and the app,
-with `-dirty` after one that had changes not committed, and that is how a phone's version is
-told from another. After a release, a page of the app before it reloads itself the next time
-it asks the site, within ten minutes while it is shown, unless someone has touched it.
+Commit first, here and in FOSS Earth: the build writes both commits into the
+page and the app, with `-dirty` after one that had changes not committed, and
+that is how a phone's version is told from another. After a release, a page of
+the app before it reloads itself the next time it asks the site, within ten
+minutes while it is shown, unless someone has touched it.
 
-After a placement or photograph changes, run `npm run build:scene`, then
-`npm run deploy:content`. Content releases validate the manifest and all referenced image files
-before publishing. When the app and the content change together, publish first the side the
-other relies on, so the live pair always works:
+A scene changes only with its repository: commit the new `scene.json` in
+[twin-cities](https://github.com/UMN-VR/twin-cities), run
+`npm run campus-scenes` and commit the two campus scenes, then build and deploy.
+New photographs are published before the scene that uses them (see the club
+site's README). Publish first the side the other relies on, so the live pair
+always works: new content an old app can read goes first, then the app. Avoid
+content the deployed app cannot read: a browser that restores a tab shows the
+page it has for as long as it keeps it.
 
-- New content an old app can read: the content first, then the app.
-- Content the deployed app cannot read: avoid it. The app would go first and the content ten
-  minutes later, when GitHub Pages' cached copies of the old page have expired, but a browser
-  that restores a tab shows the page it has for as long as it keeps it: on 2026-10-03 an
-  iPhone still ran the day before's app an hour after a release, and that app refused the
-  scene for its preview sheet. The sheet is now an extension of the scene format, which an
-  app that does not know it skips, and so is whatever else a scene can be shown without. The
-  tiled cubes of 2026-10-03 were such a change too: an app from before then refuses a scene
-  that lists them, and a later app skips any kind of image it does not know.
+The Twin Cities scene build still calls FOSS Earth's scripts from before FOSS
+Earth was split into libraries; it needs moving to `@foss-earth/360`'s
+`foss-earth-prepare-panorama` and `@foss-earth/scenes`' `foss-earth-check-scene`
+and `foss-earth-build-preview-sheets` before the next rebuild.
 
-Preview what would be sent without publishing:
+## Project policies
 
-```sh
-npm run build:app
-node tools/deploy.mjs app --dry-run
-node tools/deploy.mjs content --dry-run
-```
+- [Code of conduct](https://github.com/UMN-VR/.github/blob/main/CODE_OF_CONDUCT.md)
+- [Contributing](https://github.com/UMN-VR/.github/blob/main/CONTRIBUTING.md)
+- [AGPL-3.0 license](LICENSE)
+- [Security](https://github.com/UMN-VR/.github/blob/main/SECURITY.md)
 
-`npm run deploy:full` keeps the original complete-site release in `dist/`:
-
-- the tour's pages and bundle;
-- its scene and images;
-- the landing page's sources, which GitHub Pages renders with Jekyll as before.
-
-The build refuses to produce a file that Jekyll would leave out, one whose name starts with `_`
-or `.`. App-only output is a release overlay, so use `npm run build` followed by
-`npm run preview` when you need a complete local production preview.
-
-This reduces local copying and keeps content out of routine app release payloads. **GitHub
-Pages still builds and publishes the whole branch.** It does not make the existing media leave
-that branch or guarantee a short Pages job. A cold `gh-pages` cache also still clones that
-branch's current files. The remaining split—an independently hosted, versioned scene folder—is
-described with the format and loading strategy in [docs/content-delivery.md](docs/content-delivery.md).
-
-Before the first deploy, GitHub Pages must serve the `gh-pages` branch instead of `main`: under
-**Settings → Pages**, set the source to the `gh-pages` branch and its root. Until then the live
-site is still `main` as Jekyll renders it.
+The photographs and the panoramas' descriptions are © Regents of the University
+of Minnesota; building positions credit © OpenStreetMap contributors (ODbL 1.0)
+where the scenes say so. The project license does not relicense them.
