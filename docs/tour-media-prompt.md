@@ -1,7 +1,7 @@
 # Work prompt: put the rest of the old tour on the map
 
 Execute this task when the user starts a fresh conversation with this file.
-Work in `/Users/felg/gh/UMN-VR/UMN-VR.github.io` and `/Users/felg/gh/foss-earth`. First read:
+Work in `~/gh/UMN-VR/app` and `~/gh/foss-earth`. First read:
 
 - the current `AGENTS.md` of both;
 - [roadmap.md](roadmap.md);

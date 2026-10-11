@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "id": "campus-tour-actual-local-ref-inventory-source-preparation",
+    "location": "."
+  },
+  "refs": [
+    {
+      "name": "refs/heads/main",
+      "oid": "a3c74cb1380522c3d3f24c9be717489216a5ccaa"
+    },
+    {
+      "name": "refs/heads/migration/repository-split-20261010",
+      "oid": "a3c74cb1380522c3d3f24c9be717489216a5ccaa"
+    }
+  ]
+}

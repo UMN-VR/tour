@@ -1,4 +1,4 @@
-import type { SceneExample } from "foss-earth/scenes";
+import type { SceneExample } from "@foss-earth/scenes/browser";
 
 /**
  * The Twin Cities campus tour. tools/twin-cities/build-scene.mjs writes it into

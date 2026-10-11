@@ -2,34 +2,38 @@
 
 The tour page, <https://umn-vr.github.io/tour/twin-cities/>, shows one
 [FOSS Earth](https://github.com/foss-earth/foss-earth.github.io) scene. The scene is a manifest,
-[`public/tour/twin-cities/scene.json`](../../public/tour/twin-cities/scene.json), and the
+`tour/twin-cities/scene.json` beneath the selected public tree, and the
 prepared images under `public/tour/twin-cities/media/`. It places the old YouVisit tour's 360°
 photographs on the globe. FOSS Earth shows each one as an orb above the campus; entering an orb
 opens the photograph, and its links lead to the next one. The format is FOSS Earth's
 [`docs/scenes/format.md`](https://github.com/foss-earth/foss-earth.github.io/blob/main/docs/scenes/format.md).
 
+Normal app development consumes prepared content and does not run this importer or need the backup. `UMN_TOUR_PUBLIC_ROOT` can select the verified public-layout tree installed outside source checkouts; its manifest remains at `tour/twin-cities/scene.json`. The importer writes authoring output to the original local `public/tour/twin-cities/`, or an explicit `--out` folder, independently of that installed input.
+
 Everything under `public/tour/twin-cities/` is generated. Edit
 [`placements.json`](placements.json) or the build, then rebuild.
 
 Only what this tour needs lives here. FOSS Earth owns the scene format, the viewer and the tools
-that prepare and check any scene. This build runs those tools from the `foss-earth` package the
-repository installs. [AGENTS.md](../../AGENTS.md) sets out the split.
+that prepare and check any scene. This build runs those tools from the installed split `@foss-earth/360`, `@foss-earth/scenes` and
+`@foss-earth/preview-sheets` packages. [AGENTS.md](../../AGENTS.md) sets out the split.
 
 ## Rebuilding
 
 ```sh
-npm run build:scene
+npm run build:scene -- --backup /path/to/authorized/snapshot
 ```
 
 It needs:
 
-- **The YouVisit backup** in `.local/youvisit-backup/snapshot-*`. It exists only on the
-  laptop that made it; see that folder's README.
-- **`npm install`,** which links FOSS Earth; see the [README](../../README.md).
+- **An explicitly authorized YouVisit snapshot**, selected with `--backup`.
+  The preserved original backup remains in the read-only application archive;
+  this tool does not discover, move or copy it. It is optional authoring input,
+  never an installer or normal app-build requirement.
+- **The pinned split preparation packages,** installed through the declared workspace; see the [README](../../README.md).
 
 What the build does:
 
-1. **Prepares each photograph** with FOSS Earth's `scripts/prepare-panorama.mjs`. The outputs,
+1. **Prepares each photograph** with the public `@foss-earth/360/prepare-cli` entry. The outputs,
    all JPEG at quality 80:
    - preview cubes of 64, 128 and 256 px faces, for the orbs;
    - tiled cubes for looking around, the tour's default: an equi-angular cube (`eac-tiles/`)
@@ -45,14 +49,14 @@ What the build does:
    - later builds reuse any image already prepared from the same file with the same options,
      so an edit to `placements.json` rebuilds in seconds.
 2. **Puts every photograph's 64 px preview cube into one image,** `media/previews-64.jpg`
-   (445 KiB for all 60), with FOSS Earth's `scripts/lib/previewSheet.mjs`, and names each
+   (445 KiB for all 60), with the public `addPreviewSheets` export from `@foss-earth/preview-sheets/preparation`, and names each
    cube's place in it in the scene, as the scene format's extension for
    [sheets](https://github.com/foss-earth/foss-earth.github.io/blob/main/docs/scenes/format.md#preview-sheets).
    The map shows all its orbs after that one request; the 360 face files stay, and a viewer
    from before sheets skips the extension and loads them.
    `--preview-sheet ""` leaves it out.
 3. **Writes `scene.json`.**
-4. **Checks the result** with FOSS Earth's `scripts/check-scene.mjs`, the way the viewer will
+4. **Checks the result** with the public `@foss-earth/scenes/check-cli` entry, the way the viewer will
    read it once published: the manifest is valid, and every image file exists with the size
    and byte count it declares. `npm test` repeats this check.
 

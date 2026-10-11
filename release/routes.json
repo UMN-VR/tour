@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "selector": {
+    "repository": "UMN-VR/tour",
+    "route": "/tour/"
+  },
+  "scenes": [
+    {
+      "repository": "UMN-VR/minneapolis",
+      "route": "/tour/minneapolis/",
+      "runtime": "UMN-VR/app"
+    },
+    {
+      "repository": "UMN-VR/st-paul",
+      "route": "/tour/st-paul/",
+      "runtime": "UMN-VR/app"
+    },
+    {
+      "repository": "UMN-VR/twin-cities",
+      "route": "/tour/twin-cities/",
+      "runtime": "UMN-VR/app"
+    }
+  ],
+  "publisher": "UMN-VR/UMN-VR.github.io",
+  "worker": {
+    "url": "/foss-earth-sw.js",
+    "scope": "/",
+    "mode": "report-only compatible; public build/update seal pending"
+  },
+  "legacyContent": {
+    "url": "/tour/twin-cities/scene.json",
+    "revision": "4b89d4e2af09",
+    "sha256": "61c25d55523be24e4d937e594169c3d5d385f816005bc20bf209201c794686ed",
+    "retention": "unchanged bytes and all old resource paths"
+  }
+}

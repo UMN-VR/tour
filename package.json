@@ -1,44 +1,50 @@
 {
-  "name": "umn-vr-site",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@umn-vr/tour",
+  "version": "0.1.0",
   "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "npm run typecheck && vite build",
-    "build:app": "npm run typecheck && vite build --mode app --outDir dist-app",
-    "build:scene": "node tools/twin-cities/build-scene.mjs",
-    "ci": "npm run lint && npm run test && npm run build",
-    "deploy": "npm run deploy:app",
-    "deploy:app": "npm run build:app && node tools/deploy.mjs app",
-    "deploy:content": "node tools/deploy.mjs content",
-    "deploy:full": "npm run build && node tools/deploy.mjs full",
-    "lint": "eslint . --cache --cache-strategy content --cache-location node_modules/.cache/eslint/",
-    "preview": "vite preview",
-    "qr": "foss-earth-qr --path=/tour/twin-cities/",
-    "typecheck": "tsc -p tsconfig.app.json --incremental --tsBuildInfoFile node_modules/.tmp/typecheck.app.tsbuildinfo && tsc -p tsconfig.node.json --incremental --tsBuildInfoFile node_modules/.tmp/typecheck.node.tsbuildinfo && tsc -p tsconfig.test.json --incremental --tsBuildInfoFile node_modules/.tmp/typecheck.test.tsbuildinfo",
-    "test": "vitest run --passWithNoTests",
-    "test:changed": "vitest run --passWithNoTests --changed"
+  "private": true,
+  "repository": "https://github.com/UMN-VR/tour",
+  "exports": {
+    "./workspace-plan.json": "./release/workspace-plan.json",
+    "./routes.json": "./release/routes.json",
+    "./release": {
+      "types": "./tools/selector-release.d.mts",
+      "import": "./tools/selector-release.mjs"
+    }
   },
-  "dependencies": {
-    "@babylonjs/core": "^8.56.2",
-    "@babylonjs/loaders": "^8.56.2",
-    "@felipegalind0/gamepad-tools": "file:../../Felipegalind0/gamepad-tools",
-    "3d-tiles-renderer": "^0.4.24",
-    "foss-earth": "file:../../foss-earth",
-    "react": "^19.2.6",
-    "react-dom": "^19.2.6"
-  },
+  "files": [
+    "index.html",
+    "src/selector.css",
+    "tools/selector-release.mjs",
+    "release/routes.json",
+    "release/workspace-plan.json",
+    "docs/selector.md",
+    "README.md",
+    "AGENTS.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "SECURITY.md",
+    "tools/selector-release.d.mts"
+  ],
   "devDependencies": {
-    "@eslint/js": "^9.39.4",
-    "@types/node": "^24.12.4",
-    "@vitejs/plugin-react": "^6.0.2",
-    "eslint": "^9.39.4",
-    "gh-pages": "^6.3.0",
-    "globals": "^17.6.0",
-    "typescript": "~5.9.3",
-    "typescript-eslint": "^8.59.3",
-    "vite": "^8.0.13",
-    "vitest": "^4.1.6"
+    "@foss-earth/ci": "file:deps/foss-earth-ci-1db73d1ddb342e348a2c9e8387f7bbc7ebb3225e.tgz",
+    "vite": "8.3.4",
+    "vitest": "4.1.6",
+    "typescript": "5.9.3",
+    "@types/node": "24.12.4"
+  },
+  "scripts": {
+    "check:attribution": "node node_modules/@foss-earth/ci/bin/attribution.mjs --repo . --refs-file intended-publication-refs.json",
+    "check:conformance": "node node_modules/@foss-earth/ci/bin/conformance.mjs --consumer . --trusted-release .attribution-release.json --output-root .local/build/conformance",
+    "build": "vite build",
+    "test": "node --test --test-concurrency=1 tests/*.test.mjs",
+    "check:implementation": "npm test && npm run build",
+    "ci": "npm run check:conformance && npm run check:implementation"
+  },
+  "migration": {
+    "state": "MAINTAINED_SELECTOR_SOURCE; legacy product source remains frozen/inactive and excluded from public package/build; retained exact tool lock prepared, current selector qualification pending",
+    "activeRuntime": "none",
+    "lockQualification": "Prepared exact local CI archive plus unchanged retained registry records; actual offline npm ci integrity qualification pending"
   }
 }

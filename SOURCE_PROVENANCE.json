@@ -1,0 +1,11 @@
+{
+  "owner": "UMN-VR/tour",
+  "sourceRepository": "UMN-VR/UMN-VR.github.io",
+  "originalSourceRevision": "306d0c301da351e0573854d99b1c284a772f4957",
+  "coordinatorCleanSourceRevision": "638077b90594164739116575510779cdaa55c20c",
+  "extractionBaseline": "a3c74cb1380522c3d3f24c9be717489216a5ccaa",
+  "method": "Git fast-export/import with source paths selected; human author and committer headers preserved",
+  "paths": ["AGENTS.md", "CLAUDE.md", "README.md", "package.json", "package-lock.json", ".gitignore", "vite.config.ts", "eslint.config.js", "tsconfig.json", "tsconfig.app.json", "tsconfig.node.json", "tsconfig.test.json", "src", "tour", "tools/twin-cities", "docs/roadmap.md", "docs/content-delivery.md", "docs/bug-reporting.md", "docs/placements-prompt.md", "docs/tour-media-prompt.md", "docs/webgl-performance-review.md"],
+  "excluded": ["club landing/branding", "generated prepared media", "private YouVisit backup", "all local evidence"],
+  "acceptance": "Staging extraction; shared artifacts, checks, publication audit and remote admission pending"
+}

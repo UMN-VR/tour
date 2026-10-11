@@ -4,22 +4,22 @@
  * backup: public/tour/twin-cities/scene.json, and the prepared images under
  * public/tour/twin-cities/media/<panorama>/. The tour page serves both.
  *
- *   npm run build:scene
+ *   npm run build:scene -- --backup /path/to/authorized/snapshot
  *
  * What comes from where:
- *   - the YouVisit backup (.local/youvisit-backup/snapshot-*): the images, the
+ *   - an explicitly supplied authorized YouVisit snapshot: the images, the
  *     stops and their order, titles and descriptions, the hotspots that link
  *     one panorama to another and where they point, and each stop's start view;
  *   - tools/twin-cities/placements.json, edited by hand: which image each
  *     panorama is, its id and title, where it was taken and which way is north;
- *   - FOSS Earth, the package this repository installs: its scripts/prepare-panorama.mjs
+ *   - the public split FOSS Earth packages: @foss-earth/360/prepare-cli
  *     turns each image into preview cubes, whole images and tiled cubes, its
- *     scripts/lib/previewSheet.mjs puts every panorama's smallest preview cube into one
- *     image, and its scripts/check-scene.mjs checks the result the way the viewer will read it.
+ *     @foss-earth/preview-sheets/preparation puts every panorama's smallest preview cube into one
+ *     image, and @foss-earth/scenes/check-cli checks the result the way the viewer will read it.
  *
  * Options:
- *   --backup dir                 the snapshot to read (default: the newest .local/youvisit-backup/snapshot-*)
- *   --foss-earth dir             another FOSS Earth checkout (default: the installed foss-earth package)
+ *   --backup dir                 required explicit authorized snapshot; no backup discovery
+ *   --out dir                    authoring output (default: public/tour/twin-cities; never the installed content tree)
  *   --preview-face-sizes 64,128,256   preview cube faces, px
  *   --preview-sheet 64           the preview cubes put together in one image, media/previews-<size>.jpg,
  *                                which shows every orb after one request: the size orbs load first
@@ -36,9 +36,10 @@
  */
 import { spawn } from "node:child_process";
 import { createHash } from "node:crypto";
-import { existsSync, mkdirSync, readdirSync, readFileSync, realpathSync, rmSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import path from "node:path";
-import { fileURLToPath, pathToFileURL } from "node:url";
+import { fileURLToPath } from "node:url";
+import { assertAuthoringOutput } from "./content-root.mjs";
 import { hotspotDirection, plain, startDirection, toWorld } from "./youvisit.mjs";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
@@ -70,11 +71,13 @@ if (options.help) {
   console.log(readFileSync(fileURLToPath(import.meta.url), "utf8").split("*/")[0]);
   process.exit(0);
 }
-const backupRoot = path.join(repo, ".local", "youvisit-backup");
-const backup = path.resolve(options.backup ?? path.join(backupRoot, readdirSync(backupRoot).filter(name => name.startsWith("snapshot-")).sort().at(-1)));
-const installed = path.join(repo, "node_modules", "foss-earth");
-if (!options["foss-earth"] && !existsSync(installed)) throw new Error("foss-earth is not installed; run npm install first");
-const fossEarth = path.resolve(options["foss-earth"] ?? realpathSync(installed));
+if (options["foss-earth"]) throw new Error("Install the pinned split preparation packages; --foss-earth checkout paths are no longer a tool input");
+if (!options.backup || options.backup.startsWith("--")) throw new Error("Optional scene authoring requires --backup /path/to/authorized/snapshot. Normal setup and app builds use prepared content and do not require the private backup.");
+const backup = path.resolve(options.backup);
+const out = path.resolve(options.out ?? path.join(repo, "public", "tour", "twin-cities"));
+assertAuthoringOutput(out);
+const prepareCli = fileURLToPath(import.meta.resolve("@foss-earth/360/prepare-cli"));
+const checkCli = fileURLToPath(import.meta.resolve("@foss-earth/scenes/check-cli"));
 const previewSizes = (options["preview-face-sizes"] ?? "64,128,256").split(",").map(Number);
 const sheetSize = options["preview-sheet"] === "" ? null : Number(options["preview-sheet"] ?? Math.min(...previewSizes));
 const immersionWidths = (options["immersion-widths"] ?? "2048,4096,6144").split(",").map(Number);
@@ -82,11 +85,7 @@ const quality = Number(options.quality ?? 80);
 const tileKinds = (options.tiles ?? "eac,cube").split(",").filter(Boolean);
 const tileSize = Number(options["tile-size"] ?? 192);
 const jobs = Math.max(1, Number(options.jobs ?? 3));
-const out = path.join(repo, "public", "tour", "twin-cities");
 const media = path.join(out, "media");
-for (const file of ["scripts/prepare-panorama.mjs", "scripts/check-scene.mjs", "scripts/lib/previewSheet.mjs"]) {
-  if (!existsSync(path.join(fossEarth, file))) throw new Error(`${fossEarth} has no ${file}; update FOSS Earth, or pass --foss-earth <checkout>`);
-}
 
 // ─── the YouVisit data ───────────────────────────────────────────────────
 
@@ -202,7 +201,7 @@ async function prepareAll() {
       const folder = path.join(media, job.entityId);
       rmSync(folder, { recursive: true, force: true });
       await run(process.execPath, [
-        path.join(fossEarth, "scripts", "prepare-panorama.mjs"),
+        prepareCli,
         "--input", imageFile(job.key), "--pose", posePath, "--asset-id", job.entityId,
         "--preview-face-sizes", previewSizes.join(","), "--immersion-widths", immersionWidths.join(","),
         "--encoding", "jpeg", "--quality", String(quality),
@@ -389,7 +388,7 @@ function buildScene(assets) {
 async function withPreviewSheet(scene) {
   for (const name of readdirSync(media)) if (/^previews-\d+(-\d+)?\.jpg$/.test(name)) rmSync(path.join(media, name));
   if (sheetSize === null) return scene;
-  const { addPreviewSheets } = await import(pathToFileURL(path.join(fossEarth, "scripts", "lib", "previewSheet.mjs")).href);
+  const { addPreviewSheets } = await import("@foss-earth/preview-sheets/preparation");
   const added = addPreviewSheets(scene, { faceSize: sheetSize, quality, read: url => (existsSync(path.join(out, url)) ? readFileSync(path.join(out, url)) : null) });
   for (const { url, bytes } of added.files) writeFileSync(path.join(out, url), bytes);
   console.log(added.files.length
@@ -405,5 +404,5 @@ const scene = await withPreviewSheet(buildScene(assets));
 scene.revision = sha256(Buffer.from(JSON.stringify({ ...scene, revision: "" }))).slice(0, 12);
 writeFileSync(path.join(out, "scene.json"), `${JSON.stringify(scene, null, 2)}\n`);
 console.log(`Wrote ${path.relative(repo, path.join(out, "scene.json"))}: ${scene.entities.length} panoramas in ${scene.groups.length} groups, revision ${scene.revision}.`);
-const check = await run(process.execPath, [path.join(fossEarth, "scripts", "check-scene.mjs"), path.join(out, "scene.json"), "--base-url", PUBLISHED]).catch(error => { console.error(error.message); process.exit(1); });
+const check = await run(process.execPath, [checkCli, path.join(out, "scene.json"), "--base-url", PUBLISHED]).catch(error => { console.error(error.message); process.exit(1); });
 console.log(check.trim());

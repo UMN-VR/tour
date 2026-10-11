@@ -1,0 +1,33 @@
+{
+  "owner": "UMN-VR/tour",
+  "sourceRevision": "306d0c301da351e0573854d99b1c284a772f4957",
+  "sceneId": "umn-twin-cities",
+  "revision": "4b89d4e2af09",
+  "manifest": {
+    "path": "tour/twin-cities/scene.json",
+    "bytes": 377117,
+    "sha256": "61c25d55523be24e4d937e594169c3d5d385f816005bc20bf209201c794686ed"
+  },
+  "generated": {
+    "files": 62582,
+    "bytes": 694126088,
+    "treeSha256": "5741f8a4b9e2e4f129fcce2a2d44fa2c49bc4e43e54d24757af2f949f6d7d0d3"
+  },
+  "referencedMedia": {
+    "files": 62461,
+    "bytes": 693137598,
+    "treeSha256": "39b49775ef220f6811fcd1d2d14054f99d31058fa57ceba7feb9d24aca009f0b"
+  },
+  "treeHashAlgorithm": "SHA256 of JS string-sorted relative path + NUL + decimal byte count + NUL + per-file SHA256 + LF records",
+  "placementsSha256": "b915944639359c1cd01ad3f83117026f090cafd48479eff0b6fedf349db1a0e9",
+  "assets": 60,
+  "entities": 60,
+  "groups": 24,
+  "links": 134,
+  "initialPanorama": "northrop-mall",
+  "representationIds": ["preview-64", "preview-128", "preview-256", "whole-2048", "whole-4096", "whole-6144", "eac-tiles", "cube-tiles"],
+  "previewSheetRevision": "e2bebc5b31f1",
+  "retention": "Every content revision named by a supported app must remain available; no automatic archive deletion",
+  "publication": "Prepared-content artifact/static-origin release boundary; no new media repository or storage account selected",
+  "rights": "Photographs: © Regents of the University of Minnesota; placement sources retain OpenStreetMap credits; no new redistribution grant inferred"
+}

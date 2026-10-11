@@ -1,0 +1,9 @@
+# Campus Dev contribution
+
+`dev.ts` owns the read-only Campus observation view over shared Dev. It reports committed scene/entity/revision/errors/warnings, actual optional 360 displayed detail, and public capture accuracy/alignment. It never treats a requested or configured value as measured delivery. Loaded manifest URL and owner provenance remain unavailable because the public controller does not expose them.
+
+`dev-host.ts` borrows `SceneController.state()/subscribe()` directly and uses `DevContribution<{document: Document}, HTMLElement>`. It has no Earth website type dependency. The view loads when the shared session mounts it; observation exists only while visible, stops on cancellation/disposal and resumes with current facts on reopen. Immediate observer errors cannot lose subscription cleanup. Pending/failed replacements preserve committed facts; unload clears them. There is no fetch, loader, polling, capture, benchmark or frame loop.
+
+`dev-session.ts` binds public shared session/browser lifecycle to the existing host tab registry. Report-only wins over Dev; one exact `?dev=1` enables it. Browser presentation is imported after that gate. `composition.ts` captures the real startup registration before `shell.tsx` mounts its one fixed registry and forwards actual visibility. Central cancellation unmounts the shell before Dev unregister and content cleanup; the outer native owner must await `whenSettled()` before releasing borrowed resources. The ordinary thirteen tabs remain unchanged. Source splitting alone is not a lazy-download measurement.
+
+The complete Tour boot still awaits public browser/build/update contracts outside the excluded website wrapper. This direct composition and all causal fixtures are source preparation, UNRUN while the Campus check slot is queued.

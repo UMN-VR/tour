@@ -1,0 +1,694 @@
+{
+  "schemaVersion": 1,
+  "kind": "source-preparation-plan; not a runnable shared installer manifest",
+  "executable": false,
+  "owner": "UMN-VR/tour",
+  "workspaceLayout": [
+    "UMN-VR/<owner>",
+    "foss-earth/<provider>",
+    "Felipegalind0/gamepad-tools"
+  ],
+  "defaultOwners": [
+    "UMN-VR/app",
+    "UMN-VR/minneapolis",
+    "UMN-VR/st-paul",
+    "UMN-VR/twin-cities",
+    "UMN-VR/tour",
+    "UMN-VR/about",
+    "UMN-VR/UMN-VR.github.io",
+    "UMN-VR/dev_installer",
+    "UMN-VR/browser-testing",
+    "UMN-VR/.github"
+  ],
+  "providers": [
+    {
+      "package": "@foss-earth/360",
+      "version": "0.1.0",
+      "revision": "bcb2a028dcbe827618402f7b0060e533a659b0e5",
+      "archive": {
+        "path": "deps/foss-earth-360-bcb2a028dcbe827618402f7b0060e533a659b0e5.tgz",
+        "sha256": "c40528e4c34bae6cb849c9963e77a18db09e67e49049b58129f600f6ddd95a0c",
+        "sizeBytes": 192096
+      },
+      "publicExports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "import": "./dist/index.js"
+        },
+        "./core": {
+          "types": "./dist/index.d.ts",
+          "import": "./dist/index.js"
+        },
+        "./babylon": {
+          "types": "./dist/renderer.d.ts",
+          "import": "./dist/renderer.js"
+        },
+        "./shaders": {
+          "types": "./dist/shaders.d.ts",
+          "import": "./dist/shaders.js"
+        },
+        "./shaders-webgl": {
+          "types": "./dist/shadersWebGl.d.ts",
+          "import": "./dist/shadersWebGl.js"
+        },
+        "./input": {
+          "types": "./dist/browserInput.d.ts",
+          "import": "./dist/browserInput.js"
+        },
+        "./viewer": {
+          "types": "./dist/viewer.d.ts",
+          "import": "./dist/viewer.js"
+        },
+        "./settings": {
+          "types": "./dist/settings.d.ts",
+          "import": "./dist/settings.js"
+        },
+        "./preparation": {
+          "types": "./node/preparation.d.mts",
+          "import": "./node/preparation.mjs"
+        },
+        "./prepare-cli": "./node/prepare-cli.mjs",
+        "./resources": {
+          "types": "./dist/resources.d.ts",
+          "import": "./dist/resources.js"
+        },
+        "./panels": {
+          "types": "./dist/panels.d.ts",
+          "import": "./dist/panels.js"
+        },
+        "./node": {
+          "types": "./node/preparation.d.mts",
+          "import": "./node/preparation.mjs"
+        }
+      }
+    },
+    {
+      "package": "@foss-earth/about",
+      "version": "0.1.0",
+      "revision": "75277f70092cd8d18679f87a94361f83c779c6ad",
+      "archive": {
+        "path": "deps/foss-earth-about-75277f70092cd8d18679f87a94361f83c779c6ad.tgz",
+        "sha256": "06a9b3322a394bd02eb69ba746db811664a496269e6368e1f8e5c2c9ce9e2319",
+        "sizeBytes": 180523
+      },
+      "publicExports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "import": "./dist/index.js"
+        },
+        "./panel": {
+          "types": "./dist/panel.d.ts",
+          "import": "./dist/panel.js"
+        },
+        "./node": {
+          "types": "./dist/node.d.ts",
+          "import": "./dist/node.js"
+        },
+        "./panel.css": "./styles/panel.css",
+        "./graph-template.html": "./templates/repository-graph.html",
+        "./vite": {
+          "types": "./dist/vite/index.d.ts",
+          "import": "./dist/vite/index.js"
+        }
+      }
+    },
+    {
+      "package": "@foss-earth/cubemap",
+      "version": "0.1.0",
+      "revision": "d061dc53e8ce27eb7902c447aec01144b955f0a5",
+      "archive": {
+        "path": "deps/foss-earth-cubemap-d061dc53e8ce27eb7902c447aec01144b955f0a5.tgz",
+        "sha256": "ccb83639bc8e55adcdfc634778a2384594a9fef40021de4b41e21242c4db6cda",
+        "sizeBytes": 127400
+      },
+      "publicExports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "import": "./dist/index.js"
+        },
+        "./core": {
+          "types": "./dist/core.d.ts",
+          "import": "./dist/core.js"
+        },
+        "./preparation": {
+          "types": "./dist/preparation.d.ts",
+          "import": "./dist/preparation.js"
+        },
+        "./browser": {
+          "types": "./dist/browser/index.d.ts",
+          "import": "./dist/browser/index.js"
+        },
+        "./schema.json": "./schema/representation.json",
+        "./babylon": {
+          "types": "./dist/browser/babylon.d.ts",
+          "import": "./dist/browser/babylon.js"
+        },
+        "./shaders": {
+          "types": "./dist/shaders.d.ts",
+          "import": "./dist/shaders.js"
+        },
+        "./package.json": "./package.json"
+      }
+    },
+    {
+      "package": "@foss-earth/dev",
+      "version": "0.1.0",
+      "revision": "99c7259c87f20855e2da89557be3ad379c104e84",
+      "archive": {
+        "path": "deps/foss-earth-dev-99c7259c87f20855e2da89557be3ad379c104e84.tgz",
+        "sha256": "b3e7bfb44371db111036e139ed88e86760681bffd66888338b7c0a371117312a",
+        "sizeBytes": 113996
+      },
+      "publicExports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "import": "./dist/index.js"
+        },
+        "./browser": {
+          "types": "./dist/browser.d.ts",
+          "import": "./dist/browser.js"
+        },
+        "./panel.css": "./styles/panel.css"
+      }
+    },
+    {
+      "package": "@foss-earth/engine",
+      "version": "0.1.0",
+      "revision": "e12a82bd121cc4edfb4ca02817ad74bc47868e2a",
+      "archive": {
+        "path": "deps/foss-earth-engine-e12a82bd121cc4edfb4ca02817ad74bc47868e2a.tgz",
+        "sha256": "c5073f59227cbb1f4c64d4639c1df03c969e4fa98bbb7ca49561f411dd47124b",
+        "sizeBytes": 2750838
+      },
+      "publicExports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "import": "./dist/index.js"
+        },
+        "./core": {
+          "types": "./dist/index.d.ts",
+          "import": "./dist/index.js"
+        },
+        "./browser": {
+          "types": "./dist/browser.d.ts",
+          "import": "./dist/browser.js"
+        },
+        "./babylon": {
+          "types": "./dist/babylon/index.d.ts",
+          "import": "./dist/babylon/index.js"
+        },
+        "./package.json": "./package.json",
+        "./settings": {
+          "types": "./dist/settings/index.d.ts",
+          "import": "./dist/settings/index.js"
+        },
+        "./gamepad": {
+          "types": "./dist/gamepad/index.d.ts",
+          "import": "./dist/gamepad/index.js"
+        },
+        "./imagery": {
+          "types": "./dist/terrain/imagery/index.d.ts",
+          "import": "./dist/terrain/imagery/index.js"
+        },
+        "./panels": {
+          "types": "./dist/panels.d.ts",
+          "import": "./dist/panels.js"
+        },
+        "./input-mode.css": "./styles/input-mode.css",
+        "./map.css": "./styles/map.css",
+        "./react": {
+          "types": "./dist/react.d.ts",
+          "import": "./dist/react.js"
+        },
+        "./layers": {
+          "types": "./dist/layers/index.d.ts",
+          "import": "./dist/layers/index.js"
+        },
+        "./sprites": {
+          "types": "./dist/sprites/index.d.ts",
+          "import": "./dist/sprites/index.js"
+        },
+        "./compass": {
+          "types": "./dist/visualization/orbitCompass.d.ts",
+          "import": "./dist/visualization/orbitCompass.js"
+        },
+        "./visualization": {
+          "types": "./dist/visualization/index.d.ts",
+          "import": "./dist/visualization/index.js"
+        },
+        "./visualization-tuners": {
+          "types": "./dist/hud/visualizationTuners.d.ts",
+          "import": "./dist/hud/visualizationTuners.js"
+        },
+        "./visualization-tuners.css": "./styles/visualization-tuners.css",
+        "./location-provider": {
+          "types": "./dist/location-provider.d.ts",
+          "import": "./dist/location-provider.js"
+        },
+        "./map-cache.css": "./styles/map-cache.css"
+      }
+    },
+    {
+      "package": "@foss-earth/equirectangular",
+      "version": "0.1.0",
+      "revision": "0bfc0554c8ae924aada57678cc90dc61f56d2dc7",
+      "archive": {
+        "path": "deps/foss-earth-equirectangular-0bfc0554c8ae924aada57678cc90dc61f56d2dc7.tgz",
+        "sha256": "c0ef5534d5e2c67bac5c4059ee5fe95225e549e9b7a2e40af3781e930a75b045",
+        "sizeBytes": 129763
+      },
+      "publicExports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "import": "./dist/index.js"
+        },
+        "./core": {
+          "types": "./dist/core.d.ts",
+          "import": "./dist/core.js"
+        },
+        "./preparation": {
+          "types": "./dist/preparation.d.ts",
+          "import": "./dist/preparation.js"
+        },
+        "./browser": {
+          "types": "./dist/browser/index.d.ts",
+          "import": "./dist/browser/index.js"
+        },
+        "./schema.json": "./schema/representation.json",
+        "./babylon": {
+          "types": "./dist/browser/babylon.d.ts",
+          "import": "./dist/browser/babylon.js"
+        },
+        "./shaders": {
+          "types": "./dist/shaders.d.ts",
+          "import": "./dist/shaders.js"
+        },
+        "./package.json": "./package.json"
+      }
+    },
+    {
+      "package": "@foss-earth/images",
+      "version": "0.1.0",
+      "revision": "669b93b8a7f2e5d671c36a29a84761275265b2f7",
+      "archive": {
+        "path": "deps/foss-earth-images-669b93b8a7f2e5d671c36a29a84761275265b2f7.tgz",
+        "sha256": "96f244b1032ff057910c82f04548ef35191dec79cebf4674e7b0537ddfd6edf8",
+        "sizeBytes": 156003
+      },
+      "publicExports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "import": "./dist/index.js"
+        },
+        "./browser": {
+          "types": "./dist/browser/index.d.ts",
+          "import": "./dist/browser/index.js"
+        },
+        "./node": {
+          "types": "./node/codecs.d.mts",
+          "import": "./node/codecs.mjs"
+        },
+        "./shaders": {
+          "types": "./dist/shaders.d.ts",
+          "import": "./dist/shaders.js"
+        },
+        "./settings": {
+          "types": "./dist/settings.d.ts",
+          "import": "./dist/settings.js"
+        }
+      }
+    },
+    {
+      "package": "@foss-earth/preview-sheets",
+      "version": "0.1.0",
+      "revision": "138939f845c5ab384740773a46eb4350bf2b4066",
+      "archive": {
+        "path": "deps/foss-earth-preview-sheets-138939f845c5ab384740773a46eb4350bf2b4066.tgz",
+        "sha256": "3dceac643adcababb61c2299fa9d202cdffc56b01279cc13244f9370ffbfcfbe",
+        "sizeBytes": 131420
+      },
+      "publicExports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "import": "./dist/index.js"
+        },
+        "./core": {
+          "types": "./dist/core.d.ts",
+          "import": "./dist/core.js"
+        },
+        "./schema": {
+          "types": "./dist/schema.d.ts",
+          "import": "./dist/schema.js"
+        },
+        "./preparation": {
+          "types": "./node/preparation.d.mts",
+          "import": "./node/preparation.mjs"
+        },
+        "./browser": {
+          "types": "./dist/browser.d.ts",
+          "import": "./dist/browser.js"
+        },
+        "./schema/extension.json": "./schema/extension.json",
+        "./schema/place.json": "./schema/place.json",
+        "./scene-extension": {
+          "types": "./dist/sceneExtension.d.ts",
+          "import": "./dist/sceneExtension.js"
+        },
+        "./settings": {
+          "types": "./dist/settings.d.ts",
+          "import": "./dist/settings.js"
+        }
+      }
+    },
+    {
+      "package": "@foss-earth/renderer",
+      "version": "0.1.0",
+      "revision": "9a68115ae240ccb8e9fb28253787572fc09ddcef",
+      "archive": {
+        "path": "deps/foss-earth-renderer-9a68115ae240ccb8e9fb28253787572fc09ddcef.tgz",
+        "sha256": "b3d19168e0933ea9514ed292c43240820382b394391ecfa44a524e609a203fc1",
+        "sizeBytes": 376512
+      },
+      "publicExports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "import": "./dist/index.js"
+        },
+        "./core": {
+          "types": "./dist/index.d.ts",
+          "import": "./dist/index.js"
+        },
+        "./browser": {
+          "types": "./dist/browser.d.ts",
+          "import": "./dist/browser.js"
+        },
+        "./babylon": {
+          "types": "./dist/babylon/index.d.ts",
+          "import": "./dist/babylon/index.js"
+        },
+        "./panel": {
+          "types": "./dist/panel/index.d.ts",
+          "import": "./dist/panel/index.js"
+        },
+        "./settings": {
+          "types": "./dist/settings/catalogue.d.ts",
+          "import": "./dist/settings/catalogue.js"
+        },
+        "./package.json": "./package.json",
+        "./profiling": {
+          "types": "./dist/profiling/index.d.ts",
+          "import": "./dist/profiling/index.js"
+        },
+        "./frame-budget.css": "./dist/styles/frameBudget.css",
+        "./diagnostics": {
+          "types": "./dist/babylon/diagnostics/index.d.ts",
+          "import": "./dist/babylon/diagnostics/index.js"
+        },
+        "./vite": {
+          "types": "./dist/vite/index.d.ts",
+          "import": "./dist/vite/index.js"
+        }
+      }
+    },
+    {
+      "package": "@foss-earth/sky",
+      "version": "0.1.0",
+      "revision": "6720abe37543682e118e5cee85dff9243449dd2d",
+      "archive": {
+        "path": "deps/foss-earth-sky-6720abe37543682e118e5cee85dff9243449dd2d.tgz",
+        "sha256": "0d0f5ef72380590a5a1177882176e63cec372212725b7259f9d2311486b03eb7",
+        "sizeBytes": 456017
+      },
+      "publicExports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "import": "./dist/index.js"
+        },
+        "./settings": {
+          "types": "./dist/settings.d.ts",
+          "import": "./dist/settings.js"
+        },
+        "./panels": {
+          "types": "./dist/panels/index.d.ts",
+          "import": "./dist/panels/index.js"
+        },
+        "./babylon": {
+          "types": "./dist/babylon/index.d.ts",
+          "import": "./dist/babylon/index.js"
+        },
+        "./styles.css": "./dist/styles/sky.css",
+        "./catalogue": {
+          "types": "./dist/catalogue.d.ts",
+          "import": "./dist/catalogue.js"
+        }
+      }
+    },
+    {
+      "package": "@foss-earth/tiled-cubemap",
+      "version": "0.1.0",
+      "revision": "987c673ed25c402766c38cdef1d9273970f05427",
+      "archive": {
+        "path": "deps/foss-earth-tiled-cubemap-987c673ed25c402766c38cdef1d9273970f05427.tgz",
+        "sha256": "9a3712a18d4afa89f825612a728785d330cd4a35d4d4ea72521b0423c82107fd",
+        "sizeBytes": 135079
+      },
+      "publicExports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "import": "./dist/index.js"
+        },
+        "./core": {
+          "types": "./dist/core.d.ts",
+          "import": "./dist/core.js"
+        },
+        "./schema.json": "./schema/representation.json",
+        "./preparation": {
+          "types": "./dist/preparation.d.ts",
+          "import": "./dist/preparation.js"
+        },
+        "./browser": {
+          "types": "./dist/browser/index.d.ts",
+          "import": "./dist/browser/index.js"
+        },
+        "./babylon": {
+          "types": "./dist/browser/tileAtlas.d.ts",
+          "import": "./dist/browser/tileAtlas.js"
+        },
+        "./shaders": {
+          "types": "./dist/shaders.d.ts",
+          "import": "./dist/shaders.js"
+        },
+        "./settings": {
+          "types": "./dist/catalogue.d.ts",
+          "import": "./dist/catalogue.js"
+        }
+      }
+    },
+    {
+      "package": "@foss-earth/toolbar",
+      "version": "0.1.0",
+      "revision": "6918624c214f1619b80a9ed8d7c90e10b10b9cab",
+      "archive": {
+        "path": "deps/foss-earth-toolbar-6918624c214f1619b80a9ed8d7c90e10b10b9cab.tgz",
+        "sha256": "91436856c075797b61679b833eb8002841347bb019a1df3eabc2e0a8c8a73215",
+        "sizeBytes": 147433
+      },
+      "publicExports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "import": "./dist/index.js"
+        },
+        "./browser": {
+          "types": "./dist/browser/index.d.ts",
+          "import": "./dist/browser/index.js"
+        },
+        "./legacy": {
+          "types": "./dist/legacy/index.d.ts",
+          "import": "./dist/legacy/index.js"
+        },
+        "./styles.css": "./dist/styles/toolbar.css"
+      }
+    },
+    {
+      "package": "@foss-earth/ui",
+      "version": "0.1.0",
+      "revision": "c4edc5b2186aa96ccc7ea779f836d1641d0fefd7",
+      "archive": {
+        "path": "deps/foss-earth-ui-c4edc5b2186aa96ccc7ea779f836d1641d0fefd7.tgz",
+        "sha256": "6870f792bc2e480da70ecbf1b7870274204b96830a1d2bb05b141745cf6e09ef",
+        "sizeBytes": 273820
+      },
+      "publicExports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "import": "./dist/index.js"
+        },
+        "./settings": {
+          "types": "./dist/settings/index.d.ts",
+          "import": "./dist/settings/index.js"
+        },
+        "./windowing": {
+          "types": "./dist/windowing/index.d.ts",
+          "import": "./dist/windowing/index.js"
+        },
+        "./contributions": {
+          "types": "./dist/contributions.d.ts",
+          "import": "./dist/contributions.js"
+        },
+        "./browser": {
+          "types": "./dist/browser/index.d.ts",
+          "import": "./dist/browser/index.js"
+        },
+        "./react": {
+          "types": "./dist/react.d.ts",
+          "import": "./dist/react.js"
+        },
+        "./styles.css": "./dist/styles/ui.css",
+        "./windowing.css": "./dist/windowing/styles/windowing.css",
+        "./diagnostics": {
+          "types": "./dist/diagnostics/index.d.ts",
+          "import": "./dist/diagnostics/index.js"
+        },
+        "./dial.css": "./dist/styles/dial.css",
+        "./log.css": "./dist/styles/gameLog.css",
+        "./status.css": "./dist/styles/status.css",
+        "./mesh-inspector.css": "./dist/styles/meshInspector.css"
+      }
+    },
+    {
+      "package": "@foss-earth/scenes",
+      "version": "0.1.0",
+      "revision": "d58408d90542a73282d8bf544c54e0c9bf847b56",
+      "archive": {
+        "path": "deps/foss-earth-scenes-d58408d90542a73282d8bf544c54e0c9bf847b56.tgz",
+        "sha256": "451a0ac2ec289ff60087e0f0da43d42a984465b27fc65c8a04ff8f80e1a791ad",
+        "sizeBytes": 264587
+      },
+      "publicExports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "import": "./dist/index.js"
+        },
+        "./schema.json": "./schema/scene-1.json",
+        "./browser": {
+          "types": "./dist/browser.d.ts",
+          "import": "./dist/browser.js"
+        },
+        "./panel": {
+          "types": "./dist/panel.d.ts",
+          "import": "./dist/panel.js"
+        },
+        "./panel.css": "./styles/panel.css",
+        "./node": {
+          "types": "./node/scene-check.d.mts",
+          "import": "./node/scene-check.mjs"
+        },
+        "./check-cli": "./node/check-cli.mjs",
+        "./preview-sheets": {
+          "types": "./node/preview-sheets.d.mts",
+          "import": "./node/preview-sheets.mjs"
+        },
+        "./build-preview-cli": "./node/build-preview-cli.mjs"
+      }
+    }
+  ],
+  "selections": {
+    "about": [
+      "UMN-VR/about",
+      "foss-earth/about"
+    ],
+    "minneapolis": [
+      "UMN-VR/minneapolis",
+      "UMN-VR/app",
+      "UMN-VR/about"
+    ],
+    "st-paul": [
+      "UMN-VR/st-paul",
+      "UMN-VR/app",
+      "UMN-VR/about"
+    ],
+    "twin-cities": [
+      "UMN-VR/twin-cities",
+      "UMN-VR/minneapolis",
+      "UMN-VR/st-paul",
+      "UMN-VR/app",
+      "UMN-VR/about"
+    ],
+    "tour": [
+      "UMN-VR/tour"
+    ],
+    "club": [
+      "UMN-VR/UMN-VR.github.io",
+      "exact selector and three compiled scene artifacts"
+    ]
+  },
+  "modeContract": {
+    "default": "full Campus development workspace",
+    "modes": [
+      "source",
+      "package",
+      "hybrid"
+    ],
+    "perComponentMutableAfterSetup": true,
+    "owner": "foss-earth/dev_installer",
+    "state": "Currentff46 wrapper sealed; accepted replacement and actual bootstrap still pending; no local installer machinery."
+  },
+  "graph": [
+    {
+      "consumer": "UMN-VR/minneapolis",
+      "provider": "UMN-VR/app",
+      "type": "runtime"
+    },
+    {
+      "consumer": "UMN-VR/st-paul",
+      "provider": "UMN-VR/app",
+      "type": "runtime"
+    },
+    {
+      "consumer": "UMN-VR/twin-cities",
+      "provider": "UMN-VR/app",
+      "type": "runtime"
+    },
+    {
+      "consumer": "UMN-VR/twin-cities",
+      "provider": "UMN-VR/minneapolis",
+      "type": "pinned-content"
+    },
+    {
+      "consumer": "UMN-VR/twin-cities",
+      "provider": "UMN-VR/st-paul",
+      "type": "pinned-content"
+    },
+    {
+      "consumer": "UMN-VR/app",
+      "provider": "UMN-VR/about",
+      "type": "runtime"
+    },
+    {
+      "consumer": "UMN-VR/dev_installer",
+      "provider": "UMN-VR/tour",
+      "type": "immutable workspace manifest data only"
+    }
+  ],
+  "content": {
+    "privateBackupRequired": false,
+    "preparedSource": "UMN-VR/app/content/shared-legacy-media-release.json",
+    "publicArchiveURL": null,
+    "artifactSha256": null,
+    "fullCorpusScan": "Later bounded grant, not performed now"
+  },
+  "unavailableSeals": [
+    "new Campus source commits/packages",
+    "qualified native/map/image/update public exports",
+    "checked Scenes composition/child route selection",
+    "immutable public prepared-media artifact",
+    "accepted mutable shared installer/public distribution",
+    "runnable exact workspace/bootstrap descriptor"
+  ],
+  "excluded": [
+    "foss-earth website wrappers",
+    "foss-earth/search",
+    "foss-earth/vr",
+    "flight/native/private backup"
+  ]
+}

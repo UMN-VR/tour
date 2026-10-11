@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-10T00:41:22.827248+00:00",
+  "state": "public owner primitives received; actual Campus native/entry assembly and checked shared build/update delivery unresolved",
+  "excludedFinalProviders": [
+    "foss-earth/foss-earth.github.io",
+    "0sfs/*",
+    "foss-earth/search",
+    "foss-earth/vr"
+  ],
+  "requests": [
+    {
+      "id": "campus.browser-ports",
+      "consumers": [
+        "src/tour/twinCities.ts",
+        "src/tour/content-host.ts",
+        "src/tour/controller.ts",
+        "src/tour/world.ts",
+        "src/tour/dev-session.ts",
+        "src/tour/composition.ts",
+        "src/tour/shell.tsx"
+      ],
+      "owners": [
+        "foss-earth/engine",
+        "foss-earth/renderer",
+        "foss-earth/sky",
+        "foss-earth/images",
+        "foss-earth/360"
+      ],
+      "needed": "Confirm cross-owner host binding boundary for public Engine navigation/frame/surface/input and public 360 ViewerNavigationPorts/ViewerInputPorts/ViewerPosePorts/ViewerWorldMath plus resources over one Images broker/cache/files and Renderer device/transfer authority. Checked generic browser/Babylon primitives already exist; Campus must finish its own native/entry assembly, not wait for or consume a website mount/session wrapper. Any absent generic transition/resource bridge needs a declared public owner contract, not a copied website algorithm. Campus has prepared its own fixed13-tab root/About/Dev/catalogue/controller/placements with actual world/viewer ports."
+    },
+    {
+      "id": "campus.build-and-update",
+      "consumers": [
+        "vite.config.ts",
+        "src/tour/content-host.ts",
+        "tools/release/artifact.mjs"
+      ],
+      "owners": [
+        "Earth: assign existing shared build/update owners"
+      ],
+      "needed": "Qualified About/vite builtFrom and Renderer/vite shader plugins: owner source routes prepared but current checked archives do not contain them. Independently resolve shared appFiles build producer and actual root-worker/cache/published-page update controller outside website, or explicitly agree the Campus-owned page/worker policy boundary over public contracts. Preserve /assets/, /foss-earth-sw.js scope/, hashes/stamps/page BuiltFrom, old supported bundle retention and report-only startup; return actual status/transport contracts, separate Tour source from club deployment identity. No website wrapper or invented watcher/installed metadata."
+    },
+    {
+      "id": "campus.scene-provenance",
+      "consumers": [
+        "src/tour/dev.ts"
+      ],
+      "owners": [
+        "foss-earth/scenes"
+      ],
+      "needed": "Optional committed resolved manifest URL and validated owner-extension observations via same controller/subscription. Current immersionDetail/accuracy/alignment adopted; no refetch, fake configured provenance or extra loader."
+    },
+    {
+      "id": "campus.qr",
+      "consumers": [
+        "package.json:scripts.qr"
+      ],
+      "owners": [
+        "Earth: assign public tool owner"
+      ],
+      "needed": "Qualified public QR CLI export/bin outside website package, or remove inherited unavailable command after explicit delivery decision."
+    }
+  ],
+  "checkedGenericBrowserContracts": {
+    "inventorySha256": "7eac81744c76af27e2d106e2933468588a6346bb1d26c3348f54c97d994075e7",
+    "engineSource": "030d462f11d086a773eefe247acbe6fecf1fd6c3",
+    "rendererSource": "ee8954c36626453a7454538d6313024385f4de68",
+    "acceptance": "public primitives available; website composition wrappers stay site-owned; source inventory is not Campus compiled acceptance"
+  }
+}

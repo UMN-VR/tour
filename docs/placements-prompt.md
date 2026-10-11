@@ -1,7 +1,7 @@
 # Work prompt: set north and correct the position of every panorama
 
 Execute this task when the user starts a fresh conversation with this file.
-Work in `/Users/felg/gh/UMN-VR/UMN-VR.github.io`. Read the current `AGENTS.md`,
+Work in `~/gh/UMN-VR/app`. Read the current `AGENTS.md`,
 [tools/twin-cities/README.md](../tools/twin-cities/README.md) and
 [roadmap.md](roadmap.md) first. Do
 `../foss-earth/docs/panorama-mode-prompt.md` first if it isn't done.
