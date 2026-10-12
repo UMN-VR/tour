@@ -1,19 +1,22 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-ui-theme="umn">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Explore the University of Minnesota Twin Cities through Minneapolis, Saint Paul, and combined campus panorama tours." />
     <meta name="theme-color" content="#7a0019" />
     <title>Campus tours · UMN Virtual Reality</title>
-    <link rel="stylesheet" href="/src/selector.css" />
+    <script type="module" src="/src/selector.js"></script>
   </head>
   <body>
     <a class="skip-link" href="#campus-tours">Skip to campus tours</a>
     <header class="site-header">
       <div class="page-width header-inner">
-        <a class="club-link" href="/">UMN Virtual Reality</a>
-        <span class="site-label">Campus tours</span>
+        <div class="header-brand">
+          <a class="club-link" href="/">UMN Virtual Reality</a>
+          <span class="site-label">Campus tours</span>
+        </div>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme">Dark theme</button>
       </div>
     </header>
 

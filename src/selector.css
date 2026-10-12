@@ -1,12 +1,9 @@
 :root {
-  color-scheme: light;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #26201e;
-  background: #faf8f5;
+  font-family: var(--ui-font);
+  color: var(--ui-text);
+  background: var(--ui-page);
   font-synthesis: none;
   line-height: 1.5;
-  --campus-maroon: #7a0019;
-  --campus-gold: #ffcc33;
 }
 
 * {
@@ -18,13 +15,14 @@ body {
 }
 
 a {
-  color: var(--campus-maroon);
+  color: var(--ui-accent);
   text-underline-offset: 0.2em;
 }
 
 a:focus-visible,
-main:focus-visible {
-  outline: 3px solid var(--campus-maroon);
+main:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--ui-accent);
   outline-offset: 5px;
 }
 
@@ -39,8 +37,8 @@ main:focus-visible {
   left: 1.25rem;
   z-index: 1;
   padding: 0.75rem 1rem;
-  color: var(--campus-maroon);
-  background: var(--campus-gold);
+  color: var(--ui-accent-contrast);
+  background: var(--ui-accent);
   transform: translateY(-200%);
 }
 
@@ -49,9 +47,9 @@ main:focus-visible {
 }
 
 .site-header {
-  color: white;
-  background: var(--campus-maroon);
-  border-bottom: 0.3rem solid var(--campus-gold);
+  color: var(--ui-header-text);
+  background: var(--ui-header);
+  border-bottom: 0.3rem solid var(--ui-header-border);
 }
 
 .header-inner {
@@ -63,8 +61,15 @@ main:focus-visible {
   padding-block: 1.2rem;
 }
 
+.header-brand {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 1.5rem;
+}
+
 .club-link {
-  color: white;
+  color: var(--ui-header-text);
   font-size: 1.2rem;
   font-weight: 750;
   text-decoration: none;
@@ -75,12 +80,35 @@ main:focus-visible {
 }
 
 .club-link:focus-visible {
-  outline-color: var(--campus-gold);
+  outline-color: var(--ui-gold);
 }
 
 .site-label {
-  color: #fff0bd;
+  color: var(--ui-header-muted);
   font-size: 0.95rem;
+}
+
+.theme-toggle {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0.5rem 0.9rem;
+  color: var(--ui-text);
+  background: var(--ui-surface);
+  border: 1px solid var(--ui-border);
+  border-radius: 0.45rem;
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  color: var(--ui-accent-contrast);
+  background: var(--ui-accent-hover);
+  border-color: var(--ui-gold);
+}
+
+.theme-toggle:focus-visible {
+  outline-color: var(--ui-gold);
 }
 
 .intro {
@@ -90,7 +118,7 @@ main:focus-visible {
 
 .eyebrow {
   margin: 0 0 0.75rem;
-  color: var(--campus-maroon);
+  color: var(--ui-accent);
   font-size: 0.9rem;
   font-weight: 700;
 }
@@ -105,7 +133,7 @@ h1 {
 
 .intro-text {
   margin: 1.25rem 0 0;
-  color: #514844;
+  color: var(--ui-muted);
   font-size: 1.15rem;
   line-height: 1.65;
 }
@@ -130,14 +158,15 @@ h1 {
   flex-direction: column;
   overflow: hidden;
   color: inherit;
-  background: white;
-  border: 1px solid #d8cec8;
+  background: var(--ui-surface);
+  border: 1px solid var(--ui-border);
   border-radius: 0.6rem;
+  box-shadow: var(--ui-shadow);
   text-decoration: none;
 }
 
 .tour-card:hover {
-  border-color: var(--campus-maroon);
+  border-color: var(--ui-accent-hover);
 }
 
 .tour-card:hover h2 {
@@ -151,8 +180,8 @@ h1 {
   height: auto;
   aspect-ratio: 8 / 5;
   object-fit: cover;
-  background: #e9e3df;
-  border-bottom: 1px solid #d8cec8;
+  background: var(--ui-surface-raised);
+  border-bottom: 1px solid var(--ui-border);
 }
 
 .tour-card-content {
@@ -164,7 +193,7 @@ h1 {
 
 h2 {
   margin: 0;
-  color: var(--campus-maroon);
+  color: var(--ui-accent);
   font-size: 1.55rem;
   font-weight: 750;
   line-height: 1.2;
@@ -172,7 +201,7 @@ h2 {
 
 .tour-card-content p {
   margin: 0.9rem 0 1.5rem;
-  color: #514844;
+  color: var(--ui-muted);
 }
 
 .tour-action {
@@ -182,8 +211,8 @@ h2 {
   gap: 0.5rem;
   margin-top: auto;
   padding-top: 1rem;
-  color: var(--campus-maroon);
-  border-top: 1px solid #e9e3df;
+  color: var(--ui-accent);
+  border-top: 1px solid var(--ui-border);
   font-weight: 700;
 }
 
@@ -195,8 +224,8 @@ h2 {
 .site-footer {
   margin-top: 3rem;
   padding-block: 1.5rem 2rem;
-  color: #514844;
-  border-top: 1px solid #d8cec8;
+  color: var(--ui-muted);
+  border-top: 1px solid var(--ui-border);
   font-size: 0.9rem;
 }
 
@@ -212,6 +241,15 @@ h2 {
 }
 
 @media (max-width: 52rem) {
+  .header-inner {
+    flex-wrap: nowrap;
+    gap: 1rem;
+  }
+
+  .header-brand {
+    flex-direction: column;
+  }
+
   .tour-list {
     grid-template-columns: 1fr;
     max-width: 38rem;
@@ -229,7 +267,8 @@ h2 {
   }
 
   a:focus-visible,
-  main:focus-visible {
+  main:focus-visible,
+  button:focus-visible {
     outline-color: Highlight;
   }
 }

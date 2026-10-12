@@ -3,7 +3,7 @@ import { createRequire } from "node:module";
 import path from "node:path";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { checkSceneFiles, validateScene } from "foss-earth/scenes";
-import { TWIN_CITIES } from "./scenes";
+import { MINNEAPOLIS, ST_PAUL, TWIN_CITIES } from "./scenes";
 
 // The photographs, where the scene build (npm run build:scene) wrote them; the published site holds them otherwise.
 const site = path.resolve(process.env.TOUR_PUBLIC?.trim() || "public");
@@ -67,11 +67,17 @@ describe("the tour's content location", () => {
   it("uses the packaged scene by default and can point at a content release", async () => {
     vi.stubEnv("VITE_TOUR_SCENE_URL", "");
     vi.resetModules();
-    expect((await import("./scenes")).TWIN_CITIES.url).toBe(published.pathname.slice(1));
+    expect((await import("./scenes")).TWIN_CITIES.url).toBe("twin-cities/scene.json");
     vi.stubEnv("VITE_TOUR_SCENE_URL", " https://content.example.org/twin-cities/r2/scene.json ");
     vi.resetModules();
     const configured = (await import("./scenes")).TWIN_CITIES;
     expect(configured.id).toBe(TWIN_CITIES.id);
     expect(configured.url).toBe("https://content.example.org/twin-cities/r2/scene.json");
+  });
+
+  it("resolves every campus against the tour's project site, preserving the published URLs", () => {
+    for (const campus of [MINNEAPOLIS, ST_PAUL, TWIN_CITIES]) {
+      expect(new URL(campus.url, "https://umn-vr.github.io/tour/").href).toBe(`https://umn-vr.github.io/tour/${campus.id}/scene.json`);
+    }
   });
 });

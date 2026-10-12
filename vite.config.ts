@@ -9,15 +9,15 @@ import { appFiles, babylonShaderChunks, builtFrom, localSource } from 'foss-eart
 
 /** The tour's pages: the campus selector, and FOSS Earth's app with each campus's scene. */
 const TOUR_PAGES = {
-  selector: 'tour/index.html',
-  minneapolis: 'tour/minneapolis/index.html',
-  stPaul: 'tour/st-paul/index.html',
-  twinCities: 'tour/twin-cities/index.html',
+  selector: 'index.html',
+  minneapolis: 'minneapolis/index.html',
+  stPaul: 'st-paul/index.html',
+  twinCities: 'twin-cities/index.html',
 }
 /** Each campus's repository, checked out beside this one, holds its scene; it is published at /tour/<campus>/scene.json. */
 const CAMPUSES = ['minneapolis', 'st-paul', 'twin-cities']
-/** Where `/` leads while developing: the site's landing page is the club's, not this app's. */
-const DEV_HOME = '/tour/'
+/** This project's GitHub Pages mount; the club's site owns the domain root. */
+const BASE = '/tour/'
 /** The photographs every campus's scene points to, as the site publishes them. */
 const MEDIA = '/tour/twin-cities/media'
 const SITE = 'https://umn-vr.github.io'
@@ -38,7 +38,7 @@ function getGitOutput(command: string): string | null {
 
 const sourceCommit = getGitOutput('git rev-parse --short=12 HEAD') ?? 'unknown'
 // What the tour is built from: a change anywhere else, such as a doc, does not change what runs, so it does not make the build "-dirty".
-const BUILT_FROM = ['tour', 'src', 'vite.config.ts', 'tsconfig.json', 'tsconfig.app.json', 'tsconfig.node.json', 'package.json', 'package-lock.json']
+const BUILT_FROM = ['index.html', ...CAMPUSES, 'src', 'vite.config.ts', 'tsconfig.json', 'tsconfig.app.json', 'tsconfig.node.json', 'package.json', 'package-lock.json']
 const sourceDirty = Boolean(getGitOutput(`git status --short -- ${BUILT_FROM.join(' ')}`))
 
 const require = createRequire(import.meta.url)
@@ -49,7 +49,7 @@ function tourHome(): Plugin {
   const redirect: Connect.NextHandleFunction = (request, response, next) => {
     if (request.url !== '/') return next()
     response.statusCode = 302
-    response.setHeader('Location', DEV_HOME)
+    response.setHeader('Location', BASE)
     response.end()
   }
   return {
@@ -80,8 +80,8 @@ function campusScenes(): Plugin {
     closeBundle() {
       if (!building) return
       for (const campus of CAMPUSES) {
-        mkdirSync(path.join(outDir, 'tour', campus), { recursive: true })
-        writeFileSync(path.join(outDir, 'tour', campus, 'scene.json'), sceneOf(campus))
+        mkdirSync(path.join(outDir, campus), { recursive: true })
+        writeFileSync(path.join(outDir, campus, 'scene.json'), sceneOf(campus))
       }
     },
   }
@@ -90,8 +90,8 @@ function campusScenes(): Plugin {
 /** Without the scene build's output here, the photographs come from the published site. */
 const media: Record<string, ProxyOptions> | undefined = localMedia ? undefined : { [MEDIA]: { target: SITE, changeOrigin: true } }
 
-/** `npm run preview` serves the build only: this serves it the scene build's photographs, as `npm run dev` does. */
-function previewMedia(): Plugin {
+/** Serve local photographs before Vite strips /tour/: their source folder still mirrors the published URL. */
+function tourMedia(): Plugin {
   const root = path.resolve(PUBLIC)
   const types: Record<string, string> = { '.jpg': 'image/jpeg', '.json': 'application/json' }
   const serve: Connect.NextHandleFunction = (request, response, next) => {
@@ -101,13 +101,17 @@ function previewMedia(): Plugin {
     response.setHeader('Content-Type', types[path.extname(file)] ?? 'application/octet-stream')
     createReadStream(file).pipe(response)
   }
-  return { name: 'umn-vr-preview-media', configurePreviewServer: server => { if (localMedia) server.middlewares.use(serve) } }
+  return {
+    name: 'umn-vr-tour-media',
+    configureServer: server => { if (localMedia) server.middlewares.use(serve) },
+    configurePreviewServer: server => { if (localMedia) server.middlewares.use(serve) },
+  }
 }
 
 // https://vite.dev/config/
 export default defineConfig({
-  // The organization site is served from the domain root.
-  base: '/',
+  // This repository publishes its own project site, independent of the club's.
+  base: BASE,
   publicDir: PUBLIC,
   resolve: {
     // One copy of each, shared with FOSS Earth's source.
@@ -130,7 +134,7 @@ export default defineConfig({
     __BUILD_TIME__: JSON.stringify(new Date().toISOString()),
     __SOURCE_VERSION__: JSON.stringify(`${sourceCommit}${sourceDirty ? '-dirty' : ''}`),
     __REPOSITORY_SLUG__: JSON.stringify('UMN-VR/tour'),
-    __PAGES_REPOSITORY_SLUG__: JSON.stringify('UMN-VR/UMN-VR.github.io'),
+    __PAGES_REPOSITORY_SLUG__: JSON.stringify('UMN-VR/tour'),
   },
   build: {
     // The photographs are published apart from the app (README, "Deploying").
@@ -139,7 +143,7 @@ export default defineConfig({
   },
   // FOSS Earth's service worker keeps the app's own files on the visitor's device: GitHub Pages lets them go stale after ten minutes.
   // Each page says what it is built from, this repository, FOSS Earth and every package, for the About tab.
-  plugins: [localSource(), react(), tourHome(), campusScenes(), previewMedia(), babylonShaderChunks(), appFiles(), builtFrom()],
+  plugins: [localSource(), react(), tourHome(), campusScenes(), tourMedia(), babylonShaderChunks(), appFiles(), builtFrom()],
   test: {
     // .local/ holds the YouVisit backup and scratch; public/ the generated scene.
     exclude: [...configDefaults.exclude, '.local/**', 'public/**', 'build/**'],
