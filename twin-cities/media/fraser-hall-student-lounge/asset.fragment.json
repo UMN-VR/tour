@@ -1,0 +1,133 @@
+{
+  "asset": {
+    "id": "fraser-hall-student-lounge",
+    "revision": "36f762dbc5c7",
+    "type": "panorama-image",
+    "colorSpace": "srgb",
+    "alpha": "opaque",
+    "attribution": {
+      "text": "© Regents of the University of Minnesota"
+    },
+    "representations": [
+      {
+        "id": "preview-64",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 64,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 8663,
+        "faces": {
+          "px": "media/fraser-hall-student-lounge/preview-64/px.jpg",
+          "nx": "media/fraser-hall-student-lounge/preview-64/nx.jpg",
+          "py": "media/fraser-hall-student-lounge/preview-64/py.jpg",
+          "ny": "media/fraser-hall-student-lounge/preview-64/ny.jpg",
+          "pz": "media/fraser-hall-student-lounge/preview-64/pz.jpg",
+          "nz": "media/fraser-hall-student-lounge/preview-64/nz.jpg"
+        }
+      },
+      {
+        "id": "preview-128",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 128,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 21402,
+        "faces": {
+          "px": "media/fraser-hall-student-lounge/preview-128/px.jpg",
+          "nx": "media/fraser-hall-student-lounge/preview-128/nx.jpg",
+          "py": "media/fraser-hall-student-lounge/preview-128/py.jpg",
+          "ny": "media/fraser-hall-student-lounge/preview-128/ny.jpg",
+          "pz": "media/fraser-hall-student-lounge/preview-128/pz.jpg",
+          "nz": "media/fraser-hall-student-lounge/preview-128/nz.jpg"
+        }
+      },
+      {
+        "id": "preview-256",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 256,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 71230,
+        "faces": {
+          "px": "media/fraser-hall-student-lounge/preview-256/px.jpg",
+          "nx": "media/fraser-hall-student-lounge/preview-256/nx.jpg",
+          "py": "media/fraser-hall-student-lounge/preview-256/py.jpg",
+          "ny": "media/fraser-hall-student-lounge/preview-256/ny.jpg",
+          "pz": "media/fraser-hall-student-lounge/preview-256/pz.jpg",
+          "nz": "media/fraser-hall-student-lounge/preview-256/nz.jpg"
+        }
+      },
+      {
+        "id": "whole-2048",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 2048,
+        "height": 1024,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 367655,
+        "url": "media/fraser-hall-student-lounge/immersion-2048.jpg"
+      },
+      {
+        "id": "whole-4096",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 4096,
+        "height": 2048,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 1229735,
+        "url": "media/fraser-hall-student-lounge/immersion-4096.jpg"
+      },
+      {
+        "id": "whole-6144",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 6144,
+        "height": 3072,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 2368849,
+        "url": "media/fraser-hall-student-lounge/immersion-6144.jpg"
+      },
+      {
+        "id": "eac-tiles",
+        "role": "immersion",
+        "projection": "tiled-cube",
+        "warp": "equi-angular",
+        "faceSize": 1536,
+        "tileSize": 192,
+        "gutter": 1,
+        "levelBytes": [
+          42317,
+          163889,
+          633812,
+          2192174
+        ],
+        "mimeType": "image/jpeg",
+        "encodedBytes": 3032192,
+        "url": "media/fraser-hall-student-lounge/eac-tiles/"
+      },
+      {
+        "id": "cube-tiles",
+        "role": "immersion",
+        "projection": "tiled-cube",
+        "warp": "gnomonic",
+        "faceSize": 1536,
+        "tileSize": 192,
+        "gutter": 1,
+        "levelBytes": [
+          41671,
+          163652,
+          634136,
+          2198836
+        ],
+        "mimeType": "image/jpeg",
+        "encodedBytes": 3038295,
+        "url": "media/fraser-hall-student-lounge/cube-tiles/"
+      }
+    ]
+  },
+  "imagePose": {
+    "headingDeg": 0,
+    "pitchDeg": 0,
+    "rollDeg": 0
+  }
+}

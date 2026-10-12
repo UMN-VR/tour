@@ -1,0 +1,133 @@
+{
+  "asset": {
+    "id": "washington-avenue-walking-bridge",
+    "revision": "a58e6ddb3048",
+    "type": "panorama-image",
+    "colorSpace": "srgb",
+    "alpha": "opaque",
+    "attribution": {
+      "text": "© Regents of the University of Minnesota"
+    },
+    "representations": [
+      {
+        "id": "preview-64",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 64,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 10653,
+        "faces": {
+          "px": "media/washington-avenue-walking-bridge/preview-64/px.jpg",
+          "nx": "media/washington-avenue-walking-bridge/preview-64/nx.jpg",
+          "py": "media/washington-avenue-walking-bridge/preview-64/py.jpg",
+          "ny": "media/washington-avenue-walking-bridge/preview-64/ny.jpg",
+          "pz": "media/washington-avenue-walking-bridge/preview-64/pz.jpg",
+          "nz": "media/washington-avenue-walking-bridge/preview-64/nz.jpg"
+        }
+      },
+      {
+        "id": "preview-128",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 128,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 26121,
+        "faces": {
+          "px": "media/washington-avenue-walking-bridge/preview-128/px.jpg",
+          "nx": "media/washington-avenue-walking-bridge/preview-128/nx.jpg",
+          "py": "media/washington-avenue-walking-bridge/preview-128/py.jpg",
+          "ny": "media/washington-avenue-walking-bridge/preview-128/ny.jpg",
+          "pz": "media/washington-avenue-walking-bridge/preview-128/pz.jpg",
+          "nz": "media/washington-avenue-walking-bridge/preview-128/nz.jpg"
+        }
+      },
+      {
+        "id": "preview-256",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 256,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 75556,
+        "faces": {
+          "px": "media/washington-avenue-walking-bridge/preview-256/px.jpg",
+          "nx": "media/washington-avenue-walking-bridge/preview-256/nx.jpg",
+          "py": "media/washington-avenue-walking-bridge/preview-256/py.jpg",
+          "ny": "media/washington-avenue-walking-bridge/preview-256/ny.jpg",
+          "pz": "media/washington-avenue-walking-bridge/preview-256/pz.jpg",
+          "nz": "media/washington-avenue-walking-bridge/preview-256/nz.jpg"
+        }
+      },
+      {
+        "id": "whole-2048",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 2048,
+        "height": 1024,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 287198,
+        "url": "media/washington-avenue-walking-bridge/immersion-2048.jpg"
+      },
+      {
+        "id": "whole-4096",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 4096,
+        "height": 2048,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 929563,
+        "url": "media/washington-avenue-walking-bridge/immersion-4096.jpg"
+      },
+      {
+        "id": "whole-6144",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 6144,
+        "height": 3072,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 1793179,
+        "url": "media/washington-avenue-walking-bridge/immersion-6144.jpg"
+      },
+      {
+        "id": "eac-tiles",
+        "role": "immersion",
+        "projection": "tiled-cube",
+        "warp": "equi-angular",
+        "faceSize": 1536,
+        "tileSize": 192,
+        "gutter": 1,
+        "levelBytes": [
+          49405,
+          164341,
+          553697,
+          1859685
+        ],
+        "mimeType": "image/jpeg",
+        "encodedBytes": 2627128,
+        "url": "media/washington-avenue-walking-bridge/eac-tiles/"
+      },
+      {
+        "id": "cube-tiles",
+        "role": "immersion",
+        "projection": "tiled-cube",
+        "warp": "gnomonic",
+        "faceSize": 1536,
+        "tileSize": 192,
+        "gutter": 1,
+        "levelBytes": [
+          48040,
+          159988,
+          537135,
+          1809661
+        ],
+        "mimeType": "image/jpeg",
+        "encodedBytes": 2554824,
+        "url": "media/washington-avenue-walking-bridge/cube-tiles/"
+      }
+    ]
+  },
+  "imagePose": {
+    "headingDeg": 0,
+    "pitchDeg": 0,
+    "rollDeg": 0
+  }
+}

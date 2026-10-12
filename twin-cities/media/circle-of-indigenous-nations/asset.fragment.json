@@ -1,0 +1,133 @@
+{
+  "asset": {
+    "id": "circle-of-indigenous-nations",
+    "revision": "d0bc63ea250d",
+    "type": "panorama-image",
+    "colorSpace": "srgb",
+    "alpha": "opaque",
+    "attribution": {
+      "text": "© Regents of the University of Minnesota"
+    },
+    "representations": [
+      {
+        "id": "preview-64",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 64,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 12336,
+        "faces": {
+          "px": "media/circle-of-indigenous-nations/preview-64/px.jpg",
+          "nx": "media/circle-of-indigenous-nations/preview-64/nx.jpg",
+          "py": "media/circle-of-indigenous-nations/preview-64/py.jpg",
+          "ny": "media/circle-of-indigenous-nations/preview-64/ny.jpg",
+          "pz": "media/circle-of-indigenous-nations/preview-64/pz.jpg",
+          "nz": "media/circle-of-indigenous-nations/preview-64/nz.jpg"
+        }
+      },
+      {
+        "id": "preview-128",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 128,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 32951,
+        "faces": {
+          "px": "media/circle-of-indigenous-nations/preview-128/px.jpg",
+          "nx": "media/circle-of-indigenous-nations/preview-128/nx.jpg",
+          "py": "media/circle-of-indigenous-nations/preview-128/py.jpg",
+          "ny": "media/circle-of-indigenous-nations/preview-128/ny.jpg",
+          "pz": "media/circle-of-indigenous-nations/preview-128/pz.jpg",
+          "nz": "media/circle-of-indigenous-nations/preview-128/nz.jpg"
+        }
+      },
+      {
+        "id": "preview-256",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 256,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 101257,
+        "faces": {
+          "px": "media/circle-of-indigenous-nations/preview-256/px.jpg",
+          "nx": "media/circle-of-indigenous-nations/preview-256/nx.jpg",
+          "py": "media/circle-of-indigenous-nations/preview-256/py.jpg",
+          "ny": "media/circle-of-indigenous-nations/preview-256/ny.jpg",
+          "pz": "media/circle-of-indigenous-nations/preview-256/pz.jpg",
+          "nz": "media/circle-of-indigenous-nations/preview-256/nz.jpg"
+        }
+      },
+      {
+        "id": "whole-2048",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 2048,
+        "height": 1024,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 467815,
+        "url": "media/circle-of-indigenous-nations/immersion-2048.jpg"
+      },
+      {
+        "id": "whole-4096",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 4096,
+        "height": 2048,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 1586134,
+        "url": "media/circle-of-indigenous-nations/immersion-4096.jpg"
+      },
+      {
+        "id": "whole-6144",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 6144,
+        "height": 3072,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 3131007,
+        "url": "media/circle-of-indigenous-nations/immersion-6144.jpg"
+      },
+      {
+        "id": "eac-tiles",
+        "role": "immersion",
+        "projection": "tiled-cube",
+        "warp": "equi-angular",
+        "faceSize": 1536,
+        "tileSize": 192,
+        "gutter": 1,
+        "levelBytes": [
+          63349,
+          216836,
+          772972,
+          2775495
+        ],
+        "mimeType": "image/jpeg",
+        "encodedBytes": 3828652,
+        "url": "media/circle-of-indigenous-nations/eac-tiles/"
+      },
+      {
+        "id": "cube-tiles",
+        "role": "immersion",
+        "projection": "tiled-cube",
+        "warp": "gnomonic",
+        "faceSize": 1536,
+        "tileSize": 192,
+        "gutter": 1,
+        "levelBytes": [
+          61244,
+          211034,
+          756790,
+          2753664
+        ],
+        "mimeType": "image/jpeg",
+        "encodedBytes": 3782732,
+        "url": "media/circle-of-indigenous-nations/cube-tiles/"
+      }
+    ]
+  },
+  "imagePose": {
+    "headingDeg": 0,
+    "pitchDeg": 0,
+    "rollDeg": 0
+  }
+}

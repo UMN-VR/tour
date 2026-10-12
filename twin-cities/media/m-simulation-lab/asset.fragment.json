@@ -1,0 +1,133 @@
+{
+  "asset": {
+    "id": "m-simulation-lab",
+    "revision": "9a437194f316",
+    "type": "panorama-image",
+    "colorSpace": "srgb",
+    "alpha": "opaque",
+    "attribution": {
+      "text": "© Regents of the University of Minnesota"
+    },
+    "representations": [
+      {
+        "id": "preview-64",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 64,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 9567,
+        "faces": {
+          "px": "media/m-simulation-lab/preview-64/px.jpg",
+          "nx": "media/m-simulation-lab/preview-64/nx.jpg",
+          "py": "media/m-simulation-lab/preview-64/py.jpg",
+          "ny": "media/m-simulation-lab/preview-64/ny.jpg",
+          "pz": "media/m-simulation-lab/preview-64/pz.jpg",
+          "nz": "media/m-simulation-lab/preview-64/nz.jpg"
+        }
+      },
+      {
+        "id": "preview-128",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 128,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 21876,
+        "faces": {
+          "px": "media/m-simulation-lab/preview-128/px.jpg",
+          "nx": "media/m-simulation-lab/preview-128/nx.jpg",
+          "py": "media/m-simulation-lab/preview-128/py.jpg",
+          "ny": "media/m-simulation-lab/preview-128/ny.jpg",
+          "pz": "media/m-simulation-lab/preview-128/pz.jpg",
+          "nz": "media/m-simulation-lab/preview-128/nz.jpg"
+        }
+      },
+      {
+        "id": "preview-256",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 256,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 61294,
+        "faces": {
+          "px": "media/m-simulation-lab/preview-256/px.jpg",
+          "nx": "media/m-simulation-lab/preview-256/nx.jpg",
+          "py": "media/m-simulation-lab/preview-256/py.jpg",
+          "ny": "media/m-simulation-lab/preview-256/ny.jpg",
+          "pz": "media/m-simulation-lab/preview-256/pz.jpg",
+          "nz": "media/m-simulation-lab/preview-256/nz.jpg"
+        }
+      },
+      {
+        "id": "whole-2048",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 2048,
+        "height": 1024,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 230339,
+        "url": "media/m-simulation-lab/immersion-2048.jpg"
+      },
+      {
+        "id": "whole-4096",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 4096,
+        "height": 2048,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 734968,
+        "url": "media/m-simulation-lab/immersion-4096.jpg"
+      },
+      {
+        "id": "whole-6144",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 6144,
+        "height": 3072,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 1445883,
+        "url": "media/m-simulation-lab/immersion-6144.jpg"
+      },
+      {
+        "id": "eac-tiles",
+        "role": "immersion",
+        "projection": "tiled-cube",
+        "warp": "equi-angular",
+        "faceSize": 1536,
+        "tileSize": 192,
+        "gutter": 1,
+        "levelBytes": [
+          39675,
+          131344,
+          442175,
+          1485555
+        ],
+        "mimeType": "image/jpeg",
+        "encodedBytes": 2098749,
+        "url": "media/m-simulation-lab/eac-tiles/"
+      },
+      {
+        "id": "cube-tiles",
+        "role": "immersion",
+        "projection": "tiled-cube",
+        "warp": "gnomonic",
+        "faceSize": 1536,
+        "tileSize": 192,
+        "gutter": 1,
+        "levelBytes": [
+          38969,
+          129323,
+          435124,
+          1465635
+        ],
+        "mimeType": "image/jpeg",
+        "encodedBytes": 2069051,
+        "url": "media/m-simulation-lab/cube-tiles/"
+      }
+    ]
+  },
+  "imagePose": {
+    "headingDeg": 0,
+    "pitchDeg": 0,
+    "rollDeg": 0
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "tool": "scripts/prepare-panorama.mjs",
+  "toolVersion": "1",
+  "scriptSha256": "b8ec3a3c778151cf4564840108fcc1d3f0b0c04b809f499cbb64de4495aaea32",
+  "libSha256": "4aeac1958ee2ff3417c3b84c785c9ee206fa9fcad2fd1fd782288652ab19d5e4",
+  "node": "v26.9.0",
+  "source": {
+    "kind": "file",
+    "name": "6144.jpg",
+    "sha256": "c6b3cc921c7d75a72c9dfc9df73d07dabd5a4b898fe1ca3dc6840ff228a7f7d3",
+    "bytes": 2001008,
+    "mimeType": "image/jpeg",
+    "storedWidth": 6144,
+    "storedHeight": 3072,
+    "width": 6144,
+    "height": 3072,
+    "exifOrientation": 1,
+    "colour": "untagged, taken as sRGB"
+  },
+  "gpano": null,
+  "pose": {
+    "headingDeg": 0,
+    "pitchDeg": 0,
+    "rollDeg": 0,
+    "provenance": "Preparation does not depend on the pose; the scene's imagePose comes from tools/twin-cities/placements.json."
+  },
+  "settings": {
+    "previewSizes": [
+      64,
+      128,
+      256
+    ],
+    "immersionWidths": [
+      2048,
+      4096,
+      6144
+    ],
+    "encoding": "jpeg",
+    "quality": 80,
+    "pose": {
+      "headingDeg": 0,
+      "pitchDeg": 0,
+      "rollDeg": 0
+    },
+    "tiles": {
+      "kinds": [
+        "eac",
+        "cube"
+      ],
+      "tileSize": 192,
+      "faceSize": 1536,
+      "gutter": 1
+    }
+  },
+  "processing": "EXIF orientation applied once; colour checked as sRGB and not converted; opaque alpha dropped; resampled in linear light and encoded to sRGB once. Faces follow the format's cube table; tiled faces carry a gutter resampled past their edges.",
+  "outputs": [
+    {
+      "path": "preview-64/px.jpg",
+      "bytes": 1769,
+      "sha256": "98467ad2e5474b4e22971da428073c4f2121eb18c2ea1217e0d82e3df4e9944c",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "preview-64/nx.jpg",
+      "bytes": 2149,
+      "sha256": "a0c72504e786fe1b02cba2bb948316d9ec2959495617f3640cf46058c848a517",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "preview-64/py.jpg",
+      "bytes": 2060,
+      "sha256": "856a8883e38d481b4e8df4eeed468b8e051342843b4eedb1d957562aada2ddc9",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "preview-64/ny.jpg",
+      "bytes": 1768,
+      "sha256": "8d44be4ad8ee3bf548b187db745e13946c723af07a584772b6a1180474de93d5",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "preview-64/pz.jpg",
+      "bytes": 1555,
+      "sha256": "3742a2f733f36a5096d78969ecb7519d04becaa22261b86bda4fb4d65ff677d4",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "preview-64/nz.jpg",
+      "bytes": 1248,
+      "sha256": "d4ebd17fb435e915c71d4675576251a3944c6f022b723db53b67b359af78f8ef",
+      "width": 64,
+      "height": 64
+    },
+    {
+      "path": "preview-128/px.jpg",
+      "bytes": 4649,
+      "sha256": "d79ef563e3dd20756abe372aa30180c5639a4c84b00b4f4f06994dd86acaceee",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "path": "preview-128/nx.jpg",
+      "bytes": 6041,
+      "sha256": "2ccc44981a4b4f172abce28bdbddc36a05f8e8249026fb7da1a5a7a2a6f762d6",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "path": "preview-128/py.jpg",
+      "bytes": 6203,
+      "sha256": "186433876ff0802225d1f304eefc2cbddf003f74becebcd33c534f238db1ac3d",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "path": "preview-128/ny.jpg",
+      "bytes": 4455,
+      "sha256": "54c03804b42059b53d9bbf737e94c6d9826d3650c4cb94efbcd516b0bc7f2597",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "path": "preview-128/pz.jpg",
+      "bytes": 3521,
+      "sha256": "0d427c0b1ad63570388e39337af853aff11aa4c6a496b6e08aabac4b259d03f0",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "path": "preview-128/nz.jpg",
+      "bytes": 3097,
+      "sha256": "199a92a2de85d4582ca6ce5fd1aab959e9c26ac3efce9f1be37d7a91eda2a142",
+      "width": 128,
+      "height": 128
+    },
+    {
+      "path": "preview-256/px.jpg",
+      "bytes": 14271,
+      "sha256": "d6b99410861479a36a8e8af6ea4536d896d521d6efc1dc0064a7e7b1e8da4f6c",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "path": "preview-256/nx.jpg",
+      "bytes": 19186,
+      "sha256": "f65e979a3d4028ebddfc495ae12fcc83bf1417fce8425571ad2ce650fb48e2e1",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "path": "preview-256/py.jpg",
+      "bytes": 21273,
+      "sha256": "eafaafb610edeb3e39ed85f46c407e884da72389a7ad05c7cb152f56dceece72",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "path": "preview-256/ny.jpg",
+      "bytes": 13799,
+      "sha256": "162357afa1ea2c672e59d5e3e8207d4748c03d0b23f9d7f2fb0ac2e78d709bbc",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "path": "preview-256/pz.jpg",
+      "bytes": 9199,
+      "sha256": "f005985d52a4e9d79343fafb13eb1ddea9ad0247dd96ee9b036bf3c7649390b0",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "path": "preview-256/nz.jpg",
+      "bytes": 11119,
+      "sha256": "c04c356bc7050eb4271258d373a84c111ee0863bdefd2a0b2da7cd864e5f22de",
+      "width": 256,
+      "height": 256
+    },
+    {
+      "path": "immersion-2048.jpg",
+      "bytes": 390486,
+      "sha256": "2fabc20f740645aaa31c65ed4ec26fc64e8cef18e8dd65c9d4cb99e8cf0cccc8",
+      "width": 2048,
+      "height": 1024
+    },
+    {
+      "path": "immersion-4096.jpg",
+      "bytes": 1276357,
+      "sha256": "a843196df6f8cc4e0c3337b6361982c05ebd0ef3b635ad56fce90834b7da24f8",
+      "width": 4096,
+      "height": 2048
+    },
+    {
+      "path": "immersion-6144.jpg",
+      "bytes": 2452407,
+      "sha256": "49e96dbae48271bc84b5a341e3382efadb683eeaf19f1c1ea324c813119c361d",
+      "width": 6144,
+      "height": 3072
+    }
+  ],
+  "tiles": [
+    {
+      "path": "eac-tiles/",
+      "files": 510,
+      "bytes": 3354205,
+      "sha256": "53d6eb019cdafa9bbe824a84978d4bccd5bf69ee25884ff23a87d1e17311a8bd",
+      "faceSize": 1536,
+      "tileSize": 192,
+      "gutter": 1,
+      "warp": "equi-angular"
+    },
+    {
+      "path": "cube-tiles/",
+      "files": 510,
+      "bytes": 3306139,
+      "sha256": "561c017c440b1b16d360de80988b6b39da185ea4c7213b8099d7965bd2a9e288",
+      "faceSize": 1536,
+      "tileSize": 192,
+      "gutter": 1,
+      "warp": "gnomonic"
+    }
+  ]
+}

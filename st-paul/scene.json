@@ -1,0 +1,2450 @@
+{
+  "format": "foss-earth-scene",
+  "version": 1,
+  "id": "umn-st-paul",
+  "revision": "1e77e7fc1541",
+  "title": "University of Minnesota Saint Paul: campus tour",
+  "requiredExtensions": [],
+  "extensions": {
+    "umn-vr.tour": {
+      "source": "YouVisit tour 60288 (location 80239, tour3), backed up 2026-09-27",
+      "build": "tools/twin-cities/build-scene.mjs",
+      "placements": "tools/twin-cities/placements.json",
+      "positions": "Capture positions are approximate. They come from YouVisit's one point per stop, or from the centre of the building a panorama shows; each panorama says which. Building centres are from OpenStreetMap, © OpenStreetMap contributors, ODbL 1.0.",
+      "north": "0 of 60 panoramas have north set; the others face an arbitrary direction.",
+      "campus": "The panoramas of umn-twin-cities revision 4b89d4e2af09 listed in this campus's campus.json, written by the tour's tools/campus-scenes.mjs."
+    },
+    "foss-earth.preview-sheets": {
+      "sheets": [
+        {
+          "id": "previews-64",
+          "revision": "e2bebc5b31f1",
+          "mimeType": "image/jpeg",
+          "width": 1536,
+          "height": 960,
+          "encodedBytes": 455974,
+          "url": "../twin-cities/media/previews-64.jpg"
+        }
+      ]
+    }
+  },
+  "assets": [
+    {
+      "id": "saint-paul-campus",
+      "revision": "29a9e994a36f",
+      "type": "panorama-image",
+      "colorSpace": "srgb",
+      "alpha": "opaque",
+      "attribution": {
+        "text": "© Regents of the University of Minnesota"
+      },
+      "representations": [
+        {
+          "id": "preview-64",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 64,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 10745,
+          "faces": {
+            "px": "../twin-cities/media/saint-paul-campus/preview-64/px.jpg",
+            "nx": "../twin-cities/media/saint-paul-campus/preview-64/nx.jpg",
+            "py": "../twin-cities/media/saint-paul-campus/preview-64/py.jpg",
+            "ny": "../twin-cities/media/saint-paul-campus/preview-64/ny.jpg",
+            "pz": "../twin-cities/media/saint-paul-campus/preview-64/pz.jpg",
+            "nz": "../twin-cities/media/saint-paul-campus/preview-64/nz.jpg"
+          },
+          "extensions": {
+            "foss-earth.preview-sheets": {
+              "id": "previews-64",
+              "x": 384,
+              "y": 512
+            }
+          }
+        },
+        {
+          "id": "preview-128",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 128,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 27143,
+          "faces": {
+            "px": "../twin-cities/media/saint-paul-campus/preview-128/px.jpg",
+            "nx": "../twin-cities/media/saint-paul-campus/preview-128/nx.jpg",
+            "py": "../twin-cities/media/saint-paul-campus/preview-128/py.jpg",
+            "ny": "../twin-cities/media/saint-paul-campus/preview-128/ny.jpg",
+            "pz": "../twin-cities/media/saint-paul-campus/preview-128/pz.jpg",
+            "nz": "../twin-cities/media/saint-paul-campus/preview-128/nz.jpg"
+          }
+        },
+        {
+          "id": "preview-256",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 256,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 87718,
+          "faces": {
+            "px": "../twin-cities/media/saint-paul-campus/preview-256/px.jpg",
+            "nx": "../twin-cities/media/saint-paul-campus/preview-256/nx.jpg",
+            "py": "../twin-cities/media/saint-paul-campus/preview-256/py.jpg",
+            "ny": "../twin-cities/media/saint-paul-campus/preview-256/ny.jpg",
+            "pz": "../twin-cities/media/saint-paul-campus/preview-256/pz.jpg",
+            "nz": "../twin-cities/media/saint-paul-campus/preview-256/nz.jpg"
+          }
+        },
+        {
+          "id": "whole-2048",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 2048,
+          "height": 1024,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 405530,
+          "url": "../twin-cities/media/saint-paul-campus/immersion-2048.jpg"
+        },
+        {
+          "id": "whole-4096",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 4096,
+          "height": 2048,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 1393905,
+          "url": "../twin-cities/media/saint-paul-campus/immersion-4096.jpg"
+        },
+        {
+          "id": "whole-6144",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 6144,
+          "height": 3072,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 2729738,
+          "url": "../twin-cities/media/saint-paul-campus/immersion-6144.jpg"
+        },
+        {
+          "id": "eac-tiles",
+          "role": "immersion",
+          "projection": "tiled-cube",
+          "warp": "equi-angular",
+          "faceSize": 1536,
+          "tileSize": 192,
+          "gutter": 1,
+          "levelBytes": [
+            52167,
+            197966,
+            765984,
+            2677415
+          ],
+          "mimeType": "image/jpeg",
+          "encodedBytes": 3693532,
+          "url": "../twin-cities/media/saint-paul-campus/eac-tiles/"
+        },
+        {
+          "id": "cube-tiles",
+          "role": "immersion",
+          "projection": "tiled-cube",
+          "warp": "gnomonic",
+          "faceSize": 1536,
+          "tileSize": 192,
+          "gutter": 1,
+          "levelBytes": [
+            51780,
+            196591,
+            763958,
+            2671354
+          ],
+          "mimeType": "image/jpeg",
+          "encodedBytes": 3683683,
+          "url": "../twin-cities/media/saint-paul-campus/cube-tiles/"
+        }
+      ]
+    },
+    {
+      "id": "horticulture-display-garden",
+      "revision": "a9566f8bdc02",
+      "type": "panorama-image",
+      "colorSpace": "srgb",
+      "alpha": "opaque",
+      "attribution": {
+        "text": "© Regents of the University of Minnesota"
+      },
+      "representations": [
+        {
+          "id": "preview-64",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 64,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 14057,
+          "faces": {
+            "px": "../twin-cities/media/horticulture-display-garden/preview-64/px.jpg",
+            "nx": "../twin-cities/media/horticulture-display-garden/preview-64/nx.jpg",
+            "py": "../twin-cities/media/horticulture-display-garden/preview-64/py.jpg",
+            "ny": "../twin-cities/media/horticulture-display-garden/preview-64/ny.jpg",
+            "pz": "../twin-cities/media/horticulture-display-garden/preview-64/pz.jpg",
+            "nz": "../twin-cities/media/horticulture-display-garden/preview-64/nz.jpg"
+          },
+          "extensions": {
+            "foss-earth.preview-sheets": {
+              "id": "previews-64",
+              "x": 768,
+              "y": 512
+            }
+          }
+        },
+        {
+          "id": "preview-128",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 128,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 41832,
+          "faces": {
+            "px": "../twin-cities/media/horticulture-display-garden/preview-128/px.jpg",
+            "nx": "../twin-cities/media/horticulture-display-garden/preview-128/nx.jpg",
+            "py": "../twin-cities/media/horticulture-display-garden/preview-128/py.jpg",
+            "ny": "../twin-cities/media/horticulture-display-garden/preview-128/ny.jpg",
+            "pz": "../twin-cities/media/horticulture-display-garden/preview-128/pz.jpg",
+            "nz": "../twin-cities/media/horticulture-display-garden/preview-128/nz.jpg"
+          }
+        },
+        {
+          "id": "preview-256",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 256,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 147395,
+          "faces": {
+            "px": "../twin-cities/media/horticulture-display-garden/preview-256/px.jpg",
+            "nx": "../twin-cities/media/horticulture-display-garden/preview-256/nx.jpg",
+            "py": "../twin-cities/media/horticulture-display-garden/preview-256/py.jpg",
+            "ny": "../twin-cities/media/horticulture-display-garden/preview-256/ny.jpg",
+            "pz": "../twin-cities/media/horticulture-display-garden/preview-256/pz.jpg",
+            "nz": "../twin-cities/media/horticulture-display-garden/preview-256/nz.jpg"
+          }
+        },
+        {
+          "id": "whole-2048",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 2048,
+          "height": 1024,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 690312,
+          "url": "../twin-cities/media/horticulture-display-garden/immersion-2048.jpg"
+        },
+        {
+          "id": "whole-4096",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 4096,
+          "height": 2048,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 2171129,
+          "url": "../twin-cities/media/horticulture-display-garden/immersion-4096.jpg"
+        },
+        {
+          "id": "whole-6144",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 6144,
+          "height": 3072,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 4159752,
+          "url": "../twin-cities/media/horticulture-display-garden/immersion-6144.jpg"
+        },
+        {
+          "id": "eac-tiles",
+          "role": "immersion",
+          "projection": "tiled-cube",
+          "warp": "equi-angular",
+          "faceSize": 1536,
+          "tileSize": 192,
+          "gutter": 1,
+          "levelBytes": [
+            84758,
+            321568,
+            1189369,
+            3915082
+          ],
+          "mimeType": "image/jpeg",
+          "encodedBytes": 5510777,
+          "url": "../twin-cities/media/horticulture-display-garden/eac-tiles/"
+        },
+        {
+          "id": "cube-tiles",
+          "role": "immersion",
+          "projection": "tiled-cube",
+          "warp": "gnomonic",
+          "faceSize": 1536,
+          "tileSize": 192,
+          "gutter": 1,
+          "levelBytes": [
+            82486,
+            313534,
+            1159707,
+            3822335
+          ],
+          "mimeType": "image/jpeg",
+          "encodedBytes": 5378062,
+          "url": "../twin-cities/media/horticulture-display-garden/cube-tiles/"
+        }
+      ]
+    },
+    {
+      "id": "life-and-environmental-sciences",
+      "revision": "1701a4c42667",
+      "type": "panorama-image",
+      "colorSpace": "srgb",
+      "alpha": "opaque",
+      "attribution": {
+        "text": "© Regents of the University of Minnesota"
+      },
+      "representations": [
+        {
+          "id": "preview-64",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 64,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 10842,
+          "faces": {
+            "px": "../twin-cities/media/life-and-environmental-sciences/preview-64/px.jpg",
+            "nx": "../twin-cities/media/life-and-environmental-sciences/preview-64/nx.jpg",
+            "py": "../twin-cities/media/life-and-environmental-sciences/preview-64/py.jpg",
+            "ny": "../twin-cities/media/life-and-environmental-sciences/preview-64/ny.jpg",
+            "pz": "../twin-cities/media/life-and-environmental-sciences/preview-64/pz.jpg",
+            "nz": "../twin-cities/media/life-and-environmental-sciences/preview-64/nz.jpg"
+          },
+          "extensions": {
+            "foss-earth.preview-sheets": {
+              "id": "previews-64",
+              "x": 1152,
+              "y": 512
+            }
+          }
+        },
+        {
+          "id": "preview-128",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 128,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 28975,
+          "faces": {
+            "px": "../twin-cities/media/life-and-environmental-sciences/preview-128/px.jpg",
+            "nx": "../twin-cities/media/life-and-environmental-sciences/preview-128/nx.jpg",
+            "py": "../twin-cities/media/life-and-environmental-sciences/preview-128/py.jpg",
+            "ny": "../twin-cities/media/life-and-environmental-sciences/preview-128/ny.jpg",
+            "pz": "../twin-cities/media/life-and-environmental-sciences/preview-128/pz.jpg",
+            "nz": "../twin-cities/media/life-and-environmental-sciences/preview-128/nz.jpg"
+          }
+        },
+        {
+          "id": "preview-256",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 256,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 96539,
+          "faces": {
+            "px": "../twin-cities/media/life-and-environmental-sciences/preview-256/px.jpg",
+            "nx": "../twin-cities/media/life-and-environmental-sciences/preview-256/nx.jpg",
+            "py": "../twin-cities/media/life-and-environmental-sciences/preview-256/py.jpg",
+            "ny": "../twin-cities/media/life-and-environmental-sciences/preview-256/ny.jpg",
+            "pz": "../twin-cities/media/life-and-environmental-sciences/preview-256/pz.jpg",
+            "nz": "../twin-cities/media/life-and-environmental-sciences/preview-256/nz.jpg"
+          }
+        },
+        {
+          "id": "whole-2048",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 2048,
+          "height": 1024,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 418179,
+          "url": "../twin-cities/media/life-and-environmental-sciences/immersion-2048.jpg"
+        },
+        {
+          "id": "whole-4096",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 4096,
+          "height": 2048,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 1364685,
+          "url": "../twin-cities/media/life-and-environmental-sciences/immersion-4096.jpg"
+        },
+        {
+          "id": "whole-6144",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 6144,
+          "height": 3072,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 2633009,
+          "url": "../twin-cities/media/life-and-environmental-sciences/immersion-6144.jpg"
+        },
+        {
+          "id": "eac-tiles",
+          "role": "immersion",
+          "projection": "tiled-cube",
+          "warp": "equi-angular",
+          "faceSize": 1536,
+          "tileSize": 192,
+          "gutter": 1,
+          "levelBytes": [
+            57472,
+            215557,
+            794457,
+            2652822
+          ],
+          "mimeType": "image/jpeg",
+          "encodedBytes": 3720308,
+          "url": "../twin-cities/media/life-and-environmental-sciences/eac-tiles/"
+        },
+        {
+          "id": "cube-tiles",
+          "role": "immersion",
+          "projection": "tiled-cube",
+          "warp": "gnomonic",
+          "faceSize": 1536,
+          "tileSize": 192,
+          "gutter": 1,
+          "levelBytes": [
+            56327,
+            212645,
+            787852,
+            2641452
+          ],
+          "mimeType": "image/jpeg",
+          "encodedBytes": 3698276,
+          "url": "../twin-cities/media/life-and-environmental-sciences/cube-tiles/"
+        }
+      ]
+    },
+    {
+      "id": "plant-diagnostics-lab",
+      "revision": "bdcaf4360388",
+      "type": "panorama-image",
+      "colorSpace": "srgb",
+      "alpha": "opaque",
+      "attribution": {
+        "text": "© Regents of the University of Minnesota"
+      },
+      "representations": [
+        {
+          "id": "preview-64",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 64,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 10779,
+          "faces": {
+            "px": "../twin-cities/media/plant-diagnostics-lab/preview-64/px.jpg",
+            "nx": "../twin-cities/media/plant-diagnostics-lab/preview-64/nx.jpg",
+            "py": "../twin-cities/media/plant-diagnostics-lab/preview-64/py.jpg",
+            "ny": "../twin-cities/media/plant-diagnostics-lab/preview-64/ny.jpg",
+            "pz": "../twin-cities/media/plant-diagnostics-lab/preview-64/pz.jpg",
+            "nz": "../twin-cities/media/plant-diagnostics-lab/preview-64/nz.jpg"
+          },
+          "extensions": {
+            "foss-earth.preview-sheets": {
+              "id": "previews-64",
+              "x": 0,
+              "y": 576
+            }
+          }
+        },
+        {
+          "id": "preview-128",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 128,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 28209,
+          "faces": {
+            "px": "../twin-cities/media/plant-diagnostics-lab/preview-128/px.jpg",
+            "nx": "../twin-cities/media/plant-diagnostics-lab/preview-128/nx.jpg",
+            "py": "../twin-cities/media/plant-diagnostics-lab/preview-128/py.jpg",
+            "ny": "../twin-cities/media/plant-diagnostics-lab/preview-128/ny.jpg",
+            "pz": "../twin-cities/media/plant-diagnostics-lab/preview-128/pz.jpg",
+            "nz": "../twin-cities/media/plant-diagnostics-lab/preview-128/nz.jpg"
+          }
+        },
+        {
+          "id": "preview-256",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 256,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 89319,
+          "faces": {
+            "px": "../twin-cities/media/plant-diagnostics-lab/preview-256/px.jpg",
+            "nx": "../twin-cities/media/plant-diagnostics-lab/preview-256/nx.jpg",
+            "py": "../twin-cities/media/plant-diagnostics-lab/preview-256/py.jpg",
+            "ny": "../twin-cities/media/plant-diagnostics-lab/preview-256/ny.jpg",
+            "pz": "../twin-cities/media/plant-diagnostics-lab/preview-256/pz.jpg",
+            "nz": "../twin-cities/media/plant-diagnostics-lab/preview-256/nz.jpg"
+          }
+        },
+        {
+          "id": "whole-2048",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 2048,
+          "height": 1024,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 378367,
+          "url": "../twin-cities/media/plant-diagnostics-lab/immersion-2048.jpg"
+        },
+        {
+          "id": "whole-4096",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 4096,
+          "height": 2048,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 1242197,
+          "url": "../twin-cities/media/plant-diagnostics-lab/immersion-4096.jpg"
+        },
+        {
+          "id": "whole-6144",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 6144,
+          "height": 3072,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 2456229,
+          "url": "../twin-cities/media/plant-diagnostics-lab/immersion-6144.jpg"
+        },
+        {
+          "id": "eac-tiles",
+          "role": "immersion",
+          "projection": "tiled-cube",
+          "warp": "equi-angular",
+          "faceSize": 1536,
+          "tileSize": 192,
+          "gutter": 1,
+          "levelBytes": [
+            54966,
+            198997,
+            714535,
+            2415396
+          ],
+          "mimeType": "image/jpeg",
+          "encodedBytes": 3383894,
+          "url": "../twin-cities/media/plant-diagnostics-lab/eac-tiles/"
+        },
+        {
+          "id": "cube-tiles",
+          "role": "immersion",
+          "projection": "tiled-cube",
+          "warp": "gnomonic",
+          "faceSize": 1536,
+          "tileSize": 192,
+          "gutter": 1,
+          "levelBytes": [
+            53019,
+            191518,
+            689180,
+            2347926
+          ],
+          "mimeType": "image/jpeg",
+          "encodedBytes": 3281643,
+          "url": "../twin-cities/media/plant-diagnostics-lab/cube-tiles/"
+        }
+      ]
+    },
+    {
+      "id": "mcneal-hall-design-studio",
+      "revision": "30f4e36f8a49",
+      "type": "panorama-image",
+      "colorSpace": "srgb",
+      "alpha": "opaque",
+      "attribution": {
+        "text": "© Regents of the University of Minnesota"
+      },
+      "representations": [
+        {
+          "id": "preview-64",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 64,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 10180,
+          "faces": {
+            "px": "../twin-cities/media/mcneal-hall-design-studio/preview-64/px.jpg",
+            "nx": "../twin-cities/media/mcneal-hall-design-studio/preview-64/nx.jpg",
+            "py": "../twin-cities/media/mcneal-hall-design-studio/preview-64/py.jpg",
+            "ny": "../twin-cities/media/mcneal-hall-design-studio/preview-64/ny.jpg",
+            "pz": "../twin-cities/media/mcneal-hall-design-studio/preview-64/pz.jpg",
+            "nz": "../twin-cities/media/mcneal-hall-design-studio/preview-64/nz.jpg"
+          },
+          "extensions": {
+            "foss-earth.preview-sheets": {
+              "id": "previews-64",
+              "x": 384,
+              "y": 576
+            }
+          }
+        },
+        {
+          "id": "preview-128",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 128,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 24447,
+          "faces": {
+            "px": "../twin-cities/media/mcneal-hall-design-studio/preview-128/px.jpg",
+            "nx": "../twin-cities/media/mcneal-hall-design-studio/preview-128/nx.jpg",
+            "py": "../twin-cities/media/mcneal-hall-design-studio/preview-128/py.jpg",
+            "ny": "../twin-cities/media/mcneal-hall-design-studio/preview-128/ny.jpg",
+            "pz": "../twin-cities/media/mcneal-hall-design-studio/preview-128/pz.jpg",
+            "nz": "../twin-cities/media/mcneal-hall-design-studio/preview-128/nz.jpg"
+          }
+        },
+        {
+          "id": "preview-256",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 256,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 69657,
+          "faces": {
+            "px": "../twin-cities/media/mcneal-hall-design-studio/preview-256/px.jpg",
+            "nx": "../twin-cities/media/mcneal-hall-design-studio/preview-256/nx.jpg",
+            "py": "../twin-cities/media/mcneal-hall-design-studio/preview-256/py.jpg",
+            "ny": "../twin-cities/media/mcneal-hall-design-studio/preview-256/ny.jpg",
+            "pz": "../twin-cities/media/mcneal-hall-design-studio/preview-256/pz.jpg",
+            "nz": "../twin-cities/media/mcneal-hall-design-studio/preview-256/nz.jpg"
+          }
+        },
+        {
+          "id": "whole-2048",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 2048,
+          "height": 1024,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 266554,
+          "url": "../twin-cities/media/mcneal-hall-design-studio/immersion-2048.jpg"
+        },
+        {
+          "id": "whole-4096",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 4096,
+          "height": 2048,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 823337,
+          "url": "../twin-cities/media/mcneal-hall-design-studio/immersion-4096.jpg"
+        },
+        {
+          "id": "whole-6144",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 6144,
+          "height": 3072,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 1552131,
+          "url": "../twin-cities/media/mcneal-hall-design-studio/immersion-6144.jpg"
+        },
+        {
+          "id": "eac-tiles",
+          "role": "immersion",
+          "projection": "tiled-cube",
+          "warp": "equi-angular",
+          "faceSize": 1536,
+          "tileSize": 192,
+          "gutter": 1,
+          "levelBytes": [
+            44851,
+            149349,
+            499154,
+            1617123
+          ],
+          "mimeType": "image/jpeg",
+          "encodedBytes": 2310477,
+          "url": "../twin-cities/media/mcneal-hall-design-studio/eac-tiles/"
+        },
+        {
+          "id": "cube-tiles",
+          "role": "immersion",
+          "projection": "tiled-cube",
+          "warp": "gnomonic",
+          "faceSize": 1536,
+          "tileSize": 192,
+          "gutter": 1,
+          "levelBytes": [
+            44005,
+            147177,
+            491875,
+            1601326
+          ],
+          "mimeType": "image/jpeg",
+          "encodedBytes": 2284383,
+          "url": "../twin-cities/media/mcneal-hall-design-studio/cube-tiles/"
+        }
+      ]
+    },
+    {
+      "id": "letterpress-lab",
+      "revision": "1a3f9132c257",
+      "type": "panorama-image",
+      "colorSpace": "srgb",
+      "alpha": "opaque",
+      "attribution": {
+        "text": "© Regents of the University of Minnesota"
+      },
+      "representations": [
+        {
+          "id": "preview-64",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 64,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 11290,
+          "faces": {
+            "px": "../twin-cities/media/letterpress-lab/preview-64/px.jpg",
+            "nx": "../twin-cities/media/letterpress-lab/preview-64/nx.jpg",
+            "py": "../twin-cities/media/letterpress-lab/preview-64/py.jpg",
+            "ny": "../twin-cities/media/letterpress-lab/preview-64/ny.jpg",
+            "pz": "../twin-cities/media/letterpress-lab/preview-64/pz.jpg",
+            "nz": "../twin-cities/media/letterpress-lab/preview-64/nz.jpg"
+          },
+          "extensions": {
+            "foss-earth.preview-sheets": {
+              "id": "previews-64",
+              "x": 768,
+              "y": 576
+            }
+          }
+        },
+        {
+          "id": "preview-128",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 128,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 28556,
+          "faces": {
+            "px": "../twin-cities/media/letterpress-lab/preview-128/px.jpg",
+            "nx": "../twin-cities/media/letterpress-lab/preview-128/nx.jpg",
+            "py": "../twin-cities/media/letterpress-lab/preview-128/py.jpg",
+            "ny": "../twin-cities/media/letterpress-lab/preview-128/ny.jpg",
+            "pz": "../twin-cities/media/letterpress-lab/preview-128/pz.jpg",
+            "nz": "../twin-cities/media/letterpress-lab/preview-128/nz.jpg"
+          }
+        },
+        {
+          "id": "preview-256",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 256,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 84464,
+          "faces": {
+            "px": "../twin-cities/media/letterpress-lab/preview-256/px.jpg",
+            "nx": "../twin-cities/media/letterpress-lab/preview-256/nx.jpg",
+            "py": "../twin-cities/media/letterpress-lab/preview-256/py.jpg",
+            "ny": "../twin-cities/media/letterpress-lab/preview-256/ny.jpg",
+            "pz": "../twin-cities/media/letterpress-lab/preview-256/pz.jpg",
+            "nz": "../twin-cities/media/letterpress-lab/preview-256/nz.jpg"
+          }
+        },
+        {
+          "id": "whole-2048",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 2048,
+          "height": 1024,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 334036,
+          "url": "../twin-cities/media/letterpress-lab/immersion-2048.jpg"
+        },
+        {
+          "id": "whole-4096",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 4096,
+          "height": 2048,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 1012097,
+          "url": "../twin-cities/media/letterpress-lab/immersion-4096.jpg"
+        },
+        {
+          "id": "whole-6144",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 6144,
+          "height": 3072,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 1922961,
+          "url": "../twin-cities/media/letterpress-lab/immersion-6144.jpg"
+        },
+        {
+          "id": "eac-tiles",
+          "role": "immersion",
+          "projection": "tiled-cube",
+          "warp": "equi-angular",
+          "faceSize": 1536,
+          "tileSize": 192,
+          "gutter": 1,
+          "levelBytes": [
+            54161,
+            182639,
+            604996,
+            1931926
+          ],
+          "mimeType": "image/jpeg",
+          "encodedBytes": 2773722,
+          "url": "../twin-cities/media/letterpress-lab/eac-tiles/"
+        },
+        {
+          "id": "cube-tiles",
+          "role": "immersion",
+          "projection": "tiled-cube",
+          "warp": "gnomonic",
+          "faceSize": 1536,
+          "tileSize": 192,
+          "gutter": 1,
+          "levelBytes": [
+            52322,
+            176222,
+            583413,
+            1880366
+          ],
+          "mimeType": "image/jpeg",
+          "encodedBytes": 2692323,
+          "url": "../twin-cities/media/letterpress-lab/cube-tiles/"
+        }
+      ]
+    },
+    {
+      "id": "apparel-design-classroom",
+      "revision": "6e660f581966",
+      "type": "panorama-image",
+      "colorSpace": "srgb",
+      "alpha": "opaque",
+      "attribution": {
+        "text": "© Regents of the University of Minnesota"
+      },
+      "representations": [
+        {
+          "id": "preview-64",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 64,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 13697,
+          "faces": {
+            "px": "../twin-cities/media/apparel-design-classroom/preview-64/px.jpg",
+            "nx": "../twin-cities/media/apparel-design-classroom/preview-64/nx.jpg",
+            "py": "../twin-cities/media/apparel-design-classroom/preview-64/py.jpg",
+            "ny": "../twin-cities/media/apparel-design-classroom/preview-64/ny.jpg",
+            "pz": "../twin-cities/media/apparel-design-classroom/preview-64/pz.jpg",
+            "nz": "../twin-cities/media/apparel-design-classroom/preview-64/nz.jpg"
+          },
+          "extensions": {
+            "foss-earth.preview-sheets": {
+              "id": "previews-64",
+              "x": 1152,
+              "y": 576
+            }
+          }
+        },
+        {
+          "id": "preview-128",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 128,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 37193,
+          "faces": {
+            "px": "../twin-cities/media/apparel-design-classroom/preview-128/px.jpg",
+            "nx": "../twin-cities/media/apparel-design-classroom/preview-128/nx.jpg",
+            "py": "../twin-cities/media/apparel-design-classroom/preview-128/py.jpg",
+            "ny": "../twin-cities/media/apparel-design-classroom/preview-128/ny.jpg",
+            "pz": "../twin-cities/media/apparel-design-classroom/preview-128/pz.jpg",
+            "nz": "../twin-cities/media/apparel-design-classroom/preview-128/nz.jpg"
+          }
+        },
+        {
+          "id": "preview-256",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 256,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 113070,
+          "faces": {
+            "px": "../twin-cities/media/apparel-design-classroom/preview-256/px.jpg",
+            "nx": "../twin-cities/media/apparel-design-classroom/preview-256/nx.jpg",
+            "py": "../twin-cities/media/apparel-design-classroom/preview-256/py.jpg",
+            "ny": "../twin-cities/media/apparel-design-classroom/preview-256/ny.jpg",
+            "pz": "../twin-cities/media/apparel-design-classroom/preview-256/pz.jpg",
+            "nz": "../twin-cities/media/apparel-design-classroom/preview-256/nz.jpg"
+          }
+        },
+        {
+          "id": "whole-2048",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 2048,
+          "height": 1024,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 437583,
+          "url": "../twin-cities/media/apparel-design-classroom/immersion-2048.jpg"
+        },
+        {
+          "id": "whole-4096",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 4096,
+          "height": 2048,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 1322863,
+          "url": "../twin-cities/media/apparel-design-classroom/immersion-4096.jpg"
+        },
+        {
+          "id": "whole-6144",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 6144,
+          "height": 3072,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 2480500,
+          "url": "../twin-cities/media/apparel-design-classroom/immersion-6144.jpg"
+        },
+        {
+          "id": "eac-tiles",
+          "role": "immersion",
+          "projection": "tiled-cube",
+          "warp": "equi-angular",
+          "faceSize": 1536,
+          "tileSize": 192,
+          "gutter": 1,
+          "levelBytes": [
+            69974,
+            232877,
+            765245,
+            2459831
+          ],
+          "mimeType": "image/jpeg",
+          "encodedBytes": 3527927,
+          "url": "../twin-cities/media/apparel-design-classroom/eac-tiles/"
+        },
+        {
+          "id": "cube-tiles",
+          "role": "immersion",
+          "projection": "tiled-cube",
+          "warp": "gnomonic",
+          "faceSize": 1536,
+          "tileSize": 192,
+          "gutter": 1,
+          "levelBytes": [
+            69393,
+            230249,
+            754354,
+            2439890
+          ],
+          "mimeType": "image/jpeg",
+          "encodedBytes": 3493886,
+          "url": "../twin-cities/media/apparel-design-classroom/cube-tiles/"
+        }
+      ]
+    },
+    {
+      "id": "cfans",
+      "revision": "e4b8a0c01518",
+      "type": "panorama-image",
+      "colorSpace": "srgb",
+      "alpha": "opaque",
+      "attribution": {
+        "text": "© Regents of the University of Minnesota"
+      },
+      "representations": [
+        {
+          "id": "preview-64",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 64,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 13609,
+          "faces": {
+            "px": "../twin-cities/media/cfans/preview-64/px.jpg",
+            "nx": "../twin-cities/media/cfans/preview-64/nx.jpg",
+            "py": "../twin-cities/media/cfans/preview-64/py.jpg",
+            "ny": "../twin-cities/media/cfans/preview-64/ny.jpg",
+            "pz": "../twin-cities/media/cfans/preview-64/pz.jpg",
+            "nz": "../twin-cities/media/cfans/preview-64/nz.jpg"
+          },
+          "extensions": {
+            "foss-earth.preview-sheets": {
+              "id": "previews-64",
+              "x": 0,
+              "y": 640
+            }
+          }
+        },
+        {
+          "id": "preview-128",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 128,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 41510,
+          "faces": {
+            "px": "../twin-cities/media/cfans/preview-128/px.jpg",
+            "nx": "../twin-cities/media/cfans/preview-128/nx.jpg",
+            "py": "../twin-cities/media/cfans/preview-128/py.jpg",
+            "ny": "../twin-cities/media/cfans/preview-128/ny.jpg",
+            "pz": "../twin-cities/media/cfans/preview-128/pz.jpg",
+            "nz": "../twin-cities/media/cfans/preview-128/nz.jpg"
+          }
+        },
+        {
+          "id": "preview-256",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 256,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 145648,
+          "faces": {
+            "px": "../twin-cities/media/cfans/preview-256/px.jpg",
+            "nx": "../twin-cities/media/cfans/preview-256/nx.jpg",
+            "py": "../twin-cities/media/cfans/preview-256/py.jpg",
+            "ny": "../twin-cities/media/cfans/preview-256/ny.jpg",
+            "pz": "../twin-cities/media/cfans/preview-256/pz.jpg",
+            "nz": "../twin-cities/media/cfans/preview-256/nz.jpg"
+          }
+        },
+        {
+          "id": "whole-2048",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 2048,
+          "height": 1024,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 608534,
+          "url": "../twin-cities/media/cfans/immersion-2048.jpg"
+        },
+        {
+          "id": "whole-4096",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 4096,
+          "height": 2048,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 1828870,
+          "url": "../twin-cities/media/cfans/immersion-4096.jpg"
+        },
+        {
+          "id": "whole-6144",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 6144,
+          "height": 3072,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 3394504,
+          "url": "../twin-cities/media/cfans/immersion-6144.jpg"
+        },
+        {
+          "id": "eac-tiles",
+          "role": "immersion",
+          "projection": "tiled-cube",
+          "warp": "equi-angular",
+          "faceSize": 1536,
+          "tileSize": 192,
+          "gutter": 1,
+          "levelBytes": [
+            83038,
+            308946,
+            1081016,
+            3370454
+          ],
+          "mimeType": "image/jpeg",
+          "encodedBytes": 4843454,
+          "url": "../twin-cities/media/cfans/eac-tiles/"
+        },
+        {
+          "id": "cube-tiles",
+          "role": "immersion",
+          "projection": "tiled-cube",
+          "warp": "gnomonic",
+          "faceSize": 1536,
+          "tileSize": 192,
+          "gutter": 1,
+          "levelBytes": [
+            81850,
+            305889,
+            1068838,
+            3336330
+          ],
+          "mimeType": "image/jpeg",
+          "encodedBytes": 4792907,
+          "url": "../twin-cities/media/cfans/cube-tiles/"
+        }
+      ]
+    },
+    {
+      "id": "community-connections",
+      "revision": "0c6a9ad4bd87",
+      "type": "panorama-image",
+      "colorSpace": "srgb",
+      "alpha": "opaque",
+      "attribution": {
+        "text": "© Regents of the University of Minnesota"
+      },
+      "representations": [
+        {
+          "id": "preview-64",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 64,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 11771,
+          "faces": {
+            "px": "../twin-cities/media/community-connections/preview-64/px.jpg",
+            "nx": "../twin-cities/media/community-connections/preview-64/nx.jpg",
+            "py": "../twin-cities/media/community-connections/preview-64/py.jpg",
+            "ny": "../twin-cities/media/community-connections/preview-64/ny.jpg",
+            "pz": "../twin-cities/media/community-connections/preview-64/pz.jpg",
+            "nz": "../twin-cities/media/community-connections/preview-64/nz.jpg"
+          },
+          "extensions": {
+            "foss-earth.preview-sheets": {
+              "id": "previews-64",
+              "x": 384,
+              "y": 640
+            }
+          }
+        },
+        {
+          "id": "preview-128",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 128,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 29859,
+          "faces": {
+            "px": "../twin-cities/media/community-connections/preview-128/px.jpg",
+            "nx": "../twin-cities/media/community-connections/preview-128/nx.jpg",
+            "py": "../twin-cities/media/community-connections/preview-128/py.jpg",
+            "ny": "../twin-cities/media/community-connections/preview-128/ny.jpg",
+            "pz": "../twin-cities/media/community-connections/preview-128/pz.jpg",
+            "nz": "../twin-cities/media/community-connections/preview-128/nz.jpg"
+          }
+        },
+        {
+          "id": "preview-256",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 256,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 89084,
+          "faces": {
+            "px": "../twin-cities/media/community-connections/preview-256/px.jpg",
+            "nx": "../twin-cities/media/community-connections/preview-256/nx.jpg",
+            "py": "../twin-cities/media/community-connections/preview-256/py.jpg",
+            "ny": "../twin-cities/media/community-connections/preview-256/ny.jpg",
+            "pz": "../twin-cities/media/community-connections/preview-256/pz.jpg",
+            "nz": "../twin-cities/media/community-connections/preview-256/nz.jpg"
+          }
+        },
+        {
+          "id": "whole-2048",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 2048,
+          "height": 1024,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 361178,
+          "url": "../twin-cities/media/community-connections/immersion-2048.jpg"
+        },
+        {
+          "id": "whole-4096",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 4096,
+          "height": 2048,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 1137248,
+          "url": "../twin-cities/media/community-connections/immersion-4096.jpg"
+        },
+        {
+          "id": "whole-6144",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 6144,
+          "height": 3072,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 2165450,
+          "url": "../twin-cities/media/community-connections/immersion-6144.jpg"
+        },
+        {
+          "id": "eac-tiles",
+          "role": "immersion",
+          "projection": "tiled-cube",
+          "warp": "equi-angular",
+          "faceSize": 1536,
+          "tileSize": 192,
+          "gutter": 1,
+          "levelBytes": [
+            56729,
+            192371,
+            656806,
+            2144680
+          ],
+          "mimeType": "image/jpeg",
+          "encodedBytes": 3050586,
+          "url": "../twin-cities/media/community-connections/eac-tiles/"
+        },
+        {
+          "id": "cube-tiles",
+          "role": "immersion",
+          "projection": "tiled-cube",
+          "warp": "gnomonic",
+          "faceSize": 1536,
+          "tileSize": 192,
+          "gutter": 1,
+          "levelBytes": [
+            54783,
+            185959,
+            635790,
+            2088124
+          ],
+          "mimeType": "image/jpeg",
+          "encodedBytes": 2964656,
+          "url": "../twin-cities/media/community-connections/cube-tiles/"
+        }
+      ]
+    },
+    {
+      "id": "bell-museum-planetarium",
+      "revision": "0b8423469fb7",
+      "type": "panorama-image",
+      "colorSpace": "srgb",
+      "alpha": "opaque",
+      "attribution": {
+        "text": "© Regents of the University of Minnesota"
+      },
+      "representations": [
+        {
+          "id": "preview-64",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 64,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 9942,
+          "faces": {
+            "px": "../twin-cities/media/bell-museum-planetarium/preview-64/px.jpg",
+            "nx": "../twin-cities/media/bell-museum-planetarium/preview-64/nx.jpg",
+            "py": "../twin-cities/media/bell-museum-planetarium/preview-64/py.jpg",
+            "ny": "../twin-cities/media/bell-museum-planetarium/preview-64/ny.jpg",
+            "pz": "../twin-cities/media/bell-museum-planetarium/preview-64/pz.jpg",
+            "nz": "../twin-cities/media/bell-museum-planetarium/preview-64/nz.jpg"
+          },
+          "extensions": {
+            "foss-earth.preview-sheets": {
+              "id": "previews-64",
+              "x": 768,
+              "y": 640
+            }
+          }
+        },
+        {
+          "id": "preview-128",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 128,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 25334,
+          "faces": {
+            "px": "../twin-cities/media/bell-museum-planetarium/preview-128/px.jpg",
+            "nx": "../twin-cities/media/bell-museum-planetarium/preview-128/nx.jpg",
+            "py": "../twin-cities/media/bell-museum-planetarium/preview-128/py.jpg",
+            "ny": "../twin-cities/media/bell-museum-planetarium/preview-128/ny.jpg",
+            "pz": "../twin-cities/media/bell-museum-planetarium/preview-128/pz.jpg",
+            "nz": "../twin-cities/media/bell-museum-planetarium/preview-128/nz.jpg"
+          }
+        },
+        {
+          "id": "preview-256",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 256,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 79809,
+          "faces": {
+            "px": "../twin-cities/media/bell-museum-planetarium/preview-256/px.jpg",
+            "nx": "../twin-cities/media/bell-museum-planetarium/preview-256/nx.jpg",
+            "py": "../twin-cities/media/bell-museum-planetarium/preview-256/py.jpg",
+            "ny": "../twin-cities/media/bell-museum-planetarium/preview-256/ny.jpg",
+            "pz": "../twin-cities/media/bell-museum-planetarium/preview-256/pz.jpg",
+            "nz": "../twin-cities/media/bell-museum-planetarium/preview-256/nz.jpg"
+          }
+        },
+        {
+          "id": "whole-2048",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 2048,
+          "height": 1024,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 362943,
+          "url": "../twin-cities/media/bell-museum-planetarium/immersion-2048.jpg"
+        },
+        {
+          "id": "whole-4096",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 4096,
+          "height": 2048,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 1129910,
+          "url": "../twin-cities/media/bell-museum-planetarium/immersion-4096.jpg"
+        },
+        {
+          "id": "whole-6144",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 6144,
+          "height": 3072,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 2133540,
+          "url": "../twin-cities/media/bell-museum-planetarium/immersion-6144.jpg"
+        },
+        {
+          "id": "eac-tiles",
+          "role": "immersion",
+          "projection": "tiled-cube",
+          "warp": "equi-angular",
+          "faceSize": 1536,
+          "tileSize": 192,
+          "gutter": 1,
+          "levelBytes": [
+            48118,
+            173603,
+            614696,
+            2014529
+          ],
+          "mimeType": "image/jpeg",
+          "encodedBytes": 2850946,
+          "url": "../twin-cities/media/bell-museum-planetarium/eac-tiles/"
+        },
+        {
+          "id": "cube-tiles",
+          "role": "immersion",
+          "projection": "tiled-cube",
+          "warp": "gnomonic",
+          "faceSize": 1536,
+          "tileSize": 192,
+          "gutter": 1,
+          "levelBytes": [
+            48068,
+            172630,
+            609793,
+            2002506
+          ],
+          "mimeType": "image/jpeg",
+          "encodedBytes": 2832997,
+          "url": "../twin-cities/media/bell-museum-planetarium/cube-tiles/"
+        }
+      ]
+    },
+    {
+      "id": "mcneal-hall",
+      "revision": "907f4e256403",
+      "type": "panorama-image",
+      "colorSpace": "srgb",
+      "alpha": "opaque",
+      "attribution": {
+        "text": "© Regents of the University of Minnesota"
+      },
+      "representations": [
+        {
+          "id": "preview-64",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 64,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 14602,
+          "faces": {
+            "px": "../twin-cities/media/mcneal-hall/preview-64/px.jpg",
+            "nx": "../twin-cities/media/mcneal-hall/preview-64/nx.jpg",
+            "py": "../twin-cities/media/mcneal-hall/preview-64/py.jpg",
+            "ny": "../twin-cities/media/mcneal-hall/preview-64/ny.jpg",
+            "pz": "../twin-cities/media/mcneal-hall/preview-64/pz.jpg",
+            "nz": "../twin-cities/media/mcneal-hall/preview-64/nz.jpg"
+          },
+          "extensions": {
+            "foss-earth.preview-sheets": {
+              "id": "previews-64",
+              "x": 768,
+              "y": 896
+            }
+          }
+        },
+        {
+          "id": "preview-128",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 128,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 44832,
+          "faces": {
+            "px": "../twin-cities/media/mcneal-hall/preview-128/px.jpg",
+            "nx": "../twin-cities/media/mcneal-hall/preview-128/nx.jpg",
+            "py": "../twin-cities/media/mcneal-hall/preview-128/py.jpg",
+            "ny": "../twin-cities/media/mcneal-hall/preview-128/ny.jpg",
+            "pz": "../twin-cities/media/mcneal-hall/preview-128/pz.jpg",
+            "nz": "../twin-cities/media/mcneal-hall/preview-128/nz.jpg"
+          }
+        },
+        {
+          "id": "preview-256",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 256,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 160085,
+          "faces": {
+            "px": "../twin-cities/media/mcneal-hall/preview-256/px.jpg",
+            "nx": "../twin-cities/media/mcneal-hall/preview-256/nx.jpg",
+            "py": "../twin-cities/media/mcneal-hall/preview-256/py.jpg",
+            "ny": "../twin-cities/media/mcneal-hall/preview-256/ny.jpg",
+            "pz": "../twin-cities/media/mcneal-hall/preview-256/pz.jpg",
+            "nz": "../twin-cities/media/mcneal-hall/preview-256/nz.jpg"
+          }
+        },
+        {
+          "id": "whole-2048",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 2048,
+          "height": 1024,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 785639,
+          "url": "../twin-cities/media/mcneal-hall/immersion-2048.jpg"
+        },
+        {
+          "id": "whole-4096",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 4096,
+          "height": 2048,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 2590717,
+          "url": "../twin-cities/media/mcneal-hall/immersion-4096.jpg"
+        },
+        {
+          "id": "whole-6144",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 6144,
+          "height": 3072,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 5083857,
+          "url": "../twin-cities/media/mcneal-hall/immersion-6144.jpg"
+        },
+        {
+          "id": "eac-tiles",
+          "role": "immersion",
+          "projection": "tiled-cube",
+          "warp": "equi-angular",
+          "faceSize": 1536,
+          "tileSize": 192,
+          "gutter": 1,
+          "levelBytes": [
+            90609,
+            345044,
+            1303158,
+            4546514
+          ],
+          "mimeType": "image/jpeg",
+          "encodedBytes": 6285325,
+          "url": "../twin-cities/media/mcneal-hall/eac-tiles/"
+        },
+        {
+          "id": "cube-tiles",
+          "role": "immersion",
+          "projection": "tiled-cube",
+          "warp": "gnomonic",
+          "faceSize": 1536,
+          "tileSize": 192,
+          "gutter": 1,
+          "levelBytes": [
+            88886,
+            339641,
+            1290361,
+            4541104
+          ],
+          "mimeType": "image/jpeg",
+          "encodedBytes": 6259992,
+          "url": "../twin-cities/media/mcneal-hall/cube-tiles/"
+        }
+      ]
+    },
+    {
+      "id": "st-paul-mall",
+      "revision": "e9ae00a53cdb",
+      "type": "panorama-image",
+      "colorSpace": "srgb",
+      "alpha": "opaque",
+      "attribution": {
+        "text": "© Regents of the University of Minnesota"
+      },
+      "representations": [
+        {
+          "id": "preview-64",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 64,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 9993,
+          "faces": {
+            "px": "../twin-cities/media/st-paul-mall/preview-64/px.jpg",
+            "nx": "../twin-cities/media/st-paul-mall/preview-64/nx.jpg",
+            "py": "../twin-cities/media/st-paul-mall/preview-64/py.jpg",
+            "ny": "../twin-cities/media/st-paul-mall/preview-64/ny.jpg",
+            "pz": "../twin-cities/media/st-paul-mall/preview-64/pz.jpg",
+            "nz": "../twin-cities/media/st-paul-mall/preview-64/nz.jpg"
+          },
+          "extensions": {
+            "foss-earth.preview-sheets": {
+              "id": "previews-64",
+              "x": 1152,
+              "y": 896
+            }
+          }
+        },
+        {
+          "id": "preview-128",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 128,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 28180,
+          "faces": {
+            "px": "../twin-cities/media/st-paul-mall/preview-128/px.jpg",
+            "nx": "../twin-cities/media/st-paul-mall/preview-128/nx.jpg",
+            "py": "../twin-cities/media/st-paul-mall/preview-128/py.jpg",
+            "ny": "../twin-cities/media/st-paul-mall/preview-128/ny.jpg",
+            "pz": "../twin-cities/media/st-paul-mall/preview-128/pz.jpg",
+            "nz": "../twin-cities/media/st-paul-mall/preview-128/nz.jpg"
+          }
+        },
+        {
+          "id": "preview-256",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 256,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 102652,
+          "faces": {
+            "px": "../twin-cities/media/st-paul-mall/preview-256/px.jpg",
+            "nx": "../twin-cities/media/st-paul-mall/preview-256/nx.jpg",
+            "py": "../twin-cities/media/st-paul-mall/preview-256/py.jpg",
+            "ny": "../twin-cities/media/st-paul-mall/preview-256/ny.jpg",
+            "pz": "../twin-cities/media/st-paul-mall/preview-256/pz.jpg",
+            "nz": "../twin-cities/media/st-paul-mall/preview-256/nz.jpg"
+          }
+        },
+        {
+          "id": "whole-2048",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 2048,
+          "height": 1024,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 592121,
+          "url": "../twin-cities/media/st-paul-mall/immersion-2048.jpg"
+        },
+        {
+          "id": "whole-4096",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 4096,
+          "height": 2048,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 2123838,
+          "url": "../twin-cities/media/st-paul-mall/immersion-4096.jpg"
+        },
+        {
+          "id": "whole-6144",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 6144,
+          "height": 3072,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 4339979,
+          "url": "../twin-cities/media/st-paul-mall/immersion-6144.jpg"
+        },
+        {
+          "id": "eac-tiles",
+          "role": "immersion",
+          "projection": "tiled-cube",
+          "warp": "equi-angular",
+          "faceSize": 1536,
+          "tileSize": 192,
+          "gutter": 1,
+          "levelBytes": [
+            58132,
+            237817,
+            984414,
+            3720291
+          ],
+          "mimeType": "image/jpeg",
+          "encodedBytes": 5000654,
+          "url": "../twin-cities/media/st-paul-mall/eac-tiles/"
+        },
+        {
+          "id": "cube-tiles",
+          "role": "immersion",
+          "projection": "tiled-cube",
+          "warp": "gnomonic",
+          "faceSize": 1536,
+          "tileSize": 192,
+          "gutter": 1,
+          "levelBytes": [
+            56533,
+            232699,
+            968782,
+            3713112
+          ],
+          "mimeType": "image/jpeg",
+          "encodedBytes": 4971126,
+          "url": "../twin-cities/media/st-paul-mall/cube-tiles/"
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "saint-paul-campus",
+      "type": "panorama",
+      "assetId": "saint-paul-campus",
+      "title": "Saint Paul Campus",
+      "capture": {
+        "longitudeDeg": -93.1861961,
+        "latitudeDeg": 44.9828315,
+        "height": null,
+        "horizontalAccuracyMeters": 65
+      },
+      "imagePose": {
+        "headingDeg": 0,
+        "pitchDeg": 0,
+        "rollDeg": 0,
+        "aligned": false
+      },
+      "marker": {
+        "mode": "ground-relative",
+        "eastM": 0,
+        "northM": 0,
+        "offsetM": 25,
+        "radiusMeters": 3
+      },
+      "links": [
+        {
+          "id": "hotspot-111895",
+          "target": "life-and-environmental-sciences",
+          "label": "Life & Environmental Sciences",
+          "direction": {
+            "headingDeg": 344.542,
+            "pitchDeg": 4.019
+          }
+        },
+        {
+          "id": "stop-306394-horticulture-display-garden",
+          "target": "horticulture-display-garden",
+          "label": "Horticulture Display Garden"
+        },
+        {
+          "id": "stop-306398",
+          "target": "community-connections",
+          "label": "Back to Community Connections"
+        },
+        {
+          "id": "next-stop",
+          "target": "life-and-environmental-sciences",
+          "label": "Next stop: College of Food, Agricultural and Natural Resource Sciences (CFANS)"
+        }
+      ],
+      "extensions": {
+        "umn-vr.tour": {
+          "youvisit": {
+            "panoramas": [
+              365388,
+              368165
+            ],
+            "stops": [
+              306394,
+              306398
+            ]
+          },
+          "capture": "YouVisit's tour point for stop 306394, Welcome to the Saint Paul Campus, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+          "north": {
+            "provenance": "Not aligned: YouVisit's images carry no orientation, so north is unknown."
+          }
+        }
+      }
+    },
+    {
+      "id": "horticulture-display-garden",
+      "type": "panorama",
+      "assetId": "horticulture-display-garden",
+      "title": "Horticulture Display Garden",
+      "description": "Learning Garden for Horticulture Science",
+      "capture": {
+        "longitudeDeg": -93.1825961,
+        "latitudeDeg": 44.9882468,
+        "height": null,
+        "horizontalAccuracyMeters": 50
+      },
+      "imagePose": {
+        "headingDeg": 0,
+        "pitchDeg": 0,
+        "rollDeg": 0,
+        "aligned": false
+      },
+      "marker": {
+        "mode": "ground-relative",
+        "eastM": 0,
+        "northM": 0,
+        "offsetM": 25,
+        "radiusMeters": 3
+      },
+      "links": [
+        {
+          "id": "stop-306394",
+          "target": "saint-paul-campus",
+          "label": "Back to Saint Paul Campus"
+        },
+        {
+          "id": "stop-306395",
+          "target": "life-and-environmental-sciences",
+          "label": "Back to Life & Environmental Sciences"
+        },
+        {
+          "id": "stop-306397",
+          "target": "cfans",
+          "label": "Back to CFANS"
+        }
+      ],
+      "extensions": {
+        "umn-vr.tour": {
+          "youvisit": {
+            "panoramas": [
+              363756,
+              368159,
+              368164
+            ],
+            "stops": [
+              306394,
+              306395,
+              306397
+            ]
+          },
+          "capture": "Centre of the OpenStreetMap feature Department of Horticultural Science Display and Trial Garden (way/158591108): the Horticultural Science Display and Trial Garden, which the title names; the stop's point is at the Student Center, 700 m away. Where in it the photograph was taken is not known.",
+          "north": {
+            "provenance": "Not aligned: YouVisit's images carry no orientation, so north is unknown."
+          }
+        }
+      }
+    },
+    {
+      "id": "life-and-environmental-sciences",
+      "type": "panorama",
+      "assetId": "life-and-environmental-sciences",
+      "title": "Life & Environmental Sciences",
+      "description": "College of Food, Agricultural and Natural Resource Sciences",
+      "capture": {
+        "longitudeDeg": -93.1850964,
+        "latitudeDeg": 44.9838636,
+        "height": null,
+        "horizontalAccuracyMeters": 65
+      },
+      "imagePose": {
+        "headingDeg": 0,
+        "pitchDeg": 0,
+        "rollDeg": 0,
+        "aligned": false
+      },
+      "marker": {
+        "mode": "ground-relative",
+        "eastM": 0,
+        "northM": 0,
+        "offsetM": 25,
+        "radiusMeters": 3
+      },
+      "links": [
+        {
+          "id": "hotspot-111893",
+          "target": "horticulture-display-garden",
+          "label": "Horticulture Display Garden",
+          "direction": {
+            "headingDeg": 252.053,
+            "pitchDeg": 1.056
+          }
+        },
+        {
+          "id": "hotspot-111894",
+          "target": "plant-diagnostics-lab",
+          "label": "Plant Diagnostics Lab",
+          "direction": {
+            "headingDeg": 166.101,
+            "pitchDeg": -1.234
+          }
+        },
+        {
+          "id": "stop-306394",
+          "target": "saint-paul-campus",
+          "label": "Back to Saint Paul Campus"
+        },
+        {
+          "id": "next-stop",
+          "target": "mcneal-hall-design-studio",
+          "label": "Next stop: Design and Discovery"
+        },
+        {
+          "id": "previous-stop",
+          "target": "saint-paul-campus",
+          "label": "Previous stop: Welcome to the Saint Paul Campus"
+        }
+      ],
+      "extensions": {
+        "umn-vr.tour": {
+          "youvisit": {
+            "panoramas": [
+              365392,
+              369958
+            ],
+            "stops": [
+              306394,
+              306395
+            ]
+          },
+          "capture": "YouVisit's tour point for stop 306395, College of Food, Agricultural and Natural Resource Sciences (CFANS), whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+          "north": {
+            "provenance": "Not aligned: YouVisit's images carry no orientation, so north is unknown."
+          }
+        }
+      }
+    },
+    {
+      "id": "plant-diagnostics-lab",
+      "type": "panorama",
+      "assetId": "plant-diagnostics-lab",
+      "title": "Plant Diagnostics Lab",
+      "capture": {
+        "longitudeDeg": -93.1850964,
+        "latitudeDeg": 44.9838636,
+        "height": null,
+        "horizontalAccuracyMeters": 150
+      },
+      "imagePose": {
+        "headingDeg": 0,
+        "pitchDeg": 0,
+        "rollDeg": 0,
+        "aligned": false
+      },
+      "marker": {
+        "mode": "ground-relative",
+        "eastM": 0,
+        "northM": 15,
+        "offsetM": 25,
+        "radiusMeters": 3
+      },
+      "links": [
+        {
+          "id": "stop-306395",
+          "target": "life-and-environmental-sciences",
+          "label": "Back to Life & Environmental Sciences"
+        },
+        {
+          "id": "stop-306397",
+          "target": "cfans",
+          "label": "Back to CFANS"
+        }
+      ],
+      "extensions": {
+        "umn-vr.tour": {
+          "youvisit": {
+            "panoramas": [
+              363757,
+              368160,
+              369959
+            ],
+            "stops": [
+              306395,
+              306397
+            ]
+          },
+          "capture": "Not placed: YouVisit's tour point for stop 306395, College of Food, Agricultural and Natural Resource Sciences (CFANS), which this panorama belongs to. It is somewhere in or near that stop.",
+          "north": {
+            "provenance": "Not aligned: YouVisit's images carry no orientation, so north is unknown."
+          }
+        }
+      }
+    },
+    {
+      "id": "mcneal-hall-design-studio",
+      "type": "panorama",
+      "assetId": "mcneal-hall-design-studio",
+      "title": "McNeal Hall Design Studio",
+      "capture": {
+        "longitudeDeg": -93.1833959,
+        "latitudeDeg": 44.9850853,
+        "height": null,
+        "horizontalAccuracyMeters": 65
+      },
+      "imagePose": {
+        "headingDeg": 0,
+        "pitchDeg": 0,
+        "rollDeg": 0,
+        "aligned": false
+      },
+      "marker": {
+        "mode": "ground-relative",
+        "eastM": 0,
+        "northM": 0,
+        "offsetM": 25,
+        "radiusMeters": 3
+      },
+      "links": [
+        {
+          "id": "hotspot-109217",
+          "target": "letterpress-lab",
+          "label": "Letterpress Lab",
+          "direction": {
+            "headingDeg": 93.952,
+            "pitchDeg": 3.324
+          }
+        },
+        {
+          "id": "hotspot-111918",
+          "target": "apparel-design-classroom",
+          "label": "Apparel Design Classroom",
+          "direction": {
+            "headingDeg": 308.43,
+            "pitchDeg": -2.884
+          }
+        },
+        {
+          "id": "next-stop",
+          "target": "cfans",
+          "label": "Next stop: Biology & The Environment"
+        },
+        {
+          "id": "previous-stop",
+          "target": "life-and-environmental-sciences",
+          "label": "Previous stop: College of Food, Agricultural and Natural Resource Sciences (CFANS)"
+        }
+      ],
+      "extensions": {
+        "umn-vr.tour": {
+          "youvisit": {
+            "panoramas": [
+              365390
+            ],
+            "stops": [
+              306396
+            ]
+          },
+          "capture": "YouVisit's tour point for stop 306396, Design and Discovery, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+          "north": {
+            "provenance": "Not aligned: YouVisit's images carry no orientation, so north is unknown."
+          }
+        }
+      }
+    },
+    {
+      "id": "letterpress-lab",
+      "type": "panorama",
+      "assetId": "letterpress-lab",
+      "title": "Letterpress Lab",
+      "description": "Creativity abounds in all of the McNeal Hall design labs, and here in the Letterpress Lab, the past is preserved. The lab's typefaces collection contains over 100 different historically significant styles with design influences that span from early Rome to advertising scripts of the mid-20th century.",
+      "capture": {
+        "longitudeDeg": -93.1833959,
+        "latitudeDeg": 44.9850853,
+        "height": null,
+        "horizontalAccuracyMeters": 60
+      },
+      "imagePose": {
+        "headingDeg": 0,
+        "pitchDeg": 0,
+        "rollDeg": 0,
+        "aligned": false
+      },
+      "marker": {
+        "mode": "ground-relative",
+        "eastM": 0,
+        "northM": 15,
+        "offsetM": 25,
+        "radiusMeters": 3
+      },
+      "links": [
+        {
+          "id": "stop-306396",
+          "target": "mcneal-hall-design-studio",
+          "label": "Back to McNeal Hall Design Studio"
+        }
+      ],
+      "extensions": {
+        "umn-vr.tour": {
+          "youvisit": {
+            "panoramas": [
+              365391,
+              365421
+            ],
+            "stops": [
+              306396
+            ]
+          },
+          "capture": "YouVisit's tour point for stop 306396, Design and Discovery, which is 30 m from the centre of McNeal Hall (OpenStreetMap way/77712291), where this panorama was taken. Where in the building is not known.",
+          "north": {
+            "provenance": "Not aligned: YouVisit's images carry no orientation, so north is unknown."
+          }
+        }
+      }
+    },
+    {
+      "id": "apparel-design-classroom",
+      "type": "panorama",
+      "assetId": "apparel-design-classroom",
+      "title": "Apparel Design Classroom",
+      "capture": {
+        "longitudeDeg": -93.1833959,
+        "latitudeDeg": 44.9850853,
+        "height": null,
+        "horizontalAccuracyMeters": 60
+      },
+      "imagePose": {
+        "headingDeg": 0,
+        "pitchDeg": 0,
+        "rollDeg": 0,
+        "aligned": false
+      },
+      "marker": {
+        "mode": "ground-relative",
+        "eastM": 0,
+        "northM": -15,
+        "offsetM": 25,
+        "radiusMeters": 3
+      },
+      "links": [
+        {
+          "id": "stop-306396",
+          "target": "mcneal-hall-design-studio",
+          "label": "Back to McNeal Hall Design Studio"
+        }
+      ],
+      "extensions": {
+        "umn-vr.tour": {
+          "youvisit": {
+            "panoramas": [
+              368169
+            ],
+            "stops": [
+              306396
+            ]
+          },
+          "capture": "YouVisit's tour point for stop 306396, Design and Discovery, which is 30 m from the centre of McNeal Hall (OpenStreetMap way/77712291), where this panorama was taken. Where in the building is not known.",
+          "north": {
+            "provenance": "Not aligned: YouVisit's images carry no orientation, so north is unknown."
+          }
+        }
+      }
+    },
+    {
+      "id": "cfans",
+      "type": "panorama",
+      "assetId": "cfans",
+      "title": "CFANS",
+      "capture": {
+        "longitudeDeg": -93.1814003,
+        "latitudeDeg": 44.9884469,
+        "height": null,
+        "horizontalAccuracyMeters": 65
+      },
+      "imagePose": {
+        "headingDeg": 0,
+        "pitchDeg": 0,
+        "rollDeg": 0,
+        "aligned": false
+      },
+      "marker": {
+        "mode": "ground-relative",
+        "eastM": 0,
+        "northM": 0,
+        "offsetM": 25,
+        "radiusMeters": 3
+      },
+      "links": [
+        {
+          "id": "hotspot-111904",
+          "target": "plant-diagnostics-lab",
+          "label": "Plant Diagnostics Lab",
+          "direction": {
+            "headingDeg": 338.326,
+            "pitchDeg": 19.634
+          }
+        },
+        {
+          "id": "hotspot-111905",
+          "target": "horticulture-display-garden",
+          "label": "Horticulture Display Garden",
+          "direction": {
+            "headingDeg": 206.47,
+            "pitchDeg": 6.659
+          }
+        },
+        {
+          "id": "next-stop",
+          "target": "community-connections",
+          "label": "Next stop: Community Connections"
+        },
+        {
+          "id": "previous-stop",
+          "target": "mcneal-hall-design-studio",
+          "label": "Previous stop: Design and Discovery"
+        }
+      ],
+      "extensions": {
+        "umn-vr.tour": {
+          "youvisit": {
+            "panoramas": [
+              365389
+            ],
+            "stops": [
+              306397
+            ]
+          },
+          "capture": "YouVisit's tour point for stop 306397, Biology & The Environment, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+          "north": {
+            "provenance": "Not aligned: YouVisit's images carry no orientation, so north is unknown."
+          }
+        }
+      }
+    },
+    {
+      "id": "community-connections",
+      "type": "panorama",
+      "assetId": "community-connections",
+      "title": "Community Connections",
+      "capture": {
+        "longitudeDeg": -93.18802,
+        "latitudeDeg": 44.9911861,
+        "height": null,
+        "horizontalAccuracyMeters": 65
+      },
+      "imagePose": {
+        "headingDeg": 0,
+        "pitchDeg": 0,
+        "rollDeg": 0,
+        "aligned": false
+      },
+      "marker": {
+        "mode": "ground-relative",
+        "eastM": 0,
+        "northM": 0,
+        "offsetM": 25,
+        "radiusMeters": 3
+      },
+      "links": [
+        {
+          "id": "hotspot-109218",
+          "target": "bell-museum-planetarium",
+          "label": "Bell Museum Planetarium",
+          "direction": {
+            "headingDeg": 41.397,
+            "pitchDeg": 12.06
+          }
+        },
+        {
+          "id": "hotspot-111908",
+          "target": "saint-paul-campus",
+          "label": "Saint Paul Campus",
+          "direction": {
+            "headingDeg": 357.455,
+            "pitchDeg": 4.543
+          }
+        },
+        {
+          "id": "previous-stop",
+          "target": "cfans",
+          "label": "Previous stop: Biology & The Environment"
+        }
+      ],
+      "extensions": {
+        "umn-vr.tour": {
+          "youvisit": {
+            "panoramas": [
+              365393
+            ],
+            "stops": [
+              306398
+            ]
+          },
+          "capture": "YouVisit's tour point for stop 306398, Community Connections, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+          "north": {
+            "provenance": "Not aligned: YouVisit's images carry no orientation, so north is unknown."
+          }
+        }
+      }
+    },
+    {
+      "id": "bell-museum-planetarium",
+      "type": "panorama",
+      "assetId": "bell-museum-planetarium",
+      "title": "Bell Museum Planetarium",
+      "capture": {
+        "longitudeDeg": -93.18802,
+        "latitudeDeg": 44.9911861,
+        "height": null,
+        "horizontalAccuracyMeters": 60
+      },
+      "imagePose": {
+        "headingDeg": 0,
+        "pitchDeg": 0,
+        "rollDeg": 0,
+        "aligned": false
+      },
+      "marker": {
+        "mode": "ground-relative",
+        "eastM": 0,
+        "northM": 15,
+        "offsetM": 25,
+        "radiusMeters": 3
+      },
+      "links": [
+        {
+          "id": "stop-306398",
+          "target": "community-connections",
+          "label": "Back to Community Connections"
+        }
+      ],
+      "extensions": {
+        "umn-vr.tour": {
+          "youvisit": {
+            "panoramas": [
+              365394,
+              365422
+            ],
+            "stops": [
+              306398
+            ]
+          },
+          "capture": "YouVisit's tour point for stop 306398, Community Connections, which is 4 m from the centre of Bell Museum (OpenStreetMap way/580258639), where this panorama was taken. Where in the building is not known.",
+          "north": {
+            "provenance": "Not aligned: YouVisit's images carry no orientation, so north is unknown."
+          }
+        }
+      }
+    },
+    {
+      "id": "mcneal-hall",
+      "type": "panorama",
+      "assetId": "mcneal-hall",
+      "title": "McNeal Hall",
+      "capture": {
+        "longitudeDeg": -93.1833975,
+        "latitudeDeg": 44.9853519,
+        "height": null,
+        "horizontalAccuracyMeters": 50
+      },
+      "imagePose": {
+        "headingDeg": 0,
+        "pitchDeg": 0,
+        "rollDeg": 0,
+        "aligned": false
+      },
+      "marker": {
+        "mode": "ground-relative",
+        "eastM": 0,
+        "northM": 0,
+        "offsetM": 25,
+        "radiusMeters": 3
+      },
+      "extensions": {
+        "umn-vr.tour": {
+          "youvisit": {
+            "panoramas": [
+              363724
+            ],
+            "stops": [],
+            "retiredStop": 306366
+          },
+          "capture": "Centre of the OpenStreetMap feature McNeal Hall (way/77712291): McNeal Hall, which the title names. YouVisit's map put this retired stop 3.4 km west of McNeal Hall, off the Saint Paul campus. Where in it the photograph was taken is not known.",
+          "north": {
+            "provenance": "Not aligned: YouVisit's images carry no orientation, so north is unknown."
+          }
+        }
+      }
+    },
+    {
+      "id": "st-paul-mall",
+      "type": "panorama",
+      "assetId": "st-paul-mall",
+      "title": "St. Paul Mall",
+      "capture": {
+        "longitudeDeg": -93.1843568,
+        "latitudeDeg": 44.984565,
+        "height": null,
+        "horizontalAccuracyMeters": 100
+      },
+      "imagePose": {
+        "headingDeg": 0,
+        "pitchDeg": 0,
+        "rollDeg": 0,
+        "aligned": false
+      },
+      "marker": {
+        "mode": "ground-relative",
+        "eastM": 0,
+        "northM": 0,
+        "offsetM": 25,
+        "radiusMeters": 3
+      },
+      "extensions": {
+        "umn-vr.tour": {
+          "youvisit": {
+            "panoramas": [
+              363726
+            ],
+            "stops": [],
+            "retiredStop": 306365
+          },
+          "capture": "Centre of the OpenStreetMap features Saint Paul Student Center (way/41424555), Coffey Hall (way/41424574), Magrath Library (way/41424572), McNeal Hall (way/77712291): the Saint Paul campus mall, taken as the middle of the Student Center, Coffey Hall, Magrath Library and McNeal Hall around it. YouVisit's map put this retired stop 3.4 km west, off the Saint Paul campus. Where in it the photograph was taken is not known.",
+          "north": {
+            "provenance": "Not aligned: YouVisit's images carry no orientation, so north is unknown."
+          }
+        }
+      }
+    }
+  ],
+  "groups": [
+    {
+      "id": "welcome-to-the-saint-paul-campus",
+      "title": "13. Welcome to the Saint Paul Campus",
+      "members": [
+        "saint-paul-campus",
+        "horticulture-display-garden",
+        "life-and-environmental-sciences"
+      ],
+      "extensions": {
+        "umn-vr.tour": {
+          "youvisitStop": 306394,
+          "number": 13
+        }
+      }
+    },
+    {
+      "id": "college-of-food-agricultural-and-natural-resource-sciences",
+      "title": "14. College of Food, Agricultural and Natural Resource Sciences (CFANS)",
+      "members": [
+        "life-and-environmental-sciences",
+        "plant-diagnostics-lab",
+        "horticulture-display-garden"
+      ],
+      "extensions": {
+        "umn-vr.tour": {
+          "youvisitStop": 306395,
+          "number": 14
+        }
+      }
+    },
+    {
+      "id": "design-and-discovery",
+      "title": "15. Design and Discovery",
+      "members": [
+        "mcneal-hall-design-studio",
+        "letterpress-lab",
+        "apparel-design-classroom"
+      ],
+      "extensions": {
+        "umn-vr.tour": {
+          "youvisitStop": 306396,
+          "number": 15
+        }
+      }
+    },
+    {
+      "id": "biology-and-the-environment",
+      "title": "16. Biology & The Environment",
+      "members": [
+        "cfans",
+        "plant-diagnostics-lab",
+        "horticulture-display-garden"
+      ],
+      "extensions": {
+        "umn-vr.tour": {
+          "youvisitStop": 306397,
+          "number": 16
+        }
+      }
+    },
+    {
+      "id": "community-connections",
+      "title": "17. Community Connections",
+      "members": [
+        "community-connections",
+        "bell-museum-planetarium",
+        "saint-paul-campus"
+      ],
+      "extensions": {
+        "umn-vr.tour": {
+          "youvisitStop": 306398,
+          "number": 17
+        }
+      }
+    },
+    {
+      "id": "earlier-tour-stops",
+      "title": "Earlier tour stops",
+      "members": [
+        "mcneal-hall",
+        "st-paul-mall"
+      ],
+      "extensions": {
+        "umn-vr.tour": {
+          "note": "Main views of stops YouVisit's tour no longer visits; they appear only on its map.",
+          "youvisitStops": [
+            306371,
+            306364,
+            306366,
+            306365
+          ]
+        }
+      }
+    }
+  ],
+  "initialPanorama": "saint-paul-campus",
+  "overview": {
+    "target": {
+      "longitudeDeg": -93.18471,
+      "latitudeDeg": 44.987009,
+      "height": null
+    },
+    "distanceMeters": 1500,
+    "headingDeg": 0,
+    "pitchDeg": -50,
+    "verticalFovDeg": 60
+  },
+  "markerStyle": {
+    "outline": {
+      "color": "#ffcc33",
+      "widthPx": 2
+    },
+    "hover": {
+      "scale": 1.3
+    }
+  }
+}

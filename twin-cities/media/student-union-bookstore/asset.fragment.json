@@ -1,0 +1,133 @@
+{
+  "asset": {
+    "id": "student-union-bookstore",
+    "revision": "fc28321a6c15",
+    "type": "panorama-image",
+    "colorSpace": "srgb",
+    "alpha": "opaque",
+    "attribution": {
+      "text": "© Regents of the University of Minnesota"
+    },
+    "representations": [
+      {
+        "id": "preview-64",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 64,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 9263,
+        "faces": {
+          "px": "media/student-union-bookstore/preview-64/px.jpg",
+          "nx": "media/student-union-bookstore/preview-64/nx.jpg",
+          "py": "media/student-union-bookstore/preview-64/py.jpg",
+          "ny": "media/student-union-bookstore/preview-64/ny.jpg",
+          "pz": "media/student-union-bookstore/preview-64/pz.jpg",
+          "nz": "media/student-union-bookstore/preview-64/nz.jpg"
+        }
+      },
+      {
+        "id": "preview-128",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 128,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 22334,
+        "faces": {
+          "px": "media/student-union-bookstore/preview-128/px.jpg",
+          "nx": "media/student-union-bookstore/preview-128/nx.jpg",
+          "py": "media/student-union-bookstore/preview-128/py.jpg",
+          "ny": "media/student-union-bookstore/preview-128/ny.jpg",
+          "pz": "media/student-union-bookstore/preview-128/pz.jpg",
+          "nz": "media/student-union-bookstore/preview-128/nz.jpg"
+        }
+      },
+      {
+        "id": "preview-256",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 256,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 66131,
+        "faces": {
+          "px": "media/student-union-bookstore/preview-256/px.jpg",
+          "nx": "media/student-union-bookstore/preview-256/nx.jpg",
+          "py": "media/student-union-bookstore/preview-256/py.jpg",
+          "ny": "media/student-union-bookstore/preview-256/ny.jpg",
+          "pz": "media/student-union-bookstore/preview-256/pz.jpg",
+          "nz": "media/student-union-bookstore/preview-256/nz.jpg"
+        }
+      },
+      {
+        "id": "whole-2048",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 2048,
+        "height": 1024,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 272597,
+        "url": "media/student-union-bookstore/immersion-2048.jpg"
+      },
+      {
+        "id": "whole-4096",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 4096,
+        "height": 2048,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 821842,
+        "url": "media/student-union-bookstore/immersion-4096.jpg"
+      },
+      {
+        "id": "whole-6144",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 6144,
+        "height": 3072,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 1533826,
+        "url": "media/student-union-bookstore/immersion-6144.jpg"
+      },
+      {
+        "id": "eac-tiles",
+        "role": "immersion",
+        "projection": "tiled-cube",
+        "warp": "equi-angular",
+        "faceSize": 1536,
+        "tileSize": 192,
+        "gutter": 1,
+        "levelBytes": [
+          42609,
+          146616,
+          487788,
+          1565817
+        ],
+        "mimeType": "image/jpeg",
+        "encodedBytes": 2242830,
+        "url": "media/student-union-bookstore/eac-tiles/"
+      },
+      {
+        "id": "cube-tiles",
+        "role": "immersion",
+        "projection": "tiled-cube",
+        "warp": "gnomonic",
+        "faceSize": 1536,
+        "tileSize": 192,
+        "gutter": 1,
+        "levelBytes": [
+          40774,
+          140846,
+          469962,
+          1523935
+        ],
+        "mimeType": "image/jpeg",
+        "encodedBytes": 2175517,
+        "url": "media/student-union-bookstore/cube-tiles/"
+      }
+    ]
+  },
+  "imagePose": {
+    "headingDeg": 0,
+    "pitchDeg": 0,
+    "rollDeg": 0
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "asset": {
+    "id": "letterpress-lab",
+    "revision": "1a3f9132c257",
+    "type": "panorama-image",
+    "colorSpace": "srgb",
+    "alpha": "opaque",
+    "attribution": {
+      "text": "© Regents of the University of Minnesota"
+    },
+    "representations": [
+      {
+        "id": "preview-64",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 64,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 11290,
+        "faces": {
+          "px": "media/letterpress-lab/preview-64/px.jpg",
+          "nx": "media/letterpress-lab/preview-64/nx.jpg",
+          "py": "media/letterpress-lab/preview-64/py.jpg",
+          "ny": "media/letterpress-lab/preview-64/ny.jpg",
+          "pz": "media/letterpress-lab/preview-64/pz.jpg",
+          "nz": "media/letterpress-lab/preview-64/nz.jpg"
+        }
+      },
+      {
+        "id": "preview-128",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 128,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 28556,
+        "faces": {
+          "px": "media/letterpress-lab/preview-128/px.jpg",
+          "nx": "media/letterpress-lab/preview-128/nx.jpg",
+          "py": "media/letterpress-lab/preview-128/py.jpg",
+          "ny": "media/letterpress-lab/preview-128/ny.jpg",
+          "pz": "media/letterpress-lab/preview-128/pz.jpg",
+          "nz": "media/letterpress-lab/preview-128/nz.jpg"
+        }
+      },
+      {
+        "id": "preview-256",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 256,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 84464,
+        "faces": {
+          "px": "media/letterpress-lab/preview-256/px.jpg",
+          "nx": "media/letterpress-lab/preview-256/nx.jpg",
+          "py": "media/letterpress-lab/preview-256/py.jpg",
+          "ny": "media/letterpress-lab/preview-256/ny.jpg",
+          "pz": "media/letterpress-lab/preview-256/pz.jpg",
+          "nz": "media/letterpress-lab/preview-256/nz.jpg"
+        }
+      },
+      {
+        "id": "whole-2048",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 2048,
+        "height": 1024,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 334036,
+        "url": "media/letterpress-lab/immersion-2048.jpg"
+      },
+      {
+        "id": "whole-4096",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 4096,
+        "height": 2048,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 1012097,
+        "url": "media/letterpress-lab/immersion-4096.jpg"
+      },
+      {
+        "id": "whole-6144",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 6144,
+        "height": 3072,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 1922961,
+        "url": "media/letterpress-lab/immersion-6144.jpg"
+      },
+      {
+        "id": "eac-tiles",
+        "role": "immersion",
+        "projection": "tiled-cube",
+        "warp": "equi-angular",
+        "faceSize": 1536,
+        "tileSize": 192,
+        "gutter": 1,
+        "levelBytes": [
+          54161,
+          182639,
+          604996,
+          1931926
+        ],
+        "mimeType": "image/jpeg",
+        "encodedBytes": 2773722,
+        "url": "media/letterpress-lab/eac-tiles/"
+      },
+      {
+        "id": "cube-tiles",
+        "role": "immersion",
+        "projection": "tiled-cube",
+        "warp": "gnomonic",
+        "faceSize": 1536,
+        "tileSize": 192,
+        "gutter": 1,
+        "levelBytes": [
+          52322,
+          176222,
+          583413,
+          1880366
+        ],
+        "mimeType": "image/jpeg",
+        "encodedBytes": 2692323,
+        "url": "media/letterpress-lab/cube-tiles/"
+      }
+    ]
+  },
+  "imagePose": {
+    "headingDeg": 0,
+    "pitchDeg": 0,
+    "rollDeg": 0
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "asset": {
+    "id": "one-stop-student-services",
+    "revision": "b94c6c00cbda",
+    "type": "panorama-image",
+    "colorSpace": "srgb",
+    "alpha": "opaque",
+    "attribution": {
+      "text": "© Regents of the University of Minnesota"
+    },
+    "representations": [
+      {
+        "id": "preview-64",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 64,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 11444,
+        "faces": {
+          "px": "media/one-stop-student-services/preview-64/px.jpg",
+          "nx": "media/one-stop-student-services/preview-64/nx.jpg",
+          "py": "media/one-stop-student-services/preview-64/py.jpg",
+          "ny": "media/one-stop-student-services/preview-64/ny.jpg",
+          "pz": "media/one-stop-student-services/preview-64/pz.jpg",
+          "nz": "media/one-stop-student-services/preview-64/nz.jpg"
+        }
+      },
+      {
+        "id": "preview-128",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 128,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 28596,
+        "faces": {
+          "px": "media/one-stop-student-services/preview-128/px.jpg",
+          "nx": "media/one-stop-student-services/preview-128/nx.jpg",
+          "py": "media/one-stop-student-services/preview-128/py.jpg",
+          "ny": "media/one-stop-student-services/preview-128/ny.jpg",
+          "pz": "media/one-stop-student-services/preview-128/pz.jpg",
+          "nz": "media/one-stop-student-services/preview-128/nz.jpg"
+        }
+      },
+      {
+        "id": "preview-256",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 256,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 83075,
+        "faces": {
+          "px": "media/one-stop-student-services/preview-256/px.jpg",
+          "nx": "media/one-stop-student-services/preview-256/nx.jpg",
+          "py": "media/one-stop-student-services/preview-256/py.jpg",
+          "ny": "media/one-stop-student-services/preview-256/ny.jpg",
+          "pz": "media/one-stop-student-services/preview-256/pz.jpg",
+          "nz": "media/one-stop-student-services/preview-256/nz.jpg"
+        }
+      },
+      {
+        "id": "whole-2048",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 2048,
+        "height": 1024,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 334571,
+        "url": "media/one-stop-student-services/immersion-2048.jpg"
+      },
+      {
+        "id": "whole-4096",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 4096,
+        "height": 2048,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 1107427,
+        "url": "media/one-stop-student-services/immersion-4096.jpg"
+      },
+      {
+        "id": "whole-6144",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 6144,
+        "height": 3072,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 2212375,
+        "url": "media/one-stop-student-services/immersion-6144.jpg"
+      },
+      {
+        "id": "eac-tiles",
+        "role": "immersion",
+        "projection": "tiled-cube",
+        "warp": "equi-angular",
+        "faceSize": 1536,
+        "tileSize": 192,
+        "gutter": 1,
+        "levelBytes": [
+          52833,
+          174909,
+          597428,
+          2097512
+        ],
+        "mimeType": "image/jpeg",
+        "encodedBytes": 2922682,
+        "url": "media/one-stop-student-services/eac-tiles/"
+      },
+      {
+        "id": "cube-tiles",
+        "role": "immersion",
+        "projection": "tiled-cube",
+        "warp": "gnomonic",
+        "faceSize": 1536,
+        "tileSize": 192,
+        "gutter": 1,
+        "levelBytes": [
+          51725,
+          171500,
+          593269,
+          2099070
+        ],
+        "mimeType": "image/jpeg",
+        "encodedBytes": 2915564,
+        "url": "media/one-stop-student-services/cube-tiles/"
+      }
+    ]
+  },
+  "imagePose": {
+    "headingDeg": 0,
+    "pitchDeg": 0,
+    "rollDeg": 0
+  }
+}

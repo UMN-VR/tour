@@ -1,0 +1,133 @@
+{
+  "asset": {
+    "id": "life-and-environmental-sciences",
+    "revision": "1701a4c42667",
+    "type": "panorama-image",
+    "colorSpace": "srgb",
+    "alpha": "opaque",
+    "attribution": {
+      "text": "© Regents of the University of Minnesota"
+    },
+    "representations": [
+      {
+        "id": "preview-64",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 64,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 10842,
+        "faces": {
+          "px": "media/life-and-environmental-sciences/preview-64/px.jpg",
+          "nx": "media/life-and-environmental-sciences/preview-64/nx.jpg",
+          "py": "media/life-and-environmental-sciences/preview-64/py.jpg",
+          "ny": "media/life-and-environmental-sciences/preview-64/ny.jpg",
+          "pz": "media/life-and-environmental-sciences/preview-64/pz.jpg",
+          "nz": "media/life-and-environmental-sciences/preview-64/nz.jpg"
+        }
+      },
+      {
+        "id": "preview-128",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 128,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 28975,
+        "faces": {
+          "px": "media/life-and-environmental-sciences/preview-128/px.jpg",
+          "nx": "media/life-and-environmental-sciences/preview-128/nx.jpg",
+          "py": "media/life-and-environmental-sciences/preview-128/py.jpg",
+          "ny": "media/life-and-environmental-sciences/preview-128/ny.jpg",
+          "pz": "media/life-and-environmental-sciences/preview-128/pz.jpg",
+          "nz": "media/life-and-environmental-sciences/preview-128/nz.jpg"
+        }
+      },
+      {
+        "id": "preview-256",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 256,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 96539,
+        "faces": {
+          "px": "media/life-and-environmental-sciences/preview-256/px.jpg",
+          "nx": "media/life-and-environmental-sciences/preview-256/nx.jpg",
+          "py": "media/life-and-environmental-sciences/preview-256/py.jpg",
+          "ny": "media/life-and-environmental-sciences/preview-256/ny.jpg",
+          "pz": "media/life-and-environmental-sciences/preview-256/pz.jpg",
+          "nz": "media/life-and-environmental-sciences/preview-256/nz.jpg"
+        }
+      },
+      {
+        "id": "whole-2048",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 2048,
+        "height": 1024,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 418179,
+        "url": "media/life-and-environmental-sciences/immersion-2048.jpg"
+      },
+      {
+        "id": "whole-4096",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 4096,
+        "height": 2048,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 1364685,
+        "url": "media/life-and-environmental-sciences/immersion-4096.jpg"
+      },
+      {
+        "id": "whole-6144",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 6144,
+        "height": 3072,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 2633009,
+        "url": "media/life-and-environmental-sciences/immersion-6144.jpg"
+      },
+      {
+        "id": "eac-tiles",
+        "role": "immersion",
+        "projection": "tiled-cube",
+        "warp": "equi-angular",
+        "faceSize": 1536,
+        "tileSize": 192,
+        "gutter": 1,
+        "levelBytes": [
+          57472,
+          215557,
+          794457,
+          2652822
+        ],
+        "mimeType": "image/jpeg",
+        "encodedBytes": 3720308,
+        "url": "media/life-and-environmental-sciences/eac-tiles/"
+      },
+      {
+        "id": "cube-tiles",
+        "role": "immersion",
+        "projection": "tiled-cube",
+        "warp": "gnomonic",
+        "faceSize": 1536,
+        "tileSize": 192,
+        "gutter": 1,
+        "levelBytes": [
+          56327,
+          212645,
+          787852,
+          2641452
+        ],
+        "mimeType": "image/jpeg",
+        "encodedBytes": 3698276,
+        "url": "media/life-and-environmental-sciences/cube-tiles/"
+      }
+    ]
+  },
+  "imagePose": {
+    "headingDeg": 0,
+    "pitchDeg": 0,
+    "rollDeg": 0
+  }
+}

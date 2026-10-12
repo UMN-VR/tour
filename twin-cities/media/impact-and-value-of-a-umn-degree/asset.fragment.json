@@ -1,0 +1,133 @@
+{
+  "asset": {
+    "id": "impact-and-value-of-a-umn-degree",
+    "revision": "82e2969ae714",
+    "type": "panorama-image",
+    "colorSpace": "srgb",
+    "alpha": "opaque",
+    "attribution": {
+      "text": "© Regents of the University of Minnesota"
+    },
+    "representations": [
+      {
+        "id": "preview-64",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 64,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 11601,
+        "faces": {
+          "px": "media/impact-and-value-of-a-umn-degree/preview-64/px.jpg",
+          "nx": "media/impact-and-value-of-a-umn-degree/preview-64/nx.jpg",
+          "py": "media/impact-and-value-of-a-umn-degree/preview-64/py.jpg",
+          "ny": "media/impact-and-value-of-a-umn-degree/preview-64/ny.jpg",
+          "pz": "media/impact-and-value-of-a-umn-degree/preview-64/pz.jpg",
+          "nz": "media/impact-and-value-of-a-umn-degree/preview-64/nz.jpg"
+        }
+      },
+      {
+        "id": "preview-128",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 128,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 30395,
+        "faces": {
+          "px": "media/impact-and-value-of-a-umn-degree/preview-128/px.jpg",
+          "nx": "media/impact-and-value-of-a-umn-degree/preview-128/nx.jpg",
+          "py": "media/impact-and-value-of-a-umn-degree/preview-128/py.jpg",
+          "ny": "media/impact-and-value-of-a-umn-degree/preview-128/ny.jpg",
+          "pz": "media/impact-and-value-of-a-umn-degree/preview-128/pz.jpg",
+          "nz": "media/impact-and-value-of-a-umn-degree/preview-128/nz.jpg"
+        }
+      },
+      {
+        "id": "preview-256",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 256,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 96611,
+        "faces": {
+          "px": "media/impact-and-value-of-a-umn-degree/preview-256/px.jpg",
+          "nx": "media/impact-and-value-of-a-umn-degree/preview-256/nx.jpg",
+          "py": "media/impact-and-value-of-a-umn-degree/preview-256/py.jpg",
+          "ny": "media/impact-and-value-of-a-umn-degree/preview-256/ny.jpg",
+          "pz": "media/impact-and-value-of-a-umn-degree/preview-256/pz.jpg",
+          "nz": "media/impact-and-value-of-a-umn-degree/preview-256/nz.jpg"
+        }
+      },
+      {
+        "id": "whole-2048",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 2048,
+        "height": 1024,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 443869,
+        "url": "media/impact-and-value-of-a-umn-degree/immersion-2048.jpg"
+      },
+      {
+        "id": "whole-4096",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 4096,
+        "height": 2048,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 1424724,
+        "url": "media/impact-and-value-of-a-umn-degree/immersion-4096.jpg"
+      },
+      {
+        "id": "whole-6144",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 6144,
+        "height": 3072,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 2712462,
+        "url": "media/impact-and-value-of-a-umn-degree/immersion-6144.jpg"
+      },
+      {
+        "id": "eac-tiles",
+        "role": "immersion",
+        "projection": "tiled-cube",
+        "warp": "equi-angular",
+        "faceSize": 1536,
+        "tileSize": 192,
+        "gutter": 1,
+        "levelBytes": [
+          58257,
+          209121,
+          762640,
+          2508484
+        ],
+        "mimeType": "image/jpeg",
+        "encodedBytes": 3538502,
+        "url": "media/impact-and-value-of-a-umn-degree/eac-tiles/"
+      },
+      {
+        "id": "cube-tiles",
+        "role": "immersion",
+        "projection": "tiled-cube",
+        "warp": "gnomonic",
+        "faceSize": 1536,
+        "tileSize": 192,
+        "gutter": 1,
+        "levelBytes": [
+          57702,
+          209191,
+          761873,
+          2505243
+        ],
+        "mimeType": "image/jpeg",
+        "encodedBytes": 3534009,
+        "url": "media/impact-and-value-of-a-umn-degree/cube-tiles/"
+      }
+    ]
+  },
+  "imagePose": {
+    "headingDeg": 0,
+    "pitchDeg": 0,
+    "rollDeg": 0
+  }
+}

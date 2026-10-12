@@ -1,0 +1,133 @@
+{
+  "asset": {
+    "id": "regis-center-for-art-gallery",
+    "revision": "536cd290397c",
+    "type": "panorama-image",
+    "colorSpace": "srgb",
+    "alpha": "opaque",
+    "attribution": {
+      "text": "© Regents of the University of Minnesota"
+    },
+    "representations": [
+      {
+        "id": "preview-64",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 64,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 12079,
+        "faces": {
+          "px": "media/regis-center-for-art-gallery/preview-64/px.jpg",
+          "nx": "media/regis-center-for-art-gallery/preview-64/nx.jpg",
+          "py": "media/regis-center-for-art-gallery/preview-64/py.jpg",
+          "ny": "media/regis-center-for-art-gallery/preview-64/ny.jpg",
+          "pz": "media/regis-center-for-art-gallery/preview-64/pz.jpg",
+          "nz": "media/regis-center-for-art-gallery/preview-64/nz.jpg"
+        }
+      },
+      {
+        "id": "preview-128",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 128,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 31799,
+        "faces": {
+          "px": "media/regis-center-for-art-gallery/preview-128/px.jpg",
+          "nx": "media/regis-center-for-art-gallery/preview-128/nx.jpg",
+          "py": "media/regis-center-for-art-gallery/preview-128/py.jpg",
+          "ny": "media/regis-center-for-art-gallery/preview-128/ny.jpg",
+          "pz": "media/regis-center-for-art-gallery/preview-128/pz.jpg",
+          "nz": "media/regis-center-for-art-gallery/preview-128/nz.jpg"
+        }
+      },
+      {
+        "id": "preview-256",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 256,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 94740,
+        "faces": {
+          "px": "media/regis-center-for-art-gallery/preview-256/px.jpg",
+          "nx": "media/regis-center-for-art-gallery/preview-256/nx.jpg",
+          "py": "media/regis-center-for-art-gallery/preview-256/py.jpg",
+          "ny": "media/regis-center-for-art-gallery/preview-256/ny.jpg",
+          "pz": "media/regis-center-for-art-gallery/preview-256/pz.jpg",
+          "nz": "media/regis-center-for-art-gallery/preview-256/nz.jpg"
+        }
+      },
+      {
+        "id": "whole-2048",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 2048,
+        "height": 1024,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 366118,
+        "url": "media/regis-center-for-art-gallery/immersion-2048.jpg"
+      },
+      {
+        "id": "whole-4096",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 4096,
+        "height": 2048,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 1106376,
+        "url": "media/regis-center-for-art-gallery/immersion-4096.jpg"
+      },
+      {
+        "id": "whole-6144",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 6144,
+        "height": 3072,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 2106792,
+        "url": "media/regis-center-for-art-gallery/immersion-6144.jpg"
+      },
+      {
+        "id": "eac-tiles",
+        "role": "immersion",
+        "projection": "tiled-cube",
+        "warp": "equi-angular",
+        "faceSize": 1536,
+        "tileSize": 192,
+        "gutter": 1,
+        "levelBytes": [
+          59106,
+          196980,
+          636343,
+          2069882
+        ],
+        "mimeType": "image/jpeg",
+        "encodedBytes": 2962311,
+        "url": "media/regis-center-for-art-gallery/eac-tiles/"
+      },
+      {
+        "id": "cube-tiles",
+        "role": "immersion",
+        "projection": "tiled-cube",
+        "warp": "gnomonic",
+        "faceSize": 1536,
+        "tileSize": 192,
+        "gutter": 1,
+        "levelBytes": [
+          58006,
+          194049,
+          631580,
+          2068180
+        ],
+        "mimeType": "image/jpeg",
+        "encodedBytes": 2951815,
+        "url": "media/regis-center-for-art-gallery/cube-tiles/"
+      }
+    ]
+  },
+  "imagePose": {
+    "headingDeg": 0,
+    "pitchDeg": 0,
+    "rollDeg": 0
+  }
+}

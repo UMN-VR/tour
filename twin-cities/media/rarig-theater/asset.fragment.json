@@ -1,0 +1,133 @@
+{
+  "asset": {
+    "id": "rarig-theater",
+    "revision": "3f38cf8c446b",
+    "type": "panorama-image",
+    "colorSpace": "srgb",
+    "alpha": "opaque",
+    "attribution": {
+      "text": "© Regents of the University of Minnesota"
+    },
+    "representations": [
+      {
+        "id": "preview-64",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 64,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 10419,
+        "faces": {
+          "px": "media/rarig-theater/preview-64/px.jpg",
+          "nx": "media/rarig-theater/preview-64/nx.jpg",
+          "py": "media/rarig-theater/preview-64/py.jpg",
+          "ny": "media/rarig-theater/preview-64/ny.jpg",
+          "pz": "media/rarig-theater/preview-64/pz.jpg",
+          "nz": "media/rarig-theater/preview-64/nz.jpg"
+        }
+      },
+      {
+        "id": "preview-128",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 128,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 26794,
+        "faces": {
+          "px": "media/rarig-theater/preview-128/px.jpg",
+          "nx": "media/rarig-theater/preview-128/nx.jpg",
+          "py": "media/rarig-theater/preview-128/py.jpg",
+          "ny": "media/rarig-theater/preview-128/ny.jpg",
+          "pz": "media/rarig-theater/preview-128/pz.jpg",
+          "nz": "media/rarig-theater/preview-128/nz.jpg"
+        }
+      },
+      {
+        "id": "preview-256",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 256,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 85533,
+        "faces": {
+          "px": "media/rarig-theater/preview-256/px.jpg",
+          "nx": "media/rarig-theater/preview-256/nx.jpg",
+          "py": "media/rarig-theater/preview-256/py.jpg",
+          "ny": "media/rarig-theater/preview-256/ny.jpg",
+          "pz": "media/rarig-theater/preview-256/pz.jpg",
+          "nz": "media/rarig-theater/preview-256/nz.jpg"
+        }
+      },
+      {
+        "id": "whole-2048",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 2048,
+        "height": 1024,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 419968,
+        "url": "media/rarig-theater/immersion-2048.jpg"
+      },
+      {
+        "id": "whole-4096",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 4096,
+        "height": 2048,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 1373427,
+        "url": "media/rarig-theater/immersion-4096.jpg"
+      },
+      {
+        "id": "whole-6144",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 6144,
+        "height": 3072,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 2629492,
+        "url": "media/rarig-theater/immersion-6144.jpg"
+      },
+      {
+        "id": "eac-tiles",
+        "role": "immersion",
+        "projection": "tiled-cube",
+        "warp": "equi-angular",
+        "faceSize": 1536,
+        "tileSize": 192,
+        "gutter": 1,
+        "levelBytes": [
+          51484,
+          190058,
+          713152,
+          2414764
+        ],
+        "mimeType": "image/jpeg",
+        "encodedBytes": 3369458,
+        "url": "media/rarig-theater/eac-tiles/"
+      },
+      {
+        "id": "cube-tiles",
+        "role": "immersion",
+        "projection": "tiled-cube",
+        "warp": "gnomonic",
+        "faceSize": 1536,
+        "tileSize": 192,
+        "gutter": 1,
+        "levelBytes": [
+          50740,
+          188039,
+          709111,
+          2409593
+        ],
+        "mimeType": "image/jpeg",
+        "encodedBytes": 3357483,
+        "url": "media/rarig-theater/cube-tiles/"
+      }
+    ]
+  },
+  "imagePose": {
+    "headingDeg": 0,
+    "pitchDeg": 0,
+    "rollDeg": 0
+  }
+}

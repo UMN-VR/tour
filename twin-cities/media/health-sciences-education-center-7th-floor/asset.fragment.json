@@ -1,0 +1,133 @@
+{
+  "asset": {
+    "id": "health-sciences-education-center-7th-floor",
+    "revision": "a3d761d7fa26",
+    "type": "panorama-image",
+    "colorSpace": "srgb",
+    "alpha": "opaque",
+    "attribution": {
+      "text": "© Regents of the University of Minnesota"
+    },
+    "representations": [
+      {
+        "id": "preview-64",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 64,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 9947,
+        "faces": {
+          "px": "media/health-sciences-education-center-7th-floor/preview-64/px.jpg",
+          "nx": "media/health-sciences-education-center-7th-floor/preview-64/nx.jpg",
+          "py": "media/health-sciences-education-center-7th-floor/preview-64/py.jpg",
+          "ny": "media/health-sciences-education-center-7th-floor/preview-64/ny.jpg",
+          "pz": "media/health-sciences-education-center-7th-floor/preview-64/pz.jpg",
+          "nz": "media/health-sciences-education-center-7th-floor/preview-64/nz.jpg"
+        }
+      },
+      {
+        "id": "preview-128",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 128,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 25433,
+        "faces": {
+          "px": "media/health-sciences-education-center-7th-floor/preview-128/px.jpg",
+          "nx": "media/health-sciences-education-center-7th-floor/preview-128/nx.jpg",
+          "py": "media/health-sciences-education-center-7th-floor/preview-128/py.jpg",
+          "ny": "media/health-sciences-education-center-7th-floor/preview-128/ny.jpg",
+          "pz": "media/health-sciences-education-center-7th-floor/preview-128/pz.jpg",
+          "nz": "media/health-sciences-education-center-7th-floor/preview-128/nz.jpg"
+        }
+      },
+      {
+        "id": "preview-256",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 256,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 78054,
+        "faces": {
+          "px": "media/health-sciences-education-center-7th-floor/preview-256/px.jpg",
+          "nx": "media/health-sciences-education-center-7th-floor/preview-256/nx.jpg",
+          "py": "media/health-sciences-education-center-7th-floor/preview-256/py.jpg",
+          "ny": "media/health-sciences-education-center-7th-floor/preview-256/ny.jpg",
+          "pz": "media/health-sciences-education-center-7th-floor/preview-256/pz.jpg",
+          "nz": "media/health-sciences-education-center-7th-floor/preview-256/nz.jpg"
+        }
+      },
+      {
+        "id": "whole-2048",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 2048,
+        "height": 1024,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 381624,
+        "url": "media/health-sciences-education-center-7th-floor/immersion-2048.jpg"
+      },
+      {
+        "id": "whole-4096",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 4096,
+        "height": 2048,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 1159496,
+        "url": "media/health-sciences-education-center-7th-floor/immersion-4096.jpg"
+      },
+      {
+        "id": "whole-6144",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 6144,
+        "height": 3072,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 2161572,
+        "url": "media/health-sciences-education-center-7th-floor/immersion-6144.jpg"
+      },
+      {
+        "id": "eac-tiles",
+        "role": "immersion",
+        "projection": "tiled-cube",
+        "warp": "equi-angular",
+        "faceSize": 1536,
+        "tileSize": 192,
+        "gutter": 1,
+        "levelBytes": [
+          50368,
+          175896,
+          597117,
+          1943600
+        ],
+        "mimeType": "image/jpeg",
+        "encodedBytes": 2766981,
+        "url": "media/health-sciences-education-center-7th-floor/eac-tiles/"
+      },
+      {
+        "id": "cube-tiles",
+        "role": "immersion",
+        "projection": "tiled-cube",
+        "warp": "gnomonic",
+        "faceSize": 1536,
+        "tileSize": 192,
+        "gutter": 1,
+        "levelBytes": [
+          48036,
+          167336,
+          567352,
+          1860259
+        ],
+        "mimeType": "image/jpeg",
+        "encodedBytes": 2642983,
+        "url": "media/health-sciences-education-center-7th-floor/cube-tiles/"
+      }
+    ]
+  },
+  "imagePose": {
+    "headingDeg": 0,
+    "pitchDeg": 0,
+    "rollDeg": 0
+  }
+}

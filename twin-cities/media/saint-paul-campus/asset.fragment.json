@@ -1,0 +1,133 @@
+{
+  "asset": {
+    "id": "saint-paul-campus",
+    "revision": "29a9e994a36f",
+    "type": "panorama-image",
+    "colorSpace": "srgb",
+    "alpha": "opaque",
+    "attribution": {
+      "text": "© Regents of the University of Minnesota"
+    },
+    "representations": [
+      {
+        "id": "preview-64",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 64,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 10745,
+        "faces": {
+          "px": "media/saint-paul-campus/preview-64/px.jpg",
+          "nx": "media/saint-paul-campus/preview-64/nx.jpg",
+          "py": "media/saint-paul-campus/preview-64/py.jpg",
+          "ny": "media/saint-paul-campus/preview-64/ny.jpg",
+          "pz": "media/saint-paul-campus/preview-64/pz.jpg",
+          "nz": "media/saint-paul-campus/preview-64/nz.jpg"
+        }
+      },
+      {
+        "id": "preview-128",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 128,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 27143,
+        "faces": {
+          "px": "media/saint-paul-campus/preview-128/px.jpg",
+          "nx": "media/saint-paul-campus/preview-128/nx.jpg",
+          "py": "media/saint-paul-campus/preview-128/py.jpg",
+          "ny": "media/saint-paul-campus/preview-128/ny.jpg",
+          "pz": "media/saint-paul-campus/preview-128/pz.jpg",
+          "nz": "media/saint-paul-campus/preview-128/nz.jpg"
+        }
+      },
+      {
+        "id": "preview-256",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 256,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 87718,
+        "faces": {
+          "px": "media/saint-paul-campus/preview-256/px.jpg",
+          "nx": "media/saint-paul-campus/preview-256/nx.jpg",
+          "py": "media/saint-paul-campus/preview-256/py.jpg",
+          "ny": "media/saint-paul-campus/preview-256/ny.jpg",
+          "pz": "media/saint-paul-campus/preview-256/pz.jpg",
+          "nz": "media/saint-paul-campus/preview-256/nz.jpg"
+        }
+      },
+      {
+        "id": "whole-2048",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 2048,
+        "height": 1024,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 405530,
+        "url": "media/saint-paul-campus/immersion-2048.jpg"
+      },
+      {
+        "id": "whole-4096",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 4096,
+        "height": 2048,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 1393905,
+        "url": "media/saint-paul-campus/immersion-4096.jpg"
+      },
+      {
+        "id": "whole-6144",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 6144,
+        "height": 3072,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 2729738,
+        "url": "media/saint-paul-campus/immersion-6144.jpg"
+      },
+      {
+        "id": "eac-tiles",
+        "role": "immersion",
+        "projection": "tiled-cube",
+        "warp": "equi-angular",
+        "faceSize": 1536,
+        "tileSize": 192,
+        "gutter": 1,
+        "levelBytes": [
+          52167,
+          197966,
+          765984,
+          2677415
+        ],
+        "mimeType": "image/jpeg",
+        "encodedBytes": 3693532,
+        "url": "media/saint-paul-campus/eac-tiles/"
+      },
+      {
+        "id": "cube-tiles",
+        "role": "immersion",
+        "projection": "tiled-cube",
+        "warp": "gnomonic",
+        "faceSize": 1536,
+        "tileSize": 192,
+        "gutter": 1,
+        "levelBytes": [
+          51780,
+          196591,
+          763958,
+          2671354
+        ],
+        "mimeType": "image/jpeg",
+        "encodedBytes": 3683683,
+        "url": "media/saint-paul-campus/cube-tiles/"
+      }
+    ]
+  },
+  "imagePose": {
+    "headingDeg": 0,
+    "pitchDeg": 0,
+    "rollDeg": 0
+  }
+}

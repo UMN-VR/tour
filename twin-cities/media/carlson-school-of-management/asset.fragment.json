@@ -1,0 +1,133 @@
+{
+  "asset": {
+    "id": "carlson-school-of-management",
+    "revision": "7691e1337e8e",
+    "type": "panorama-image",
+    "colorSpace": "srgb",
+    "alpha": "opaque",
+    "attribution": {
+      "text": "© Regents of the University of Minnesota"
+    },
+    "representations": [
+      {
+        "id": "preview-64",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 64,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 11032,
+        "faces": {
+          "px": "media/carlson-school-of-management/preview-64/px.jpg",
+          "nx": "media/carlson-school-of-management/preview-64/nx.jpg",
+          "py": "media/carlson-school-of-management/preview-64/py.jpg",
+          "ny": "media/carlson-school-of-management/preview-64/ny.jpg",
+          "pz": "media/carlson-school-of-management/preview-64/pz.jpg",
+          "nz": "media/carlson-school-of-management/preview-64/nz.jpg"
+        }
+      },
+      {
+        "id": "preview-128",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 128,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 28039,
+        "faces": {
+          "px": "media/carlson-school-of-management/preview-128/px.jpg",
+          "nx": "media/carlson-school-of-management/preview-128/nx.jpg",
+          "py": "media/carlson-school-of-management/preview-128/py.jpg",
+          "ny": "media/carlson-school-of-management/preview-128/ny.jpg",
+          "pz": "media/carlson-school-of-management/preview-128/pz.jpg",
+          "nz": "media/carlson-school-of-management/preview-128/nz.jpg"
+        }
+      },
+      {
+        "id": "preview-256",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 256,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 83423,
+        "faces": {
+          "px": "media/carlson-school-of-management/preview-256/px.jpg",
+          "nx": "media/carlson-school-of-management/preview-256/nx.jpg",
+          "py": "media/carlson-school-of-management/preview-256/py.jpg",
+          "ny": "media/carlson-school-of-management/preview-256/ny.jpg",
+          "pz": "media/carlson-school-of-management/preview-256/pz.jpg",
+          "nz": "media/carlson-school-of-management/preview-256/nz.jpg"
+        }
+      },
+      {
+        "id": "whole-2048",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 2048,
+        "height": 1024,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 323131,
+        "url": "media/carlson-school-of-management/immersion-2048.jpg"
+      },
+      {
+        "id": "whole-4096",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 4096,
+        "height": 2048,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 1024165,
+        "url": "media/carlson-school-of-management/immersion-4096.jpg"
+      },
+      {
+        "id": "whole-6144",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 6144,
+        "height": 3072,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 2043376,
+        "url": "media/carlson-school-of-management/immersion-6144.jpg"
+      },
+      {
+        "id": "eac-tiles",
+        "role": "immersion",
+        "projection": "tiled-cube",
+        "warp": "equi-angular",
+        "faceSize": 1536,
+        "tileSize": 192,
+        "gutter": 1,
+        "levelBytes": [
+          52567,
+          174994,
+          581572,
+          1989198
+        ],
+        "mimeType": "image/jpeg",
+        "encodedBytes": 2798331,
+        "url": "media/carlson-school-of-management/eac-tiles/"
+      },
+      {
+        "id": "cube-tiles",
+        "role": "immersion",
+        "projection": "tiled-cube",
+        "warp": "gnomonic",
+        "faceSize": 1536,
+        "tileSize": 192,
+        "gutter": 1,
+        "levelBytes": [
+          51578,
+          172029,
+          576884,
+          1987072
+        ],
+        "mimeType": "image/jpeg",
+        "encodedBytes": 2787563,
+        "url": "media/carlson-school-of-management/cube-tiles/"
+      }
+    ]
+  },
+  "imagePose": {
+    "headingDeg": 0,
+    "pitchDeg": 0,
+    "rollDeg": 0
+  }
+}

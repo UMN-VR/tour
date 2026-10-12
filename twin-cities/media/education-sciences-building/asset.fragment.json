@@ -1,0 +1,133 @@
+{
+  "asset": {
+    "id": "education-sciences-building",
+    "revision": "41db3dd0c616",
+    "type": "panorama-image",
+    "colorSpace": "srgb",
+    "alpha": "opaque",
+    "attribution": {
+      "text": "© Regents of the University of Minnesota"
+    },
+    "representations": [
+      {
+        "id": "preview-64",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 64,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 12193,
+        "faces": {
+          "px": "media/education-sciences-building/preview-64/px.jpg",
+          "nx": "media/education-sciences-building/preview-64/nx.jpg",
+          "py": "media/education-sciences-building/preview-64/py.jpg",
+          "ny": "media/education-sciences-building/preview-64/ny.jpg",
+          "pz": "media/education-sciences-building/preview-64/pz.jpg",
+          "nz": "media/education-sciences-building/preview-64/nz.jpg"
+        }
+      },
+      {
+        "id": "preview-128",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 128,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 32402,
+        "faces": {
+          "px": "media/education-sciences-building/preview-128/px.jpg",
+          "nx": "media/education-sciences-building/preview-128/nx.jpg",
+          "py": "media/education-sciences-building/preview-128/py.jpg",
+          "ny": "media/education-sciences-building/preview-128/ny.jpg",
+          "pz": "media/education-sciences-building/preview-128/pz.jpg",
+          "nz": "media/education-sciences-building/preview-128/nz.jpg"
+        }
+      },
+      {
+        "id": "preview-256",
+        "role": "preview",
+        "projection": "cube",
+        "faceSize": 256,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 98947,
+        "faces": {
+          "px": "media/education-sciences-building/preview-256/px.jpg",
+          "nx": "media/education-sciences-building/preview-256/nx.jpg",
+          "py": "media/education-sciences-building/preview-256/py.jpg",
+          "ny": "media/education-sciences-building/preview-256/ny.jpg",
+          "pz": "media/education-sciences-building/preview-256/pz.jpg",
+          "nz": "media/education-sciences-building/preview-256/nz.jpg"
+        }
+      },
+      {
+        "id": "whole-2048",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 2048,
+        "height": 1024,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 403838,
+        "url": "media/education-sciences-building/immersion-2048.jpg"
+      },
+      {
+        "id": "whole-4096",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 4096,
+        "height": 2048,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 1250915,
+        "url": "media/education-sciences-building/immersion-4096.jpg"
+      },
+      {
+        "id": "whole-6144",
+        "role": "immersion",
+        "projection": "equirectangular",
+        "width": 6144,
+        "height": 3072,
+        "mimeType": "image/jpeg",
+        "encodedBytes": 2351492,
+        "url": "media/education-sciences-building/immersion-6144.jpg"
+      },
+      {
+        "id": "eac-tiles",
+        "role": "immersion",
+        "projection": "tiled-cube",
+        "warp": "equi-angular",
+        "faceSize": 1536,
+        "tileSize": 192,
+        "gutter": 1,
+        "levelBytes": [
+          62268,
+          208396,
+          695283,
+          2316480
+        ],
+        "mimeType": "image/jpeg",
+        "encodedBytes": 3282427,
+        "url": "media/education-sciences-building/eac-tiles/"
+      },
+      {
+        "id": "cube-tiles",
+        "role": "immersion",
+        "projection": "tiled-cube",
+        "warp": "gnomonic",
+        "faceSize": 1536,
+        "tileSize": 192,
+        "gutter": 1,
+        "levelBytes": [
+          60595,
+          204434,
+          686340,
+          2301032
+        ],
+        "mimeType": "image/jpeg",
+        "encodedBytes": 3252401,
+        "url": "media/education-sciences-building/cube-tiles/"
+      }
+    ]
+  },
+  "imagePose": {
+    "headingDeg": 0,
+    "pitchDeg": 0,
+    "rollDeg": 0
+  }
+}
