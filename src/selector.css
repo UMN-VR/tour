@@ -113,26 +113,11 @@ button:focus-visible {
 
 .intro {
   max-width: 48rem;
-  padding-block: clamp(2.5rem, 6vw, 5rem) 2rem;
-}
-
-.eyebrow {
-  margin: 0 0 0.75rem;
-  color: var(--ui-accent);
-  font-size: 0.9rem;
-  font-weight: 700;
-}
-
-h1 {
-  margin: 0;
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 750;
-  line-height: 1.12;
-  letter-spacing: -0.035em;
+  padding-block: 2rem 1.5rem;
 }
 
 .intro-text {
-  margin: 1.25rem 0 0;
+  margin: 0;
   color: var(--ui-muted);
   font-size: 1.15rem;
   line-height: 1.65;
@@ -235,9 +220,13 @@ h2 {
 
 .return-link {
   display: inline-block;
-  margin-top: 0.75rem;
   padding-block: 0.25rem;
   font-weight: 700;
+}
+
+.powered {
+  margin: 0.75rem 0 0;
+  font-weight: 400;
 }
 
 @media (max-width: 52rem) {

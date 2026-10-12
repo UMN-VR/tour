@@ -2,7 +2,7 @@
 
 The University of Minnesota's virtual campus tours, built on
 [FOSS Earth](https://github.com/foss-earth/app): 360° photographs on a 3D globe.
-They are published with the UMN VR club's site, https://umn-vr.github.io/:
+GitHub Pages serves them from this repository at https://umn-vr.github.io/tour/. The club's own site is https://umn-vr.github.io/.
 
 | Page | What it is |
 | --- | --- |
@@ -145,8 +145,8 @@ has the details, and how to attach a browser's inspector to a phone.
 
 | Path | Contents |
 | --- | --- |
-| `tour/index.html`, `src/selector.css` | The campus selector, a plain page with no app |
-| `tour/<campus>/index.html`, `src/tour/` | Each campus's page: FOSS Earth's app, offering that campus's scene |
+| `index.html`, `src/selector.css` | The campus selector, a plain page with no app |
+| `<campus>/index.html`, `src/tour/` | Each campus's page: FOSS Earth's app, offering that campus's scene |
 | `tools/campus-scenes.mjs` | Makes each campus's scene from the Twin Cities one |
 | `tools/twin-cities/` | The Twin Cities scene's build and its hand-edited placements |
 | `docs/` | What is left to do ([roadmap.md](docs/roadmap.md)), and a prompt for each larger piece |
@@ -154,11 +154,25 @@ has the details, and how to attach a browser's inspector to a phone.
 
 ## Deploying
 
-The [club site](https://github.com/UMN-VR/UMN-VR.github.io) publishes the tours
-with its landing page: build here (`npm run build`), then `npm run deploy` there.
-The deploy adds this build to the `gh-pages` branch and keeps what is already
-published, the photographs and older app files included, so a page that is
-already open keeps working.
+This repository publishes the tours on its own `gh-pages` branch. The
+[club site](https://github.com/UMN-VR/UMN-VR.github.io) is a separate deploy and
+does not publish the tour.
+
+```sh
+npm run deploy
+```
+
+The first time, when this repository has no `gh-pages` branch yet, copy the
+photographs that are already published:
+
+```sh
+npm run deploy -- --bootstrap-from https://github.com/UMN-VR/UMN-VR.github.io.git
+```
+
+The deploy adds this build to `gh-pages` and keeps what is already published,
+the photographs and older app files included, so a page that is already open
+keeps working. New photographs go out with `--media <public folder>` before the
+scene that uses them.
 
 Commit first, here and in FOSS Earth: the build writes both commits into the
 page and the app, with `-dirty` after one that had changes not committed, and
@@ -169,8 +183,7 @@ minutes while it is shown, unless someone has touched it.
 A scene changes only with its repository: commit the new `scene.json` in
 [twin-cities](https://github.com/UMN-VR/twin-cities), run
 `npm run campus-scenes` and commit the two campus scenes, then build and deploy.
-New photographs are published before the scene that uses them (see the club
-site's README). Publish first the side the other relies on, so the live pair
+Publish first the side the other relies on, so the live pair
 always works: new content an old app can read goes first, then the app. Avoid
 content the deployed app cannot read: a browser that restores a tab shows the
 page it has for as long as it keeps it.
