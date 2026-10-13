@@ -18,9 +18,10 @@ the file, and that attachment is immediately public in this public repository.
 The issue is published when you submit it. The short draft context is sent to
 GitHub when you open the draft.
 
-Give an agent the resulting issue URL, or `UMN-VR/UMN-VR.github.io#123` with the
-actual issue number. It can use the attached activity and build revisions to
-investigate the app that ran. Tour content belongs here; shared renderer,
-panorama and shell defects belong in FOSS Earth. The shared implementation and
-report fields are described in
-[FOSS Earth's bug-reporting documentation](../../../foss-earth/docs/bug-reporting.md).
+The build files the issue on `UMN-VR/tour`, from `__REPOSITORY_SLUG__`. Give an
+agent the resulting issue URL, or `UMN-VR/tour#123` with the actual issue
+number. It can use the attached activity and build revisions to investigate the
+app that ran. Tour content belongs here; shared renderer, panorama and shell
+defects belong in FOSS Earth. The shared implementation and report fields are
+described in
+[FOSS Earth's bug-reporting documentation](../../../foss-earth/ui/docs/bug-reporting.md).

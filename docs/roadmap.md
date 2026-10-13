@@ -58,7 +58,7 @@ fresh conversation with. Work that FOSS Earth owns has its prompt there.
 - **The tour says what went wrong** (deployed 2026-10-04). Settings → Diagnostics → Copy
   report, or `?report` in the address, gives the version, the renderer, the settings changed
   and what the visit did; a visit that stopped without being closed is reported by the next
-  one. See the [README](../README.md#when-something-goes-wrong).
+  one. See [which-version.md](which-version.md).
 
 ## Next
 
@@ -74,11 +74,11 @@ fresh conversation with. Work that FOSS Earth owns has its prompt there.
    Safari's feature flags), and on 2026-10-04 it stopped after five minutes: both times the
    phone was running the app of 2026-10-03 00:33 from Safari's copy of the page, so no app
    since has been tried there ([content-delivery.md](content-delivery.md), "The phones the
-   day after"). Reload the tab on the phone, read the log's first line or count the Settings
-   tab's sections to be sure which app it is, and then find out whether the current app still
-   crashes, and whether `?renderer=webgl2` does; either way, the report from Settings →
-   Diagnostics, or from `?report` after a crash, says which renderer ran and where the page
-   was. After the release that follows the one with FOSS Earth's version check, come back to
+   day after"). Reload the tab on the phone and read the log's first line
+   ([which-version.md](which-version.md)) to be sure which app it is, and then find out
+   whether the current app still crashes, and whether `?renderer=webgl2` does. The report
+   ([bug-reporting.md](bug-reporting.md)), or `?report` after a crash, says which renderer
+   ran and where the page was. After the release that follows the one with FOSS Earth's version check, come back to
    the tab and see whether the page reloaded itself. Safari's engine
    runs the tour in a check on a Mac, with WebGL 2 only; nothing checks WebGPU in Safari or a
    phone's memory.

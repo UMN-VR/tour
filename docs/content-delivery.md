@@ -109,7 +109,7 @@ again also asked for nothing: its tiles came back from the disk, complete in 0.9
 this has run on a phone.
 
 The app's own files are kept too, by FOSS Earth's service worker (its
-[docs/app-files.md](../../../foss-earth/docs/app-files.md)): FOSS Earth's
+[docs/app-files.md](../../../foss-earth/ui/docs/app-files.md)): FOSS Earth's
 `scripts/validation/app-files.mjs` found that this build's first visit kept all 63 files it
 loaded, and that a reload and a later visit asked the network for none of them.
 
@@ -146,6 +146,12 @@ does not expose GPU fences. These are capability and implementation differences,
 that a particular phone or backend has been performance-qualified.
 
 ## Development and current releases
+
+The `deploy:app`, `deploy:content` and `deploy:full` commands below are the club-site
+publisher this repository no longer uses. Publishing now is `npm run deploy` on this
+repository's own `gh-pages` branch; the [README](../README.md#deploying) has the current
+commands. The dates and measurements in this section are the record of the releases that
+used the old publisher.
 
 Use `npm run dev` for iteration, or `npm run dev -- --host 0.0.0.0` for a phone on the same
 network. The HTTP network address Vite prints can use WebGL; WebGPU needs a secure context,
@@ -206,7 +212,7 @@ back after a deploy keeps the files the deploy changed on that first visit, not 
 next: from a browser holding the 21:00 version's worker, that visit downloaded those 5 files,
 1.48 MiB, and took the other 58 from the worker, and a reload and a later visit downloaded
 nothing of the app (FOSS Earth's
-[docs/app-files.md](../../../foss-earth/docs/app-files.md)).
+[docs/app-files.md](../../../foss-earth/ui/docs/app-files.md)).
 
 **Two phones that evening, and the sheet's move.** The release was tried on two phones within
 the hour. Firefox on an Android phone drew every orb black: FOSS Earth cut the faces out of
@@ -243,7 +249,8 @@ app from before the tiled release of 2026-10-03 still refuses the scene, for its
 
 **What the tour can now say of a fault.** Neither phone could say which version ran or what
 the page was doing. The app now keeps a trail of each visit and gives a report to copy, in
-Settings → Diagnostics or with `?report` in the address; the [README](../README.md) says how.
+Settings → Diagnostics or with `?report` in the address; [which-version.md](which-version.md)
+and [bug-reporting.md](bug-reporting.md) say how.
 FOSS Earth's check kills the page as a phone's browser does: on the live tour, the visit after
 it said "The last visit stopped without being closed, 11 s after it opened or later; it was
 at: scene umn-twin-cities, revision 4b89d4e2af09, inside the 360 image northrop-mall". The
@@ -276,7 +283,7 @@ its build's time and commits; the app asks the site for its own page as it start
 older than the published one reloads itself while nobody has touched it, once, or says so
 with a button; and the log's first line says which version runs, such as "App built
 2026-10-04 20:23 UTC from a9e8e9d with FOSS Earth 930f725"
-([its app files page](../../../foss-earth/docs/app-files.md#the-page-and-a-browsers-copy-of-it)).
+([its app files page](../../../foss-earth/ui/docs/app-files.md#the-page-and-a-browsers-copy-of-it)).
 On this tour's build, FOSS Earth's `published-version.mjs` played the phone's case, the check
 answering the browser's requests for the page with a copy two days older: in Chrome, Firefox
 and WebKit the copy reloaded itself once into the published page and said so, did not when it

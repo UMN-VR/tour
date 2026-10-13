@@ -5,7 +5,9 @@ Follow the shared rules for every UMN-VR repository in
 (in a local checkout of the organization: `../.github/AGENTS.md`).
 
 [README.md](README.md) explains the pages, the commands and how the tours are
-published, and [docs/roadmap.md](docs/roadmap.md) what is left to do. In this
+published. [docs/which-version.md](docs/which-version.md) is how to tell which
+build a device is running, [docs/bug-reporting.md](docs/bug-reporting.md) how a
+fault is filed, and [docs/roadmap.md](docs/roadmap.md) what is left to do. In this
 repository also:
 
 - **Tour-only work goes here; globe features go in FOSS Earth.** A feature a
@@ -25,4 +27,7 @@ repository also:
   and [UI layout](https://github.com/foss-earth/docs/blob/main/docs/ui-layout.md) rules.
 - **After an edit:** run `npm run typecheck`, `npm run test:changed -- <changed files>`
   and `npm run lint`; for finished work, `npm run ci` once.
-- **Don't start servers or deploy unless asked.** Give the command instead.
+- **Don't start servers or deploy unless asked.** When asked to publish the
+  tour, run `cd ~/gh/UMN-VR/tour && npm run deploy`. That builds and pushes this
+  repository's `gh-pages` branch to https://umn-vr.github.io/tour/ and keeps the
+  photographs already there. The club homepage is a separate repository.
