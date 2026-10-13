@@ -1,0 +1,1 @@
+import"./modulepreload-polyfill-P2Xu9kJm.js";import{i as e,n as t}from"./scenes-6f9Hl8OK.js";e(t);
