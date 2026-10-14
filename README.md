@@ -130,6 +130,18 @@ does not publish the tour.
 npm run deploy
 ```
 
+A deploy first records the commit of each checkout the tour is built from,
+FOSS Earth's and the campuses', in `deployed-from.json`. When one moved since
+the last deploy, it commits that file and pushes this repository's branch, so
+the build is a new version of the tour, and the history here says what each
+deploy was built from. The record is FOSS Earth About's `recordBuildInputs`,
+the same for every app's and site's deploy. It stops if this branch lacks
+commits its remote has: pull, then deploy again. A checkout with changes not
+committed, or with a commit on no remote branch, is named, and the deploy goes
+on. Then it builds and publishes. `--dry-run` says what it would record,
+commits and pushes nothing here, and builds and prepares the `gh-pages` commit
+without publishing it.
+
 The first time, when this repository has no `gh-pages` branch yet, copy the
 photographs that are already published:
 
@@ -145,7 +157,8 @@ the app that requires the new scene. A browser that restores a tab shows the
 page it has until that page updates itself or someone reloads it.
 
 `npm run build` writes this repository's commit and FOSS Earth's into the page.
-Uncommitted changes in the files the build is made from are marked `-dirty`.
+Uncommitted changes in the files the build is made from are marked `-dirty`,
+in the page and in the `gh-pages` commit that publishes it.
 Commit those first, here and in FOSS Earth, when the published version should
 name a clean commit. A page that can ask the site reloads itself into a newer
 published version at startup and about every ten minutes while it is shown,

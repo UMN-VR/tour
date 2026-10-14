@@ -1,5 +1,5 @@
 import { execFileSync } from 'node:child_process'
-import { mkdirSync, mkdtempSync, rmSync, symlinkSync, writeFileSync } from 'node:fs'
+import { existsSync, mkdirSync, mkdtempSync, rmSync, symlinkSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { afterEach, describe, expect, it } from 'vitest'
@@ -173,5 +173,19 @@ describe('the tour-owned Git publisher', () => {
       remote: path.join(root, 'no-such-remote'), bootstrapFrom: legacy,
     }))).rejects.toThrow(/Incomplete tour build|File outside the tour build|Refusing a symbolic link/)
     expect(refs()).toBe(before)
+  })
+})
+
+describe('the publishing commit', () => {
+  it('names the source the page itself names, with its -dirty mark or without one', async () => {
+    const { root, legacy, publish } = fixture()
+    const page = source => put(root, 'dist/index.html', `<meta name="foss-earth-app-source" content="${source}"><script src="/tour/assets/new-tour.js"></script>`)
+    page('0123456789ab')
+    const clean = await publish({ bootstrapFrom: legacy })
+    expect(git(root, ['log', '-1', '--format=%s', clean.commit])).toBe('Deploy the tour at 0123456789ab with existing photographs')
+    page('0123456789ab-dirty')
+    const dirty = await publish()
+    expect(git(root, ['log', '-1', '--format=%s', dirty.commit])).toBe('Deploy the tour at 0123456789ab-dirty')
+    expect(existsSync(path.join(root, 'deployed-from.json'))).toBe(false)
   })
 })

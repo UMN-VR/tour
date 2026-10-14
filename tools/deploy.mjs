@@ -1,9 +1,10 @@
 // Publishes the tour's own GitHub Pages project at /tour/.
 // Existing photographs and old app assets stay in gh-pages; the club site is separate.
 import { execFileSync } from 'node:child_process'
-import { existsSync, mkdirSync, mkdtempSync, readdirSync, rmSync } from 'node:fs'
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { recordBuildInputs } from 'foss-earth/vite'
 
 const ROOT = fileURLToPath(new URL('../', import.meta.url))
 const BRANCH = 'refs/heads/gh-pages'
@@ -79,9 +80,10 @@ export function publishTour({ root = ROOT, remote = 'origin', bootstrapFrom, boo
       return { changed: false, commit: parent, tree, fileCount: files.length, mediaTree }
     }
 
-    const source = git(['rev-parse', '--short=12', 'HEAD'])
-    const dirty = git(['status', '--short', '--', 'src', 'index.html', ...CAMPUSES, 'vite.config.ts', 'tools/deploy.mjs', 'package.json', 'package-lock.json'])
-    const message = `Deploy the tour at ${source}${dirty ? '-dirty' : ''}${parent ? '' : ' with existing photographs'}`
+    // The build's own name for its source, as the page says it: the tour's commit, and "-dirty" if it had changes.
+    const source = /<meta name="foss-earth-app-source" content="([^"]+)"/.exec(readFileSync(path.join(dist, 'index.html'), 'utf8'))?.[1]
+      ?? git(['rev-parse', '--short=12', 'HEAD'])
+    const message = `Deploy the tour at ${source}${parent ? '' : ' with existing photographs'}`
     // The first commit has no club-site parent: it imports content, not the club's history.
     const commit = git(['commit-tree', tree, ...(parent ? ['-p', parent] : []), '-m', message])
     if (dryRun) log(`Prepared tour deployment ${commit}; no publishing branch was updated.`)
@@ -107,4 +109,10 @@ function optionsOf(args) {
   return options
 }
 
-if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) publishTour(optionsOf(process.argv.slice(2)))
+// npm run deploy: record what the tour is built from (About's deployed-from.json, so new code is a new version), build, publish.
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  const options = optionsOf(process.argv.slice(2))
+  recordBuildInputs({ root: ROOT, dryRun: options.dryRun })
+  execFileSync('npm', ['run', 'build'], { cwd: ROOT, stdio: 'inherit' })
+  publishTour(options)
+}

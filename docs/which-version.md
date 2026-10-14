@@ -15,7 +15,9 @@ App built 2026-10-04 20:23 UTC from a9e8e9d with FOSS Earth 930f725.
 
 The time is the build's, to the minute. The first commit is this repository.
 The second is FOSS Earth. `-dirty` after a commit means that build had
-uncommitted changes in the files it is made from.
+uncommitted changes in the files it is made from. A deploy commits
+`deployed-from.json` here when FOSS Earth or a campus moved, so a deploy with
+new code has a new commit of this repository, and a new version.
 
 **About**, a tab under **+**, has the same in full: this repository, FOSS Earth,
 and the other checkouts the build records, each with its commits and links to

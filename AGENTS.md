@@ -28,6 +28,7 @@ repository also:
 - **After an edit:** run `npm run typecheck`, `npm run test:changed -- <changed files>`
   and `npm run lint`; for finished work, `npm run ci` once.
 - **Don't start servers or deploy unless asked.** When asked to publish the
-  tour, run `cd ~/gh/UMN-VR/tour && npm run deploy`. That builds and pushes this
-  repository's `gh-pages` branch to https://umn-vr.github.io/tour/ and keeps the
+  tour, run `cd ~/gh/UMN-VR/tour && npm run deploy`. That commits and pushes
+  `deployed-from.json` here when FOSS Earth or a campus moved, then builds and
+  pushes this repository's `gh-pages` branch to https://umn-vr.github.io/tour/ and keeps the
   photographs already there. The club homepage is a separate repository.
