@@ -6,6 +6,7 @@ import { createReadStream, existsSync, mkdirSync, readFileSync, statSync, writeF
 import { createRequire } from 'node:module'
 import path from 'node:path'
 import { appFiles, babylonShaderChunks, builtFrom, localSource } from 'foss-earth/vite'
+import { browserRecovery } from '@foss-earth/ui/vite'
 
 /** The tour's pages: the campus selector, and FOSS Earth's app with each campus's scene. */
 const TOUR_PAGES = {
@@ -143,7 +144,7 @@ export default defineConfig({
   },
   // FOSS Earth's service worker keeps the app's own files on the visitor's device: GitHub Pages lets them go stale after ten minutes.
   // Each page says what it is built from, this repository, FOSS Earth and every package, for the About tab.
-  plugins: [localSource(), react(), tourHome(), campusScenes(), tourMedia(), babylonShaderChunks(), appFiles(), builtFrom()],
+  plugins: [localSource(), react(), tourHome(), campusScenes(), tourMedia(), babylonShaderChunks(), browserRecovery({ appId: 'umn-vr-tour' }), appFiles(), builtFrom()],
   test: {
     // .local/ holds the YouVisit backup and scratch; public/ the generated scene.
     exclude: [...configDefaults.exclude, '.local/**', 'public/**', 'build/**'],

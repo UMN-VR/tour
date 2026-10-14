@@ -12,6 +12,13 @@ settings, current scene and panorama, warnings, errors, retained activity, and
 the previous visit. If the tour cannot start, add `?report` to its address to
 recover the previous visit's report without starting the map.
 
+If an update leaves the tour unable to load, **Earth → Browser data** clears
+this website's saved settings, downloaded files, and other browser data, then
+reloads it. Saved provider keys are kept by default; remove them only if you
+choose to. After repeated failed or stalled starts, the page offers the same recovery
+even when the tour's settings cannot open. Download a bug report first if you
+want to keep the previous visit's diagnostics.
+
 Reports are prepared and downloaded locally. Review the editable preview for
 details you do not want to share. The full report reaches GitHub when you attach
 the file, and that attachment is immediately public in this public repository.

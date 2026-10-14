@@ -161,7 +161,7 @@ A scene changes only with its repository: commit the new `scene.json` in
 `npm run build:scene` still runs `scripts/prepare-panorama.mjs`,
 `scripts/check-scene.mjs` and `scripts/lib/previewSheet.mjs` from the installed
 `foss-earth` package. Those files are no longer there. The replacements are
-`foss-earth-prepare-panorama` from `@foss-earth/360`, and
+`foss-earth-prepare-panorama` from `@foss-earth/image-viewer`, and
 `foss-earth-check-scene` and `foss-earth-build-preview-sheets` from
 `@foss-earth/scenes`. See [tools/twin-cities/README.md](tools/twin-cities/README.md).
 
