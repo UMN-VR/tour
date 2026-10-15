@@ -13,11 +13,11 @@
   "@foss-earth/sphere-equirectangular": "72294e0a1176ec57ae37708ef5d1ca39908c922b",
   "@foss-earth/sphere-image": "5c5fe4ee83ad795f2cfee941c08155bf8bfdaf99",
   "@foss-earth/sphere-tiled-cubemap": "d4fd55e7a72807a0f20b6f9b93f3f0ec653352a1",
-  "@foss-earth/toolbar": "9911eef3279a9766e446ed6f3886b94302cb2146",
+  "@foss-earth/toolbar": "951435b9a083e190f3d0822ac195d5c72c0e54db",
   "@foss-earth/ui": "27a0b22946d87c2d46000deabf8d3ce2d19b8452",
   "@foss-earth/weather": "3878cc3a0d96bce5d972fd252dc8e1ed40015b5c",
   "@umn-vr/minneapolis": "2ae48e6068b7c7ddc39a1c094d478598bb035b54",
   "@umn-vr/st-paul": "ea1b876459312a8e754b77e8dd1f2c23206abfc7",
   "@umn-vr/twin-cities": "4fc63b0d9e12991c6cc0df1693b3a5bc4ec46414",
-  "foss-earth": "20b44634afbab886f136f0b03defb149a896ba44"
+  "foss-earth": "f1f6e6dc553f17b7a2fe84a1d3f4664d93c0dce6"
 }
