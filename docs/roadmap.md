@@ -93,23 +93,19 @@ fresh conversation with. Work that FOSS Earth owns has its prompt there.
    See [content-delivery.md](content-delivery.md) for the format, current commands and the
    remaining independent-content-origin boundary.
 3. **Set north and correct the positions of all 60, and place the five that aren't placed.**
-   Prompt: [placements-prompt.md](placements-prompt.md). By hand, 60 photographs is slow.
-   FOSS Earth's TODO.md has the tools that would make it quick:
-   - blending a 360 image with the map from its capture point;
-   - moving an orb on the map with handles;
-   - turning and nudging a photograph from inside it;
-   - clicking the same point in the photograph and on the map to solve the heading and
-     position.
+   Prompt: [placements-prompt.md](placements-prompt.md). The editing tools are in place; the human pass is not done.
+   On a phone, open the published tour with exactly one `?dev=1` (for example `https://umn-vr.github.io/tour/twin-cities/?dev=1`). Edits stay in that browser. Export them from the photograph tab and keep the file. A physical phone still has to confirm long-press, touch handles, pinch, and bringing the file back; a desktop viewport is not that check.
+   On the laptop, with the export at `build/phone-poses.json`:
 
-   Their edits are exported as JSON keyed by scene entity id. The tour's part is a script in
-   `tools/twin-cities/`, with a test, that merges such an export into `placements.json`:
-   - map each entity id back to its YouVisit key;
-   - write the position and `horizontalAccuracyMeters`;
-   - set `aligned: true`;
-   - write a `provenance` and `source` that say the tool, what it was checked against
-     (Google 3D tiles, landmarks) and the date.
+   ```sh
+   node tools/twin-cities/import-poses.mjs --input build/phone-poses.json
+   node tools/twin-cities/import-poses.mjs --input build/phone-poses.json --reference "Campus landmarks checked on the map" --write
+   npm run build:scene -- --poses-only
+   npm run campus-scenes
+   ```
 
-   Rebuild with `npm run build:scene` afterwards.
+   Inspect the three scene diffs, then commit placements and the generated manifests in their own repos when asked. Deploy only when asked. After publish, reload the new scenes on the phone that edited them so a saved override cannot hide a bad import.
+   `npm run build:scene` without `--poses-only` still calls removed preparation scripts and is not the correction rebuild.
 4. **Put the rest of the tour on the map:** photos, videos, narration and hotspot text. Prompt:
    [tour-media-prompt.md](tour-media-prompt.md).
 5. **Add a Minneapolis and a Saint Paul scene beside the Twin Cities one.** The photographs sit

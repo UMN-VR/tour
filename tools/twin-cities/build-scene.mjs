@@ -40,12 +40,12 @@ import { existsSync, mkdirSync, readdirSync, readFileSync, realpathSync, rmSync,
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { hotspotDirection, plain, startDirection, toWorld } from "./youvisit.mjs";
+import { markerOffsets } from "./scene-pose.mjs";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const repo = path.resolve(here, "..", "..");
 const PUBLISHED = "https://umn-vr.github.io/tour/twin-cities/scene.json";
 const EXTENSION = "umn-vr.tour";
-const round = (value, digits = 3) => Math.round(value * 10 ** digits) / 10 ** digits;
 /** The Regents hold the copyright on the tour's photographs. */
 const ATTRIBUTION = "© Regents of the University of Minnesota";
 
@@ -57,7 +57,7 @@ function parseArgs(argv) {
     const arg = argv[i];
     if (!arg.startsWith("--")) throw new Error(`unexpected argument ${arg}`);
     const [name, inline] = arg.slice(2).split("=", 2);
-    if (name === "help") { options.help = true; continue; }
+    if (name === "help" || name === "poses-only") { options[name] = inline ?? true; continue; }
     const value = inline ?? argv[++i];
     if (value === undefined) throw new Error(`--${name} needs a value`);
     options[name] = value;
@@ -68,6 +68,12 @@ function parseArgs(argv) {
 const options = parseArgs(process.argv.slice(2));
 if (options.help) {
   console.log(readFileSync(fileURLToPath(import.meta.url), "utf8").split("*/")[0]);
+  process.exit(0);
+}
+if (options["poses-only"]) {
+  const { runPoseOnly } = await import("./scene-pose.mjs");
+  try { console.log(await runPoseOnly(options)); }
+  catch (error) { console.error(error instanceof Error ? error.message : error); process.exit(1); }
   process.exit(0);
 }
 const backupRoot = path.join(repo, ".local", "youvisit-backup");
@@ -244,24 +250,10 @@ function buildScene(assets) {
   const stopNumber = stopId => stopOrder.indexOf(stopId) + 1;
   const stopTitle = stopId => plain(stopById.get(stopId).title);
 
-  // Panoramas that share a capture point get their orbs spread on a ring around it, so each can be picked.
-  const RING_METERS = 15;
-  const atPoint = new Map();
-  for (const entityId of order) {
-    const { capture } = idOfImage.get(entityId).placement;
-    const key = `${capture.longitudeDeg},${capture.latitudeDeg}`;
-    if (!atPoint.has(key)) atPoint.set(key, []);
-    atPoint.get(key).push(entityId);
-  }
+  const offsets = markerOffsets(order, entityId => idOfImage.get(entityId).placement.capture);
   const markerOf = entityId => {
     const { placement } = idOfImage.get(entityId);
-    const shared = atPoint.get(`${placement.capture.longitudeDeg},${placement.capture.latitudeDeg}`);
-    const index = shared.indexOf(entityId);
-    let [eastM, northM] = [0, 0];
-    if (index > 0) {
-      const angle = (2 * Math.PI * (index - 1)) / (shared.length - 1);
-      [eastM, northM] = [round(RING_METERS * Math.sin(angle), 2), round(RING_METERS * Math.cos(angle), 2)];
-    }
+    const { eastM, northM } = offsets.get(entityId);
     return { mode: "ground-relative", eastM, northM, offsetM: 25, radiusMeters: 3, ...placement.marker };
   };
 

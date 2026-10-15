@@ -107,7 +107,8 @@ day: [docs/which-version.md](docs/which-version.md). Filing what it reports:
 | `npm test` | The scenes' tests. When the photographs are on disk (`public/`, or `TOUR_PUBLIC`), the Twin Cities scene's declared files are checked too |
 | `npm run ci` | Lint, tests and a production build |
 | `npm run campus-scenes` | Rewrites the Minneapolis and Saint Paul scenes from the Twin Cities scene and each campus's `campus.json` |
-| `npm run build:scene` | Rebuilds the Twin Cities scene and photographs from the YouVisit backup. The script paths it calls were removed in the FOSS Earth split; see [The scene build](#the-scene-build) |
+| `npm run build:scene -- --poses-only` | Rewrites pose-derived fields in the Twin Cities scene from `placements.json`, without preparing photographs. Then run `npm run campus-scenes` |
+| `npm run build:scene` | Full rebuild from the YouVisit backup. It still calls removed FOSS Earth script paths, so this command does not complete in the current checkout |
 
 ## Layout
 
@@ -171,12 +172,18 @@ A scene changes only with its repository: commit the new `scene.json` in
 
 ### The scene build
 
-`npm run build:scene` still runs `scripts/prepare-panorama.mjs`,
-`scripts/check-scene.mjs` and `scripts/lib/previewSheet.mjs` from the installed
-`foss-earth` package. Those files are no longer there. The replacements are
-`foss-earth-prepare-panorama` from `@foss-earth/image-viewer`, and
-`foss-earth-check-scene` and `foss-earth-build-preview-sheets` from
-`@foss-earth/scenes`. See [tools/twin-cities/README.md](tools/twin-cities/README.md).
+Correcting a photograph's place does not prepare images again:
+
+```sh
+node tools/twin-cities/import-poses.mjs --input build/phone-poses.json
+node tools/twin-cities/import-poses.mjs --input build/phone-poses.json --reference "Campus landmarks checked on the map" --write
+npm run build:scene -- --poses-only
+npm run campus-scenes
+```
+
+The first command is a dry run. `--write` updates `tools/twin-cities/placements.json` only. `--poses-only` reads that file and the sibling `twin-cities/scene.json`, updates capture, orientation, markers, hotspot directions, opening views and the north summary, and writes that same scene. It does not prepare photographs or change which photographs are in the scene. `campus-scenes` then regenerates Minneapolis and Saint Paul. Keep the phone export under gitignored `build/`.
+
+`npm run build:scene` without `--poses-only` still runs `scripts/prepare-panorama.mjs`, `scripts/check-scene.mjs` and `scripts/lib/previewSheet.mjs` from the installed `foss-earth` package. Those files are no longer there. The replacements are `foss-earth-prepare-panorama` from `@foss-earth/image-viewer`, and `foss-earth-check-scene` and `foss-earth-build-preview-sheets` from `@foss-earth/scenes`. That full media pipeline is not what `--poses-only` runs. See [tools/twin-cities/README.md](tools/twin-cities/README.md).
 
 ## Project policies
 

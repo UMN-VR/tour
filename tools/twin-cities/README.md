@@ -17,11 +17,20 @@ repository installs. [AGENTS.md](../../AGENTS.md) sets out the split.
 
 ## Rebuilding
 
+A correction of places, after a phone export has been reviewed:
+
 ```sh
-npm run build:scene
+node tools/twin-cities/import-poses.mjs --input build/phone-poses.json
+node tools/twin-cities/import-poses.mjs --input build/phone-poses.json --reference "Campus landmarks checked on the map" --write
+npm run build:scene -- --poses-only
+npm run campus-scenes
 ```
 
-It needs:
+`--poses-only` updates the sibling [`twin-cities/scene.json`](../../../twin-cities/scene.json) from [`placements.json`](placements.json). It keeps the photographs, preview sheets and entity membership, recomputes pose-dependent fields, and validates the manifest without reading media files. Unchanged placements leave that scene's revision as it is. Hotspot directions and opening views are recomputed from the YouVisit backup's image-local angles when a pose changes. The published directions are not inverted. If the backup is not on this machine, a pose change that would move a hotspot or an opening view stops instead of guessing.
+
+The full `npm run build:scene` still prepares photographs. It calls `scripts/prepare-panorama.mjs`, `scripts/check-scene.mjs` and `scripts/lib/previewSheet.mjs` inside the installed `foss-earth` package. Those paths were removed in the FOSS Earth split, so that command does not complete here. The public replacements are `foss-earth-prepare-panorama` (`@foss-earth/image-viewer`), `foss-earth-check-scene` and `foss-earth-build-preview-sheets` (`@foss-earth/scenes`). Wiring those into the full media build is separate from the pose-only path above.
+
+The historical full build, when those scripts were present, needed:
 
 - **The YouVisit backup** in `.local/youvisit-backup/snapshot-*`. It exists only on the
   laptop that made it; see that folder's README.

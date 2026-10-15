@@ -40,7 +40,7 @@ describe("tour startup recovery", () => {
     vi.mocked(mountGlobeApp).mockReturnValue(new Promise(resolve => { finish = resolve; }));
     mountTour(MINNEAPOLIS);
     expect(markBrowserAppReady).not.toHaveBeenCalled();
-    expect(mountGlobeApp).toHaveBeenCalledWith(root, { scenes: [MINNEAPOLIS], initialScene: MINNEAPOLIS.id });
+    expect(mountGlobeApp).toHaveBeenCalledWith(root, { scenes: [MINNEAPOLIS], initialScene: MINNEAPOLIS.id, poseExportPrefix: "umn-tour-poses" });
     finish({} as Awaited<ReturnType<typeof mountGlobeApp>>);
     await vi.waitFor(() => expect(markBrowserAppReady).toHaveBeenCalledWith(document));
     expect(reportBrowserAppFailure).not.toHaveBeenCalled();
@@ -49,8 +49,9 @@ describe("tour startup recovery", () => {
   it("reports failed startup and keeps the visible loading error", async () => {
     vi.mocked(mountGlobeApp).mockRejectedValue(new Error("Stored state is unusable"));
     mountTour(MINNEAPOLIS);
-    await vi.waitFor(() => expect(reportBrowserAppFailure).toHaveBeenCalledWith(document, "The tour could not start."));
+    await vi.waitFor(() => expect(reportBrowserAppFailure).toHaveBeenCalledWith(document, "The tour could not start. Error: Stored state is unusable"));
     expect(root.innerHTML).toContain("The tour could not start.");
+    expect(root.innerHTML).not.toContain("Stored state is unusable");
     expect(markBrowserAppReady).not.toHaveBeenCalled();
   });
 
