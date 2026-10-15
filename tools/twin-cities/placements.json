@@ -1,9 +1,10 @@
 {
-  "about": "Where each photograph of the Twin Cities tour was taken and which way it faces: one entry per photograph, keyed by its YouVisit panorama id. sameImage lists the other YouVisit panoramas that are the same photograph, uploaded again. Edited by hand; tools/twin-cities/build-scene.mjs reads it. See tools/twin-cities/README.md.",
+  "about": "Where each photograph of the Twin Cities tour was taken and which way it faces: one entry per photograph, keyed by its YouVisit panorama id. sameImage lists the other YouVisit panoramas that are the same photograph, uploaded again. Edited by hand; tools/twin-cities/build-scene.mjs reads it. See tools/twin-cities/README.md. Each photograph's layer is indoor or outdoor; the scene puts it in that map layer's 360 images.",
   "panoramas": {
     "363720": {
       "id": "hanson-hall-minnesota-carlson",
       "title": "Hanson Hall, Minnesota Carlson",
+      "layer": "outdoor",
       "capture": {
         "longitudeDeg": -93.2448184,
         "latitudeDeg": 44.9703543,
@@ -21,6 +22,7 @@
     "363721": {
       "id": "classroom-studio-spaces",
       "title": "Classroom Studio Spaces",
+      "layer": "indoor",
       "capture": {
         "longitudeDeg": -93.2423186,
         "latitudeDeg": 44.9704834,
@@ -38,6 +40,7 @@
     "363722": {
       "id": "walter-library-lobby",
       "title": "Walter Library Lobby",
+      "layer": "indoor",
       "sameImage": [
         "368155"
       ],
@@ -58,6 +61,7 @@
     "363723": {
       "id": "taylor-center",
       "title": "Taylor Center",
+      "layer": "indoor",
       "capture": {
         "longitudeDeg": -93.2333842,
         "latitudeDeg": 44.974516,
@@ -75,6 +79,7 @@
     "363724": {
       "id": "mcneal-hall",
       "title": "McNeal Hall",
+      "layer": "indoor",
       "capture": {
         "longitudeDeg": -93.1833975,
         "latitudeDeg": 44.9853519,
@@ -92,6 +97,7 @@
     "363726": {
       "id": "st-paul-mall",
       "title": "St. Paul Mall",
+      "layer": "outdoor",
       "capture": {
         "longitudeDeg": -93.1843568,
         "latitudeDeg": 44.984565,
@@ -109,6 +115,7 @@
     "363728": {
       "id": "northrop-auditorium",
       "title": "Northrop Auditorium",
+      "layer": "outdoor",
       "capture": {
         "longitudeDeg": -93.2353971,
         "latitudeDeg": 44.9766819,
@@ -126,6 +133,7 @@
     "363729": {
       "id": "northrop-mall",
       "title": "Northrop Mall",
+      "layer": "outdoor",
       "capture": {
         "longitudeDeg": -93.234272,
         "latitudeDeg": 44.9762821,
@@ -143,6 +151,7 @@
     "363731": {
       "id": "circle-of-indigenous-nations",
       "title": "Circle of Indigenous Nations",
+      "layer": "outdoor",
       "capture": {
         "longitudeDeg": -93.2365733,
         "latitudeDeg": 44.9750564,
@@ -160,6 +169,7 @@
     "363732": {
       "id": "huntington-bank-stadium",
       "title": "Huntington Bank Stadium",
+      "layer": "outdoor",
       "sameImage": [
         "368158"
       ],
@@ -180,6 +190,7 @@
     "363733": {
       "id": "education-sciences-building",
       "title": "Education Sciences Building",
+      "layer": "indoor",
       "capture": {
         "longitudeDeg": -93.2396381,
         "latitudeDeg": 44.9785518,
@@ -197,6 +208,7 @@
     "363734": {
       "id": "recwell-lobby",
       "title": "RecWell Lobby",
+      "layer": "indoor",
       "sameImage": [
         "368166"
       ],
@@ -217,6 +229,7 @@
     "363736": {
       "id": "recwell-indoor-track",
       "title": "RecWell Indoor Track",
+      "layer": "indoor",
       "sameImage": [
         "368167"
       ],
@@ -237,6 +250,7 @@
     "363737": {
       "id": "17th-ave-residence-hall",
       "title": "17th Ave Residence Hall",
+      "layer": "indoor",
       "capture": {
         "longitudeDeg": -93.2313193,
         "latitudeDeg": 44.9782663,
@@ -254,6 +268,7 @@
     "363738": {
       "id": "immersive-learning-at-the-bentson-center",
       "title": "Immersive Learning at the Bentson Center",
+      "layer": "indoor",
       "capture": {
         "longitudeDeg": -93.2307261,
         "latitudeDeg": 44.9722861,
@@ -271,6 +286,7 @@
     "363739": {
       "id": "coffman-memorial-union-2nd-floor",
       "title": "Coffman Memorial Union 2nd Floor",
+      "layer": "indoor",
       "capture": {
         "longitudeDeg": -93.2354093,
         "latitudeDeg": 44.9729654,
@@ -288,6 +304,7 @@
     "363742": {
       "id": "folwell-hall",
       "title": "Folwell Hall",
+      "layer": "outdoor",
       "capture": {
         "longitudeDeg": -93.2345402,
         "latitudeDeg": 44.9782705,
@@ -305,6 +322,7 @@
     "363744": {
       "id": "nursing-labs-at-the-bentson-center",
       "title": "Nursing Labs at The Bentson Center",
+      "layer": "indoor",
       "capture": {
         "longitudeDeg": -93.2307261,
         "latitudeDeg": 44.9722861,
@@ -322,6 +340,7 @@
     "363747": {
       "id": "atrium-of-tate-hall",
       "title": "Atrium of Tate Hall",
+      "layer": "indoor",
       "sameImage": [
         "368168"
       ],
@@ -342,6 +361,7 @@
     "363750": {
       "id": "wall-of-discovery-scholars-walk",
       "title": "Wall of Discovery, Scholars Walk",
+      "layer": "outdoor",
       "sameImage": [
         "368162"
       ],
@@ -362,6 +382,7 @@
     "363756": {
       "id": "horticulture-display-garden",
       "title": "Horticulture Display Garden",
+      "layer": "outdoor",
       "sameImage": [
         "368159",
         "368164"
@@ -383,6 +404,7 @@
     "363757": {
       "id": "plant-diagnostics-lab",
       "title": "Plant Diagnostics Lab",
+      "layer": "indoor",
       "sameImage": [
         "368160",
         "369959"
@@ -404,6 +426,7 @@
     "363760": {
       "id": "superblock",
       "title": "Superblock",
+      "layer": "indoor",
       "capture": {
         "longitudeDeg": -93.2294548,
         "latitudeDeg": 44.9708325,
@@ -421,6 +444,7 @@
     "365370": {
       "id": "residence-life-and-dining",
       "title": "Residence Life & Dining",
+      "layer": "outdoor",
       "capture": {
         "longitudeDeg": -93.2294548,
         "latitudeDeg": 44.9708325,
@@ -438,6 +462,7 @@
     "365378": {
       "id": "health-sciences-education-center",
       "title": "Health Sciences Education Center",
+      "layer": "outdoor",
       "capture": {
         "longitudeDeg": -93.2307261,
         "latitudeDeg": 44.9722861,
@@ -455,6 +480,7 @@
     "365381": {
       "id": "coffman-memorial-union",
       "title": "Coffman Memorial Union",
+      "layer": "outdoor",
       "capture": {
         "longitudeDeg": -93.2354093,
         "latitudeDeg": 44.9729654,
@@ -472,6 +498,7 @@
     "365382": {
       "id": "student-union-bookstore",
       "title": "Student Union Bookstore",
+      "layer": "indoor",
       "capture": {
         "longitudeDeg": -93.2354093,
         "latitudeDeg": 44.9729654,
@@ -489,6 +516,7 @@
     "365383": {
       "id": "washington-avenue-bridge-and-the-mississippi-river",
       "title": "Washington Avenue Bridge and the Mississippi River",
+      "layer": "outdoor",
       "capture": {
         "longitudeDeg": -93.2393038,
         "latitudeDeg": 44.9731172,
@@ -506,6 +534,7 @@
     "365384": {
       "id": "west-bank-heller-hall",
       "title": "West Bank: Heller Hall",
+      "layer": "outdoor",
       "capture": {
         "longitudeDeg": -93.2441747,
         "latitudeDeg": 44.9716143,
@@ -523,6 +552,7 @@
     "365385": {
       "id": "international-student-and-scholar-services-isss",
       "title": "International Student and Scholar Services (ISSS)",
+      "layer": "indoor",
       "capture": {
         "longitudeDeg": -93.2441747,
         "latitudeDeg": 44.9716143,
@@ -540,6 +570,7 @@
     "365386": {
       "id": "rarig-theater",
       "title": "Rarig Theater",
+      "layer": "indoor",
       "sameImage": [
         "368170"
       ],
@@ -560,6 +591,7 @@
     "365388": {
       "id": "saint-paul-campus",
       "title": "Saint Paul Campus",
+      "layer": "outdoor",
       "sameImage": [
         "368165"
       ],
@@ -580,6 +612,7 @@
     "365389": {
       "id": "cfans",
       "title": "CFANS",
+      "layer": "outdoor",
       "capture": {
         "longitudeDeg": -93.1814003,
         "latitudeDeg": 44.9884469,
@@ -597,6 +630,7 @@
     "365390": {
       "id": "mcneal-hall-design-studio",
       "title": "McNeal Hall Design Studio",
+      "layer": "indoor",
       "capture": {
         "longitudeDeg": -93.1833959,
         "latitudeDeg": 44.9850853,
@@ -614,6 +648,7 @@
     "365391": {
       "id": "letterpress-lab",
       "title": "Letterpress Lab",
+      "layer": "indoor",
       "sameImage": [
         "365421"
       ],
@@ -634,6 +669,7 @@
     "365392": {
       "id": "life-and-environmental-sciences",
       "title": "Life & Environmental Sciences",
+      "layer": "outdoor",
       "sameImage": [
         "369958"
       ],
@@ -654,6 +690,7 @@
     "365393": {
       "id": "community-connections",
       "title": "Community Connections",
+      "layer": "outdoor",
       "capture": {
         "longitudeDeg": -93.18802,
         "latitudeDeg": 44.9911861,
@@ -671,6 +708,7 @@
     "365394": {
       "id": "bell-museum-planetarium",
       "title": "Bell Museum Planetarium",
+      "layer": "indoor",
       "sameImage": [
         "365422"
       ],
@@ -691,6 +729,7 @@
     "365395": {
       "id": "recreation-and-wellness-center",
       "title": "Recreation and Wellness Center",
+      "layer": "outdoor",
       "capture": {
         "longitudeDeg": -93.2297873,
         "latitudeDeg": 44.9751588,
@@ -708,6 +747,7 @@
     "365396": {
       "id": "golden-gopher-spirit-athletics",
       "title": "Golden Gopher Spirit: Athletics",
+      "layer": "outdoor",
       "capture": {
         "longitudeDeg": -93.2258391,
         "latitudeDeg": 44.9764567,
@@ -725,6 +765,7 @@
     "365397": {
       "id": "impact-and-value-of-a-umn-degree",
       "title": "Impact and Value of a UMN Degree",
+      "layer": "outdoor",
       "capture": {
         "longitudeDeg": -93.2277703,
         "latitudeDeg": 44.9751361,
@@ -742,6 +783,7 @@
     "365398": {
       "id": "bruininks-hall-student-services",
       "title": "Bruininks Hall: Student Services",
+      "layer": "indoor",
       "capture": {
         "longitudeDeg": -93.2373297,
         "latitudeDeg": 44.9740583,
@@ -759,6 +801,7 @@
     "365404": {
       "id": "inside-northrop-auditorium",
       "title": "Inside Northrop Auditorium",
+      "layer": "indoor",
       "capture": {
         "longitudeDeg": -93.2353686,
         "latitudeDeg": 44.9764784,
@@ -776,6 +819,7 @@
     "365406": {
       "id": "pioneer-hall-lobby",
       "title": "Pioneer Hall Lobby",
+      "layer": "indoor",
       "capture": {
         "longitudeDeg": -93.2294548,
         "latitudeDeg": 44.9708325,
@@ -793,6 +837,7 @@
     "365407": {
       "id": "superblock-outdoor-area",
       "title": "Superblock Outdoor Area",
+      "layer": "outdoor",
       "capture": {
         "longitudeDeg": -93.2294548,
         "latitudeDeg": 44.9708325,
@@ -810,6 +855,7 @@
     "365408": {
       "id": "the-toaster-innovation-hub",
       "title": "The Toaster Innovation Hub",
+      "layer": "indoor",
       "capture": {
         "longitudeDeg": -93.2362247,
         "latitudeDeg": 44.9752803,
@@ -827,6 +873,7 @@
     "365409": {
       "id": "walter-library-study-space",
       "title": "Walter Library Study Space",
+      "layer": "indoor",
       "sameImage": [
         "368157"
       ],
@@ -847,6 +894,7 @@
     "365410": {
       "id": "walter-library-computer-lab",
       "title": "Walter Library Computer Lab",
+      "layer": "indoor",
       "capture": {
         "longitudeDeg": -93.2362247,
         "latitudeDeg": 44.9752803,
@@ -864,6 +912,7 @@
     "365412": {
       "id": "center-for-academic-planning-and-exploration",
       "title": "Center for Academic Planning and Exploration",
+      "layer": "indoor",
       "capture": {
         "longitudeDeg": -93.2373297,
         "latitudeDeg": 44.9740583,
@@ -881,6 +930,7 @@
     "365415": {
       "id": "one-stop-student-services",
       "title": "One Stop Student Services",
+      "layer": "indoor",
       "capture": {
         "longitudeDeg": -93.2373297,
         "latitudeDeg": 44.9740583,
@@ -898,6 +948,7 @@
     "365417": {
       "id": "health-sciences-education-center-7th-floor",
       "title": "Health Sciences Education Center, 7th Floor",
+      "layer": "indoor",
       "capture": {
         "longitudeDeg": -93.2307261,
         "latitudeDeg": 44.9722861,
@@ -915,6 +966,7 @@
     "365419": {
       "id": "m-simulation-lab",
       "title": "M Simulation Lab",
+      "layer": "indoor",
       "capture": {
         "longitudeDeg": -93.2307261,
         "latitudeDeg": 44.9722861,
@@ -932,6 +984,7 @@
     "365420": {
       "id": "washington-avenue-walking-bridge",
       "title": "Washington Avenue Walking Bridge",
+      "layer": "outdoor",
       "sameImage": [
         "368156"
       ],
@@ -952,6 +1005,7 @@
     "366510": {
       "id": "fraser-hall-student-lounge",
       "title": "Fraser Hall Student Lounge",
+      "layer": "indoor",
       "capture": {
         "longitudeDeg": -93.2371688,
         "latitudeDeg": 44.975766,
@@ -969,6 +1023,7 @@
     "366564": {
       "id": "stone-arch-bridge",
       "title": "Stone Arch Bridge",
+      "layer": "outdoor",
       "capture": {
         "longitudeDeg": -93.2536912,
         "latitudeDeg": 44.9807825,
@@ -986,6 +1041,7 @@
     "366565": {
       "id": "undergraduate-teaching-labs",
       "title": "Undergraduate Teaching Labs",
+      "layer": "indoor",
       "sameImage": [
         "366511"
       ],
@@ -1006,6 +1062,7 @@
     "368153": {
       "id": "carlson-school-of-management",
       "title": "Carlson School of Management",
+      "layer": "indoor",
       "capture": {
         "longitudeDeg": -93.2446121,
         "latitudeDeg": 44.9704925,
@@ -1023,6 +1080,7 @@
     "368161": {
       "id": "the-commons-park",
       "title": "The Commons Park",
+      "layer": "outdoor",
       "capture": {
         "longitudeDeg": -93.2618838,
         "latitudeDeg": 44.9757795,
@@ -1040,6 +1098,7 @@
     "368169": {
       "id": "apparel-design-classroom",
       "title": "Apparel Design Classroom",
+      "layer": "indoor",
       "capture": {
         "longitudeDeg": -93.1833959,
         "latitudeDeg": 44.9850853,
@@ -1057,6 +1116,7 @@
     "370155": {
       "id": "regis-center-for-art-gallery",
       "title": "Regis Center for Art: Gallery",
+      "layer": "indoor",
       "sameImage": [
         "368154"
       ],

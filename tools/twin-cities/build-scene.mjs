@@ -331,6 +331,19 @@ function buildScene(assets) {
     };
   });
 
+  const mapLayers = authored => {
+    const members = { outdoor: [], indoor: [] };
+    for (const entity of authored) {
+      const layer = idOfImage.get(entity.id).placement.layer;
+      if (layer !== "outdoor" && layer !== "indoor") throw new Error(`placements.json: ${entity.id} needs "layer": "indoor" or "outdoor"`);
+      members[layer].push(entity.id);
+    }
+    const images = (id, title) => ({
+      id, title, visible: true,
+      layers: [{ id: `${id}-360`, title: "360 images", kind: "panoramas", visible: true, members: members[id] }],
+    });
+    return [images("outdoor", "Outdoor"), images("indoor", "Indoor")];
+  };
   const slug = text => text.toLowerCase().replace(/\(.*?\)/g, "").replace(/&/g, " and ").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
   const groups = stopOrder.map(stopId => {
     const stop = stopById.get(stopId);
@@ -369,6 +382,7 @@ function buildScene(assets) {
     assets: assetList,
     entities,
     groups,
+    layers: mapLayers(entities),
     initialPanorama: mainOf(stopOrder[0]),
     // Both campuses, the river and downtown's edge, from the south.
     overview: { target: { longitudeDeg: -93.2215, latitudeDeg: 44.98, height: null }, distanceMeters: 5000, headingDeg: 0, pitchDeg: -50, verticalFovDeg: 60 },

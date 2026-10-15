@@ -54,6 +54,17 @@ describe("the Twin Cities tour's scene", () => {
     }
   });
 
+  it("splits the photographs into outdoor and indoor layers, each holding the 360 images", () => {
+    if (!result.ok) throw new Error("the scene is not valid");
+    expect(result.scene.layers.map(layer => [layer.id, layer.title, layer.layers?.map(child => [child.id, child.title, child.kind])])).toEqual([
+      ["outdoor", "Outdoor", [["outdoor-360", "360 images", "panoramas"]]],
+      ["indoor", "Indoor", [["indoor-360", "360 images", "panoramas"]]],
+    ]);
+    const members = result.scene.layers.flatMap(layer => layer.layers?.flatMap(child => child.members ?? []) ?? []);
+    expect(new Set(members).size).toBe(result.scene.spheres.size);
+    expect(members).toHaveLength(result.scene.spheres.size);
+  });
+
   it("opens on the tour's first stop", () => {
     if (!result.ok) throw new Error("the scene is not valid");
     expect(result.scene.initialPanorama).toBe("northrop-mall");

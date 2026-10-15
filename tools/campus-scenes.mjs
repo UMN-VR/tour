@@ -34,6 +34,16 @@ export function campusScene(full, campus) {
   const assetIds = new Set(entities.map(entity => entity.assetId));
   const groups = (full.groups ?? []).map(group => ({ ...group, members: group.members.filter(id => members.has(id)) }))
     .filter(group => group.members.length);
+  const filterLayer = layer => {
+    if (layer.layers) {
+      const layers = layer.layers.map(filterLayer).filter(Boolean);
+      return layers.length ? { ...layer, layers } : null;
+    }
+    if (layer.kind !== "panoramas") return layer;
+    const kept = (layer.members ?? []).filter(id => members.has(id));
+    return kept.length ? { ...layer, members: kept } : null;
+  };
+  const layers = (full.layers ?? []).map(filterLayer).filter(Boolean);
 
   const scene = {
     format: full.format,
@@ -49,6 +59,7 @@ export function campusScene(full, campus) {
     assets: full.assets.filter(asset => assetIds.has(asset.id)),
     entities,
     groups,
+    ...(layers.length ? { layers } : {}),
     initialPanorama: campus.initialPanorama,
     overview: overviewOf(entities, full.overview),
     markerStyle: full.markerStyle,
