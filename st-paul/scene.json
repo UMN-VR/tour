@@ -2,7 +2,7 @@
   "format": "foss-earth-scene",
   "version": 1,
   "id": "umn-st-paul",
-  "revision": "1e77e7fc1541",
+  "revision": "d1a26edbb315",
   "title": "University of Minnesota Saint Paul: campus tour",
   "requiredExtensions": [],
   "extensions": {
@@ -12,7 +12,7 @@
       "placements": "tools/twin-cities/placements.json",
       "positions": "Capture positions are approximate. They come from YouVisit's one point per stop, or from the centre of the building a panorama shows; each panorama says which. Building centres are from OpenStreetMap, © OpenStreetMap contributors, ODbL 1.0.",
       "north": "0 of 60 panoramas have north set; the others face an arbitrary direction.",
-      "campus": "The panoramas of umn-twin-cities revision 4b89d4e2af09 listed in this campus's campus.json, written by the tour's tools/campus-scenes.mjs."
+      "campus": "The panoramas of umn-twin-cities revision 390caad2f0d6 listed in this campus's campus.json, written by the tour's tools/campus-scenes.mjs."
     },
     "foss-earth.preview-sheets": {
       "sheets": [
@@ -2424,6 +2424,50 @@
           ]
         }
       }
+    }
+  ],
+  "layers": [
+    {
+      "id": "outdoor",
+      "title": "Outdoor",
+      "visible": true,
+      "layers": [
+        {
+          "id": "outdoor-360",
+          "title": "360 images",
+          "kind": "panoramas",
+          "visible": true,
+          "members": [
+            "saint-paul-campus",
+            "horticulture-display-garden",
+            "life-and-environmental-sciences",
+            "cfans",
+            "community-connections",
+            "st-paul-mall"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "indoor",
+      "title": "Indoor",
+      "visible": true,
+      "layers": [
+        {
+          "id": "indoor-360",
+          "title": "360 images",
+          "kind": "panoramas",
+          "visible": true,
+          "members": [
+            "plant-diagnostics-lab",
+            "mcneal-hall-design-studio",
+            "letterpress-lab",
+            "apparel-design-classroom",
+            "bell-museum-planetarium",
+            "mcneal-hall"
+          ]
+        }
+      ]
     }
   ],
   "initialPanorama": "saint-paul-campus",

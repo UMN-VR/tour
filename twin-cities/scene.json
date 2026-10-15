@@ -2,7 +2,7 @@
   "format": "foss-earth-scene",
   "version": 1,
   "id": "umn-twin-cities",
-  "revision": "4b89d4e2af09",
+  "revision": "390caad2f0d6",
   "title": "University of Minnesota Twin Cities: campus tour",
   "requiredExtensions": [],
   "extensions": {
@@ -11839,6 +11839,98 @@
           ]
         }
       }
+    }
+  ],
+  "layers": [
+    {
+      "id": "outdoor",
+      "title": "Outdoor",
+      "visible": true,
+      "layers": [
+        {
+          "id": "outdoor-360",
+          "title": "360 images",
+          "kind": "panoramas",
+          "visible": true,
+          "members": [
+            "northrop-mall",
+            "folwell-hall",
+            "washington-avenue-walking-bridge",
+            "circle-of-indigenous-nations",
+            "health-sciences-education-center",
+            "coffman-memorial-union",
+            "washington-avenue-bridge-and-the-mississippi-river",
+            "west-bank-heller-hall",
+            "hanson-hall-minnesota-carlson",
+            "saint-paul-campus",
+            "horticulture-display-garden",
+            "life-and-environmental-sciences",
+            "cfans",
+            "community-connections",
+            "recreation-and-wellness-center",
+            "golden-gopher-spirit-athletics",
+            "huntington-bank-stadium",
+            "stone-arch-bridge",
+            "the-commons-park",
+            "residence-life-and-dining",
+            "superblock-outdoor-area",
+            "impact-and-value-of-a-umn-degree",
+            "wall-of-discovery-scholars-walk",
+            "northrop-auditorium",
+            "st-paul-mall"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "indoor",
+      "title": "Indoor",
+      "visible": true,
+      "layers": [
+        {
+          "id": "indoor-360",
+          "title": "360 images",
+          "kind": "panoramas",
+          "visible": true,
+          "members": [
+            "inside-northrop-auditorium",
+            "walter-library-lobby",
+            "the-toaster-innovation-hub",
+            "walter-library-study-space",
+            "walter-library-computer-lab",
+            "fraser-hall-student-lounge",
+            "undergraduate-teaching-labs",
+            "education-sciences-building",
+            "atrium-of-tate-hall",
+            "taylor-center",
+            "bruininks-hall-student-services",
+            "center-for-academic-planning-and-exploration",
+            "one-stop-student-services",
+            "nursing-labs-at-the-bentson-center",
+            "immersive-learning-at-the-bentson-center",
+            "health-sciences-education-center-7th-floor",
+            "m-simulation-lab",
+            "student-union-bookstore",
+            "coffman-memorial-union-2nd-floor",
+            "international-student-and-scholar-services-isss",
+            "carlson-school-of-management",
+            "rarig-theater",
+            "regis-center-for-art-gallery",
+            "classroom-studio-spaces",
+            "plant-diagnostics-lab",
+            "mcneal-hall-design-studio",
+            "letterpress-lab",
+            "apparel-design-classroom",
+            "bell-museum-planetarium",
+            "recwell-indoor-track",
+            "recwell-lobby",
+            "superblock",
+            "17th-ave-residence-hall",
+            "pioneer-hall-lobby",
+            "mcneal-hall"
+          ]
+        }
+      ]
     }
   ],
   "initialPanorama": "northrop-mall",

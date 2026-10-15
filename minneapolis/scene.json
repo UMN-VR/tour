@@ -2,7 +2,7 @@
   "format": "foss-earth-scene",
   "version": 1,
   "id": "umn-minneapolis",
-  "revision": "9c27bf43a2b7",
+  "revision": "f3ec1399a013",
   "title": "University of Minnesota Minneapolis: campus tour",
   "requiredExtensions": [],
   "extensions": {
@@ -12,7 +12,7 @@
       "placements": "tools/twin-cities/placements.json",
       "positions": "Capture positions are approximate. They come from YouVisit's one point per stop, or from the centre of the building a panorama shows; each panorama says which. Building centres are from OpenStreetMap, © OpenStreetMap contributors, ODbL 1.0.",
       "north": "0 of 60 panoramas have north set; the others face an arbitrary direction.",
-      "campus": "The panoramas of umn-twin-cities revision 4b89d4e2af09 listed in this campus's campus.json, written by the tour's tools/campus-scenes.mjs."
+      "campus": "The panoramas of umn-twin-cities revision 390caad2f0d6 listed in this campus's campus.json, written by the tour's tools/campus-scenes.mjs."
     },
     "foss-earth.preview-sheets": {
       "sheets": [
@@ -9445,6 +9445,86 @@
           ]
         }
       }
+    }
+  ],
+  "layers": [
+    {
+      "id": "outdoor",
+      "title": "Outdoor",
+      "visible": true,
+      "layers": [
+        {
+          "id": "outdoor-360",
+          "title": "360 images",
+          "kind": "panoramas",
+          "visible": true,
+          "members": [
+            "northrop-mall",
+            "folwell-hall",
+            "washington-avenue-walking-bridge",
+            "circle-of-indigenous-nations",
+            "health-sciences-education-center",
+            "coffman-memorial-union",
+            "washington-avenue-bridge-and-the-mississippi-river",
+            "west-bank-heller-hall",
+            "hanson-hall-minnesota-carlson",
+            "recreation-and-wellness-center",
+            "golden-gopher-spirit-athletics",
+            "huntington-bank-stadium",
+            "stone-arch-bridge",
+            "the-commons-park",
+            "residence-life-and-dining",
+            "superblock-outdoor-area",
+            "impact-and-value-of-a-umn-degree",
+            "wall-of-discovery-scholars-walk",
+            "northrop-auditorium"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "indoor",
+      "title": "Indoor",
+      "visible": true,
+      "layers": [
+        {
+          "id": "indoor-360",
+          "title": "360 images",
+          "kind": "panoramas",
+          "visible": true,
+          "members": [
+            "inside-northrop-auditorium",
+            "walter-library-lobby",
+            "the-toaster-innovation-hub",
+            "walter-library-study-space",
+            "walter-library-computer-lab",
+            "fraser-hall-student-lounge",
+            "undergraduate-teaching-labs",
+            "education-sciences-building",
+            "atrium-of-tate-hall",
+            "taylor-center",
+            "bruininks-hall-student-services",
+            "center-for-academic-planning-and-exploration",
+            "one-stop-student-services",
+            "nursing-labs-at-the-bentson-center",
+            "immersive-learning-at-the-bentson-center",
+            "health-sciences-education-center-7th-floor",
+            "m-simulation-lab",
+            "student-union-bookstore",
+            "coffman-memorial-union-2nd-floor",
+            "international-student-and-scholar-services-isss",
+            "carlson-school-of-management",
+            "rarig-theater",
+            "regis-center-for-art-gallery",
+            "classroom-studio-spaces",
+            "recwell-indoor-track",
+            "recwell-lobby",
+            "superblock",
+            "17th-ave-residence-hall",
+            "pioneer-hall-lobby"
+          ]
+        }
+      ]
     }
   ],
   "initialPanorama": "northrop-mall",
