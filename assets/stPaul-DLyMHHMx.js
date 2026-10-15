@@ -1,0 +1,1 @@
+import"./browser-DODu6uFy.js";import{i as e,n as t}from"./scenes-BfQd-vSY.js";e(t);
