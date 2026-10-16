@@ -9,7 +9,22 @@
         "longitudeDeg": -93.2448184,
         "latitudeDeg": 44.9703543,
         "horizontalAccuracyMeters": 65,
-        "source": "YouVisit's tour point for stop 306367, Business at Minnesota Carlson, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m."
+        "source": "YouVisit's tour point for stop 306367, Business at Minnesota Carlson, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+        "height": {
+          "meters": 244.402,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2448184,
+          "latitudeDeg": 44.9703543,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -27,7 +42,22 @@
         "longitudeDeg": -93.2423186,
         "latitudeDeg": 44.9704834,
         "horizontalAccuracyMeters": 150,
-        "source": "Not placed: YouVisit's tour point for stop 306393, Arts on Campus, which this panorama belongs to. It is somewhere in or near that stop."
+        "source": "Not placed: YouVisit's tour point for stop 306393, Arts on Campus, which this panorama belongs to. It is somewhere in or near that stop.",
+        "height": {
+          "meters": 249.605,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2423186,
+          "latitudeDeg": 44.9704834,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -48,7 +78,22 @@
         "longitudeDeg": -93.2362247,
         "latitudeDeg": 44.9752803,
         "horizontalAccuracyMeters": 65,
-        "source": "YouVisit's tour point for stop 306357, Learning at the Libraries, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m."
+        "source": "YouVisit's tour point for stop 306357, Learning at the Libraries, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+        "height": {
+          "meters": 246.368,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2362247,
+          "latitudeDeg": 44.9752803,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -66,7 +111,22 @@
         "longitudeDeg": -93.2333842,
         "latitudeDeg": 44.974516,
         "horizontalAccuracyMeters": 50,
-        "source": "Centre of the OpenStreetMap feature Lind Hall (way/39187076): Lind Hall: its description says the Taylor Center is in Lind Hall. Where in it the photograph was taken is not known."
+        "source": "Centre of the OpenStreetMap feature Lind Hall (way/39187076): Lind Hall: its description says the Taylor Center is in Lind Hall. Where in it the photograph was taken is not known.",
+        "height": {
+          "meters": 230.295,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2333842,
+          "latitudeDeg": 44.974516,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -84,7 +144,22 @@
         "longitudeDeg": -93.1833975,
         "latitudeDeg": 44.9853519,
         "horizontalAccuracyMeters": 50,
-        "source": "Centre of the OpenStreetMap feature McNeal Hall (way/77712291): McNeal Hall, which the title names. YouVisit's map put this retired stop 3.4 km west of McNeal Hall, off the Saint Paul campus. Where in it the photograph was taken is not known."
+        "source": "Centre of the OpenStreetMap feature McNeal Hall (way/77712291): McNeal Hall, which the title names. YouVisit's map put this retired stop 3.4 km west of McNeal Hall, off the Saint Paul campus. Where in it the photograph was taken is not known.",
+        "height": {
+          "meters": 292.218,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.1833975,
+          "latitudeDeg": 44.9853519,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -102,7 +177,22 @@
         "longitudeDeg": -93.1843568,
         "latitudeDeg": 44.984565,
         "horizontalAccuracyMeters": 100,
-        "source": "Centre of the OpenStreetMap features Saint Paul Student Center (way/41424555), Coffey Hall (way/41424574), Magrath Library (way/41424572), McNeal Hall (way/77712291): the Saint Paul campus mall, taken as the middle of the Student Center, Coffey Hall, Magrath Library and McNeal Hall around it. YouVisit's map put this retired stop 3.4 km west, off the Saint Paul campus. Where in it the photograph was taken is not known."
+        "source": "Centre of the OpenStreetMap features Saint Paul Student Center (way/41424555), Coffey Hall (way/41424574), Magrath Library (way/41424572), McNeal Hall (way/77712291): the Saint Paul campus mall, taken as the middle of the Student Center, Coffey Hall, Magrath Library and McNeal Hall around it. YouVisit's map put this retired stop 3.4 km west, off the Saint Paul campus. Where in it the photograph was taken is not known.",
+        "height": {
+          "meters": 267.659,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.1843568,
+          "latitudeDeg": 44.984565,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -120,7 +210,22 @@
         "longitudeDeg": -93.2353971,
         "latitudeDeg": 44.9766819,
         "horizontalAccuracyMeters": 65,
-        "source": "YouVisit's tour point for stop 307206, Thank You for Visiting & Learn More, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m."
+        "source": "YouVisit's tour point for stop 307206, Thank You for Visiting & Learn More, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+        "height": {
+          "meters": 262.147,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2353971,
+          "latitudeDeg": 44.9766819,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -138,7 +243,22 @@
         "longitudeDeg": -93.234272,
         "latitudeDeg": 44.9762821,
         "horizontalAccuracyMeters": 65,
-        "source": "YouVisit's tour point for stop 306373, Welcome to the UMN Twin Cities (feat. Northrop Mall), whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m."
+        "source": "YouVisit's tour point for stop 306373, Welcome to the UMN Twin Cities (feat. Northrop Mall), whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+        "height": {
+          "meters": 236.303,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.234272,
+          "latitudeDeg": 44.9762821,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -156,7 +276,22 @@
         "longitudeDeg": -93.2365733,
         "latitudeDeg": 44.9750564,
         "horizontalAccuracyMeters": 65,
-        "source": "YouVisit's tour point for stop 306358, Culture & Identity, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m."
+        "source": "YouVisit's tour point for stop 306358, Culture & Identity, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+        "height": {
+          "meters": 244.829,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2365733,
+          "latitudeDeg": 44.9750564,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -177,7 +312,22 @@
         "longitudeDeg": -93.2245517,
         "latitudeDeg": 44.976487,
         "horizontalAccuracyMeters": 65,
-        "source": "YouVisit's interactive map position for stop 306364, Huntington Bank Stadium, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m."
+        "source": "YouVisit's interactive map position for stop 306364, Huntington Bank Stadium, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+        "height": {
+          "meters": 223.902,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2245517,
+          "latitudeDeg": 44.976487,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -195,7 +345,22 @@
         "longitudeDeg": -93.2396381,
         "latitudeDeg": 44.9785518,
         "horizontalAccuracyMeters": 50,
-        "source": "Centre of the OpenStreetMap feature Education Sciences Building (way/39186402): the Education Sciences Building, which the title names. Where in it the photograph was taken is not known."
+        "source": "Centre of the OpenStreetMap feature Education Sciences Building (way/39186402): the Education Sciences Building, which the title names. Where in it the photograph was taken is not known.",
+        "height": {
+          "meters": 241.213,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2396381,
+          "latitudeDeg": 44.9785518,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -216,7 +381,22 @@
         "longitudeDeg": -93.2297873,
         "latitudeDeg": 44.9751588,
         "horizontalAccuracyMeters": 60,
-        "source": "YouVisit's tour point for stop 306399, Health & Wellness, which is 8 m from the centre of University Recreation & Wellness Center (OpenStreetMap way/153915799), where this panorama was taken. Where in the building is not known."
+        "source": "YouVisit's tour point for stop 306399, Health & Wellness, which is 8 m from the centre of University Recreation & Wellness Center (OpenStreetMap way/153915799), where this panorama was taken. Where in the building is not known.",
+        "height": {
+          "meters": 252.934,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2297873,
+          "latitudeDeg": 44.9751588,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -237,7 +417,22 @@
         "longitudeDeg": -93.2297873,
         "latitudeDeg": 44.9751588,
         "horizontalAccuracyMeters": 60,
-        "source": "YouVisit's tour point for stop 306399, Health & Wellness, which is 8 m from the centre of University Recreation & Wellness Center (OpenStreetMap way/153915799), where this panorama was taken. Where in the building is not known."
+        "source": "YouVisit's tour point for stop 306399, Health & Wellness, which is 8 m from the centre of University Recreation & Wellness Center (OpenStreetMap way/153915799), where this panorama was taken. Where in the building is not known.",
+        "height": {
+          "meters": 252.934,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2297873,
+          "latitudeDeg": 44.9751588,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -255,7 +450,22 @@
         "longitudeDeg": -93.2313193,
         "latitudeDeg": 44.9782663,
         "horizontalAccuracyMeters": 50,
-        "source": "Centre of the OpenStreetMap feature 17th Avenue Residence Hall (way/235398391): 17th Avenue Residence Hall, which the title names; the stop's point is at Pioneer Hall, 850 m away. Where in it the photograph was taken is not known."
+        "source": "Centre of the OpenStreetMap feature 17th Avenue Residence Hall (way/235398391): 17th Avenue Residence Hall, which the title names; the stop's point is at Pioneer Hall, 850 m away. Where in it the photograph was taken is not known.",
+        "height": {
+          "meters": 227.002,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2313193,
+          "latitudeDeg": 44.9782663,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -273,7 +483,22 @@
         "longitudeDeg": -93.2307261,
         "latitudeDeg": 44.9722861,
         "horizontalAccuracyMeters": 60,
-        "source": "YouVisit's tour point for stop 306389, Innovative Health Sciences, which is 23 m from the centre of Health Sciences Education Center (OpenStreetMap way/1220638232), where this panorama was taken. Where in the building is not known."
+        "source": "YouVisit's tour point for stop 306389, Innovative Health Sciences, which is 23 m from the centre of Health Sciences Education Center (OpenStreetMap way/1220638232), where this panorama was taken. Where in the building is not known.",
+        "height": {
+          "meters": 253.101,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2307261,
+          "latitudeDeg": 44.9722861,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -291,7 +516,22 @@
         "longitudeDeg": -93.2354093,
         "latitudeDeg": 44.9729654,
         "horizontalAccuracyMeters": 60,
-        "source": "YouVisit's tour point for stop 306390, Coffman Memorial Student Union, which is 16 m from the centre of Coffman Memorial Union (OpenStreetMap way/30056874), where this panorama was taken. Where in the building is not known."
+        "source": "YouVisit's tour point for stop 306390, Coffman Memorial Student Union, which is 16 m from the centre of Coffman Memorial Union (OpenStreetMap way/30056874), where this panorama was taken. Where in the building is not known.",
+        "height": {
+          "meters": 252.942,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2354093,
+          "latitudeDeg": 44.9729654,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -309,7 +549,22 @@
         "longitudeDeg": -93.2345402,
         "latitudeDeg": 44.9782705,
         "horizontalAccuracyMeters": 65,
-        "source": "YouVisit's interactive map position for stop 306371, Folwell Hall, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m."
+        "source": "YouVisit's interactive map position for stop 306371, Folwell Hall, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+        "height": {
+          "meters": 249.657,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2345402,
+          "latitudeDeg": 44.9782705,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -327,7 +582,22 @@
         "longitudeDeg": -93.2307261,
         "latitudeDeg": 44.9722861,
         "horizontalAccuracyMeters": 60,
-        "source": "YouVisit's tour point for stop 306389, Innovative Health Sciences, which is 23 m from the centre of Health Sciences Education Center (OpenStreetMap way/1220638232), where this panorama was taken. Where in the building is not known."
+        "source": "YouVisit's tour point for stop 306389, Innovative Health Sciences, which is 23 m from the centre of Health Sciences Education Center (OpenStreetMap way/1220638232), where this panorama was taken. Where in the building is not known.",
+        "height": {
+          "meters": 253.101,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2307261,
+          "latitudeDeg": 44.9722861,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -348,7 +618,22 @@
         "longitudeDeg": -93.2344866,
         "latitudeDeg": 44.9751968,
         "horizontalAccuracyMeters": 65,
-        "source": "YouVisit's tour point for stop 306377, Science & Engineering (feat. Tate Hall), whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m."
+        "source": "YouVisit's tour point for stop 306377, Science & Engineering (feat. Tate Hall), whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+        "height": {
+          "meters": 248.862,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2344866,
+          "latitudeDeg": 44.9751968,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -369,7 +654,22 @@
         "longitudeDeg": -93.2277703,
         "latitudeDeg": 44.9751361,
         "horizontalAccuracyMeters": 150,
-        "source": "Not placed: YouVisit's tour point for stop 306401, Impact & Value of a UMN Degree, which this panorama belongs to. It is somewhere in or near that stop."
+        "source": "Not placed: YouVisit's tour point for stop 306401, Impact & Value of a UMN Degree, which this panorama belongs to. It is somewhere in or near that stop.",
+        "height": {
+          "meters": 257.777,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2277703,
+          "latitudeDeg": 44.9751361,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -391,7 +691,22 @@
         "longitudeDeg": -93.1825961,
         "latitudeDeg": 44.9882468,
         "horizontalAccuracyMeters": 50,
-        "source": "Centre of the OpenStreetMap feature Department of Horticultural Science Display and Trial Garden (way/158591108): the Horticultural Science Display and Trial Garden, which the title names; the stop's point is at the Student Center, 700 m away. Where in it the photograph was taken is not known."
+        "source": "Centre of the OpenStreetMap feature Department of Horticultural Science Display and Trial Garden (way/158591108): the Horticultural Science Display and Trial Garden, which the title names; the stop's point is at the Student Center, 700 m away. Where in it the photograph was taken is not known.",
+        "height": {
+          "meters": 267.026,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.1825961,
+          "latitudeDeg": 44.9882468,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -413,7 +728,22 @@
         "longitudeDeg": -93.1850964,
         "latitudeDeg": 44.9838636,
         "horizontalAccuracyMeters": 150,
-        "source": "Not placed: YouVisit's tour point for stop 306395, College of Food, Agricultural and Natural Resource Sciences (CFANS), which this panorama belongs to. It is somewhere in or near that stop."
+        "source": "Not placed: YouVisit's tour point for stop 306395, College of Food, Agricultural and Natural Resource Sciences (CFANS), which this panorama belongs to. It is somewhere in or near that stop.",
+        "height": {
+          "meters": 288.341,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.1850964,
+          "latitudeDeg": 44.9838636,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -431,7 +761,22 @@
         "longitudeDeg": -93.2294548,
         "latitudeDeg": 44.9708325,
         "horizontalAccuracyMeters": 60,
-        "source": "YouVisit's tour point for stop 306386, Living on Campus, which is 3 m from the centre of Pioneer Hall (OpenStreetMap way/40760464), where this panorama was taken. Where in the building is not known."
+        "source": "YouVisit's tour point for stop 306386, Living on Campus, which is 3 m from the centre of Pioneer Hall (OpenStreetMap way/40760464), where this panorama was taken. Where in the building is not known.",
+        "height": {
+          "meters": 245.721,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2294548,
+          "latitudeDeg": 44.9708325,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -449,7 +794,22 @@
         "longitudeDeg": -93.2294548,
         "latitudeDeg": 44.9708325,
         "horizontalAccuracyMeters": 65,
-        "source": "YouVisit's tour point for stop 306386, Living on Campus, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m."
+        "source": "YouVisit's tour point for stop 306386, Living on Campus, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+        "height": {
+          "meters": 245.721,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2294548,
+          "latitudeDeg": 44.9708325,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -467,7 +827,22 @@
         "longitudeDeg": -93.2307261,
         "latitudeDeg": 44.9722861,
         "horizontalAccuracyMeters": 65,
-        "source": "YouVisit's tour point for stop 306389, Innovative Health Sciences, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m."
+        "source": "YouVisit's tour point for stop 306389, Innovative Health Sciences, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+        "height": {
+          "meters": 253.101,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2307261,
+          "latitudeDeg": 44.9722861,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -485,7 +860,22 @@
         "longitudeDeg": -93.2354093,
         "latitudeDeg": 44.9729654,
         "horizontalAccuracyMeters": 65,
-        "source": "YouVisit's tour point for stop 306390, Coffman Memorial Student Union, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m."
+        "source": "YouVisit's tour point for stop 306390, Coffman Memorial Student Union, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+        "height": {
+          "meters": 252.942,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2354093,
+          "latitudeDeg": 44.9729654,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -503,7 +893,22 @@
         "longitudeDeg": -93.2354093,
         "latitudeDeg": 44.9729654,
         "horizontalAccuracyMeters": 60,
-        "source": "YouVisit's tour point for stop 306390, Coffman Memorial Student Union, which is 16 m from the centre of Coffman Memorial Union (OpenStreetMap way/30056874), where this panorama was taken. Where in the building is not known."
+        "source": "YouVisit's tour point for stop 306390, Coffman Memorial Student Union, which is 16 m from the centre of Coffman Memorial Union (OpenStreetMap way/30056874), where this panorama was taken. Where in the building is not known.",
+        "height": {
+          "meters": 252.942,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2354093,
+          "latitudeDeg": 44.9729654,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -521,7 +926,22 @@
         "longitudeDeg": -93.2393038,
         "latitudeDeg": 44.9731172,
         "horizontalAccuracyMeters": 65,
-        "source": "YouVisit's tour point for stop 306391, Getting Around Campus, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m."
+        "source": "YouVisit's tour point for stop 306391, Getting Around Campus, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+        "height": {
+          "meters": 230.198,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2393038,
+          "latitudeDeg": 44.9731172,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -539,7 +959,22 @@
         "longitudeDeg": -93.2441747,
         "latitudeDeg": 44.9716143,
         "horizontalAccuracyMeters": 65,
-        "source": "YouVisit's tour point for stop 306392, A Global University, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m."
+        "source": "YouVisit's tour point for stop 306392, A Global University, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+        "height": {
+          "meters": 236.186,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2441747,
+          "latitudeDeg": 44.9716143,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -557,7 +992,22 @@
         "longitudeDeg": -93.2441747,
         "latitudeDeg": 44.9716143,
         "horizontalAccuracyMeters": 150,
-        "source": "Not placed: YouVisit's tour point for stop 306392, A Global University, which this panorama belongs to. It is somewhere in or near that stop."
+        "source": "Not placed: YouVisit's tour point for stop 306392, A Global University, which this panorama belongs to. It is somewhere in or near that stop.",
+        "height": {
+          "meters": 236.186,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2441747,
+          "latitudeDeg": 44.9716143,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -578,7 +1028,22 @@
         "longitudeDeg": -93.2424649,
         "latitudeDeg": 44.9704366,
         "horizontalAccuracyMeters": 50,
-        "source": "Centre of the OpenStreetMap feature Rarig Center (way/255808942): Rarig Center, which the title names. Where in it the photograph was taken is not known."
+        "source": "Centre of the OpenStreetMap feature Rarig Center (way/255808942): Rarig Center, which the title names. Where in it the photograph was taken is not known.",
+        "height": {
+          "meters": 249.615,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2424649,
+          "latitudeDeg": 44.9704366,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -599,7 +1064,22 @@
         "longitudeDeg": -93.1861961,
         "latitudeDeg": 44.9828315,
         "horizontalAccuracyMeters": 65,
-        "source": "YouVisit's tour point for stop 306394, Welcome to the Saint Paul Campus, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m."
+        "source": "YouVisit's tour point for stop 306394, Welcome to the Saint Paul Campus, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+        "height": {
+          "meters": 261.966,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.1861961,
+          "latitudeDeg": 44.9828315,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -617,7 +1097,22 @@
         "longitudeDeg": -93.1814003,
         "latitudeDeg": 44.9884469,
         "horizontalAccuracyMeters": 65,
-        "source": "YouVisit's tour point for stop 306397, Biology & The Environment, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m."
+        "source": "YouVisit's tour point for stop 306397, Biology & The Environment, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+        "height": {
+          "meters": 269.572,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.1814003,
+          "latitudeDeg": 44.9884469,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -635,7 +1130,22 @@
         "longitudeDeg": -93.1833959,
         "latitudeDeg": 44.9850853,
         "horizontalAccuracyMeters": 65,
-        "source": "YouVisit's tour point for stop 306396, Design and Discovery, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m."
+        "source": "YouVisit's tour point for stop 306396, Design and Discovery, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+        "height": {
+          "meters": 287.061,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.1833959,
+          "latitudeDeg": 44.9850853,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -656,7 +1166,22 @@
         "longitudeDeg": -93.1833959,
         "latitudeDeg": 44.9850853,
         "horizontalAccuracyMeters": 60,
-        "source": "YouVisit's tour point for stop 306396, Design and Discovery, which is 30 m from the centre of McNeal Hall (OpenStreetMap way/77712291), where this panorama was taken. Where in the building is not known."
+        "source": "YouVisit's tour point for stop 306396, Design and Discovery, which is 30 m from the centre of McNeal Hall (OpenStreetMap way/77712291), where this panorama was taken. Where in the building is not known.",
+        "height": {
+          "meters": 287.061,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.1833959,
+          "latitudeDeg": 44.9850853,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -677,7 +1202,22 @@
         "longitudeDeg": -93.1850964,
         "latitudeDeg": 44.9838636,
         "horizontalAccuracyMeters": 65,
-        "source": "YouVisit's tour point for stop 306395, College of Food, Agricultural and Natural Resource Sciences (CFANS), whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m."
+        "source": "YouVisit's tour point for stop 306395, College of Food, Agricultural and Natural Resource Sciences (CFANS), whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+        "height": {
+          "meters": 288.341,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.1850964,
+          "latitudeDeg": 44.9838636,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -695,7 +1235,22 @@
         "longitudeDeg": -93.18802,
         "latitudeDeg": 44.9911861,
         "horizontalAccuracyMeters": 65,
-        "source": "YouVisit's tour point for stop 306398, Community Connections, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m."
+        "source": "YouVisit's tour point for stop 306398, Community Connections, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+        "height": {
+          "meters": 283.943,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.18802,
+          "latitudeDeg": 44.9911861,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -716,7 +1271,22 @@
         "longitudeDeg": -93.18802,
         "latitudeDeg": 44.9911861,
         "horizontalAccuracyMeters": 60,
-        "source": "YouVisit's tour point for stop 306398, Community Connections, which is 4 m from the centre of Bell Museum (OpenStreetMap way/580258639), where this panorama was taken. Where in the building is not known."
+        "source": "YouVisit's tour point for stop 306398, Community Connections, which is 4 m from the centre of Bell Museum (OpenStreetMap way/580258639), where this panorama was taken. Where in the building is not known.",
+        "height": {
+          "meters": 283.943,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.18802,
+          "latitudeDeg": 44.9911861,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -734,7 +1304,22 @@
         "longitudeDeg": -93.2297873,
         "latitudeDeg": 44.9751588,
         "horizontalAccuracyMeters": 65,
-        "source": "YouVisit's tour point for stop 306399, Health & Wellness, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m."
+        "source": "YouVisit's tour point for stop 306399, Health & Wellness, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+        "height": {
+          "meters": 252.934,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2297873,
+          "latitudeDeg": 44.9751588,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -752,7 +1337,22 @@
         "longitudeDeg": -93.2258391,
         "latitudeDeg": 44.9764567,
         "horizontalAccuracyMeters": 65,
-        "source": "YouVisit's tour point for stop 306400, Cheer for the Gophers! (Athletics), whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m."
+        "source": "YouVisit's tour point for stop 306400, Cheer for the Gophers! (Athletics), whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+        "height": {
+          "meters": 226.66,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2258391,
+          "latitudeDeg": 44.9764567,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -770,7 +1370,22 @@
         "longitudeDeg": -93.2277703,
         "latitudeDeg": 44.9751361,
         "horizontalAccuracyMeters": 65,
-        "source": "YouVisit's tour point for stop 306401, Impact & Value of a UMN Degree, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m."
+        "source": "YouVisit's tour point for stop 306401, Impact & Value of a UMN Degree, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+        "height": {
+          "meters": 257.777,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2277703,
+          "latitudeDeg": 44.9751361,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -788,7 +1403,22 @@
         "longitudeDeg": -93.2373297,
         "latitudeDeg": 44.9740583,
         "horizontalAccuracyMeters": 65,
-        "source": "YouVisit's tour point for stop 306387, Student Services and Support, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m."
+        "source": "YouVisit's tour point for stop 306387, Student Services and Support, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+        "height": {
+          "meters": 247.988,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2373297,
+          "latitudeDeg": 44.9740583,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -806,7 +1436,22 @@
         "longitudeDeg": -93.2353686,
         "latitudeDeg": 44.9764784,
         "horizontalAccuracyMeters": 50,
-        "source": "Centre of the OpenStreetMap feature Northrop Memorial Auditorium (way/255808964): Northrop, which the title names; YouVisit gave it the Northrop Mall stop's point. Where in it the photograph was taken is not known."
+        "source": "Centre of the OpenStreetMap feature Northrop Memorial Auditorium (way/255808964): Northrop, which the title names; YouVisit gave it the Northrop Mall stop's point. Where in it the photograph was taken is not known.",
+        "height": {
+          "meters": 266.207,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2353686,
+          "latitudeDeg": 44.9764784,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -824,7 +1469,22 @@
         "longitudeDeg": -93.2294548,
         "latitudeDeg": 44.9708325,
         "horizontalAccuracyMeters": 60,
-        "source": "YouVisit's tour point for stop 306386, Living on Campus, which is 3 m from the centre of Pioneer Hall (OpenStreetMap way/40760464), where this panorama was taken. Where in the building is not known."
+        "source": "YouVisit's tour point for stop 306386, Living on Campus, which is 3 m from the centre of Pioneer Hall (OpenStreetMap way/40760464), where this panorama was taken. Where in the building is not known.",
+        "height": {
+          "meters": 245.721,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2294548,
+          "latitudeDeg": 44.9708325,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -842,7 +1502,22 @@
         "longitudeDeg": -93.2294548,
         "latitudeDeg": 44.9708325,
         "horizontalAccuracyMeters": 60,
-        "source": "YouVisit's tour point for stop 306386, Living on Campus, which is 3 m from the centre of Pioneer Hall (OpenStreetMap way/40760464), where this panorama was taken. Where in the building is not known."
+        "source": "YouVisit's tour point for stop 306386, Living on Campus, which is 3 m from the centre of Pioneer Hall (OpenStreetMap way/40760464), where this panorama was taken. Where in the building is not known.",
+        "height": {
+          "meters": 245.721,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2294548,
+          "latitudeDeg": 44.9708325,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -860,7 +1535,22 @@
         "longitudeDeg": -93.2362247,
         "latitudeDeg": 44.9752803,
         "horizontalAccuracyMeters": 60,
-        "source": "YouVisit's tour point for stop 306357, Learning at the Libraries, which is 5 m from the centre of Walter Library (OpenStreetMap way/23014165), where this panorama was taken. Where in the building is not known."
+        "source": "YouVisit's tour point for stop 306357, Learning at the Libraries, which is 5 m from the centre of Walter Library (OpenStreetMap way/23014165), where this panorama was taken. Where in the building is not known.",
+        "height": {
+          "meters": 246.368,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2362247,
+          "latitudeDeg": 44.9752803,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -881,7 +1571,22 @@
         "longitudeDeg": -93.2362247,
         "latitudeDeg": 44.9752803,
         "horizontalAccuracyMeters": 60,
-        "source": "YouVisit's tour point for stop 306357, Learning at the Libraries, which is 5 m from the centre of Walter Library (OpenStreetMap way/23014165), where this panorama was taken. Where in the building is not known."
+        "source": "YouVisit's tour point for stop 306357, Learning at the Libraries, which is 5 m from the centre of Walter Library (OpenStreetMap way/23014165), where this panorama was taken. Where in the building is not known.",
+        "height": {
+          "meters": 246.368,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2362247,
+          "latitudeDeg": 44.9752803,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -899,7 +1604,22 @@
         "longitudeDeg": -93.2362247,
         "latitudeDeg": 44.9752803,
         "horizontalAccuracyMeters": 60,
-        "source": "YouVisit's tour point for stop 306357, Learning at the Libraries, which is 5 m from the centre of Walter Library (OpenStreetMap way/23014165), where this panorama was taken. Where in the building is not known."
+        "source": "YouVisit's tour point for stop 306357, Learning at the Libraries, which is 5 m from the centre of Walter Library (OpenStreetMap way/23014165), where this panorama was taken. Where in the building is not known.",
+        "height": {
+          "meters": 246.368,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2362247,
+          "latitudeDeg": 44.9752803,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -917,7 +1637,22 @@
         "longitudeDeg": -93.2373297,
         "latitudeDeg": 44.9740583,
         "horizontalAccuracyMeters": 60,
-        "source": "YouVisit's tour point for stop 306387, Student Services and Support, which is 5 m from the centre of Robert H. Bruininks Hall (OpenStreetMap way/255808960), where this panorama was taken. Where in the building is not known."
+        "source": "YouVisit's tour point for stop 306387, Student Services and Support, which is 5 m from the centre of Robert H. Bruininks Hall (OpenStreetMap way/255808960), where this panorama was taken. Where in the building is not known.",
+        "height": {
+          "meters": 247.988,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2373297,
+          "latitudeDeg": 44.9740583,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -935,7 +1670,22 @@
         "longitudeDeg": -93.2373297,
         "latitudeDeg": 44.9740583,
         "horizontalAccuracyMeters": 60,
-        "source": "YouVisit's tour point for stop 306387, Student Services and Support, which is 5 m from the centre of Robert H. Bruininks Hall (OpenStreetMap way/255808960), where this panorama was taken. Where in the building is not known."
+        "source": "YouVisit's tour point for stop 306387, Student Services and Support, which is 5 m from the centre of Robert H. Bruininks Hall (OpenStreetMap way/255808960), where this panorama was taken. Where in the building is not known.",
+        "height": {
+          "meters": 247.988,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2373297,
+          "latitudeDeg": 44.9740583,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -953,7 +1703,22 @@
         "longitudeDeg": -93.2307261,
         "latitudeDeg": 44.9722861,
         "horizontalAccuracyMeters": 60,
-        "source": "YouVisit's tour point for stop 306389, Innovative Health Sciences, which is 23 m from the centre of Health Sciences Education Center (OpenStreetMap way/1220638232), where this panorama was taken. Where in the building is not known."
+        "source": "YouVisit's tour point for stop 306389, Innovative Health Sciences, which is 23 m from the centre of Health Sciences Education Center (OpenStreetMap way/1220638232), where this panorama was taken. Where in the building is not known.",
+        "height": {
+          "meters": 253.101,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2307261,
+          "latitudeDeg": 44.9722861,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -971,7 +1736,22 @@
         "longitudeDeg": -93.2307261,
         "latitudeDeg": 44.9722861,
         "horizontalAccuracyMeters": 60,
-        "source": "YouVisit's tour point for stop 306389, Innovative Health Sciences, which is 23 m from the centre of Health Sciences Education Center (OpenStreetMap way/1220638232), where this panorama was taken. Where in the building is not known."
+        "source": "YouVisit's tour point for stop 306389, Innovative Health Sciences, which is 23 m from the centre of Health Sciences Education Center (OpenStreetMap way/1220638232), where this panorama was taken. Where in the building is not known.",
+        "height": {
+          "meters": 253.101,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2307261,
+          "latitudeDeg": 44.9722861,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -992,7 +1772,22 @@
         "longitudeDeg": -93.2400345,
         "latitudeDeg": 44.9731123,
         "horizontalAccuracyMeters": 50,
-        "source": "Centre of the OpenStreetMap feature Washington Avenue Pedestrian Bridge (way/139902429): the Washington Avenue Bridge's pedestrian deck, which the title names. Where in it the photograph was taken is not known."
+        "source": "Centre of the OpenStreetMap feature Washington Avenue Pedestrian Bridge (way/139902429): the Washington Avenue Bridge's pedestrian deck, which the title names. Where in it the photograph was taken is not known.",
+        "height": {
+          "meters": 227.14,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2400345,
+          "latitudeDeg": 44.9731123,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -1010,7 +1805,22 @@
         "longitudeDeg": -93.2371688,
         "latitudeDeg": 44.975766,
         "horizontalAccuracyMeters": 65,
-        "source": "YouVisit's tour point for stop 306388, Research & Innovation (feat. Fraser Hall), whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m."
+        "source": "YouVisit's tour point for stop 306388, Research & Innovation (feat. Fraser Hall), whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+        "height": {
+          "meters": 245.401,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2371688,
+          "latitudeDeg": 44.975766,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -1028,7 +1838,22 @@
         "longitudeDeg": -93.2536912,
         "latitudeDeg": 44.9807825,
         "horizontalAccuracyMeters": 65,
-        "source": "YouVisit's tour point for stop 306402, The Twin Cities (Our Location & Opportunities), whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m."
+        "source": "YouVisit's tour point for stop 306402, The Twin Cities (Our Location & Opportunities), whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+        "height": {
+          "meters": 200.989,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2536912,
+          "latitudeDeg": 44.9807825,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -1049,7 +1874,22 @@
         "longitudeDeg": -93.2371688,
         "latitudeDeg": 44.975766,
         "horizontalAccuracyMeters": 150,
-        "source": "Not placed: YouVisit's tour point for stop 306388, Research & Innovation (feat. Fraser Hall), which this panorama belongs to. It is somewhere in or near that stop."
+        "source": "Not placed: YouVisit's tour point for stop 306388, Research & Innovation (feat. Fraser Hall), which this panorama belongs to. It is somewhere in or near that stop.",
+        "height": {
+          "meters": 245.401,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2371688,
+          "latitudeDeg": 44.975766,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -1067,7 +1907,22 @@
         "longitudeDeg": -93.2446121,
         "latitudeDeg": 44.9704925,
         "horizontalAccuracyMeters": 50,
-        "source": "Centre of the OpenStreetMap feature Carlson School of Management (way/29124068): the Carlson School of Management building, which the title names. Where in it the photograph was taken is not known."
+        "source": "Centre of the OpenStreetMap feature Carlson School of Management (way/29124068): the Carlson School of Management building, which the title names. Where in it the photograph was taken is not known.",
+        "height": {
+          "meters": 249.664,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2446121,
+          "latitudeDeg": 44.9704925,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -1085,7 +1940,22 @@
         "longitudeDeg": -93.2618838,
         "latitudeDeg": 44.9757795,
         "horizontalAccuracyMeters": 50,
-        "source": "Centre of the OpenStreetMap feature The Commons (relation/6563703): The Commons park, which the title names; YouVisit gave it the Stone Arch Bridge stop's point. Where in it the photograph was taken is not known."
+        "source": "Centre of the OpenStreetMap feature The Commons (relation/6563703): The Commons park, which the title names; YouVisit gave it the Stone Arch Bridge stop's point. Where in it the photograph was taken is not known.",
+        "height": {
+          "meters": 226.683,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2618838,
+          "latitudeDeg": 44.9757795,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -1103,7 +1973,22 @@
         "longitudeDeg": -93.1833959,
         "latitudeDeg": 44.9850853,
         "horizontalAccuracyMeters": 60,
-        "source": "YouVisit's tour point for stop 306396, Design and Discovery, which is 30 m from the centre of McNeal Hall (OpenStreetMap way/77712291), where this panorama was taken. Where in the building is not known."
+        "source": "YouVisit's tour point for stop 306396, Design and Discovery, which is 30 m from the centre of McNeal Hall (OpenStreetMap way/77712291), where this panorama was taken. Where in the building is not known.",
+        "height": {
+          "meters": 287.061,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.1833959,
+          "latitudeDeg": 44.9850853,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,
@@ -1124,7 +2009,22 @@
         "longitudeDeg": -93.2425119,
         "latitudeDeg": 44.9693051,
         "horizontalAccuracyMeters": 100,
-        "source": "Centre of the OpenStreetMap features Regis Center For Art (West) (way/255808938), Regis Center For Art (East) (way/255808939): the Regis Center for Art, which the title names; the stop's point is at Rarig Center. Where in it the photograph was taken is not known."
+        "source": "Centre of the OpenStreetMap features Regis Center For Art (West) (way/255808938), Regis Center For Art (East) (way/255808939): the Regis Center for Art, which the title names; the stop's point is at Rarig Center. Where in it the photograph was taken is not known.",
+        "height": {
+          "meters": 223.86,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "heightPreparation": {
+          "provider": "google-photorealistic-3d-tiles",
+          "sampledOn": "2026-10-16",
+          "longitudeDeg": -93.2425119,
+          "latitudeDeg": 44.9693051,
+          "surface": "top of mesh",
+          "geometricErrorMeters": 2.006,
+          "tileDepth": 25
+        }
       },
       "pose": {
         "headingDeg": 0,

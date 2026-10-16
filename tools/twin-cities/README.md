@@ -26,6 +26,16 @@ npm run build:scene -- --poses-only
 npm run campus-scenes
 ```
 
+A photograph without a fixed height, or one whose position moved, gets a height before the
+scenes are rebuilt (see [Heights](#heights-prepared-once-at-build-time)):
+
+```sh
+npm run prepare:heights
+npm run build:scene -- --poses-only
+npm run campus-scenes
+npm run check:heights
+```
+
 `--poses-only` updates the sibling [`twin-cities/scene.json`](../../../twin-cities/scene.json) from [`placements.json`](placements.json). It keeps the photographs, preview sheets and entity membership, recomputes pose-dependent fields, and validates the manifest without reading media files. Unchanged placements leave that scene's revision as it is. Hotspot directions and opening views are recomputed from the YouVisit backup's image-local angles when a pose changes. The published directions are not inverted. If the backup is not on this machine, a pose change that would move a hotspot or an opening view stops instead of guessing.
 
 The full `npm run build:scene` still prepares photographs. It calls `scripts/prepare-panorama.mjs`, `scripts/check-scene.mjs` and `scripts/lib/previewSheet.mjs` inside the installed `foss-earth` package. Those paths were removed in the FOSS Earth split, so that command does not complete here. The public replacements are `foss-earth-prepare-panorama` (`@foss-earth/image-viewer`), `foss-earth-check-scene` and `foss-earth-build-preview-sheets` (`@foss-earth/scenes`). Wiring those into the full media build is separate from the pose-only path above.
@@ -95,7 +105,11 @@ There is one entry per photograph, keyed by its YouVisit panorama id:
 "363723": {
   "id": "taylor-center",
   "title": "Taylor Center",
-  "capture": { "longitudeDeg": -93.2333836, "latitudeDeg": 44.9745163, "horizontalAccuracyMeters": 50, "source": "…" },
+  "capture": {
+    "longitudeDeg": -93.2333842, "latitudeDeg": 44.974516, "horizontalAccuracyMeters": 50, "source": "…",
+    "height": { "meters": 230.295, "datum": "WGS84-ellipsoid", "uncertaintyMeters": 2.01, "source": "…" },
+    "heightPreparation": { "provider": "google-photorealistic-3d-tiles", "sampledOn": "2026-10-16", "…": "…" }
+  },
   "pose": { "headingDeg": 0, "pitchDeg": 0, "rollDeg": 0, "aligned": false, "provenance": "…" }
 }
 ```
@@ -110,13 +124,15 @@ There is one entry per photograph, keyed by its YouVisit panorama id:
     Lobby, RecWell Lobby, RecWell Indoor Track and Huntington Bank Stadium.
   - That leaves 60 distinct photographs among YouVisit's 79 panorama ids.
 - **`capture`** is where the photograph was taken. `source` says where the position came
-  from, and `horizontalAccuracyMeters` how far off it may be.
+  from, and `horizontalAccuracyMeters` how far off it may be. `height` is the photograph's
+  fixed height and `heightPreparation` how it was found; see
+  [Heights](#heights-prepared-once-at-build-time).
 - **`pose`** is which way the image faces. `headingDeg` is the compass bearing of the image's
   centre column. `aligned: false` means nobody has set it yet; it goes into the scene's
   `imagePose`, and the panorama's tab says whether north is set. `provenance` says how it was
   set.
 - **`marker`** is optional and overrides where the orb floats. It uses the fields of the
-  format's marker, such as `offsetM` for the height above the ground.
+  format's marker, such as `offsetM` for the height above the capture height.
 
 ### Positions: approximate
 
@@ -142,6 +158,39 @@ therefore approximate, and each entry says which kind it is:
 
 Panoramas that share a point have their orbs spread on a 15 m ring around it, so each can be
 picked. The ring moves only the orb, not the recorded position.
+
+### Heights: prepared once, at build time
+
+Every photograph carries a fixed height in metres above the WGS84 ellipsoid, and its orb is
+placed from it (`capture-relative`). The viewer never samples the map for these orbs, so map
+detail arriving or changing never moves them. `npm run build` stops if a placement lacks a
+height or a scene disagrees with `placements.json` (`npm run check:heights`).
+
+`npm run prepare:heights` finds heights for photographs that have none, or whose position
+moved since their height was prepared, and leaves the rest alone, so a repeat makes no
+network requests. It uses FOSS Earth's `foss-earth-prepare-heights` (`@foss-earth/engine`):
+
+- **Google Photorealistic 3D Tiles first.** The height is the top of the finest geometry
+  Google serves on the vertical through the position: on campus, leaf tiles with a 2 m
+  geometric error, which is recorded as the uncertainty. Google's coordinates are already
+  WGS84, so there is no datum conversion. The key is `FOSS_EARTH_GOOGLE_KEY`, read from the
+  environment or from `.env.local` here, in `~/gh/foss-earth/app` or in `~/gh/0sfs/fly`. It
+  is sent as a header, never written anywhere, and no Google responses are kept.
+- **USGS 3DEP with GEOID18 only when Google can't serve a point** (no key, refused, no
+  coverage, or nothing finer than 4 m). The record says why. It is bare earth, with a 5 m
+  allowance for treating NAD83(2011) as WGS84. `--retry-fallbacks` tries Google again for
+  those; `--no-fallback` fails instead.
+- **A height set by hand or in the placement editor is never replaced.** `import-poses.mjs`
+  accepts an editor height change with `--reference` and records it as `provider: "editor"`;
+  a height typed into `placements.json` should use `provider: "manual"`.
+
+`--refresh` prepares every build-prepared height again. A failure writes nothing.
+
+The positions are approximate, so a height is the surface at the recorded position, not a
+measured camera height. Where the position is on a building, that surface is the roof: on
+open ground the 2026-10-16 heights agree with USGS bare earth to about 1 m, while those on
+buildings are 15–31 m above it. Correct a photograph's position or height in the placement
+editor and import it.
 
 ### North: not set
 

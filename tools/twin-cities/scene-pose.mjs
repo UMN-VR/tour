@@ -128,12 +128,12 @@ function applyEntity(entity, placement, offsets, locals) {
     ...entity.capture,
     longitudeDeg: placement.capture.longitudeDeg,
     latitudeDeg: placement.capture.latitudeDeg,
-    height: null,
+    height: placement.capture.height ?? null,
   };
   entity.imagePose = { ...entity.imagePose, ...pose, aligned: placement.pose.aligned === true };
   entity.marker = {
     ...entity.marker,
-    mode: "ground-relative",
+    mode: placement.capture.height ? "capture-relative" : "ground-relative",
     offsetM: DEFAULT_OFFSET_M,
     radiusMeters: entity.marker?.radiusMeters ?? 3,
     ...override,

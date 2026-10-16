@@ -254,7 +254,7 @@ function buildScene(assets) {
   const markerOf = entityId => {
     const { placement } = idOfImage.get(entityId);
     const { eastM, northM } = offsets.get(entityId);
-    return { mode: "ground-relative", eastM, northM, offsetM: 25, radiusMeters: 3, ...placement.marker };
+    return { mode: placement.capture.height ? "capture-relative" : "ground-relative", eastM, northM, offsetM: 25, radiusMeters: 3, ...placement.marker };
   };
 
   const entities = order.map(entityId => {
@@ -314,7 +314,7 @@ function buildScene(assets) {
       capture: {
         longitudeDeg: placement.capture.longitudeDeg,
         latitudeDeg: placement.capture.latitudeDeg,
-        height: null,
+        height: placement.capture.height ?? null,
         ...(placement.capture.horizontalAccuracyMeters ? { horizontalAccuracyMeters: placement.capture.horizontalAccuracyMeters } : {}),
       },
       imagePose: { ...pose, aligned: placement.pose.aligned === true },
