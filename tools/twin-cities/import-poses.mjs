@@ -63,12 +63,14 @@ function readNumber(value, digits, min, max, exclusiveMax = false) {
 function normalizeEdit(edit) {
   if (!edit || typeof edit !== "object" || Array.isArray(edit)) return fail("An edit is not an object.");
   if (!nonempty(edit.entityId) || !nonempty(edit.title) || !nonempty(edit.authoredRevision) || !iso(edit.updatedAt)) return fail(`${edit.entityId ?? "An edit"} is missing its id, title, revision, or time.`);
-  if (edit.mode !== "ground-relative") return fail(`${edit.entityId} uses ${edit.mode ?? "no"} placement mode. This importer accepts ground-relative photographs with no capture height.`);
+  if (edit.mode !== "ground-relative" && edit.mode !== "capture-relative") return fail(`${edit.entityId} uses ${edit.mode ?? "no"} placement mode. This importer accepts capture-relative photographs with a fixed height, and ground-relative ones with none.`);
   const capture = edit.capture ?? {};
   const pose = edit.imagePose ?? {};
   const marker = edit.marker ?? {};
   const authored = edit.authored ?? {};
-  if (capture.heightMeters !== null) return fail(`${edit.entityId} has a capture height. This importer keeps the tour's null height.`);
+  if (edit.mode === "ground-relative" && capture.heightMeters !== null) return fail(`${edit.entityId} is ground-relative but has a capture height.`);
+  const heightMeters = edit.mode === "capture-relative" ? readNumber(capture.heightMeters, 3, -500, 9000) : null;
+  if (edit.mode === "capture-relative" && heightMeters === null) return fail(`${edit.entityId} is capture-relative without a usable capture height.`);
   const longitudeDeg = readNumber(capture.longitudeDeg, 8, -180, 180, true);
   const latitudeDeg = readNumber(capture.latitudeDeg, 8, -90, 90);
   const headingDeg = readNumber(pose.headingDeg, 4, 0, 360, true);
@@ -99,10 +101,10 @@ function normalizeEdit(edit) {
   if (authored.aligned !== true && authored.aligned !== false && authored.aligned !== null) return fail(`${edit.entityId} has an authored alignment this importer cannot compare.`);
   if (pose.aligned === true && !orientation) {
     const inherited = authoredNumbers.aligned === true
-      && authoredNumbers.mode === "ground-relative"
+      && authoredNumbers.mode === edit.mode
       && authoredNumbers.longitudeDeg === longitudeDeg
       && authoredNumbers.latitudeDeg === latitudeDeg
-      && authoredNumbers.heightMeters === null
+      && heightClose(authoredNumbers.heightMeters, heightMeters)
       && authoredNumbers.headingDeg === headingDeg
       && authoredNumbers.pitchDeg === pitchDeg;
     if (!inherited) return fail(`${edit.entityId} says north is checked without a confirmation or an inherited check.`);
@@ -111,7 +113,7 @@ function normalizeEdit(edit) {
     ok: true,
     edit: {
       entityId: edit.entityId, title: edit.title, mode: edit.mode, authoredRevision: edit.authoredRevision, updatedAt: edit.updatedAt,
-      capture: { longitudeDeg, latitudeDeg, heightMeters: null },
+      capture: { longitudeDeg, latitudeDeg, heightMeters },
       imagePose: { headingDeg, pitchDeg, aligned: pose.aligned },
       marker: { offsetM },
       authored: { ...authoredNumbers, rollDeg },
@@ -130,11 +132,13 @@ function desiredKey(edit) {
 
 function publishedOf(placement) {
   const marker = placement.marker ?? {};
+  const height = placement.capture.height ?? null;
   return {
-    mode: marker.mode ?? "ground-relative",
+    // The scene builders publish a placement with a fixed height as capture-relative.
+    mode: marker.mode ?? (height ? "capture-relative" : "ground-relative"),
     longitudeDeg: placement.capture.longitudeDeg,
     latitudeDeg: placement.capture.latitudeDeg,
-    heightMeters: null,
+    heightMeters: height ? height.meters : null,
     headingDeg: placement.pose.headingDeg,
     pitchDeg: placement.pose.pitchDeg,
     rollDeg: placement.pose.rollDeg,
@@ -184,9 +188,10 @@ function applyOne(placement, edit, reference) {
   const current = publishedOf(placement);
   const proposed = {
     ...current,
+    mode: edit.mode,
     longitudeDeg: edit.capture.longitudeDeg,
     latitudeDeg: edit.capture.latitudeDeg,
-    heightMeters: null,
+    heightMeters: edit.capture.heightMeters,
     headingDeg: edit.imagePose.headingDeg,
     pitchDeg: edit.imagePose.pitchDeg,
     offsetM: edit.marker.offsetM,
@@ -197,10 +202,12 @@ function applyOne(placement, edit, reference) {
     return { status: "already-applied", before: current, after: current, note: "Already applied." };
   }
   const conflicts = conflictList(edit.authored, current, proposed);
+  if (!conflicts.length && proposed.mode !== current.mode) conflicts.push({ field: "mode", authored: edit.authored.mode, current: current.mode, proposed: proposed.mode });
   if (conflicts.length) return { status: "conflicting", before: current, after: proposed, conflicts, note: conflicts.map(item => `${item.field}: authored ${item.authored}, current ${item.current}, proposed ${item.proposed}`).join("; ") };
   const coordinates = !lonClose(current.longitudeDeg, proposed.longitudeDeg) || Math.abs(current.latitudeDeg - proposed.latitudeDeg) > 1e-8;
+  const height = !heightClose(current.heightMeters, proposed.heightMeters);
   const orientation = !headingClose(current.headingDeg, proposed.headingDeg) || !angleClose(current.pitchDeg, proposed.pitchDeg) || !alignedClose(current.aligned, proposed.aligned);
-  const numeric = coordinates
+  const numeric = coordinates || height
     || !headingClose(current.headingDeg, proposed.headingDeg)
     || !angleClose(current.pitchDeg, proposed.pitchDeg)
     || !metersClose(current.offsetM, proposed.offsetM);
@@ -220,6 +227,16 @@ function applyOne(placement, edit, reference) {
   if (coordinates) {
     next.capture.source = withHistory(placement.capture.source, `Capture corrected in the FOSS Earth placement editor on ${dateOf(edit.updatedAt)} (${reference}).`);
   }
+  if (height) {
+    // Someone chose this height while looking at it; height preparation never replaces it.
+    const previous = placement.capture.height;
+    next.capture.height = {
+      meters: proposed.heightMeters, datum: "WGS84-ellipsoid",
+      source: withHistory(previous?.source, `Set to ${proposed.heightMeters} m in the FOSS Earth placement editor on ${dateOf(edit.updatedAt)} (${reference}); uncertainty is the earlier preparation's.`),
+      uncertaintyMeters: previous?.uncertaintyMeters ?? 0,
+    };
+    next.capture.heightPreparation = { provider: "editor", setOn: dateOf(edit.updatedAt), reference, longitudeDeg: proposed.longitudeDeg, latitudeDeg: proposed.latitudeDeg };
+  }
   if (orientation) {
     const confirmation = edit.verification.orientation;
     const alignmentChanged = !alignedClose(current.aligned, proposed.aligned);
@@ -230,8 +247,11 @@ function applyOne(placement, edit, reference) {
         : `Orientation corrected in the FOSS Earth placement editor on ${dateOf(edit.updatedAt)} (${reference}).`;
     next.pose.provenance = withHistory(placement.pose.provenance, claim);
   }
-  const offsetOnly = !coordinates && !orientation && !metersClose(current.offsetM, proposed.offsetM);
-  const movement = offsetOnly ? "Display offset only; the capture did not move." : coordinates ? "Capture coordinates change. The recorded horizontal accuracy is unchanged and should be reviewed." : "Orientation changes.";
+  const offsetOnly = !coordinates && !height && !orientation && !metersClose(current.offsetM, proposed.offsetM);
+  const stale = coordinates && !height && next.capture.heightPreparation && next.capture.heightPreparation.provider !== "editor" && next.capture.heightPreparation.provider !== "manual";
+  const movement = offsetOnly ? "Display offset only; the capture did not move."
+    : coordinates ? `Capture coordinates change. The recorded horizontal accuracy is unchanged and should be reviewed.${stale ? " Its prepared height is for the old coordinate: run npm run prepare:heights." : ""}`
+      : height ? "Capture height changes." : "Orientation changes.";
   return { status: "accepted", before: current, after: proposed, placement: next, note: movement };
 }
 

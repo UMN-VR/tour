@@ -134,7 +134,7 @@ describe("pose import", () => {
     expect(disagreed.placements).toBeNull();
   });
 
-  it("rejects a future export, a capture height, and does not copy unknown fields", () => {
+  it("rejects a future export, a ground-relative edit with a height, and does not copy unknown fields", () => {
     expect(planPoseImport(document(), { format: "foss-earth-pose-overrides", version: 2, scenes: [] }, campuses).ok).toBe(false);
     const height = planPoseImport(document(), exported([edit({ capture: { longitudeDeg: -93.2, latitudeDeg: 44.9, heightMeters: 12 } })]), campuses, { reference: "map" });
     expect(height.rows[0].status).toBe("invalid");
@@ -160,5 +160,62 @@ describe("pose import", () => {
     writeFileSync(file, `${text}\n`);
     expect(() => commitPlacements(file, text, plan.placements)).toThrow(/changed/);
     expect(readFileSync(file, "utf8")).toBe(`${text}\n`);
+  });
+});
+
+describe("pose import with fixed heights", () => {
+  const prepared = { meters: 236.303, datum: "WGS84-ellipsoid", uncertaintyMeters: 2.01, source: "Build-time Google Photorealistic 3D Tiles." };
+  const preparation = { provider: "google-photorealistic-3d-tiles", sampledOn: "2026-10-15", longitudeDeg: -93.2, latitudeDeg: 44.9, surface: "top of mesh", geometricErrorMeters: 2.006, tileDepth: 25 };
+  function heightDocument() {
+    const next = document();
+    for (const row of Object.values(next.panoramas)) Object.assign(row.capture, { height: { ...prepared }, heightPreparation: { ...preparation } });
+    return next;
+  }
+  function fixed(over = {}) {
+    return edit({
+      mode: "capture-relative",
+      capture: { longitudeDeg: -93.2, latitudeDeg: 44.9, heightMeters: 236.303 },
+      authored: { ...edit().authored, mode: "capture-relative", heightMeters: 236.303 },
+      ...over,
+    });
+  }
+
+  it("applies an orientation change and keeps the prepared height and its provenance", () => {
+    const plan = planPoseImport(heightDocument(), exported([fixed()]), campuses, { reference: "map" });
+    expect(plan.ok).toBe(true);
+    const next = plan.placements.panoramas["363729"];
+    expect(next.pose.headingDeg).toBe(12);
+    expect(next.capture.height).toEqual(prepared);
+    expect(next.capture.heightPreparation).toEqual(preparation);
+  });
+
+  it("records a height chosen in the editor so preparation never replaces it", () => {
+    const changed = fixed({ capture: { longitudeDeg: -93.2, latitudeDeg: 44.9, heightMeters: 240.5 }, imagePose: { headingDeg: 0, pitchDeg: 0, aligned: false } });
+    expect(planPoseImport(heightDocument(), exported([changed]), campuses, {}).needsReference).toBe(true);
+    const plan = planPoseImport(heightDocument(), exported([changed]), campuses, { reference: "Matched the lobby floor" });
+    const next = plan.placements.panoramas["363729"];
+    expect(next.capture.height).toMatchObject({ meters: 240.5, datum: "WGS84-ellipsoid", uncertaintyMeters: 2.01 });
+    expect(next.capture.height.source).toMatch(/^Set to 240.5 m in the FOSS Earth placement editor on 2026-10-14 \(Matched the lobby floor\).*Earlier: Build-time Google/);
+    expect(next.capture.heightPreparation).toMatchObject({ provider: "editor", reference: "Matched the lobby floor", longitudeDeg: -93.2 });
+    expect(plan.rows[0].note).toMatch(/height changes/);
+    const again = planPoseImport(plan.placements, exported([changed]), campuses, {});
+    expect(again.counts.alreadyApplied).toBe(1);
+  });
+
+  it("says a moved capture needs its height prepared again", () => {
+    const moved = fixed({ capture: { longitudeDeg: -93.21, latitudeDeg: 44.9, heightMeters: 236.303 }, imagePose: { headingDeg: 0, pitchDeg: 0, aligned: false } });
+    const plan = planPoseImport(heightDocument(), exported([moved]), campuses, { reference: "map" });
+    expect(plan.ok).toBe(true);
+    expect(plan.placements.panoramas["363729"].capture.heightPreparation.longitudeDeg).toBe(-93.2);
+    expect(plan.rows[0].note).toMatch(/npm run prepare:heights/);
+  });
+
+  it("refuses an export made before heights were prepared, and a capture-relative edit with no height", () => {
+    const old = planPoseImport(heightDocument(), exported([edit()]), campuses, { reference: "map" });
+    expect(old.rows[0].status).toBe("conflicting");
+    expect(old.rows[0].note).toMatch(/mode: authored ground-relative, current capture-relative/);
+    expect(old.placements).toBeNull();
+    const missing = planPoseImport(heightDocument(), exported([fixed({ capture: { longitudeDeg: -93.2, latitudeDeg: 44.9, heightMeters: null } })]), campuses, { reference: "map" });
+    expect(missing.rows[0].status).toBe("invalid");
   });
 });
