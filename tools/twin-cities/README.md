@@ -133,6 +133,9 @@ There is one entry per photograph, keyed by its YouVisit panorama id:
   set.
 - **`marker`** is optional and overrides where the orb floats. It uses the fields of the
   format's marker, such as `offsetM` for the height above the capture height.
+- **`links`** optionally lists additional destination photograph ids. Use **Image links**
+  in the editor and `import-links.mjs` to add them. Both builds derive their hotspot
+  directions from the fixed capture locations and preserve the original tour links.
 
 ### Positions: approximate
 

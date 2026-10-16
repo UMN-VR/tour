@@ -77,7 +77,9 @@ function normalizeEdit(edit) {
   const pitchDeg = readNumber(pose.pitchDeg, 4, -90, 90);
   const offsetM = readNumber(marker.offsetM, 3, OFFSET_MIN, OFFSET_MAX);
   const rollDeg = readNumber(authored.rollDeg, 4, -180, 180);
-  if ([longitudeDeg, latitudeDeg, headingDeg, pitchDeg, offsetM, rollDeg].some(value => value === null)) return fail(`${edit.entityId} has a number outside the range a placement can store.`);
+  // Exports from before roll was editable carry no image roll; the authored roll stands in.
+  const poseRollDeg = pose.rollDeg === undefined ? rollDeg : readNumber(pose.rollDeg, 4, -180, 180);
+  if ([longitudeDeg, latitudeDeg, headingDeg, pitchDeg, offsetM, rollDeg, poseRollDeg].some(value => value === null)) return fail(`${edit.entityId} has a number outside the range a placement can store.`);
   if (typeof pose.aligned !== "boolean") return fail(`${edit.entityId} needs an explicit aligned true or false.`);
   const orientation = edit.verification?.orientation ?? null;
   if (orientation) {
@@ -106,7 +108,8 @@ function normalizeEdit(edit) {
       && authoredNumbers.latitudeDeg === latitudeDeg
       && heightClose(authoredNumbers.heightMeters, heightMeters)
       && authoredNumbers.headingDeg === headingDeg
-      && authoredNumbers.pitchDeg === pitchDeg;
+      && authoredNumbers.pitchDeg === pitchDeg
+      && angleClose(rollDeg, poseRollDeg);
     if (!inherited) return fail(`${edit.entityId} says north is checked without a confirmation or an inherited check.`);
   }
   return {
@@ -114,7 +117,7 @@ function normalizeEdit(edit) {
     edit: {
       entityId: edit.entityId, title: edit.title, mode: edit.mode, authoredRevision: edit.authoredRevision, updatedAt: edit.updatedAt,
       capture: { longitudeDeg, latitudeDeg, heightMeters },
-      imagePose: { headingDeg, pitchDeg, aligned: pose.aligned },
+      imagePose: { headingDeg, pitchDeg, rollDeg: poseRollDeg, aligned: pose.aligned },
       marker: { offsetM },
       authored: { ...authoredNumbers, rollDeg },
       verification: { orientation: orientation ? { checkedAt: orientation.checkedAt, checkedAgainst: orientation.checkedAgainst } : null },
@@ -125,7 +128,7 @@ function normalizeEdit(edit) {
 function desiredKey(edit) {
   const orientation = edit.verification.orientation;
   return JSON.stringify({
-    capture: edit.capture, heading: edit.imagePose.headingDeg, pitch: edit.imagePose.pitchDeg, aligned: edit.imagePose.aligned,
+    capture: edit.capture, heading: edit.imagePose.headingDeg, pitch: edit.imagePose.pitchDeg, roll: edit.imagePose.rollDeg, aligned: edit.imagePose.aligned,
     offset: edit.marker.offsetM, authored: edit.authored, checked: orientation?.checkedAgainst ?? null, hasCheck: Boolean(orientation),
   });
 }
@@ -196,9 +199,9 @@ function applyOne(placement, edit, reference) {
     pitchDeg: edit.imagePose.pitchDeg,
     offsetM: edit.marker.offsetM,
     aligned: edit.imagePose.aligned,
-    rollDeg: edit.authored.rollDeg,
+    rollDeg: edit.imagePose.rollDeg,
   };
-  if (samePlace(current, { ...proposed, rollDeg: edit.authored.rollDeg })) {
+  if (samePlace(current, proposed)) {
     return { status: "already-applied", before: current, after: current, note: "Already applied." };
   }
   const conflicts = conflictList(edit.authored, current, proposed);
@@ -206,10 +209,11 @@ function applyOne(placement, edit, reference) {
   if (conflicts.length) return { status: "conflicting", before: current, after: proposed, conflicts, note: conflicts.map(item => `${item.field}: authored ${item.authored}, current ${item.current}, proposed ${item.proposed}`).join("; ") };
   const coordinates = !lonClose(current.longitudeDeg, proposed.longitudeDeg) || Math.abs(current.latitudeDeg - proposed.latitudeDeg) > 1e-8;
   const height = !heightClose(current.heightMeters, proposed.heightMeters);
-  const orientation = !headingClose(current.headingDeg, proposed.headingDeg) || !angleClose(current.pitchDeg, proposed.pitchDeg) || !alignedClose(current.aligned, proposed.aligned);
+  const orientation = !headingClose(current.headingDeg, proposed.headingDeg) || !angleClose(current.pitchDeg, proposed.pitchDeg) || !angleClose(current.rollDeg, proposed.rollDeg) || !alignedClose(current.aligned, proposed.aligned);
   const numeric = coordinates || height
     || !headingClose(current.headingDeg, proposed.headingDeg)
     || !angleClose(current.pitchDeg, proposed.pitchDeg)
+    || !angleClose(current.rollDeg, proposed.rollDeg)
     || !metersClose(current.offsetM, proposed.offsetM);
   if (numeric && !reference) {
     return { status: "needs-reference", before: current, after: proposed, note: "A --reference is required to write this correction." };
@@ -220,7 +224,7 @@ function applyOne(placement, edit, reference) {
   next.pose.headingDeg = proposed.headingDeg;
   next.pose.pitchDeg = proposed.pitchDeg;
   next.pose.aligned = proposed.aligned;
-  next.pose.rollDeg = placement.pose.rollDeg;
+  next.pose.rollDeg = proposed.rollDeg;
   if (proposed.offsetM !== 25 || placement.marker) {
     next.marker = { ...placement.marker, offsetM: proposed.offsetM };
   }

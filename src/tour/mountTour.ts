@@ -18,7 +18,7 @@ export function mountTour(scene: SceneExample): void {
   // Before the globe reads the clock, so the first frame already has this Sun.
   applyCampusSunTime(getAppSettings());
 
-  void mountGlobeApp(rootElement, { scenes: [scene], initialScene: scene.id, poseExportPrefix: "umn-tour-poses", layerExportPrefix: "umn-tour-layers" }).then(() => {
+  void mountGlobeApp(rootElement, { scenes: [scene], initialScene: scene.id, poseExportPrefix: "umn-tour-poses", layerExportPrefix: "umn-tour-layers", linkExportPrefix: "umn-tour-links" }).then(() => {
     markBrowserAppReady(document);
   }).catch((error: unknown) => {
     console.error("The tour could not start.", error);

@@ -18,10 +18,6 @@ const FORMAT = "foss-earth-layer-overrides";
 const VERSION = 1;
 const SCENE_IDS = new Set(["umn-twin-cities", "umn-minneapolis", "umn-st-paul"]);
 
-function fail(message) {
-  return { ok: false, message };
-}
-
 function text(value) {
   return typeof value === "string" && value.trim() === value && value.length > 0;
 }

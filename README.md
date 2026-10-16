@@ -183,6 +183,29 @@ npm run campus-scenes
 
 The first command is a dry run. `--write` updates `tools/twin-cities/placements.json` only. `--poses-only` reads that file and the sibling `twin-cities/scene.json`, updates capture, orientation, markers, hotspot directions, opening views and the north summary, and writes that same scene. It does not prepare photographs or change which photographs are in the scene. `campus-scenes` then regenerates Minneapolis and Saint Paul. Keep the phone export under gitignored `build/`.
 
+With `?dev=1`, open **Scenes → Image links** to connect photographs. Choose From and To
+(nearest destinations first), leave **Link both ways** checked for a return link,
+then press **Add link**. The links work immediately and stay in this browser.
+**Remove** removes that direction of a locally added link; **Reset this scene**
+restores the scene's published links. Download links exports all locally added
+connections as `umn-tour-links-YYYY-MM-DD.json`.
+
+To incorporate downloaded connections into the tour:
+
+```sh
+node tools/twin-cities/import-links.mjs --input build/phone-links.json
+node tools/twin-cities/import-links.mjs --input build/phone-links.json --write
+npm run build:scene -- --poses-only
+npm run campus-scenes
+```
+
+The importer adds destination ids to each source's `links` in `placements.json`.
+Both scene build paths preserve the original YouVisit links and add these
+connections. Hotspot directions come from the corrected capture coordinates and
+heights, and are recalculated on rebuild. Coincident captures get list links.
+To remove an incorporated connection, remove its destination id from placements
+and rebuild. Downloads and local edits do not publish the tour.
+
 `npm run build:scene` without `--poses-only` still runs `scripts/prepare-panorama.mjs`, `scripts/check-scene.mjs` and `scripts/lib/previewSheet.mjs` from the installed `foss-earth` package. Those files are no longer there. The replacements are `foss-earth-prepare-panorama` from `@foss-earth/image-viewer`, and `foss-earth-check-scene` and `foss-earth-build-preview-sheets` from `@foss-earth/scenes`. That full media pipeline is not what `--poses-only` runs. See [tools/twin-cities/README.md](tools/twin-cities/README.md).
 
 ## Project policies

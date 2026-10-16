@@ -4,7 +4,7 @@
     "363720": {
       "id": "hanson-hall-minnesota-carlson",
       "title": "Hanson Hall, Minnesota Carlson",
-      "layer": "outdoor",
+      "layer": "indoor",
       "capture": {
         "longitudeDeg": -93.2448184,
         "latitudeDeg": 44.9703543,
@@ -207,71 +207,73 @@
       "title": "Northrop Auditorium",
       "layer": "outdoor",
       "capture": {
-        "longitudeDeg": -93.2353971,
-        "latitudeDeg": 44.9766819,
+        "longitudeDeg": -93.23536854,
+        "latitudeDeg": 44.97592324,
         "horizontalAccuracyMeters": 65,
-        "source": "YouVisit's tour point for stop 307206, Thank You for Visiting & Learn More, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+        "source": "Capture corrected in the FOSS Earth placement editor on 2026-10-16 (User geolocation and orientation corrections from placement editor exports #3–#9). Earlier: YouVisit's tour point for stop 307206, Thank You for Visiting & Learn More, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
         "height": {
-          "meters": 262.147,
+          "meters": 208.716,
           "datum": "WGS84-ellipsoid",
-          "uncertaintyMeters": 2.01,
-          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+          "source": "Set to 208.716 m in the FOSS Earth placement editor on 2026-10-16 (User geolocation and orientation corrections from placement editor exports #3–#9); uncertainty is the earlier preparation's. Earlier: Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height.",
+          "uncertaintyMeters": 2.01
         },
         "heightPreparation": {
-          "provider": "google-photorealistic-3d-tiles",
-          "sampledOn": "2026-10-16",
-          "longitudeDeg": -93.2353971,
-          "latitudeDeg": 44.9766819,
-          "surface": "top of mesh",
-          "geometricErrorMeters": 2.006,
-          "tileDepth": 25
+          "provider": "editor",
+          "setOn": "2026-10-16",
+          "reference": "User geolocation and orientation corrections from placement editor exports #3–#9",
+          "longitudeDeg": -93.23536854,
+          "latitudeDeg": 44.97592324
         }
       },
       "pose": {
-        "headingDeg": 0,
+        "headingDeg": 2.922,
         "pitchDeg": 0,
         "rollDeg": 0,
         "aligned": false,
-        "provenance": "Not aligned: YouVisit's images carry no orientation, so north is unknown."
-      }
+        "provenance": "Orientation corrected in the FOSS Earth placement editor on 2026-10-16 (User geolocation and orientation corrections from placement editor exports #3–#9). Earlier: Not aligned: YouVisit's images carry no orientation, so north is unknown."
+      },
+      "links": [
+        "northrop-mall"
+      ]
     },
     "363729": {
       "id": "northrop-mall",
       "title": "Northrop Mall",
       "layer": "outdoor",
       "capture": {
-        "longitudeDeg": -93.234272,
-        "latitudeDeg": 44.9762821,
+        "longitudeDeg": -93.2353732,
+        "latitudeDeg": 44.97528376,
         "horizontalAccuracyMeters": 65,
-        "source": "YouVisit's tour point for stop 306373, Welcome to the UMN Twin Cities (feat. Northrop Mall), whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+        "source": "Capture corrected in the FOSS Earth placement editor on 2026-10-16 (User geolocation and orientation corrections from placement editor exports #3–#9). Earlier: YouVisit's tour point for stop 306373, Welcome to the UMN Twin Cities (feat. Northrop Mall), whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
         "height": {
-          "meters": 236.303,
+          "meters": 206.23,
           "datum": "WGS84-ellipsoid",
-          "uncertaintyMeters": 2.01,
-          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+          "source": "Set to 206.23 m in the FOSS Earth placement editor on 2026-10-16 (User geolocation and orientation corrections from placement editor exports #3–#9); uncertainty is the earlier preparation's. Earlier: Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height.",
+          "uncertaintyMeters": 2.01
         },
         "heightPreparation": {
-          "provider": "google-photorealistic-3d-tiles",
-          "sampledOn": "2026-10-16",
-          "longitudeDeg": -93.234272,
-          "latitudeDeg": 44.9762821,
-          "surface": "top of mesh",
-          "geometricErrorMeters": 2.006,
-          "tileDepth": 25
+          "provider": "editor",
+          "setOn": "2026-10-16",
+          "reference": "User geolocation and orientation corrections from placement editor exports #3–#9",
+          "longitudeDeg": -93.2353732,
+          "latitudeDeg": 44.97528376
         }
       },
       "pose": {
-        "headingDeg": 0,
+        "headingDeg": 269.6135,
         "pitchDeg": 0,
         "rollDeg": 0,
         "aligned": false,
-        "provenance": "Not aligned: YouVisit's images carry no orientation, so north is unknown."
-      }
+        "provenance": "Orientation corrected in the FOSS Earth placement editor on 2026-10-16 (User geolocation and orientation corrections from placement editor exports #3–#9). Earlier: Not aligned: YouVisit's images carry no orientation, so north is unknown."
+      },
+      "links": [
+        "northrop-auditorium"
+      ]
     },
     "363731": {
       "id": "circle-of-indigenous-nations",
       "title": "Circle of Indigenous Nations",
-      "layer": "outdoor",
+      "layer": "indoor",
       "capture": {
         "longitudeDeg": -93.2365733,
         "latitudeDeg": 44.9750564,
@@ -309,32 +311,30 @@
         "368158"
       ],
       "capture": {
-        "longitudeDeg": -93.2245517,
-        "latitudeDeg": 44.976487,
+        "longitudeDeg": -93.22442549,
+        "latitudeDeg": 44.97645176,
         "horizontalAccuracyMeters": 65,
-        "source": "YouVisit's interactive map position for stop 306364, Huntington Bank Stadium, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+        "source": "Capture corrected in the FOSS Earth placement editor on 2026-10-16 (User geolocation and orientation corrections from placement editor exports #3–#9). Earlier: YouVisit's interactive map position for stop 306364, Huntington Bank Stadium, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
         "height": {
-          "meters": 223.902,
+          "meters": 200.375,
           "datum": "WGS84-ellipsoid",
-          "uncertaintyMeters": 2.01,
-          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+          "source": "Set to 200.375 m in the FOSS Earth placement editor on 2026-10-16 (User geolocation and orientation corrections from placement editor exports #3–#9); uncertainty is the earlier preparation's. Earlier: Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height.",
+          "uncertaintyMeters": 2.01
         },
         "heightPreparation": {
-          "provider": "google-photorealistic-3d-tiles",
-          "sampledOn": "2026-10-16",
-          "longitudeDeg": -93.2245517,
-          "latitudeDeg": 44.976487,
-          "surface": "top of mesh",
-          "geometricErrorMeters": 2.006,
-          "tileDepth": 25
+          "provider": "editor",
+          "setOn": "2026-10-16",
+          "reference": "User geolocation and orientation corrections from placement editor exports #3–#9",
+          "longitudeDeg": -93.22442549,
+          "latitudeDeg": 44.97645176
         }
       },
       "pose": {
-        "headingDeg": 0,
+        "headingDeg": 322.0217,
         "pitchDeg": 0,
         "rollDeg": 0,
         "aligned": false,
-        "provenance": "Not aligned: YouVisit's images carry no orientation, so north is unknown."
+        "provenance": "Orientation corrected in the FOSS Earth placement editor on 2026-10-16 (User geolocation and orientation corrections from placement editor exports #3–#9). Earlier: Not aligned: YouVisit's images carry no orientation, so north is unknown."
       }
     },
     "363733": {
@@ -546,32 +546,30 @@
       "title": "Folwell Hall",
       "layer": "outdoor",
       "capture": {
-        "longitudeDeg": -93.2345402,
-        "latitudeDeg": 44.9782705,
+        "longitudeDeg": -93.23469578,
+        "latitudeDeg": 44.97799901,
         "horizontalAccuracyMeters": 65,
-        "source": "YouVisit's interactive map position for stop 306371, Folwell Hall, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+        "source": "Capture corrected in the FOSS Earth placement editor on 2026-10-16 (User geolocation and orientation corrections from placement editor exports #3–#9). Earlier: YouVisit's interactive map position for stop 306371, Folwell Hall, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
         "height": {
-          "meters": 249.657,
+          "meters": 205.471,
           "datum": "WGS84-ellipsoid",
-          "uncertaintyMeters": 2.01,
-          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+          "source": "Set to 205.471 m in the FOSS Earth placement editor on 2026-10-16 (User geolocation and orientation corrections from placement editor exports #3–#9); uncertainty is the earlier preparation's. Earlier: Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height.",
+          "uncertaintyMeters": 2.01
         },
         "heightPreparation": {
-          "provider": "google-photorealistic-3d-tiles",
-          "sampledOn": "2026-10-16",
-          "longitudeDeg": -93.2345402,
-          "latitudeDeg": 44.9782705,
-          "surface": "top of mesh",
-          "geometricErrorMeters": 2.006,
-          "tileDepth": 25
+          "provider": "editor",
+          "setOn": "2026-10-16",
+          "reference": "User geolocation and orientation corrections from placement editor exports #3–#9",
+          "longitudeDeg": -93.23469578,
+          "latitudeDeg": 44.97799901
         }
       },
       "pose": {
-        "headingDeg": 0,
+        "headingDeg": 28.0538,
         "pitchDeg": 0,
         "rollDeg": 0,
         "aligned": false,
-        "provenance": "Not aligned: YouVisit's images carry no orientation, so north is unknown."
+        "provenance": "Orientation corrected in the FOSS Earth placement editor on 2026-10-16 (User geolocation and orientation corrections from placement editor exports #3–#9). Earlier: Not aligned: YouVisit's images carry no orientation, so north is unknown."
       }
     },
     "363744": {
@@ -646,7 +644,7 @@
     "363750": {
       "id": "wall-of-discovery-scholars-walk",
       "title": "Wall of Discovery, Scholars Walk",
-      "layer": "outdoor",
+      "layer": "indoor",
       "sameImage": [
         "368162"
       ],
@@ -756,34 +754,32 @@
     "363760": {
       "id": "superblock",
       "title": "Superblock",
-      "layer": "indoor",
+      "layer": "outdoor",
       "capture": {
-        "longitudeDeg": -93.2294548,
-        "latitudeDeg": 44.9708325,
+        "longitudeDeg": -93.22865815,
+        "latitudeDeg": 44.97149406,
         "horizontalAccuracyMeters": 60,
-        "source": "YouVisit's tour point for stop 306386, Living on Campus, which is 3 m from the centre of Pioneer Hall (OpenStreetMap way/40760464), where this panorama was taken. Where in the building is not known.",
+        "source": "Capture corrected in the FOSS Earth placement editor on 2026-10-16 (User calibration supplied in umn-tour-poses-2026-10-16 #3.json). Earlier: YouVisit's tour point for stop 306386, Living on Campus, which is 3 m from the centre of Pioneer Hall (OpenStreetMap way/40760464), where this panorama was taken. Where in the building is not known.",
         "height": {
-          "meters": 245.721,
+          "meters": 204.031,
           "datum": "WGS84-ellipsoid",
-          "uncertaintyMeters": 2.01,
-          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+          "source": "Set to 204.031 m in the FOSS Earth placement editor on 2026-10-16 (User calibration supplied in umn-tour-poses-2026-10-16 #3.json); uncertainty is the earlier preparation's. Earlier: Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height.",
+          "uncertaintyMeters": 2.01
         },
         "heightPreparation": {
-          "provider": "google-photorealistic-3d-tiles",
-          "sampledOn": "2026-10-16",
-          "longitudeDeg": -93.2294548,
-          "latitudeDeg": 44.9708325,
-          "surface": "top of mesh",
-          "geometricErrorMeters": 2.006,
-          "tileDepth": 25
+          "provider": "editor",
+          "setOn": "2026-10-16",
+          "reference": "User calibration supplied in umn-tour-poses-2026-10-16 #3.json",
+          "longitudeDeg": -93.22865815,
+          "latitudeDeg": 44.97149406
         }
       },
       "pose": {
-        "headingDeg": 0,
+        "headingDeg": 185.4016,
         "pitchDeg": 0,
         "rollDeg": 0,
         "aligned": false,
-        "provenance": "Not aligned: YouVisit's images carry no orientation, so north is unknown."
+        "provenance": "Orientation corrected in the FOSS Earth placement editor on 2026-10-16 (User calibration supplied in umn-tour-poses-2026-10-16 #3.json). Earlier: Not aligned: YouVisit's images carry no orientation, so north is unknown."
       }
     },
     "365370": {
@@ -791,38 +787,36 @@
       "title": "Residence Life & Dining",
       "layer": "outdoor",
       "capture": {
-        "longitudeDeg": -93.2294548,
-        "latitudeDeg": 44.9708325,
+        "longitudeDeg": -93.22950789,
+        "latitudeDeg": 44.97135393,
         "horizontalAccuracyMeters": 65,
-        "source": "YouVisit's tour point for stop 306386, Living on Campus, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+        "source": "Capture corrected in the FOSS Earth placement editor on 2026-10-16 (User calibration supplied in umn-tour-poses-2026-10-16 #3.json). Earlier: YouVisit's tour point for stop 306386, Living on Campus, whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
         "height": {
-          "meters": 245.721,
+          "meters": 204.333,
           "datum": "WGS84-ellipsoid",
-          "uncertaintyMeters": 2.01,
-          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+          "source": "Set to 204.333 m in the FOSS Earth placement editor on 2026-10-16 (User calibration supplied in umn-tour-poses-2026-10-16 #3.json); uncertainty is the earlier preparation's. Earlier: Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height.",
+          "uncertaintyMeters": 2.01
         },
         "heightPreparation": {
-          "provider": "google-photorealistic-3d-tiles",
-          "sampledOn": "2026-10-16",
-          "longitudeDeg": -93.2294548,
-          "latitudeDeg": 44.9708325,
-          "surface": "top of mesh",
-          "geometricErrorMeters": 2.006,
-          "tileDepth": 25
+          "provider": "editor",
+          "setOn": "2026-10-16",
+          "reference": "User calibration supplied in umn-tour-poses-2026-10-16 #3.json",
+          "longitudeDeg": -93.22950789,
+          "latitudeDeg": 44.97135393
         }
       },
       "pose": {
-        "headingDeg": 0,
+        "headingDeg": 179.6642,
         "pitchDeg": 0,
         "rollDeg": 0,
         "aligned": false,
-        "provenance": "Not aligned: YouVisit's images carry no orientation, so north is unknown."
+        "provenance": "Orientation corrected in the FOSS Earth placement editor on 2026-10-16 (User calibration supplied in umn-tour-poses-2026-10-16 #3.json). Earlier: Not aligned: YouVisit's images carry no orientation, so north is unknown."
       }
     },
     "365378": {
       "id": "health-sciences-education-center",
       "title": "Health Sciences Education Center",
-      "layer": "outdoor",
+      "layer": "indoor",
       "capture": {
         "longitudeDeg": -93.2307261,
         "latitudeDeg": 44.9722861,
@@ -855,7 +849,7 @@
     "365381": {
       "id": "coffman-memorial-union",
       "title": "Coffman Memorial Union",
-      "layer": "outdoor",
+      "layer": "indoor",
       "capture": {
         "longitudeDeg": -93.2354093,
         "latitudeDeg": 44.9729654,
@@ -921,7 +915,7 @@
     "365383": {
       "id": "washington-avenue-bridge-and-the-mississippi-river",
       "title": "Washington Avenue Bridge and the Mississippi River",
-      "layer": "outdoor",
+      "layer": "indoor",
       "capture": {
         "longitudeDeg": -93.2393038,
         "latitudeDeg": 44.9731172,
@@ -954,7 +948,7 @@
     "365384": {
       "id": "west-bank-heller-hall",
       "title": "West Bank: Heller Hall",
-      "layer": "outdoor",
+      "layer": "indoor",
       "capture": {
         "longitudeDeg": -93.2441747,
         "latitudeDeg": 44.9716143,
@@ -1299,7 +1293,7 @@
     "365395": {
       "id": "recreation-and-wellness-center",
       "title": "Recreation and Wellness Center",
-      "layer": "outdoor",
+      "layer": "indoor",
       "capture": {
         "longitudeDeg": -93.2297873,
         "latitudeDeg": 44.9751588,
@@ -1334,38 +1328,36 @@
       "title": "Golden Gopher Spirit: Athletics",
       "layer": "outdoor",
       "capture": {
-        "longitudeDeg": -93.2258391,
-        "latitudeDeg": 44.9764567,
+        "longitudeDeg": -93.22641631,
+        "latitudeDeg": 44.97683231,
         "horizontalAccuracyMeters": 65,
-        "source": "YouVisit's tour point for stop 306400, Cheer for the Gophers! (Athletics), whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
+        "source": "Capture corrected in the FOSS Earth placement editor on 2026-10-16 (User geolocation and orientation corrections from placement editor exports #3–#9). Earlier: YouVisit's tour point for stop 306400, Cheer for the Gophers! (Athletics), whose main panorama this is. YouVisit's two positions for a stop differ by up to 65 m.",
         "height": {
-          "meters": 226.66,
+          "meters": 203.531,
           "datum": "WGS84-ellipsoid",
-          "uncertaintyMeters": 2.01,
-          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+          "source": "Set to 203.531 m in the FOSS Earth placement editor on 2026-10-16 (User geolocation and orientation corrections from placement editor exports #3–#9); uncertainty is the earlier preparation's. Earlier: Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height.",
+          "uncertaintyMeters": 2.01
         },
         "heightPreparation": {
-          "provider": "google-photorealistic-3d-tiles",
-          "sampledOn": "2026-10-16",
-          "longitudeDeg": -93.2258391,
-          "latitudeDeg": 44.9764567,
-          "surface": "top of mesh",
-          "geometricErrorMeters": 2.006,
-          "tileDepth": 25
+          "provider": "editor",
+          "setOn": "2026-10-16",
+          "reference": "User geolocation and orientation corrections from placement editor exports #3–#9",
+          "longitudeDeg": -93.22641631,
+          "latitudeDeg": 44.97683231
         }
       },
       "pose": {
-        "headingDeg": 0,
+        "headingDeg": 110.0932,
         "pitchDeg": 0,
         "rollDeg": 0,
         "aligned": false,
-        "provenance": "Not aligned: YouVisit's images carry no orientation, so north is unknown."
+        "provenance": "Orientation corrected in the FOSS Earth placement editor on 2026-10-16 (User geolocation and orientation corrections from placement editor exports #3–#9). Earlier: Not aligned: YouVisit's images carry no orientation, so north is unknown."
       }
     },
     "365397": {
       "id": "impact-and-value-of-a-umn-degree",
       "title": "Impact and Value of a UMN Degree",
-      "layer": "outdoor",
+      "layer": "indoor",
       "capture": {
         "longitudeDeg": -93.2277703,
         "latitudeDeg": 44.9751361,
@@ -1499,32 +1491,30 @@
       "title": "Superblock Outdoor Area",
       "layer": "outdoor",
       "capture": {
-        "longitudeDeg": -93.2294548,
-        "latitudeDeg": 44.9708325,
+        "longitudeDeg": -93.22862127,
+        "latitudeDeg": 44.97145494,
         "horizontalAccuracyMeters": 60,
-        "source": "YouVisit's tour point for stop 306386, Living on Campus, which is 3 m from the centre of Pioneer Hall (OpenStreetMap way/40760464), where this panorama was taken. Where in the building is not known.",
+        "source": "Capture corrected in the FOSS Earth placement editor on 2026-10-16 (User calibration supplied in umn-tour-poses-2026-10-16 #3.json). Earlier: YouVisit's tour point for stop 306386, Living on Campus, which is 3 m from the centre of Pioneer Hall (OpenStreetMap way/40760464), where this panorama was taken. Where in the building is not known.",
         "height": {
-          "meters": 245.721,
+          "meters": 205.479,
           "datum": "WGS84-ellipsoid",
-          "uncertaintyMeters": 2.01,
-          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+          "source": "Set to 205.479 m in the FOSS Earth placement editor on 2026-10-16 (User calibration supplied in umn-tour-poses-2026-10-16 #3.json); uncertainty is the earlier preparation's. Earlier: Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height.",
+          "uncertaintyMeters": 2.01
         },
         "heightPreparation": {
-          "provider": "google-photorealistic-3d-tiles",
-          "sampledOn": "2026-10-16",
-          "longitudeDeg": -93.2294548,
-          "latitudeDeg": 44.9708325,
-          "surface": "top of mesh",
-          "geometricErrorMeters": 2.006,
-          "tileDepth": 25
+          "provider": "editor",
+          "setOn": "2026-10-16",
+          "reference": "User calibration supplied in umn-tour-poses-2026-10-16 #3.json",
+          "longitudeDeg": -93.22862127,
+          "latitudeDeg": 44.97145494
         }
       },
       "pose": {
-        "headingDeg": 0,
+        "headingDeg": 72.2632,
         "pitchDeg": 0,
         "rollDeg": 0,
         "aligned": false,
-        "provenance": "Not aligned: YouVisit's images carry no orientation, so north is unknown."
+        "provenance": "Orientation corrected in the FOSS Earth placement editor on 2026-10-16 (User calibration supplied in umn-tour-poses-2026-10-16 #3.json). Earlier: Not aligned: YouVisit's images carry no orientation, so north is unknown."
       }
     },
     "365408": {
@@ -1769,32 +1759,30 @@
         "368156"
       ],
       "capture": {
-        "longitudeDeg": -93.2400345,
-        "latitudeDeg": 44.9731123,
+        "longitudeDeg": -93.23839827,
+        "latitudeDeg": 44.97341391,
         "horizontalAccuracyMeters": 50,
-        "source": "Centre of the OpenStreetMap feature Washington Avenue Pedestrian Bridge (way/139902429): the Washington Avenue Bridge's pedestrian deck, which the title names. Where in it the photograph was taken is not known.",
+        "source": "Capture corrected in the FOSS Earth placement editor on 2026-10-16 (User geolocation and orientation corrections from placement editor exports #3–#9). Earlier: Centre of the OpenStreetMap feature Washington Avenue Pedestrian Bridge (way/139902429): the Washington Avenue Bridge's pedestrian deck, which the title names. Where in it the photograph was taken is not known.",
         "height": {
-          "meters": 227.14,
+          "meters": 205.524,
           "datum": "WGS84-ellipsoid",
-          "uncertaintyMeters": 2.01,
-          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+          "source": "Set to 205.524 m in the FOSS Earth placement editor on 2026-10-16 (User geolocation and orientation corrections from placement editor exports #3–#9); uncertainty is the earlier preparation's. Earlier: Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height.",
+          "uncertaintyMeters": 2.01
         },
         "heightPreparation": {
-          "provider": "google-photorealistic-3d-tiles",
-          "sampledOn": "2026-10-16",
-          "longitudeDeg": -93.2400345,
-          "latitudeDeg": 44.9731123,
-          "surface": "top of mesh",
-          "geometricErrorMeters": 2.006,
-          "tileDepth": 25
+          "provider": "editor",
+          "setOn": "2026-10-16",
+          "reference": "User geolocation and orientation corrections from placement editor exports #3–#9",
+          "longitudeDeg": -93.23839827,
+          "latitudeDeg": 44.97341391
         }
       },
       "pose": {
-        "headingDeg": 0,
+        "headingDeg": 277.9217,
         "pitchDeg": 0,
         "rollDeg": 0,
         "aligned": false,
-        "provenance": "Not aligned: YouVisit's images carry no orientation, so north is unknown."
+        "provenance": "Orientation corrected in the FOSS Earth placement editor on 2026-10-16 (User geolocation and orientation corrections from placement editor exports #3–#9). Earlier: Not aligned: YouVisit's images carry no orientation, so north is unknown."
       }
     },
     "366510": {

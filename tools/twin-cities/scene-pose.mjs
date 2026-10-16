@@ -8,6 +8,7 @@ import { existsSync, readFileSync, readdirSync, renameSync, rmSync, writeFileSyn
 import path from "node:path";
 import { pathToFileURL, fileURLToPath } from "node:url";
 import { hotspotDirection, startDirection, toWorld } from "./youvisit.mjs";
+import { applyPlacementLinks } from "./scene-links.mjs";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const EXTENSION = "umn-vr.tour";
@@ -168,6 +169,7 @@ export function applyPlacementPoses(scene, panoramas, locals = null) {
     if (entity.type !== "panorama") continue;
     applyEntity(entity, byId.get(entity.id), offsets, locals?.get(entity.id) ?? null);
   }
+  applyPlacementLinks(next, panoramas);
   const aligned = next.entities.filter(entity => entity.type === "panorama" && entity.imagePose?.aligned === true).length;
   const total = order.length;
   const summary = `${aligned} of ${total} panoramas have north set; the others face an arbitrary direction.`;

@@ -58,6 +58,12 @@ describe("pose import", () => {
     expect(plan.rows[0].note).toMatch(/horizontal accuracy/);
   });
 
+  it("writes an edited roll", () => {
+    const plan = planPoseImport(document(), exported([edit({ imagePose: { headingDeg: 0, pitchDeg: 0, rollDeg: -2.5, aligned: false } })]), campuses, { reference: "Horizon checked level" });
+    expect(plan.ok).toBe(true);
+    expect(plan.placements.panoramas["363729"].pose.rollDeg).toBe(-2.5);
+  });
+
   it("requires a reference before a numeric write and still reports the change", () => {
     const plan = planPoseImport(document(), exported([edit()]), campuses, {});
     expect(plan.clean).toBe(true);

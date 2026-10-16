@@ -40,6 +40,7 @@ import { existsSync, mkdirSync, readdirSync, readFileSync, realpathSync, rmSync,
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { hotspotDirection, plain, startDirection, toWorld } from "./youvisit.mjs";
+import { applyPlacementLinks } from "./scene-links.mjs";
 import { markerOffsets } from "./scene-pose.mjs";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
@@ -388,7 +389,7 @@ function buildScene(assets) {
     overview: { target: { longitudeDeg: -93.2215, latitudeDeg: 44.98, height: null }, distanceMeters: 5000, headingDeg: 0, pitchDeg: -50, verticalFovDeg: 60 },
     markerStyle: { outline: { color: "#ffcc33", widthPx: 2 }, hover: { scale: 1.3 } },
   };
-  return scene;
+  return applyPlacementLinks(scene, placements);
 }
 
 /** The scene with every panorama's `sheetSize` preview cube in one image, written beside the others; the sheet's file is part of what the revision covers. */
