@@ -62,6 +62,15 @@ fresh conversation with. Work that FOSS Earth owns has its prompt there.
 
 ## Next
 
+0. **Scenes catalog (FOSS Earth).** One photograph grid in Settings → Scenes,
+   grouped by indoor/outdoor or by tour stop, mini 360 on expand, opening-look
+   setting (including Look up). Implementation is FOSS Earth's; the tour is the
+   scene that shows it. Prompt:
+   [foss-earth `docs/docs/proposals/scenes-photograph-grid.md`](https://github.com/foss-earth/docs/blob/main/docs/proposals/scenes-photograph-grid.md)
+   (local checkout: `~/gh/foss-earth/docs/docs/proposals/scenes-photograph-grid.md`).
+   Layer drag/export is already in the working trees; apply an export with
+   `node tools/twin-cities/import-layers.mjs --input <file>` (dry run) and
+   `--write` when asked.
 1. **Review and prioritize low-end 360° performance before wider release.**
    The photographs are the reported main bottleneck; their loading now comes in tiles, which
    leaves drawing and the globe behind them. The

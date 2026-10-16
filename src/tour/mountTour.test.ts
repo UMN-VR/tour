@@ -40,7 +40,7 @@ describe("tour startup recovery", () => {
     vi.mocked(mountGlobeApp).mockReturnValue(new Promise(resolve => { finish = resolve; }));
     mountTour(MINNEAPOLIS);
     expect(markBrowserAppReady).not.toHaveBeenCalled();
-    expect(mountGlobeApp).toHaveBeenCalledWith(root, { scenes: [MINNEAPOLIS], initialScene: MINNEAPOLIS.id, poseExportPrefix: "umn-tour-poses" });
+    expect(mountGlobeApp).toHaveBeenCalledWith(root, { scenes: [MINNEAPOLIS], initialScene: MINNEAPOLIS.id, poseExportPrefix: "umn-tour-poses", layerExportPrefix: "umn-tour-layers" });
     finish({} as Awaited<ReturnType<typeof mountGlobeApp>>);
     await vi.waitFor(() => expect(markBrowserAppReady).toHaveBeenCalledWith(document));
     expect(reportBrowserAppFailure).not.toHaveBeenCalled();
