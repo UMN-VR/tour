@@ -76,7 +76,8 @@ fresh conversation with. Work that FOSS Earth owns has its prompt there.
    leaves drawing and the globe behind them. The
    [WebGL performance review](webgl-performance-review.md) records the findings, expected
    performance and UX tradeoffs, and links the shared FOSS Earth optimization catalogue.
-   Implementation choices and device qualification remain open.
+   Implementation choices and device qualification remain open. The ranked work the tour
+   owns is in [optimization-backlog.md](optimization-backlog.md).
 2. **Verify responsive loading on the deployed phone tour, and separate content hosting.**
    The first deployment exposed a long deployment and a blank/loading scene on the phone.
    On 2026-10-03 the page kept crashing on an iPhone XS Max (iOS 18.2.1, WebGPU turned on in
@@ -117,6 +118,9 @@ fresh conversation with. Work that FOSS Earth owns has its prompt there.
    `npm run build:scene` without `--poses-only` still calls removed preparation scripts and is not the correction rebuild.
 4. **Put the rest of the tour on the map:** photos, videos, narration and hotspot text. Prompt:
    [tour-media-prompt.md](tour-media-prompt.md).
+   YouTube embeds won't load once FOSS Earth isolates the page for shared memory
+   ([its WebAssembly plan](https://github.com/foss-earth/docs/blob/main/docs/proposals/webassembly.md), step 2). Open those
+   videos by link, or host them as YouVisit's three are.
 5. **Add a Minneapolis and a Saint Paul scene beside the Twin Cities one.** The photographs sit
    in two clumps 3.1 km apart with none between: 48 around the Minneapolis campus, in 18 stops,
    and 12 on the Saint Paul campus, in 5. Keep the Twin Cities scene as it is, for anyone who
