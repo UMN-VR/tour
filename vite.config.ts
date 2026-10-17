@@ -5,7 +5,7 @@ import { execSync } from 'node:child_process'
 import { createReadStream, existsSync, mkdirSync, readFileSync, statSync, writeFileSync } from 'node:fs'
 import { createRequire } from 'node:module'
 import path from 'node:path'
-import { appFiles, babylonShaderChunks, builtFrom, localSource } from 'foss-earth/vite'
+import { appFiles, babylonShaderChunks, builtFrom, headsetEmulator, localSource } from 'foss-earth/vite'
 import { browserRecovery } from '@foss-earth/ui/vite'
 
 /** The tour's pages: the campus selector, and FOSS Earth's app with each campus's scene. */
@@ -144,7 +144,8 @@ export default defineConfig({
   },
   // FOSS Earth's service worker keeps the app's own files on the visitor's device: GitHub Pages lets them go stale after ten minutes.
   // Each page says what it is built from, this repository, FOSS Earth and every package, for the About tab.
-  plugins: [localSource(), react(), tourHome(), campusScenes(), tourMedia(), babylonShaderChunks(), browserRecovery({ appId: 'umn-vr-tour' }), appFiles(), builtFrom()],
+  // npm run dev only: a page opened with ?headsetEmulator=quest3 gets an emulated VR headset.
+  plugins: [localSource(), react(), tourHome(), campusScenes(), tourMedia(), babylonShaderChunks(), browserRecovery({ appId: 'umn-vr-tour' }), appFiles(), builtFrom(), headsetEmulator()],
   test: {
     // .local/ holds the YouVisit backup and scratch; public/ the generated scene.
     exclude: [...configDefaults.exclude, '.local/**', 'public/**', 'build/**'],
