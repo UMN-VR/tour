@@ -6,7 +6,7 @@ import { createReadStream, existsSync, mkdirSync, readFileSync, statSync, writeF
 import { createRequire } from 'node:module'
 import path from 'node:path'
 import { appFiles, babylonShaderChunks, builtFrom, headsetEmulator, localSource } from 'foss-earth/vite'
-import { browserRecovery } from '@foss-earth/ui/vite'
+import { bootTerminal, browserRecovery, warmPages } from '@foss-earth/ui/vite'
 
 /** The tour's pages: the campus selector, and FOSS Earth's app with each campus's scene. */
 const TOUR_PAGES = {
@@ -15,6 +15,8 @@ const TOUR_PAGES = {
   stPaul: 'st-paul/index.html',
   twinCities: 'twin-cities/index.html',
 }
+/** The campus pages, as the build names them: "/minneapolis/index.html". */
+const CAMPUS_PAGES = Object.values(TOUR_PAGES).filter(page => page !== TOUR_PAGES.selector).map(page => `/${page}`)
 /** Each campus's repository, checked out beside this one, holds its scene; it is published at /tour/<campus>/scene.json. */
 const CAMPUSES = ['minneapolis', 'st-paul', 'twin-cities']
 /** This project's GitHub Pages mount; the club's site owns the domain root. */
@@ -145,7 +147,10 @@ export default defineConfig({
   // FOSS Earth's service worker keeps the app's own files on the visitor's device: GitHub Pages lets them go stale after ten minutes.
   // Each page says what it is built from, this repository, FOSS Earth and every package, for the About tab.
   // npm run dev only: a page opened with ?headsetEmulator=quest3 gets an emulated VR headset.
-  plugins: [localSource(), react(), tourHome(), campusScenes(), tourMedia(), babylonShaderChunks(), browserRecovery({ appId: 'umn-vr-tour' }), appFiles(), builtFrom(), headsetEmulator()],
+  // Each campus page shows the boot terminal from its first bytes. The selector fetches a campus page as a card is hovered or pressed,
+  // and the campus pages' app files once it is idle.
+  plugins: [localSource(), react(), tourHome(), campusScenes(), tourMedia(), babylonShaderChunks(), browserRecovery({ appId: 'umn-vr-tour' }),
+    bootTerminal({ pages: page => CAMPUS_PAGES.includes(page) }), warmPages({ from: `/${TOUR_PAGES.selector}`, pages: CAMPUS_PAGES }), appFiles(), builtFrom(), headsetEmulator()],
   test: {
     // .local/ holds the YouVisit backup and scratch; public/ the generated scene.
     exclude: [...configDefaults.exclude, '.local/**', 'public/**', 'build/**'],

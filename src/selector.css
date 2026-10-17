@@ -159,6 +159,18 @@ button:focus-visible {
   text-underline-offset: 0.18em;
 }
 
+/* A tap shows at once, while the campus page is on its way. */
+.tour-card:active {
+  border-color: var(--ui-accent);
+  transform: scale(0.985);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tour-card:active {
+    transform: none;
+  }
+}
+
 .tour-image {
   display: block;
   width: 100%;
