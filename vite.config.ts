@@ -5,7 +5,7 @@ import { execSync } from 'node:child_process'
 import { createReadStream, existsSync, mkdirSync, readFileSync, statSync, writeFileSync } from 'node:fs'
 import { createRequire } from 'node:module'
 import path from 'node:path'
-import { appFiles, babylonBarrels, babylonShaderChunks, builtFrom, headsetEmulator, lazyFeatures, localSource } from 'foss-earth/vite'
+import { appFiles, babylonBarrels, babylonShaderChunks, builtFrom, crossOriginIsolation, headsetEmulator, lazyFeatures, localSource } from 'foss-earth/vite'
 import { bootTerminal, browserRecovery, warmPages } from '@foss-earth/ui/vite'
 
 /** The tour's pages: the campus selector, and FOSS Earth's app with each campus's scene. */
@@ -149,7 +149,7 @@ export default defineConfig({
   // npm run dev only: a page opened with ?headsetEmulator=quest3 gets an emulated VR headset.
   // Each campus page shows the boot terminal from its first bytes. The selector fetches a campus page as a card is hovered or pressed,
   // and the campus pages' app files once it is idle.
-  plugins: [localSource(), react(), tourHome(), campusScenes(), tourMedia(), babylonBarrels(), babylonShaderChunks(), lazyFeatures(), browserRecovery({ appId: 'umn-vr-tour' }),
+  plugins: [crossOriginIsolation(), localSource(), react(), tourHome(), campusScenes(), tourMedia(), babylonBarrels(), babylonShaderChunks(), lazyFeatures(), browserRecovery({ appId: 'umn-vr-tour' }),
     bootTerminal({ pages: page => CAMPUS_PAGES.includes(page) }), warmPages({ from: `/${TOUR_PAGES.selector}`, pages: CAMPUS_PAGES }), appFiles(), builtFrom(), headsetEmulator()],
   test: {
     // .local/ holds the YouVisit backup and scratch; public/ the generated scene.
