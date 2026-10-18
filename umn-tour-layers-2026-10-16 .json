@@ -1,0 +1,85 @@
+{
+  "format": "foss-earth-layer-overrides",
+  "version": 1,
+  "exportedAt": "2026-10-16T03:26:21.343Z",
+  "scenes": [
+    {
+      "sceneId": "umn-minneapolis",
+      "sceneUrl": "http://localhost:5173/tour/minneapolis/scene.json",
+      "edits": [
+        {
+          "entityId": "circle-of-indigenous-nations",
+          "title": "Circle of Indigenous Nations",
+          "layerId": "indoor-360",
+          "authoredLayerId": "outdoor-360",
+          "authoredRevision": "b88f4bab9d01",
+          "updatedAt": "2026-10-16T03:25:47.181Z"
+        },
+        {
+          "entityId": "coffman-memorial-union",
+          "title": "Coffman Memorial Union",
+          "layerId": "indoor-360",
+          "authoredLayerId": "outdoor-360",
+          "authoredRevision": "b88f4bab9d01",
+          "updatedAt": "2026-10-16T03:25:44.627Z"
+        },
+        {
+          "entityId": "hanson-hall-minnesota-carlson",
+          "title": "Hanson Hall, Minnesota Carlson",
+          "layerId": "indoor-360",
+          "authoredLayerId": "outdoor-360",
+          "authoredRevision": "b88f4bab9d01",
+          "updatedAt": "2026-10-16T03:25:56.511Z"
+        },
+        {
+          "entityId": "health-sciences-education-center",
+          "title": "Health Sciences Education Center",
+          "layerId": "indoor-360",
+          "authoredLayerId": "outdoor-360",
+          "authoredRevision": "b88f4bab9d01",
+          "updatedAt": "2026-10-16T03:25:04.216Z"
+        },
+        {
+          "entityId": "impact-and-value-of-a-umn-degree",
+          "title": "Impact and Value of a UMN Degree",
+          "layerId": "indoor-360",
+          "authoredLayerId": "outdoor-360",
+          "authoredRevision": "b88f4bab9d01",
+          "updatedAt": "2026-10-16T03:25:39.396Z"
+        },
+        {
+          "entityId": "recreation-and-wellness-center",
+          "title": "Recreation and Wellness Center",
+          "layerId": "indoor-360",
+          "authoredLayerId": "outdoor-360",
+          "authoredRevision": "b88f4bab9d01",
+          "updatedAt": "2026-10-16T03:25:59.529Z"
+        },
+        {
+          "entityId": "superblock",
+          "title": "Superblock",
+          "layerId": "outdoor-360",
+          "authoredLayerId": "indoor-360",
+          "authoredRevision": "b88f4bab9d01",
+          "updatedAt": "2026-10-16T03:26:04.212Z"
+        },
+        {
+          "entityId": "washington-avenue-bridge-and-the-mississippi-river",
+          "title": "Washington Avenue Bridge and the Mississippi River",
+          "layerId": "indoor-360",
+          "authoredLayerId": "outdoor-360",
+          "authoredRevision": "b88f4bab9d01",
+          "updatedAt": "2026-10-16T03:25:52.165Z"
+        },
+        {
+          "entityId": "west-bank-heller-hall",
+          "title": "West Bank: Heller Hall",
+          "layerId": "indoor-360",
+          "authoredLayerId": "outdoor-360",
+          "authoredRevision": "b88f4bab9d01",
+          "updatedAt": "2026-10-16T03:25:49.596Z"
+        }
+      ]
+    }
+  ]
+}

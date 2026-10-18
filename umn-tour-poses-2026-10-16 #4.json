@@ -1,0 +1,48 @@
+{
+  "format": "foss-earth-pose-overrides",
+  "version": 1,
+  "exportedAt": "2026-10-16T03:40:32.842Z",
+  "scenes": [
+    {
+      "sceneId": "umn-minneapolis",
+      "sceneUrl": "http://localhost:5173/tour/minneapolis/scene.json",
+      "edits": [
+        {
+          "entityId": "huntington-bank-stadium",
+          "title": "Huntington Bank Stadium",
+          "mode": "capture-relative",
+          "authoredRevision": "b88f4bab9d01",
+          "updatedAt": "2026-10-16T03:39:48.195Z",
+          "capture": {
+            "longitudeDeg": -93.22442548999999,
+            "latitudeDeg": 44.97645176,
+            "heightMeters": 200.375
+          },
+          "imagePose": {
+            "headingDeg": 322.0217,
+            "pitchDeg": 0,
+            "rollDeg": 0,
+            "aligned": false
+          },
+          "marker": {
+            "offsetM": 25
+          },
+          "authored": {
+            "mode": "capture-relative",
+            "longitudeDeg": -93.2245517,
+            "latitudeDeg": 44.976487,
+            "heightMeters": 223.902,
+            "headingDeg": 0,
+            "pitchDeg": 0,
+            "rollDeg": 0,
+            "offsetM": 25,
+            "aligned": false
+          },
+          "verification": {
+            "orientation": null
+          }
+        }
+      ]
+    }
+  ]
+}

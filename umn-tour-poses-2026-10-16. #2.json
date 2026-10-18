@@ -1,0 +1,81 @@
+{
+  "format": "foss-earth-pose-overrides",
+  "version": 1,
+  "exportedAt": "2026-10-16T02:26:05.831Z",
+  "scenes": [
+    {
+      "sceneId": "umn-minneapolis",
+      "sceneUrl": "http://localhost:5173/tour/minneapolis/scene.json",
+      "edits": [
+        {
+          "entityId": "residence-life-and-dining",
+          "title": "Residence Life & Dining",
+          "mode": "capture-relative",
+          "authoredRevision": "b88f4bab9d01",
+          "updatedAt": "2026-10-16T01:50:07.072Z",
+          "capture": {
+            "longitudeDeg": -93.22950788999998,
+            "latitudeDeg": 44.97135393,
+            "heightMeters": 204.333
+          },
+          "imagePose": {
+            "headingDeg": 179.66419999999994,
+            "pitchDeg": 0,
+            "aligned": false
+          },
+          "marker": {
+            "offsetM": 25
+          },
+          "authored": {
+            "mode": "capture-relative",
+            "longitudeDeg": -93.22945479999998,
+            "latitudeDeg": 44.9708325,
+            "heightMeters": 245.721,
+            "headingDeg": 0,
+            "pitchDeg": 0,
+            "rollDeg": 0,
+            "offsetM": 25,
+            "aligned": false
+          },
+          "verification": {
+            "orientation": null
+          }
+        },
+        {
+          "entityId": "superblock",
+          "title": "Superblock",
+          "mode": "capture-relative",
+          "authoredRevision": "b88f4bab9d01",
+          "updatedAt": "2026-10-16T02:22:55.933Z",
+          "capture": {
+            "longitudeDeg": -93.22865815,
+            "latitudeDeg": 44.97149406,
+            "heightMeters": 204.031
+          },
+          "imagePose": {
+            "headingDeg": 185.40160000000003,
+            "pitchDeg": 0,
+            "aligned": false
+          },
+          "marker": {
+            "offsetM": 25
+          },
+          "authored": {
+            "mode": "capture-relative",
+            "longitudeDeg": -93.22945479999998,
+            "latitudeDeg": 44.9708325,
+            "heightMeters": 245.721,
+            "headingDeg": 0,
+            "pitchDeg": 0,
+            "rollDeg": 0,
+            "offsetM": 25,
+            "aligned": false
+          },
+          "verification": {
+            "orientation": null
+          }
+        }
+      ]
+    }
+  ]
+}

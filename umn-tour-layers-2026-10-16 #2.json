@@ -1,0 +1,21 @@
+{
+  "format": "foss-earth-layer-overrides",
+  "version": 1,
+  "exportedAt": "2026-10-16T04:17:34.012Z",
+  "scenes": [
+    {
+      "sceneId": "umn-minneapolis",
+      "sceneUrl": "http://localhost:5173/tour/minneapolis/scene.json",
+      "edits": [
+        {
+          "entityId": "wall-of-discovery-scholars-walk",
+          "title": "Wall of Discovery, Scholars Walk",
+          "layerId": "indoor-360",
+          "authoredLayerId": "outdoor-360",
+          "authoredRevision": "6be67e7cbd0e",
+          "updatedAt": "2026-10-16T04:17:26.481Z"
+        }
+      ]
+    }
+  ]
+}

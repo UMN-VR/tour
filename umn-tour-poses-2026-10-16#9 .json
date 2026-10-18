@@ -1,0 +1,223 @@
+{
+  "format": "foss-earth-pose-overrides",
+  "version": 1,
+  "exportedAt": "2026-10-16T04:15:09.946Z",
+  "scenes": [
+    {
+      "sceneId": "umn-minneapolis",
+      "sceneUrl": "http://localhost:5173/tour/minneapolis/scene.json",
+      "edits": [
+        {
+          "entityId": "folwell-hall",
+          "title": "Folwell Hall",
+          "mode": "capture-relative",
+          "authoredRevision": "6be67e7cbd0e",
+          "updatedAt": "2026-10-16T04:11:23.266Z",
+          "capture": {
+            "longitudeDeg": -93.23469577999998,
+            "latitudeDeg": 44.97799901,
+            "heightMeters": 205.471
+          },
+          "imagePose": {
+            "headingDeg": 28.053800000000024,
+            "pitchDeg": 0,
+            "rollDeg": 0,
+            "aligned": false
+          },
+          "marker": {
+            "offsetM": 25
+          },
+          "authored": {
+            "mode": "capture-relative",
+            "longitudeDeg": -93.23454019999997,
+            "latitudeDeg": 44.9782705,
+            "heightMeters": 249.657,
+            "headingDeg": 0,
+            "pitchDeg": 0,
+            "rollDeg": 0,
+            "offsetM": 25,
+            "aligned": false
+          },
+          "verification": {
+            "orientation": null
+          }
+        },
+        {
+          "entityId": "golden-gopher-spirit-athletics",
+          "title": "Golden Gopher Spirit: Athletics",
+          "mode": "capture-relative",
+          "authoredRevision": "6be67e7cbd0e",
+          "updatedAt": "2026-10-16T03:46:25.375Z",
+          "capture": {
+            "longitudeDeg": -93.22641630999999,
+            "latitudeDeg": 44.97683231,
+            "heightMeters": 203.531
+          },
+          "imagePose": {
+            "headingDeg": 110.09320000000002,
+            "pitchDeg": 0,
+            "rollDeg": 0,
+            "aligned": false
+          },
+          "marker": {
+            "offsetM": 25
+          },
+          "authored": {
+            "mode": "capture-relative",
+            "longitudeDeg": -93.22583910000003,
+            "latitudeDeg": 44.9764567,
+            "heightMeters": 226.66,
+            "headingDeg": 0,
+            "pitchDeg": 0,
+            "rollDeg": 0,
+            "offsetM": 25,
+            "aligned": false
+          },
+          "verification": {
+            "orientation": null
+          }
+        },
+        {
+          "entityId": "huntington-bank-stadium",
+          "title": "Huntington Bank Stadium",
+          "mode": "capture-relative",
+          "authoredRevision": "b88f4bab9d01",
+          "updatedAt": "2026-10-16T03:39:48.195Z",
+          "capture": {
+            "longitudeDeg": -93.22442548999999,
+            "latitudeDeg": 44.97645176,
+            "heightMeters": 200.375
+          },
+          "imagePose": {
+            "headingDeg": 322.0217,
+            "pitchDeg": 0,
+            "rollDeg": 0,
+            "aligned": false
+          },
+          "marker": {
+            "offsetM": 25
+          },
+          "authored": {
+            "mode": "capture-relative",
+            "longitudeDeg": -93.2245517,
+            "latitudeDeg": 44.976487,
+            "heightMeters": 223.902,
+            "headingDeg": 0,
+            "pitchDeg": 0,
+            "rollDeg": 0,
+            "offsetM": 25,
+            "aligned": false
+          },
+          "verification": {
+            "orientation": null
+          }
+        },
+        {
+          "entityId": "northrop-auditorium",
+          "title": "Northrop Auditorium",
+          "mode": "capture-relative",
+          "authoredRevision": "6be67e7cbd0e",
+          "updatedAt": "2026-10-16T03:55:15.201Z",
+          "capture": {
+            "longitudeDeg": -93.23536853999997,
+            "latitudeDeg": 44.97592324,
+            "heightMeters": 208.716
+          },
+          "imagePose": {
+            "headingDeg": 2.9220000000000255,
+            "pitchDeg": 0,
+            "rollDeg": 0,
+            "aligned": false
+          },
+          "marker": {
+            "offsetM": 25
+          },
+          "authored": {
+            "mode": "capture-relative",
+            "longitudeDeg": -93.2353971,
+            "latitudeDeg": 44.9766819,
+            "heightMeters": 262.147,
+            "headingDeg": 0,
+            "pitchDeg": 0,
+            "rollDeg": 0,
+            "offsetM": 25,
+            "aligned": false
+          },
+          "verification": {
+            "orientation": null
+          }
+        },
+        {
+          "entityId": "northrop-mall",
+          "title": "Northrop Mall",
+          "mode": "capture-relative",
+          "authoredRevision": "6be67e7cbd0e",
+          "updatedAt": "2026-10-16T04:05:54.598Z",
+          "capture": {
+            "longitudeDeg": -93.23537320000003,
+            "latitudeDeg": 44.97528376,
+            "heightMeters": 206.23
+          },
+          "imagePose": {
+            "headingDeg": 269.61349999999993,
+            "pitchDeg": 0,
+            "rollDeg": 0,
+            "aligned": false
+          },
+          "marker": {
+            "offsetM": 25
+          },
+          "authored": {
+            "mode": "capture-relative",
+            "longitudeDeg": -93.23427200000003,
+            "latitudeDeg": 44.9762821,
+            "heightMeters": 236.303,
+            "headingDeg": 0,
+            "pitchDeg": 0,
+            "rollDeg": 0,
+            "offsetM": 25,
+            "aligned": false
+          },
+          "verification": {
+            "orientation": null
+          }
+        },
+        {
+          "entityId": "washington-avenue-walking-bridge",
+          "title": "Washington Avenue Walking Bridge",
+          "mode": "capture-relative",
+          "authoredRevision": "6be67e7cbd0e",
+          "updatedAt": "2026-10-16T04:14:39.616Z",
+          "capture": {
+            "longitudeDeg": -93.23839827,
+            "latitudeDeg": 44.97341391,
+            "heightMeters": 205.524
+          },
+          "imagePose": {
+            "headingDeg": 277.9217,
+            "pitchDeg": 0,
+            "rollDeg": 0,
+            "aligned": false
+          },
+          "marker": {
+            "offsetM": 25
+          },
+          "authored": {
+            "mode": "capture-relative",
+            "longitudeDeg": -93.24003449999998,
+            "latitudeDeg": 44.9731123,
+            "heightMeters": 227.14,
+            "headingDeg": 0,
+            "pitchDeg": 0,
+            "rollDeg": 0,
+            "offsetM": 25,
+            "aligned": false
+          },
+          "verification": {
+            "orientation": null
+          }
+        }
+      ]
+    }
+  ]
+}
