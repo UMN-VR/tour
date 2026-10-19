@@ -27,6 +27,12 @@ repository also:
   and [UI layout](https://github.com/foss-earth/docs/blob/main/docs/ui-layout.md) rules.
 - **After an edit:** run `npm run typecheck`, `npm run test:changed -- <changed files>`
   and `npm run lint`; for finished work, `npm run ci` once.
+- **A phone needs the HTTPS dev server.** When asked to serve the tour to a
+  phone, start it with `--host` (add `FOSS_EARTH_ISOLATION=enforce` for shared
+  memory). It then serves HTTPS with a self-signed certificate, which the phone
+  accepts once (Advanced, then Proceed). A plain `http://` network address is
+  not a secure page and has no WebGPU or shared memory, so a test there says
+  nothing about either. [README.md](README.md) has the details.
 - **Don't start servers or deploy unless asked.** When asked to publish the
   tour, run `cd ~/gh/UMN-VR/tour && npm run deploy`. That commits and pushes
   `deployed-from.json` here when FOSS Earth or a campus moved, then builds and

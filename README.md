@@ -49,10 +49,14 @@ including CSS imports from those packages.
 
 The photographs come from the published site unless
 `public/tour/twin-cities/media/` is present, or `TOUR_PUBLIC` names another
-folder that contains `tour/twin-cities/media/`. For a phone on the same
-network, use `npm run dev -- --host 0.0.0.0`. WebGPU needs a secure context, so
-that `http://` address runs on WebGL. To exercise WebGPU, use a trusted HTTPS
-development proxy or tunnel.
+folder that contains `tour/twin-cities/media/`.
+
+For a phone on the same network, use `npm run dev -- --host`. With `--host`, the
+server serves HTTPS with a self-signed certificate. The phone's browser warns
+once per address; in Chrome, tap Advanced, then Proceed. After that the page is
+secure, so it can use WebGPU, and with `FOSS_EARTH_ISOLATION=enforce` it can
+share memory. A plain `http://` network address gets neither: it runs on WebGL
+without shared memory. `FOSS_EARTH_DEV_HTTPS=off` keeps that http server.
 
 ## How the photographs load
 
