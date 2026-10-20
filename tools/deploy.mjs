@@ -28,8 +28,8 @@ export function publishTour({ root = ROOT, remote = 'origin', bootstrapFrom, boo
   dryRun = false, log = console.log } = {}) {
   const dist = path.join(root, 'dist')
   for (const file of REQUIRED) if (!existsSync(path.join(dist, file))) throw new Error(`Incomplete tour build: missing ${file}. Run npm run build first.`)
+  // Whatever the build emitted: Vite empties dist first, and the photographs are not copied into it (copyPublicDir).
   const files = filesOf(dist)
-  for (const [name] of files) if (!REQUIRED.includes(name) && !name.startsWith('assets/')) throw new Error(`File outside the tour build: ${name}`)
   if (!files.some(([name]) => name.startsWith('assets/'))) throw new Error('Incomplete tour build: no app assets. Run npm run build first.')
   if (mediaDirectory) {
     const base = path.join(path.resolve(mediaDirectory), 'tour', 'twin-cities', 'media')

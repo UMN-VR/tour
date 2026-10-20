@@ -65,6 +65,7 @@ function fixture() {
 
   put(root, 'dist/index.html', '<script src="/tour/assets/new-tour.js"></script>')
   put(root, 'dist/foss-earth-sw.js', 'The new tour service worker')
+  put(root, 'dist/foss-earth-isolate.js', 'A file this deployer does not name')
   put(root, 'dist/assets/new-tour.js', 'The new tour app')
   for (const campus of campuses) {
     put(root, `dist/${campus}/index.html`, `The new ${campus} page`)
@@ -99,6 +100,7 @@ describe('the tour-owned Git publisher', () => {
     expect(files).toContain('.nojekyll')
     expect(files).toContain('index.html')
     expect(files).toContain('foss-earth-sw.js')
+    expect(files).toContain('foss-earth-isolate.js')
     expect(files).not.toContain('index.md')
     expect(files).not.toContain('_config.yml')
     expect(files).not.toContain('assets/club-old.js')
@@ -157,7 +159,6 @@ describe('the tour-owned Git publisher', () => {
 
   const invalidBuilds = [
     ['a missing campus scene', root => rmSync(path.join(root, 'dist/st-paul/scene.json'))],
-    ['an unexpected landing page', root => put(root, 'dist/index.md', 'Club content must not enter the tour')],
     ['a symlink asset', root => {
       put(root, 'outside.js', 'A file outside the build')
       symlinkSync(path.join(root, 'outside.js'), path.join(root, 'dist/assets/link.js'))
@@ -171,7 +172,7 @@ describe('the tour-owned Git publisher', () => {
     // An unusable destination proves build validation happens before remote access.
     await expect(Promise.resolve().then(() => publish({
       remote: path.join(root, 'no-such-remote'), bootstrapFrom: legacy,
-    }))).rejects.toThrow(/Incomplete tour build|File outside the tour build|Refusing a symbolic link/)
+    }))).rejects.toThrow(/Incomplete tour build|Refusing a symbolic link/)
     expect(refs()).toBe(before)
   })
 })
