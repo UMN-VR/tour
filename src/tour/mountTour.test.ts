@@ -4,11 +4,13 @@ import { getAppSettings } from "foss-earth/settings";
 import { isBrowserRecoveryPage, markBrowserAppReady, reportBrowserAppFailure } from "@foss-earth/ui/browser";
 import { MINNEAPOLIS } from "./scenes";
 import { mountTour } from "./mountTour";
+import { applyTourPerformanceDefaults } from "./performanceDefaults";
 
 vi.mock("foss-earth", () => ({ mountGlobeApp: vi.fn() }));
 vi.mock("foss-earth/settings", () => ({ getAppSettings: vi.fn() }));
 vi.mock("@foss-earth/ui/browser", () => ({ isBrowserRecoveryPage: vi.fn(), markBrowserAppReady: vi.fn(), reportBrowserAppFailure: vi.fn() }));
 vi.mock("./campusSunTime", () => ({ applyCampusSunTime: vi.fn() }));
+vi.mock("./performanceDefaults", () => ({ applyTourPerformanceDefaults: vi.fn() }));
 
 describe("tour startup recovery", () => {
   let root: HTMLElement;
@@ -40,6 +42,8 @@ describe("tour startup recovery", () => {
     vi.mocked(mountGlobeApp).mockReturnValue(new Promise(resolve => { finish = resolve; }));
     mountTour(MINNEAPOLIS);
     expect(markBrowserAppReady).not.toHaveBeenCalled();
+    expect(applyTourPerformanceDefaults).toHaveBeenCalledWith(vi.mocked(getAppSettings).mock.results[0].value);
+    expect(vi.mocked(applyTourPerformanceDefaults).mock.invocationCallOrder[0]).toBeLessThan(vi.mocked(mountGlobeApp).mock.invocationCallOrder[0]);
     expect(mountGlobeApp).toHaveBeenCalledWith(root, { scenes: [MINNEAPOLIS], initialScene: MINNEAPOLIS.id, poseExportPrefix: "umn-tour-poses", layerExportPrefix: "umn-tour-layers", linkExportPrefix: "umn-tour-links" });
     finish({} as Awaited<ReturnType<typeof mountGlobeApp>>);
     await vi.waitFor(() => expect(markBrowserAppReady).toHaveBeenCalledWith(document));

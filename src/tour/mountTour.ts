@@ -4,6 +4,7 @@ import { describeError } from "foss-earth/diagnostics";
 import type { SceneExample } from "foss-earth/scenes";
 import { isBrowserRecoveryPage, markBrowserAppReady, reportBrowserAppFailure } from "@foss-earth/ui/browser";
 import { applyCampusSunTime } from "./campusSunTime";
+import { applyTourPerformanceDefaults } from "./performanceDefaults";
 
 /** FOSS Earth's globe as it is, offering one campus tour's scene and opening it. */
 export function mountTour(scene: SceneExample): void {
@@ -16,7 +17,9 @@ export function mountTour(scene: SceneExample): void {
   }
 
   // Before the globe reads the clock, so the first frame already has this Sun.
-  applyCampusSunTime(getAppSettings());
+  const settings = getAppSettings();
+  applyCampusSunTime(settings);
+  applyTourPerformanceDefaults(settings);
 
   void mountGlobeApp(rootElement, { scenes: [scene], initialScene: scene.id, poseExportPrefix: "umn-tour-poses", layerExportPrefix: "umn-tour-layers", linkExportPrefix: "umn-tour-links" }).then(() => {
     markBrowserAppReady(document);

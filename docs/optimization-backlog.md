@@ -8,14 +8,21 @@ with the method used here. IDs from there (X1, T12, S1 and so on) are used here
 unchanged. The [WebGL performance review](webgl-performance-review.md) has the
 background and the decisions still open.
 
-Written 16 October 2026. **No gain below was measured.** They are estimates to
-order the work. A phone trial decides; the review lists what it must cover.
+The ranking was written 16 October 2026; its estimates are historical. The
+[22 October continuation](performance-continuation.md) records confirmed work:
+three equivalent-output panorama paths now use tour host defaults, with
+19–24% less measured render CPU inside a photograph on the desktop phone proxy.
+The simpler WebGL shader remains opt-in because its pixels differ. Shared
+off-screen marker culling also cuts submissions about 51%, with about 5% less
+main-thread time/frame on WebGPU. Physical-phone qualification remains open.
+The [advanced implementation handoff](performance-next-agent.md) specifies the
+remaining difficult candidates.
 
 ## Ranking
 
 | Rank | ID | Item | Gain (estimate) | Effort | Tier |
 | ---: | --- | --- | --- | :-: | :-: |
-| 1 | U1 | Phone trial of FOSS Earth's four panorama experiments, then ask for them by default (X1) | Measured on the M5: main-thread render −25% inside a stop | S | 1 |
+| 1 | U1 | Physical-phone qualification of the three default panorama work-saving paths (X1); keep the simpler shader opt-in | Measured on the M5 proxy: render CPU −19 to −24% inside a stop | S | 1 |
 | 2 | U2 | Encode tiles as the prototype did | Tile bytes −18 to −27% | M | 1 |
 | 3 | U3 | Leave editing tools out of the visitors' build | Startup download and parse of a 5.4 MB chunk | M | 2 |
 | 4 | U4 | Keep Google tiles to the campus and its approaches (T12) | Downloads and memory outside the campus | S, after T12 | 2 |
@@ -31,7 +38,7 @@ order the work. A phone trial decides; the review lists what it must cover.
 
 | ID | Item | Status | Owner | Gain (estimate) | Effort | Tier |
 | --- | --- | --- | --- | --- | :-: | :-: |
-| U1 | Run the QR-code phone trial with `set.renderer.experiments.all=1` against the baseline ([review](webgl-performance-review.md#first-pass-work-saving-experiments-2026-09-29)). If it holds, ask FOSS Earth to turn them on, or set them in the tour's defaults until then. | Open | tour; renderer for the default | Main-thread render −25% inside a stop, measured on an M5; phone GPU unknown | S | 1 |
+| U1 | Bookkeeping, opaque immersion and skipping hidden globe candidates use tour defaults after exact pixels on WebGPU, WebGL2 and WebGL1 and interleaved timing. Preserve visitor overrides. The simpler shader stays opt-in; see the [continuation](performance-continuation.md). | Three paths enabled; physical-phone qualification open | tour; renderer for the default | Render CPU −19 to −24% inside a photograph on an M5 phone proxy; phone GPU unknown | S | 1 |
 | U2 | The tiles are 22 to 37% larger than the prototype's because of FOSS Earth's JPEG encoder ([roadmap](roadmap.md)). Match the prototype's encoding in the shared preparation tool, then rebuild. | Open | images (FOSS Earth), then tour rebuild | Tile bytes −18 to −27% | M | 1 |
 | U3 | The tour mounts the whole app. The placement and layer editors, the developer tab and other tools a visitor never opens can be left out of the published build or loaded on demand (S1, S2). | Open | tour composition, app | Startup download, parse and memory | M | 2 |
 | U4 | Ask the globe to load Google tiles only within the campus and the views of it the tour uses (T12) | Open, needs T12 | tour scene, engine | Downloads and memory outside the campus | S | 2 |
