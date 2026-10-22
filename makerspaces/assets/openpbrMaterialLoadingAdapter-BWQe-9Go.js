@@ -1,0 +1,1 @@
+export{p as OpenPBRMaterialLoadingAdapter}from"./index.babylonjs-BhJjJcPY.js";

@@ -1,0 +1,215 @@
+{
+  "format": "foss-earth-scene",
+  "version": 1,
+  "id": "umn-makerspaces",
+  "title": "University of Minnesota makerspaces · prototype",
+  "requiredExtensions": [],
+  "extensions": {
+    "umn-vr.makerspaces": {
+      "status": "Unlisted prototype; no University endorsement implied.",
+      "sourceScene": "https://umn-vr.github.io/tour/twin-cities/scene.json",
+      "sourceRevision": "16de80edd9d7",
+      "build": "scripts/build-scene.mjs from content/tour.json",
+      "imagery": "Existing campus-tour panorama, not a new capture or a current equipment inventory. Anderson Labs photographs are separate, flat photographs in the directory."
+    }
+  },
+  "assets": [
+    {
+      "id": "the-toaster-innovation-hub",
+      "revision": "577bc28059e2",
+      "type": "panorama-image",
+      "colorSpace": "srgb",
+      "alpha": "opaque",
+      "attribution": {
+        "text": "© Regents of the University of Minnesota"
+      },
+      "representations": [
+        {
+          "id": "preview-64",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 64,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 10838,
+          "faces": {
+            "px": "https://umn-vr.github.io/tour/twin-cities/media/the-toaster-innovation-hub/preview-64/px.jpg",
+            "nx": "https://umn-vr.github.io/tour/twin-cities/media/the-toaster-innovation-hub/preview-64/nx.jpg",
+            "py": "https://umn-vr.github.io/tour/twin-cities/media/the-toaster-innovation-hub/preview-64/py.jpg",
+            "ny": "https://umn-vr.github.io/tour/twin-cities/media/the-toaster-innovation-hub/preview-64/ny.jpg",
+            "pz": "https://umn-vr.github.io/tour/twin-cities/media/the-toaster-innovation-hub/preview-64/pz.jpg",
+            "nz": "https://umn-vr.github.io/tour/twin-cities/media/the-toaster-innovation-hub/preview-64/nz.jpg"
+          }
+        },
+        {
+          "id": "preview-128",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 128,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 27977,
+          "faces": {
+            "px": "https://umn-vr.github.io/tour/twin-cities/media/the-toaster-innovation-hub/preview-128/px.jpg",
+            "nx": "https://umn-vr.github.io/tour/twin-cities/media/the-toaster-innovation-hub/preview-128/nx.jpg",
+            "py": "https://umn-vr.github.io/tour/twin-cities/media/the-toaster-innovation-hub/preview-128/py.jpg",
+            "ny": "https://umn-vr.github.io/tour/twin-cities/media/the-toaster-innovation-hub/preview-128/ny.jpg",
+            "pz": "https://umn-vr.github.io/tour/twin-cities/media/the-toaster-innovation-hub/preview-128/pz.jpg",
+            "nz": "https://umn-vr.github.io/tour/twin-cities/media/the-toaster-innovation-hub/preview-128/nz.jpg"
+          }
+        },
+        {
+          "id": "preview-256",
+          "role": "preview",
+          "projection": "cube",
+          "faceSize": 256,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 87110,
+          "faces": {
+            "px": "https://umn-vr.github.io/tour/twin-cities/media/the-toaster-innovation-hub/preview-256/px.jpg",
+            "nx": "https://umn-vr.github.io/tour/twin-cities/media/the-toaster-innovation-hub/preview-256/nx.jpg",
+            "py": "https://umn-vr.github.io/tour/twin-cities/media/the-toaster-innovation-hub/preview-256/py.jpg",
+            "ny": "https://umn-vr.github.io/tour/twin-cities/media/the-toaster-innovation-hub/preview-256/ny.jpg",
+            "pz": "https://umn-vr.github.io/tour/twin-cities/media/the-toaster-innovation-hub/preview-256/pz.jpg",
+            "nz": "https://umn-vr.github.io/tour/twin-cities/media/the-toaster-innovation-hub/preview-256/nz.jpg"
+          }
+        },
+        {
+          "id": "whole-2048",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 2048,
+          "height": 1024,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 401436,
+          "url": "https://umn-vr.github.io/tour/twin-cities/media/the-toaster-innovation-hub/immersion-2048.jpg"
+        },
+        {
+          "id": "whole-4096",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 4096,
+          "height": 2048,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 1239725,
+          "url": "https://umn-vr.github.io/tour/twin-cities/media/the-toaster-innovation-hub/immersion-4096.jpg"
+        },
+        {
+          "id": "whole-6144",
+          "role": "immersion",
+          "projection": "equirectangular",
+          "width": 6144,
+          "height": 3072,
+          "mimeType": "image/jpeg",
+          "encodedBytes": 2314586,
+          "url": "https://umn-vr.github.io/tour/twin-cities/media/the-toaster-innovation-hub/immersion-6144.jpg"
+        },
+        {
+          "id": "eac-tiles",
+          "role": "immersion",
+          "projection": "tiled-cube",
+          "warp": "equi-angular",
+          "faceSize": 1536,
+          "tileSize": 192,
+          "gutter": 1,
+          "levelBytes": [
+            54930,
+            193900,
+            665908,
+            2171996
+          ],
+          "mimeType": "image/jpeg",
+          "encodedBytes": 3086734,
+          "url": "https://umn-vr.github.io/tour/twin-cities/media/the-toaster-innovation-hub/eac-tiles/"
+        },
+        {
+          "id": "cube-tiles",
+          "role": "immersion",
+          "projection": "tiled-cube",
+          "warp": "gnomonic",
+          "faceSize": 1536,
+          "tileSize": 192,
+          "gutter": 1,
+          "levelBytes": [
+            52219,
+            186538,
+            647144,
+            2142232
+          ],
+          "mimeType": "image/jpeg",
+          "encodedBytes": 3028133,
+          "url": "https://umn-vr.github.io/tour/twin-cities/media/the-toaster-innovation-hub/cube-tiles/"
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "the-toaster-innovation-hub",
+      "type": "panorama",
+      "assetId": "the-toaster-innovation-hub",
+      "title": "The Toaster Innovation Hub",
+      "capture": {
+        "longitudeDeg": -93.2362247,
+        "latitudeDeg": 44.9752803,
+        "height": {
+          "meters": 246.368,
+          "datum": "WGS84-ellipsoid",
+          "uncertaintyMeters": 2.01,
+          "source": "Build-time Google Photorealistic 3D Tiles, 2026-10-16: top of the finest geometry on the vertical through the capture coordinate (leaf geometric error 2.006 m). WGS84 ellipsoid from Google's earth-centred coordinates; no datum conversion. Data Google. The orb's ground reference: the surface there, or a roof where the coordinate is on a building; not a measured camera height."
+        },
+        "horizontalAccuracyMeters": 60
+      },
+      "imagePose": {
+        "headingDeg": 0,
+        "pitchDeg": 0,
+        "rollDeg": 0,
+        "aligned": false
+      },
+      "marker": {
+        "mode": "capture-relative",
+        "eastM": 0,
+        "northM": 15,
+        "offsetM": 25,
+        "radiusMeters": 3
+      },
+      "links": [],
+      "extensions": {
+        "umn-vr.tour": {
+          "youvisit": {
+            "panoramas": [
+              365408
+            ],
+            "stops": [
+              306357
+            ]
+          },
+          "capture": "YouVisit's tour point for stop 306357, Learning at the Libraries, which is 5 m from the centre of Walter Library (OpenStreetMap way/23014165), where this panorama was taken. Where in the building is not known.",
+          "north": {
+            "provenance": "Not aligned: YouVisit's images carry no orientation, so north is unknown."
+          }
+        }
+      }
+    }
+  ],
+  "groups": [
+    {
+      "id": "east-bank",
+      "title": "East Bank",
+      "members": [
+        "the-toaster-innovation-hub"
+      ]
+    }
+  ],
+  "initialPanorama": "the-toaster-innovation-hub",
+  "overview": {
+    "target": {
+      "longitudeDeg": -93.2362247,
+      "latitudeDeg": 44.9752803,
+      "height": null
+    },
+    "distanceMeters": 1400,
+    "headingDeg": 0,
+    "pitchDeg": -50,
+    "verticalFovDeg": 60
+  },
+  "revision": "d92d0fbde9f8"
+}

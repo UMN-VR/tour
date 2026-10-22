@@ -1,0 +1,120 @@
+{
+  "checkedAt": "2026-10-22",
+  "spaces": [
+    {
+      "id": "anderson-design-lab",
+      "title": "Anderson Design Lab",
+      "campus": "East Bank",
+      "room": "Mechanical Engineering 2-134",
+      "summary": "Start a project with 3D printers, laser cutters, electronics tools and flexible workbenches. Ask the lab staff how to begin.",
+      "url": "https://cse.umn.edu/andersonlabs/hours-and-locations",
+      "image": {
+        "url": "./media/anderson-design.jpg",
+        "alt": "Students work at shared wooden benches in the Anderson Design Lab.",
+        "credit": "© Regents of the University of Minnesota",
+        "sourceUrl": "https://cse.umn.edu/andersonlabs/hours-and-locations"
+      }
+    },
+    {
+      "id": "anderson-build-lab",
+      "title": "Anderson Build Lab",
+      "campus": "East Bank",
+      "room": "Civil Engineering 335",
+      "summary": "Explore woodworking, welding, 3D printing and larger fabrication projects. Classes and student groups also use this space.",
+      "url": "https://cse.umn.edu/andersonlabs/hours-and-locations",
+      "image": {
+        "url": "./media/anderson-build.jpg",
+        "alt": "Workbenches and fabrication equipment in the Anderson Build Lab.",
+        "credit": "© Regents of the University of Minnesota",
+        "sourceUrl": "https://cse.umn.edu/andersonlabs/hours-and-locations"
+      }
+    },
+    {
+      "id": "anderson-machine-shop",
+      "title": "Polaris Student Machine Shop",
+      "campus": "East Bank",
+      "room": "Mechanical Engineering 176",
+      "summary": "See metalworking tools, milling machines, lathes and a waterjet cutter, with staff guidance on manufacturing design.",
+      "url": "https://cse.umn.edu/andersonlabs/hours-and-locations",
+      "image": {
+        "url": "./media/anderson-machine.jpg",
+        "alt": "Students observe a waterjet cutter in the Anderson student machine shop.",
+        "credit": "© Regents of the University of Minnesota",
+        "sourceUrl": "https://cse.umn.edu/andersonlabs/hours-and-locations"
+      }
+    },
+    {
+      "id": "exceed-lab",
+      "title": "Exceed Lab",
+      "campus": "East Bank",
+      "room": "Keller Hall 2-160 and 2-164",
+      "summary": "A collaborative engineering workspace for student teams developing extracurricular science and engineering projects. Training is required for access.",
+      "url": "https://sites.google.com/umn.edu/exceed/home"
+    },
+    {
+      "id": "bakken-medical-devices-center",
+      "title": "Bakken Medical Devices Center",
+      "campus": "East Bank",
+      "room": "Mayo Memorial Building G217",
+      "summary": "Discover medical device prototyping, electronics and mechanical labs. Arrange access and complete the required training before using equipment.",
+      "url": "https://med.umn.edu/bmdc"
+    },
+    {
+      "id": "health-sciences-makerspace",
+      "title": "Health Sciences Library Makerspace",
+      "campus": "East Bank",
+      "room": "Health Sciences Education Center 5-101",
+      "summary": "Make with printing, sewing, electronics, laser cutting and craft equipment on HSEC's fifth floor. Equipment and materials are free to use.",
+      "url": "https://www.lib.umn.edu/spaces/makerspaces"
+    },
+    {
+      "id": "toaster-makerspace",
+      "title": "The Toaster Makerspace",
+      "campus": "East Bank",
+      "room": "Walter Library basement",
+      "summary": "Visit the makerspace inside the Toaster Innovation Hub for crafting, sewing, cutting and 3D printing, with staff support.",
+      "url": "https://www.lib.umn.edu/spaces/makerspaces",
+      "panoramaId": "the-toaster-innovation-hub"
+    },
+    {
+      "id": "rapson-fabrication-shops",
+      "title": "Rapson Fabrication Shops",
+      "campus": "East Bank",
+      "room": "Rapson Hall 127, 127B, 129 and 139",
+      "summary": "Explore the laser lab, metal shop, materials store and woodshop. Check the College of Design's current access requirements.",
+      "url": "https://design.umn.edu/designfab"
+    },
+    {
+      "id": "aisos",
+      "title": "AISOS",
+      "campus": "West Bank",
+      "room": "Heller Hall 431",
+      "summary": "The Advanced Imaging Service for Objects and Spaces supports precise imaging of objects, samples and artifacts in two and three dimensions.",
+      "url": "https://aisos.umn.edu/"
+    },
+    {
+      "id": "estudio",
+      "title": "eStudio",
+      "campus": "West Bank",
+      "room": "Regis Center for Art West W206",
+      "summary": "An interdisciplinary, collaborative art studio open to University of Minnesota students. Check the studio's current facilities and schedule.",
+      "url": "https://cla.umn.edu/art/about/facilities"
+    },
+    {
+      "id": "xyz-lab",
+      "title": "XYZ Lab",
+      "campus": "West Bank",
+      "room": "Regis Center for Art East E125",
+      "summary": "Try digital fabrication with laser cutters, 3D printers, vinyl cutters and a CNC router. Book an appointment for machine access.",
+      "url": "https://xyzlab.umn.edu/"
+    },
+    {
+      "id": "mcneal-laser-lab",
+      "title": "McNeal Laser Lab",
+      "campus": "St. Paul",
+      "room": "McNeal Hall 334A and 334B",
+      "summary": "Find the laser lab in room 334A and the Free Fabric Room in 334B. Visits are by appointment.",
+      "url": "https://design.umn.edu/designfab"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+export{m as AnimationPropertyInfo,h as TransformNodeAnimationPropertyInfo,g as WeightAnimationPropertyInfo,_ as getQuaternion,v as getVector3,y as getWeights}from"./index.babylonjs-BhJjJcPY.js";

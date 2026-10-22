@@ -1,0 +1,49 @@
+{
+  "checkedAt": "2026-10-22",
+  "notice": "Reference photographs collected for the makerspaces prototype at the user's request. The source pages do not provide an open reuse license. Copyright and other rights remain with their respective holders; these photographs are excluded from the repository's code license. No independent redistribution permission has been obtained. Review rights before wider distribution or official University use.",
+  "assets": [
+    {
+      "file": "anderson-design.jpg",
+      "credit": "© Regents of the University of Minnesota",
+      "creditBasis": "Copyright notice on the official source page; the page does not name an individual photographer.",
+      "sourcePage": "https://cse.umn.edu/andersonlabs/hours-and-locations",
+      "sourceAsset": "https://cse.umn.edu/sites/cse.umn.edu/files/Live-stream.jpg",
+      "sourceCaption": "Anderson Labs live-stream",
+      "mediaType": "image/jpeg",
+      "projection": "flat photograph, not a 360 panorama or live feed",
+      "width": 4032,
+      "height": 3024,
+      "bytes": 3212987,
+      "sha256": "2fd3a298a83fb944c2d44bb750e81dc8f2421b9a023ee6da97e630d7685d61b5"
+    },
+    {
+      "file": "anderson-build.jpg",
+      "credit": "© Regents of the University of Minnesota",
+      "creditBasis": "Copyright notice on the official source page; the page does not name an individual photographer.",
+      "sourcePage": "https://cse.umn.edu/andersonlabs/hours-and-locations",
+      "sourceAsset": "https://cse.umn.edu/sites/cse.umn.edu/files/Spaces.JPG",
+      "sourceCaption": "Anderson Labs spaces",
+      "mediaType": "image/jpeg",
+      "projection": "flat photograph, not a 360 panorama",
+      "width": 3264,
+      "height": 2448,
+      "bytes": 1731990,
+      "sha256": "171afc1ae303c470df998f797a68f8aa01f1f428e58457ee141ae35de605b3cd",
+      "locationBasis": "Displayed under the Anderson Build Lab section of the official source page."
+    },
+    {
+      "file": "anderson-machine.jpg",
+      "credit": "© Regents of the University of Minnesota",
+      "creditBasis": "Copyright notice on the official source page; the page does not name an individual photographer.",
+      "sourcePage": "https://cse.umn.edu/andersonlabs/hours-and-locations",
+      "sourceAsset": "https://cse.umn.edu/sites/cse.umn.edu/files/29234079134_7f3ed93dc7_z.jpg",
+      "sourceCaption": "Anderson Labs Student Machine Shop waterjet cutter",
+      "mediaType": "image/jpeg",
+      "projection": "flat photograph, not a 360 panorama",
+      "width": 640,
+      "height": 424,
+      "bytes": 109991,
+      "sha256": "de59738da0e22c7b81cf00caad90b282a72bc755ad92ea1506827943ba48e162"
+    }
+  ]
+}
