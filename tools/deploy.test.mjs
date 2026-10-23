@@ -3,7 +3,7 @@ import { existsSync, mkdirSync, mkdtempSync, rmSync, symlinkSync, writeFileSync 
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { afterEach, describe, expect, it } from 'vitest'
-import { publishTour } from './deploy.mjs'
+import { publishTour, publishedTourPage } from './deploy.mjs'
 
 const repository = fileURLToPath(new URL('../', import.meta.url))
 const fixtures = process.env.UMN_DEPLOY_TEST_ROOT || path.join(repository, 'build', 'checks')
@@ -174,6 +174,15 @@ describe('the tour-owned Git publisher', () => {
       remote: path.join(root, 'no-such-remote'), bootstrapFrom: legacy,
     }))).rejects.toThrow(/Incomplete tour build|Refusing a symbolic link/)
     expect(refs()).toBe(before)
+  })
+})
+
+describe('the published page', () => {
+  it('reads the page gh-pages has, and nothing before there is a gh-pages', async () => {
+    const { root, remote, legacy, publish } = fixture()
+    expect(publishedTourPage({ root })).toBeNull()
+    await publish({ bootstrapFrom: legacy })
+    expect(publishedTourPage({ root, remote })).toBe('<script src="/tour/assets/new-tour.js"></script>')
   })
 })
 

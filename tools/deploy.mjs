@@ -1,10 +1,11 @@
 // Publishes the tour's own GitHub Pages project at /tour/.
 // Existing photographs and old app assets stay in gh-pages; the club site is separate.
+// A deploy builds only when the tour has something new since the published build (About's rebuildReason).
 import { execFileSync } from 'node:child_process'
 import { existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { recordBuildInputs } from 'foss-earth/vite'
+import { rebuildReason, recordBuildInputs } from 'foss-earth/vite'
 
 const ROOT = fileURLToPath(new URL('../', import.meta.url))
 const BRANCH = 'refs/heads/gh-pages'
@@ -21,6 +22,17 @@ function filesOf(base, under = '') {
     if (!entry.isFile()) throw new Error(`Not a regular file: ${name}`)
     return [[name, path.join(base, name)]]
   }).sort(([a], [b]) => a.localeCompare(b))
+}
+
+/** The tour's page as its gh-pages branch on `remote` has it; null when there is no branch yet. */
+export function publishedTourPage({ root = ROOT, remote = 'origin' } = {}) {
+  const git = args => execFileSync('git', args, { cwd: root, encoding: 'utf8', maxBuffer: 16 * 1024 * 1024, stdio: ['ignore', 'pipe', 'pipe'] })
+  try {
+    git(['fetch', '--no-tags', '--depth=1', '--', remote, BRANCH])
+    return git(['show', 'FETCH_HEAD:index.html'])
+  } catch {
+    return null
+  }
 }
 
 /** Own publishing branch, with an optional one-time import of the existing tour subtree. */
@@ -100,19 +112,29 @@ function optionsOf(args) {
   for (let i = 0; i < args.length; i++) {
     const arg = args[i]
     if (arg === '--dry-run') options.dryRun = true
+    else if (arg === '--force') options.force = true
     else {
       const key = { '--remote': 'remote', '--bootstrap-from': 'bootstrapFrom', '--bootstrap-ref': 'bootstrapRef', '--media': 'mediaDirectory' }[arg]
-      if (!key || !args[i + 1] || args[i + 1].startsWith('--')) throw new Error('Usage: npm run deploy -- [--dry-run] [--bootstrap-from <repository>] [--media <public folder>] [--remote <destination>] [--bootstrap-ref <ref>]')
+      if (!key || !args[i + 1] || args[i + 1].startsWith('--')) throw new Error('Usage: npm run deploy -- [--dry-run] [--force] [--bootstrap-from <repository>] [--media <public folder>] [--remote <destination>] [--bootstrap-ref <ref>]')
       options[key] = args[++i]
     }
   }
   return options
 }
 
-// npm run deploy: record what the tour is built from (About's deployed-from.json, so new code is a new version), build, publish.
+// npm run deploy: record what the tour is built from (About's deployed-from.json, so new code is a new version),
+// then build and publish, unless gh-pages already has the build this would make. --force builds anyway;
+// --media always builds, as the photographs go out with a build.
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const options = optionsOf(process.argv.slice(2))
-  recordBuildInputs({ root: ROOT, dryRun: options.dryRun })
-  execFileSync('npm', ['run', 'build'], { cwd: ROOT, stdio: 'inherit' })
-  publishTour(options)
+  const inputs = recordBuildInputs({ root: ROOT, dryRun: options.dryRun })
+  const why = options.force ? 'asked to with --force'
+    : options.mediaDirectory ? 'photographs to publish'
+      : rebuildReason({ root: ROOT, page: publishedTourPage(options), inputs })
+  if (!why) console.log('The tour gh-pages branch already has the build this would make: nothing to build or publish.')
+  else {
+    console.log(`Building the tour: ${why}.`)
+    execFileSync('npm', ['run', 'build'], { cwd: ROOT, stdio: 'inherit' })
+    publishTour(options)
+  }
 }
