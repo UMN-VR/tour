@@ -148,7 +148,7 @@ export default defineConfig({
   },
   // FOSS Earth's service worker keeps the app's own files on the visitor's device: GitHub Pages lets them go stale after ten minutes.
   // Each page says what it is built from, this repository, FOSS Earth and every package, for the About tab.
-  // npm run dev only: a page opened with ?headsetEmulator=quest3 gets an emulated VR headset.
+  // npm run dev only: ?headsetEmulator=quest2 (or quest3, questPro, visionpro) gets an emulated headset.
   // Dev defaults to LAN HTTPS and prints a QR for the campus selector.
   // Each campus page shows the boot terminal from its first bytes. The selector fetches a campus page as a card is hovered or pressed,
   // and the campus pages' app files once it is idle.
