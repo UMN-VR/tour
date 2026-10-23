@@ -128,10 +128,12 @@ export default defineConfig({
   },
   ssr: { resolve: { conditions: ['source', ...defaultServerConditions] } },
   server: {
+    port: 8660,
+    strictPort: true,
     fs: { allow: ['.', '../../foss-earth', '../../Felipegalind0/gamepad-tools', ...CAMPUSES.map(campus => `../${campus}`)] },
     proxy: media,
   },
-  preview: { proxy: media },
+  preview: { port: 8660, strictPort: true, proxy: media },
   // FOSS Earth's About tab shows these.
   define: {
     __BUILD_TIME__: JSON.stringify(new Date().toISOString()),
@@ -147,10 +149,10 @@ export default defineConfig({
   // FOSS Earth's service worker keeps the app's own files on the visitor's device: GitHub Pages lets them go stale after ten minutes.
   // Each page says what it is built from, this repository, FOSS Earth and every package, for the About tab.
   // npm run dev only: a page opened with ?headsetEmulator=quest3 gets an emulated VR headset.
-  // With --host the dev server serves https, so a phone's page is secure: it shares memory and uses WebGPU only then.
+  // Dev defaults to LAN HTTPS and prints a QR for the campus selector.
   // Each campus page shows the boot terminal from its first bytes. The selector fetches a campus page as a card is hovered or pressed,
   // and the campus pages' app files once it is idle.
-  plugins: [crossOriginIsolation(), networkHttps(), localSource(), react(), tourHome(), campusScenes(), tourMedia(), babylonBarrels(), babylonShaderChunks(), lazyFeatures(), browserRecovery({ appId: 'umn-vr-tour' }),
+  plugins: [crossOriginIsolation(), networkHttps({ path: "/tour/" }), localSource(), react(), tourHome(), campusScenes(), tourMedia(), babylonBarrels(), babylonShaderChunks(), lazyFeatures(), browserRecovery({ appId: 'umn-vr-tour' }),
     bootTerminal({ pages: page => CAMPUS_PAGES.includes(page) }), warmPages({ from: `/${TOUR_PAGES.selector}`, pages: CAMPUS_PAGES }), appFiles(), builtFrom(), headsetEmulator()],
   test: {
     // .local/ holds the YouVisit backup and scratch; public/ the generated scene.

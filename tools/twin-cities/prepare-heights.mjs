@@ -20,7 +20,7 @@ import { GOOGLE_PROVIDER, USGS_PROVIDER, prepareHeightSamples, readGoogleKey } f
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const tourRoot = path.resolve(here, '..', '..');
-/** Where the organization keeps the key (UMN-VR/.github/AGENTS.md); only FOSS_EARTH_GOOGLE_KEY is read. */
+/** Agreed key locations: GOOGLE_3D_TILES_KEY, with legacy FOSS_EARTH_GOOGLE_KEY fallback. */
 export const KEY_FILES = [
   path.join(tourRoot, '.env.local'),
   path.join(homedir(), 'gh', 'foss-earth', 'app', '.env.local'),

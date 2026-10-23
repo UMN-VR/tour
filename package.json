@@ -6,7 +6,8 @@
   "description": "The University of Minnesota's virtual campus tours, Minneapolis, Saint Paul and Twin Cities, as apps built on FOSS Earth.",
   "license": "AGPL-3.0-only",
   "scripts": {
-    "dev": "vite --configLoader native",
+    "dev": "node tools/dev.mjs",
+    "llm-dev": "node tools/dev.mjs --no-qr --no-gkey",
     "build": "npm run check:heights && npm run typecheck && vite build --configLoader native",
     "deploy": "node tools/deploy.mjs",
     "preview": "vite preview --configLoader native",

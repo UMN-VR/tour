@@ -1,0 +1,40 @@
+# Tour task guidance
+
+[README.md](README.md) explains the pages, the commands and how the tours are
+published. [docs/which-version.md](docs/which-version.md) is how to tell which
+build a device is running, [docs/bug-reporting.md](docs/bug-reporting.md) how a
+fault is filed, and [docs/roadmap.md](docs/roadmap.md) what is left to do. In this
+repository also:
+
+- **Tour-only work goes here; globe features go in FOSS Earth.** A feature a
+  globe with no tour in it would want belongs in
+  [FOSS Earth](https://github.com/foss-earth/app), even when the tour is its only
+  user today. Use FOSS Earth through its exports; never copy or deep-import it.
+- **Don't edit generated scenes.** The Twin Cities scene comes from
+  `npm run build:scene` (edit `tools/twin-cities/placements.json` or the build),
+  and the campus scenes from `npm run campus-scenes` (edit a campus's
+  `campus.json`).
+- **Never delete from `.local/youvisit-backup/`.** It is the only copy of the
+  YouVisit tour.
+- **The camera has mass and momentum, draw only what changed, and dropdowns fit
+  their text:** any camera move, frame or dropdown the tour adds follows FOSS
+  Earth's [camera motion](https://github.com/foss-earth/docs/blob/main/docs/camera-motion.md),
+  [render on demand](https://github.com/foss-earth/docs/blob/main/docs/render-on-demand.md)
+  and [UI layout](https://github.com/foss-earth/docs/blob/main/docs/ui-layout.md) rules.
+- **After an edit:** run `npm run typecheck`, `npm run test:changed -- <changed files>`
+  and `npm run lint`; for finished work, `npm run ci` once.
+- **A phone needs the HTTPS dev server.** When asked to serve the tour to a
+  phone, give the user `cd ~/gh/UMN-VR/tour && npm run dev` for their own
+  terminal (add `FOSS_EARTH_ISOLATION=enforce` for shared
+  memory). It then serves HTTPS with a self-signed certificate, which the phone
+  accepts once (Advanced, then Proceed). A plain `http://` network address is
+  not a secure page and has no WebGPU or shared memory, so a test there says
+  nothing about either. [README.md](README.md) has the details.
+- **Stop temporary servers before returning.** Autonomous checks may use
+  `npm run llm-dev`; stop those servers and their children afterward unless
+  the user explicitly asks to keep them running. Leave others' servers alone.
+  Give the user a command for their own terminal to test locally.
+- **Deploy only when specifically asked.** When asked to publish the tour, run `cd ~/gh/UMN-VR/tour && npm run deploy`. That commits and pushes
+  `deployed-from.json` here when FOSS Earth or a campus moved, then builds and
+  pushes this repository's `gh-pages` branch to https://umn-vr.github.io/tour/ and keeps the
+  photographs already there. The club homepage is a separate repository.

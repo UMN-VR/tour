@@ -176,9 +176,11 @@ network requests. It uses FOSS Earth's `foss-earth-prepare-heights` (`@foss-eart
 - **Google Photorealistic 3D Tiles first.** The height is the top of the finest geometry
   Google serves on the vertical through the position: on campus, leaf tiles with a 2 m
   geometric error, which is recorded as the uncertainty. Google's coordinates are already
-  WGS84, so there is no datum conversion. The key is `FOSS_EARTH_GOOGLE_KEY`, read from the
+  WGS84, so there is no datum conversion. The key is `GOOGLE_3D_TILES_KEY`, read from the
   environment or from `.env.local` here, in `~/gh/foss-earth/app` or in `~/gh/0sfs/fly`. It
-  is sent as a header, never written anywhere, and no Google responses are kept.
+  uses `FOSS_EARTH_GOOGLE_KEY` as a legacy fallback. Either environment name beats files;
+  the new name beats the legacy name across files. It is sent as a header, never written
+  anywhere, and no Google responses are kept.
 - **USGS 3DEP with GEOID18 only when Google can't serve a point** (no key, refused, no
   coverage, or nothing finer than 4 m). The record says why. It is bare earth, with a 5 m
   allowance for treating NAD83(2011) as WGS84. `--retry-fallbacks` tries Google again for

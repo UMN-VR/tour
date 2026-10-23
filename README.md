@@ -42,7 +42,13 @@ npm install
 npm run dev
 ```
 
-Open the address Vite prints. It leads to the campus selector. Edits here and
+Open `https://localhost:8660/tour/`. It leads to the campus selector. Development
+and preview default to port `8660` and stop if it is occupied; use
+`-- --port <number>` to choose another port explicitly. Dev and preview share
+that port, so override one to run both together. The sibling apps use `7470`
+(0SFS) and `3600` (FOSS Earth). Restart an existing server to use the new
+default; browser settings saved on an old port remain on that old origin.
+Edits here and
 in the linked FOSS Earth libraries hot reload: the `localSource()` Vite plugin
 serves their checkout files and keeps them out of Vite's dependency cache,
 including CSS imports from those packages.
@@ -51,12 +57,38 @@ The photographs come from the published site unless
 `public/tour/twin-cities/media/` is present, or `TOUR_PUBLIC` names another
 folder that contains `tour/twin-cities/media/`.
 
-For a phone on the same network, use `npm run dev -- --host`. With `--host`, the
-server serves HTTPS with a self-signed certificate. The phone's browser warns
+`npm run dev` listens on the network by default and prints a network URL and QR
+code to `/tour/`. The server serves HTTPS with a self-signed certificate. The phone's browser warns
 once per address; in Chrome, tap Advanced, then Proceed. After that the page is
 secure, so it can use WebGPU, and with `FOSS_EARTH_ISOLATION=enforce` it can
 share memory. A plain `http://` network address gets neither: it runs on WebGL
 without shared memory. `FOSS_EARTH_DEV_HTTPS=off` keeps that http server.
+
+For local-only development use `npm run dev -- --host localhost`. HTTPS setup
+requires `openssl`; startup fails clearly if a certificate cannot be created.
+
+Use `npm run llm-dev` for automated checks, or `npm run dev -- --no-qr`,
+to omit QR art while keeping HTTPS and network links.
+The `--` passes the flag through npm. Other Vite options still work, for example
+`npm run llm-dev -- --port 9000`.
+
+Normal `npm run dev` also reads `GOOGLE_3D_TILES_KEY` from the environment or
+`.env.local` (this app first, then the linked FOSS Earth app). It appends
+`?gkey=YOUR_GOOGLE_MAPS_API_KEY` to the printed startup URLs and the QR code.
+Opening the link saves the key on that device and removes it from the address
+bar. Use `npm run dev -- --no-gkey` to omit the key (`--no-key` also works).
+`npm run llm-dev` omits both the key and QR output.
+
+Manual `?gkey=YOUR_GOOGLE_MAPS_API_KEY` links save a key on the device and remove
+it from the address bar. Existing `?key=` / `?googleKey=` links and saved keys
+still work; `gkey` takes precedence. Existing `FOSS_EARTH_GOOGLE_KEY` environment
+setups are accepted as a legacy fallback.
+
+QR codes appear automatically in interactive terminals and are omitted from
+captured output and CI logs. `FOSS_EARTH_DEV_QR=on npm run dev` forces a QR when
+output is redirected; `--no-qr` takes precedence. Agents stop their temporary
+servers after checking; to test a change yourself, run `npm run dev` in this
+repo in your own terminal.
 
 ## How the photographs load
 
