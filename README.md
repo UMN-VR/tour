@@ -154,8 +154,37 @@ day: [docs/which-version.md](docs/which-version.md). Filing what it reports:
 | `<campus>/index.html`, `src/tour/` | Each campus's page: FOSS Earth's app, offering that campus's scene |
 | `tools/campus-scenes.mjs` | Makes each campus's scene from the Twin Cities one |
 | `tools/twin-cities/` | The Twin Cities scene's build and its hand-edited placements |
-| `docs/` | [which-version.md](docs/which-version.md), [bug-reporting.md](docs/bug-reporting.md), how the photographs are delivered ([content-delivery.md](docs/content-delivery.md)), and what is left to do ([roadmap.md](docs/roadmap.md)) |
+| `docs/` | [which-version.md](docs/which-version.md), [bug-reporting.md](docs/bug-reporting.md), how the photographs are delivered ([content-delivery.md](docs/content-delivery.md)), and what is left to do ([roadmap.md](docs/roadmap.md)). [Documentation](#documentation) also lists tour agent guidance, the optimization backlog, and the archive |
 | `public/`, `.local/` | Gitignored: the scene build's output, and the YouVisit backup it reads |
+
+## Documentation
+
+Pages follow the shared
+[documentation layout](https://github.com/foss-earth/docs/blob/main/docs/documentation-layout.md):
+current guides stay with the repository that owns the behavior, and session notes
+are listed as archive.
+
+### Current
+
+- [which-version.md](docs/which-version.md) — which build a device is running, including a tab a phone kept from an earlier day.
+- [bug-reporting.md](docs/bug-reporting.md) — how to file what that page reports.
+- [content-delivery.md](docs/content-delivery.md) — how the photographs are delivered.
+- [roadmap.md](docs/roadmap.md) — what is left to do.
+- [agent-reference.md](docs/agent-reference.md) — task guidance for agents working in this repository. The organization-wide file is a different document: [agent-reference.md](https://github.com/UMN-VR/.github/blob/main/agent-reference.md) in `UMN-VR/.github`.
+- [optimization-backlog.md](docs/optimization-backlog.md) — the performance work this tour still owns. The background and the decisions still open are in the canonical [WebGL performance review](docs/webgl-performance-review.md).
+
+### Archive
+
+Session notes and the prompts that start a fresh conversation. Placements and
+image links are edited with the scene build above and in
+[tools/twin-cities/README.md](tools/twin-cities/README.md).
+
+- [image-links-handoff.md](docs/image-links-handoff.md) — image linking and placement corrections, saved 2026-10-15.
+- [performance-next-agent.md](docs/performance-next-agent.md) — remaining difficult performance candidates from 22 October 2026.
+- [performance-continuation.md](docs/performance-continuation.md) — measured work from that same session.
+- [pose-overrides-proposal.md](docs/pose-overrides-proposal.md) — proposal for correcting photographs on a phone and importing the result.
+- [tour-media-prompt.md](docs/tour-media-prompt.md) — prompt to put the rest of the old tour on the map.
+- [placements-prompt.md](docs/placements-prompt.md) — prompt to set north and correct every panorama.
 
 ## Deploying
 

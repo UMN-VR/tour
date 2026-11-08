@@ -6,7 +6,7 @@ import { createReadStream, existsSync, mkdirSync, readFileSync, statSync, writeF
 import { createRequire } from 'node:module'
 import path from 'node:path'
 import { appFiles, babylonBarrels, babylonShaderChunks, builtFrom, crossOriginIsolation, headsetEmulator, lazyFeatures, localSource, networkHttps } from 'foss-earth/vite'
-import { bootTerminal, browserRecovery, warmPages } from '@foss-earth/ui/vite'
+import { bootTerminal, browserRecovery, testPlans, warmPages } from '@foss-earth/ui/vite'
 
 /** The tour's pages: the campus selector, and FOSS Earth's app with each campus's scene. */
 const TOUR_PAGES = {
@@ -150,10 +150,11 @@ export default defineConfig({
   // Each page says what it is built from, this repository, FOSS Earth and every package, for the About tab.
   // npm run dev only: ?headsetEmulator=quest2 (or quest3, questPro, visionpro) gets an emulated headset.
   // Dev defaults to LAN HTTPS and prints a QR for the campus selector.
+  // npm run dev only: <page>test/<name>, such as /tour/minneapolis/test/<name>, opens the Test tab with build/test-plans/<name>.json.
   // Each campus page shows the boot terminal from its first bytes. The selector fetches a campus page as a card is hovered or pressed,
   // and the campus pages' app files once it is idle.
   plugins: [crossOriginIsolation(), networkHttps({ path: "/tour/" }), localSource(), react(), tourHome(), campusScenes(), tourMedia(), babylonBarrels(), babylonShaderChunks(), lazyFeatures(), browserRecovery({ appId: 'umn-vr-tour' }),
-    bootTerminal({ pages: page => CAMPUS_PAGES.includes(page) }), warmPages({ from: `/${TOUR_PAGES.selector}`, pages: CAMPUS_PAGES }), appFiles(), builtFrom(), headsetEmulator()],
+    bootTerminal({ pages: page => CAMPUS_PAGES.includes(page) }), warmPages({ from: `/${TOUR_PAGES.selector}`, pages: CAMPUS_PAGES }), appFiles(), builtFrom(), headsetEmulator(), testPlans()],
   test: {
     // .local/ holds the YouVisit backup and scratch; public/ the generated scene.
     exclude: [...configDefaults.exclude, '.local/**', 'public/**', 'build/**'],
