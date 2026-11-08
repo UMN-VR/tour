@@ -1,0 +1,1 @@
+export{i as OpenPBRMaterialLoadingAdapter}from"./index.babylonjs-DDLCp0rx.js";
